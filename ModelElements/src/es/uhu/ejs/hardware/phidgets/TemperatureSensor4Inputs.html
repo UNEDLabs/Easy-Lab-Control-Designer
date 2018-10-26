@@ -1,0 +1,85 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Phidget Temperature Sensor 4 Inputs</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ="">
+<h2> <img src="./TemperatureSensor4Inputs.png"> Phidget Temperature
+Sensor 4-Inputs for <strong>Phidget Module 1048_0</strong></h2>
+<p> This element allows you reading the temperature from up to four
+thermocouples with a 1048&nbsp;PhidgetTemperatureSensor 4-Input
+module.&nbsp;J, K, E and T thermocouples are directly supported in the
+library and return the measured temperature in &deg;C. </p>
+<p> It is possible to interface other thermocouple types by converting
+the measured potential returned by the Temperature Sensor into Celsius
+using the appropriate tables; the formula and links to the tables are
+described in the <a
+ href="http://www.phidgets.com/documentation/Phidgets/1048_0_Product_Manual.pdf"
+ target="_blank">1048 Product Manual</a>. </p>
+The 1048 module:
+<ul>
+  <li> Provides 4 inputs to connect different types of temperature
+sensors (thermocouples).</li>
+  <li>Outputs temperature in degrees Celsius.</li>
+  <li>Uses terminal blocks to interface to inexpensive thermocouples
+with stripped leads.</li>
+  <li>Connects directly to a computer&rsquo;s USB port.</li>
+</ul>
+<p>
+With this element, you can access to the module directly (with the
+serial number) or through the network, using the WebService of the
+phidget's driver&nbsp; in a remote computer with the phidget 1048
+connected (here, you need the IP, port and password too). </p>
+<h3>Usage</h3>
+<p> To use any Phidget element, drag an drop its icon to the list of
+model elements of your model. Then, edit the connection parameters and
+invoke <i>phidget.connect()</i> in your code. </p>
+<p> All methods returning a boolean will return <i>true</i> on
+successful completion of the command, <i>false</i> otherwise. Methods
+returning a double value will return <i>Double.NaN</i> if there is any
+error when connecting to the phidget. </p>
+<p>Available method for this particular phidgets include: </p>
+<ul>
+  <li><span style="font-weight: bold;">public boolean connect();</span>
+// establish the connection. Returns true if successful</li>
+  <li><span style="font-weight: bold;">public int getSensorsCount();</span>
+// return the number of sensors present</li>
+  <li><span style="font-weight: bold;">public double getTemperature(int
+index);</span> // Get the temperature measured by a thermocouple at the
+given index </li>
+  <li><span style="font-weight: bold;">public double
+getMinimumTemperature(int index);</span> // Get the minimum temperature
+measured by the thermocouple at the given index </li>
+  <li><span style="font-weight: bold;">public double
+getMaximumTemperature(int index);</span> // Get the maximum temperature
+measured by the thermocouple at the given index </li>
+  <li><span style="font-weight: bold;">public double
+getAmbientTemperature();</span> // Get the ambient temperature measured
+by the module</li>
+  <li><span style="font-weight: bold;">public double
+getMinimumAmbientTemperature();</span> // Get the minimum temperature
+measured by the module</li>
+  <li><span style="font-weight: bold;">public double
+getMaximumAmbientTemperature();</span> // Get the maximum temperature
+measured by the module</li>
+  <li><span style="font-weight: bold;">public boolean
+setThermocoupleType(int index, char value);</span> // Sets the type of
+sensor to one of 'K', 'J', 'E', 'T'</li>
+  <li><span style="font-weight: bold;">public char
+getThermocoupleType(int index);</span> // Gets the type of sensor.
+Returns one of 'K', 'J', 'E', 'T', or '?' if there was any error</li>
+  <li><span style="font-weight: bold;">public double getPotential(int
+index);</span> // Gets the potential measured by a thermocouple at the
+given index </li>
+  <li><span style="font-weight: bold;">public double
+getMinimumPotential(int index);</span> // Get the minimum potential
+measured by the thermocouple at the given index </li>
+  <li><span style="font-weight: bold;">public double
+getMaximumPotential(int index);</span> // Get the maximum potential
+measured by the thermocouple at the given index </li>
+</ul>
+<h3>Example of use</h3>
+<pre>// Init the module<br>if (!phidget1048.connect()) _view.alert(null,"Connection error","Can't connect to temperature phidget");<br>phidget1048.getTemperature(0); // read temperature from thermocouple number 0</pre>
+</body>
+</html>

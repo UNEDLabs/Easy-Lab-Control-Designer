@@ -1,0 +1,89 @@
+<html>
+  <head>
+  <title>Parallel Java Plots model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./PJSpeedupPlot.gif"> Parallel Java Plots model element 
+    </h2>
+    <p>
+      PJPlots can store data measurements about runs of a parallel algorithm and display plots of the Speedup or Sizeup metrics 
+    </p>
+    <p> 
+    The metrics are defined in the book <a href="http://www.cs.rit.edu/~ark/bpp/">Building Parallel Java</a>
+    by <a href="http://www.cs.rit.edu/~ark">Alan Kaminsky</a> and look like shown in the <a href="http://www.cs.rit.edu/~ark/pj/doc/Speedup.html">Speedup</a> and 
+    <a href="http://www.cs.rit.edu/~ark/pj/doc/Sizeup.html">Sizeup</a> documentation.
+    <p>
+     <img src="PJSpeedupPlotSample.png"><br>This is an example of a sizeup plot
+     </p>
+    <h3>Usage</h3> 
+      <p>
+      Add a PJPlots element to your model, by dragging the icon element to the list of your model elements. 
+      Whenever you have data from a parallel run, add it to the element using the <i>addMeasurement</i> method.
+      When you think you have enough data, invoke the element's <i>showSpeedupPlot</i> or <i>showSizeupPlot</i> method to display a dialog with the plots.
+      </p>
+      <p>
+      You can invoke the plotting methods as may times as required. The element will create each time a new plot with the available data.
+      </p>
+    <p>The element implements the following basic methods:
+    <ul>
+    <li> <i>boolean addMeasurement(int size, int K, long time)</i>: adds the data measurement from a run for the problem size <i>size</i>, with <i>K</i> processors 
+             (K=0 means a sequential run, K>=1 means a parallel program with K processors), 
+             that took <i>time</i> milliseconds to run. </li>
+             IMPORTANT: You need at least two different values of K for each problem size
+    <li> <i>void addPlotSpecification(String plotSpec)</i>: add a plot specifications as indicated in Parallel Java's  
+          <a href="http://www.cs.rit.edu/~ark/pj/doc/Speedup.html">Speedup</a> and <a href="http://www.cs.rit.edu/~ark/pj/doc/Sizeup.html">Sizeup</a> class. 
+          The commands apply to any of the plots and do not interfere. 
+    <li> <i>void clearMeasurements()</i>: clears all previous data measurements.</li> 
+    <li> <i>void clearPlotSpecifications()</i>: clears all previous plot specifications.</li> 
+    <li> <i>void clear()</i>: clears all data.</li> 
+    <li> <i>void printMeasurements(Object output)</i>: sorts and prints all data measurements through the given output.
+    The parameter <i>output</i> can be:
+      <ul>
+        <li>a Model (e.g. <i>printMeasurements(this);</i></li>
+        <li>a java.io.PrintStream (e.g. <i>printMeasurements(System.err);</i></li>
+        <li>any other object or <i>null</i>, which produces no output.
+      </ul>
+      </li> 
+    <li> <i>JDialog showSpeedupPlot(java.awt.Component parentComponent)</i>: creates and shows a JDialog (located relative to the parent component) with the speed up plots. 
+    Returns null if there was any error (typically, when there is not enough data to create the plot)</li> 
+    <li> <i>JDialog showSizePlot(java.awt.Component parentComponent)</i>: creates and shows a JDialog (located relative to the parent component) with the size up plots. 
+    Returns null if there was any error (typically, when there is not enough data to create the plot)</li> 
+    </li> 
+    <li> <i>void disposePlots()</i>: disposes all plot dialogs created previously. </li>
+    <li> <i>String runTest (Object target, int nTimes, int maxThreads, Object output)</i>: Runs a test of the target program and collect all its data.
+    It runs the program nTimes sequentially and in parallel up to the indicated maximum number of threads. Returns null if successfull, an error string if there was any error.  
+    The target must implement the following public methods:
+      <ul>
+        <li><i>int getSize()</i>: returns the size of the problem</li>
+        <li><i>long runSequential()</i>: runs the problem sequentially and returns the time ellapsed in milliseconds</li>
+        <li><i>long runParallel(int nThreads)</i>: runs the problem in parallel using <i>nThreads</i> threads and returns the time ellapsed in milliseconds</li>
+      </ul>
+    The parameter <i>output</i> can be:
+      <ul>
+        <li>a Model (e.g. <i>printMeasurements(this);</i></li>
+        <li>a java.io.PrintStream (e.g. <i>printMeasurements(System.err);</i></li>
+        <li>any other object or <i>null</i>, which produces no output.
+      </ul>
+    </li>
+    <li> <i>String runTest (Object target, int nTimes, int maxThreads)</i>: Same as <i>runTest (target, nTimes, maxThreads, null)</i>.</li>
+    </ul>
+    </p>
+        <h3>Example of use</h3>
+    <pre>
+pjPlots.addMeasurement(20,1,1234);
+pjPlots.addMeasurement(20,1,1256);
+pjPlots.addMeasurement(20,2,700);
+pjPlots.addMeasurement(20,2,710);
+pjPlots.addPlotSpecification("n 20 1048576 \"N = 1M\"");
+pjPlots.addPlotSpecification("time rightMargin 54");
+// Do more runs and add their data...
+// ...when you are ready:
+pjPlots.showSpeedupPlot(_view.mainFrame);
+// or
+pjPlots.showSizeupPlot(_view.mainFrame);
+    </pre>
+    </pre>
+  </body>
+</html>

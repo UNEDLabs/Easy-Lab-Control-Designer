@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <title>Gyroscope model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./Gyroscope.png"> Gyroscope model element 
+    </h2>
+    <p>
+      Gyroscope provides access to the built-in sensor that provides
+      the rate of rotation around the x,y,z axes.
+    <h3>Usage</h3>
+      <p>
+      To add the Gyroscope element to your model, drag the icon element to the list of your model elements.
+      </p>
+    <p>The element implements the following basic methods:
+    <ul>
+    <li><i>boolean isPresent()</i>: whether the hardware includes a gyroscope</li>
+    <li><i>void start()</i>: turns the gyroscope on</li>
+    <li><i>Object readData()</i>: reads the rate of rotation around the x,y,z axes.
+    The function returns zero values if the gyroscope is not present or has not been started</li>
+    </ul>
+    </p>
+        <h3>Example of use</h3>
+    <pre>
+gyroscope.start(); // Starts the accelerometer
+var data = gyroscope.readData(); // Reads the current acceleration 
+_println("The rotation rate around the X axis is " + data.x);
+_println("The rotation rate around the Y axis is " + data.y);
+_println("The rotation rate around the Z axis is " + data.z);
+gyroscope.stop(); // Stops the accelerometer
+    </pre>
+  </body>
+</html>

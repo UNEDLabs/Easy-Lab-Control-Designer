@@ -1,0 +1,101 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=windows-1252">
+	<TITLE>Phidget InterfaceKit</TITLE>
+	<META NAME="GENERATOR" CONTENT="OpenOffice.org 3.4.1  (Win32)">
+	<META NAME="CREATED" CONTENT="0;0">
+	<META NAME="CHANGED" CONTENT="20121003;13210940">
+	<STYLE TYPE="text/css">
+	<!--
+		P { color: #800080; font-family: "Georgia", "Times New Roman", "Times", serif }
+		H2 { color: #800080 }
+		H2.cjk { font-family: "SimSun" }
+		H2.ctl { font-family: "Mangal" }
+		H3 { color: #800080 }
+		H3.cjk { font-family: "SimSun" }
+		H3.ctl { font-family: "Mangal" }
+		PRE { color: #800080 }
+		PRE.cjk { font-family: "NSimSun", monospace }
+		A:link { color: #0000ff }
+	-->
+	</STYLE>
+</HEAD>
+<BODY LANG="es-ES" TEXT="#800080" LINK="#0000ff" BGCOLOR="#c8dfd0" DIR="LTR">
+<H2 CLASS="western"><IMG SRC="AnalogOut.png" NAME="gr&aacute;ficos1" ALIGN=BOTTOM WIDTH=32 HEIGHT=22 BORDER=0>
+PhidgetAnalog</H2>
+<P>This element allows you access to PhidgetAnalog devices, boards
+with analog outputs, like device 1002.&nbsp;</P>
+<P>The PhidgetAnalog 4-Output (1002) Produces a voltage over -10V to
++10V. This voltage will be asserted up to +-20mA. An error will be
+reported when this current is exceeded, and the voltage the customer
+is getting is no longer accurate. The voltage is produced with 12 bit
+resolution (4.8mV). 
+</P>
+<P>The board is not isolated and all 4 channels share a common
+ground. 
+</P>
+<P>All the power is supplied by the USB bus. 
+</P>
+<H3 CLASS="western">Usage</H3>
+<P>To use any Phidget element, drag an drop its icon to the list of
+model elements of your model. Then, edit the connection parameters
+and invoke <I>phidget.connect()</I> in your code. 
+</P>
+<P>All methods returning a boolean will return <I>true</I> on
+successful completion of the command, <I>false</I> otherwise. Methods
+returning a double value will return <I>Double.NaN</I> if there is
+any error when connecting to the phidget. 
+</P>
+<P>Available method for this group of&nbsp;phidgets include: 
+</P>
+<UL>
+	<LI><P STYLE="margin-bottom: 0cm"><B>public boolean connect();</B>
+	// establish the connection. Returns true if successful 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><B>public int getOutputCount();</B>
+	//Returns the number of analog outputs on the device.&nbsp; 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><B>public int
+	enableAnalogOutput(</B><FONT COLOR="#800080"><FONT FACE="Georgia, Times New Roman, Times, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>int</B></FONT></FONT></FONT><FONT COLOR="#800080"><FONT FACE="Georgia, Times New Roman, Times, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>
+	ind,</B></FONT></FONT></FONT><FONT COLOR="#800080"><FONT FACE="Georgia, Times New Roman, Times, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>boolean</B></FONT></FONT></FONT><FONT COLOR="#800080"><FONT FACE="Georgia, Times New Roman, Times, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>
+	value);</B></FONT></FONT></FONT> <FONT COLOR="#800080"><FONT FACE="Georgia, Times New Roman, Times, serif"><FONT SIZE=3 STYLE="font-size: 13pt">//Enables
+	an analog output. Setting this to true will activate the output,
+	false is the default state.&nbsp; </FONT></FONT></FONT>
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><B>public int getAnalogStatus(</B><FONT COLOR="#800080"><FONT FACE="Georgia, Times New Roman, Times, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>int</B></FONT></FONT></FONT><FONT COLOR="#800080"><FONT FACE="Georgia, Times New Roman, Times, serif"><FONT SIZE=3 STYLE="font-size: 13pt"><B>
+	ind)</B></FONT></FONT></FONT><B>;</B> //Gets the enabled state for
+	an output.&nbsp; 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><B>public boolean setVoltage(int
+	ind,&nbsp;double value);</B> //Sets the voltage output setting for
+	an analog output.&nbsp; 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><B>public boolean getVoltage(int
+	ind);</B> //Gets the voltage output setting of an analog output.&nbsp;
+		</P>
+	<LI><P STYLE="margin-bottom: 0cm"><B>public boolean getAnalogMin(int
+	ind);</B> //Gets the minimum voltage for an analog output.&nbsp; 
+	</P>
+	<LI><P STYLE="margin-bottom: 0cm"><B>public boolean getAnalogMax(int
+	ind);</B> //Gets the maximum voltage for an analog output.&nbsp; 
+	</P>
+	<P STYLE="margin-bottom: 0cm"></P>
+</UL>
+<H3 CLASS="western">Example of use</H3>
+<PRE CLASS="western">// Init the module
+<FONT COLOR="#800080">ap.connect();</FONT>
+// enables all outputs
+<B>for</B> (<B>int</B> i = 0; i &lt; ap.getOutputCount() - 1; i++) {
+  ap.enableAnalogOutput(i, <B>true</B>);
+}
+// Setting the Voltage of the first Analog Output to newVoltage
+ap.setVoltage(0, newVoltage);
+
+//closing
+ap.setVoltage(0, 0);
+<B>for</B> (<B>int</B> i = 0; i &lt; ap.getOutputCount() - 1; i++) {
+   ap.enableAnalogOutput(i, <B>false</B>);
+<FONT FACE="Consolas, sans-serif"><FONT SIZE=2>}</FONT></FONT> </PRE>
+</BODY>
+</HTML>

@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Arduino</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<H2><IMG SRC="Arduino.png">Arduino element</H2>
+<P>
+Together with the Firmata 2 firmware (an Arduino sketch uploaded to the
+  Arduino board), this element allows you to control an Arduino board from
+ your EJS simulation. You will be able to:
+ <ul>
+   <li>read from and write to any of the digital pins (from 2 to 13, pins 0 and 1 are used for communication)</li>
+   <li>read the input from the analog pins (from 0 to 5)</li>
+   <li>control servo motors attached to any of the digital pins</li>
+ </ul>
+ </p>
+<p>The Arduino board an be connected either by:
+<ul>
+  <li>ethernet connection, which requires the StandarFirmataEthernet sketch</li>
+  <li>serial (USB) connection, with requires the StandardFirmata sketch</li>
+</ul>
+<H3>Usage</H3>
+<P>To add the element, simply drag and drop the element from the palette, to the list of elements for your simulation.
+If the board is connected to the ethernet, edit the "Server IP:" and "Port number:" fields accordingly. 
+(The board must be loaded with the StandardFirmataEthernet sketch of the Firmata 2 firmware with the corresponding IP address and port.)
+</P>
+<H3>Connection methods</H3>
+<UL>
+  <li><tt>boolean connectSerial(String usbPort);</tt> Connects to the board on the given serial (USB) port at the default baudrate of 57600. Returns true if successful.</li>
+  <li><tt>boolean connectEthernet(String ipAddress, int portnumber);</tt> Connects to the board on the given ethernet IP address at the indicated port number. Returns true if successful.</li>
+  <li><tt>boolean connect();</tt> Connects to the board at the IP and port number presribed in the element's dialog. Returns true if successful.</li>
+  <li><tt>boolean close();</tt>: Closes the connection to the board. Returns true if successful.</li>
+</UL>
+<H3>Information methods</H3>
+<UL>
+  <li><tt>String readFirmwareInformation();</tt> Returns the firmware version information. Returns null if failed to communicate.</li>
+  <li><tt>String readMappingInformation();</tt> Returns information about which pins correspond to analog channels. Returns null if failed to communicate.</li>
+</UL>
+<H3>Configuration methods</H3>
+<UL>
+  <li><tt>boolean setDigitalMode(int digitalPin, int mode);</tt> Sets the mode of a digital pin. The mode must be one of:
+   <ul>
+     <li>0 = INPUT</li>
+     <li>1 = OUPUT</li>
+     <li>2 = ANALOG</li>
+     <li>3 = PWM</li>
+     <li>4 = SERVO</li>
+   </ul>
+   Returns true if successful.</li>
+  <li><tt>int getDigitalMode(int digitalPin);</tt> Returns the mode of a digital pin.</li>
+  <li><tt>boolean boolean setDigitalServoMode(int digitalPin, int minPulse, int maxPulse);</tt> Configures a digital pin to control a servo. 
+  Parameter minPulse, resp. maxPulse, is the pulse width, in microseconds, corresponding to the minimum (0 degree), resp. maximum (180 degrees), angle on the servo.
+  </li>
+  <li><tt>boolean boolean setDigitalServoMode(int digitalPin);</tt>Same as <tt>setDigitalServoMode(int digitalPin,544,2400);</tt></li>
+  
+</UL>
+<H3>Output methods</H3>
+<UL>
+  <li><tt>boolean writeDigital(int digitalPin, boolean on);</tt> Sets a digital pin On (5 volts) or Off (0 volts). Returns true if successful.</li>
+  <li><tt>boolean writeDigital(int digitalPin, int value);</tt> Sets the (PWM-wave) value of a digital pin, from 0 (always off) to 255 (always on). Returns true if successful.</li>
+  <li><tt>boolean writeDigitalServo(int digitalPin, int angle);</tt> Sets the position of the servo (in degrees), from 0 to 180. Returns true if successful.</li>
+</UL>
+
+<H3>Input methods</H3>
+<UL>
+  <li><tt>boolean readDigital(int digitalPin);</tt> Returns whether a digital pin is on</li>
+  <li><tt>int readDigitalValue(int digitalPin);</tt> Returns the value of a digital pin</li>
+  <li><tt>int readAnalog(int analogPin);</tt> Returns the value read from an analog pin (from 0 to 1023)</li>
+  <li><tt>double readAnalogVoltage(int pin, double voltageReference);</tt> Returns the voltage read from an analog pin in the interval [0,voltageReference]</li>
+  <li><tt>double readAnalogVoltage(int pin);</tt> Returns the voltage read from an analog pin in the interval [0,5]</li>
+</UL>
+<H3>Example of use</H3>
+<PRE>
+if (!arduino.connect("/dev/tty.usbmodem1421",57600)) { // "/dev/tty.usbmodem1421" a USB port on a MAc computer. Try "COM3" on a Windows machine
+  _view.alert("","Error","Arduino board not found:\n  "+arduino);
+  _pause();
+}
+else {
+  _println("Arduino connected: "+arduino);
+  arduino.writeDigital(8, true); // Sets the digital pin number 8 to ON 
+}
+</PRE>
+</BODY>
+</HTML>

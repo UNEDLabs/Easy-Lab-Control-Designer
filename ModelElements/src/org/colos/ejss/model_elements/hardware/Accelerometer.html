@@ -1,0 +1,45 @@
+<html>
+  <head>
+  <title>Accelerometer model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./Accelerometer.png"> Accelerometer model element 
+    </h2>
+    <p>
+      Accelerometer provides access to the built-in accelerometer (if present).
+    <h3>Usage</h3>
+      <p>
+      To add the Accelerometer element to your model, drag the icon element to the list of your model elements.
+      </p>
+    <p>The element implements the following basic methods:
+    <ul>
+    <li><i>boolean isPresent()</i>: whether the hardware includes an accelerometer</li>
+    <li><i>void start()</i>: turns the accelerometer on</li>
+    <li><i>void stop()</i>: turns the accelerometer off</li>
+    <li><i>boolean isRunning()</i>: whether reading accelerometer data has been started (using start())</li>
+    <li><i>Object getDeviceData()</i>: reads the raw data (in the device reference frame) of the acceleration measured (including gravity) and 
+    the rotation of the device. The object has x,y,z components for the acceleration, and alpha,beta,gamma for the
+    rotation.  
+    The values are all zero if the accelerometer is not present or has not been started.</li>
+    <li><i>Object getViewData()</i>: returns a similar same object as getDeviceData(), but the acceleration is in the
+    user's view reference frame (which has the X and Y axes horizontal and vertical on the screen and Z perpendicular to it).
+    This function take scare of orientation changes of the screen and also differences among operating systems.</li>
+    </ul>
+    </p>
+        <h3>Example of use</h3>
+    <pre>
+accelerometer.start(); // Starts the accelerometer
+var data = accelerometer.getDeviceData(); // Reads the current acceleration 
+_println("The acceleration on the X axis is " + data.x);
+_println("The acceleration on the Y axis is " + data.y);
+_println("The acceleration on the Z axis is " + data.z);
+var viewData = accelerometer.getViewData(); // Reads the acceleration in the view reference system 
+_println("The view acceleration on the X axis is " + viewData.x);
+_println("The view acceleration on the Y axis is " + viewData.y);
+_println("The view acceleration on the Z axis is " + viewData.z);
+accelerometer.stop(); // Stops the accelerometer
+    </pre>
+  </body>
+</html>

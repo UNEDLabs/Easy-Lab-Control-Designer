@@ -1,0 +1,62 @@
+<HTML>
+<HEAD>
+<TITLE>Package edu.rit.pj.io</TITLE>
+</HEAD>
+<BODY>
+
+Package edu.rit.pj.io contains classes
+for parallel file input and output
+in Parallel Java (PJ) programs.
+
+<P>
+To run a PJ program
+on a cluster parallel computer,
+the user logs into the cluster's <B>frontend processor</B>
+and runs the PJ program with the <TT>java</TT> command.
+That process is the <B>job frontend process.</B>
+The job frontend process contacts
+some number of <B>backend processors</B> in the cluster
+and causes each backend processor
+to run a <B>job backend process.</B>
+It is the job backend processes,
+running on the backend processors,
+that execute the actual PJ program.
+The job frontend process performs a supervisory role
+but does not execute the actual PJ program.
+For further information,
+see package <A HREF="../cluster/package-summary.html">edu.rit.pj.cluster</A>.
+
+<P>
+This architecture poses a problem if the PJ program needs to do file I/O.
+The job backend processes are typically running
+in a special PJ account,
+not in the user's account.
+Also, the job backend processes' working directories
+are temporary directories created for the job,
+not the user's working directory.
+Therefore, the job backend processes
+are not able to access files in the user's account
+using the normal Java file I/O classes.
+
+<P>
+Package edu.rit.pj.io to the rescue!
+An instance of class <A HREF="StreamFile.html">StreamFile</A>
+refers to a file in the user's account
+relative to the user's working directory
+where the job frontend process is running.
+When a job backend process opens an input stream or output stream
+on a <A HREF="StreamFile.html">StreamFile</A>
+and reads or writes the stream,
+the job backend process forwards all the stream operations
+to the job frontend process,
+which in turn performs the actual file I/O.
+
+<P>
+In summary,
+to access a file in the user's account in the frontend processor,
+use class <A HREF="StreamFile.html">StreamFile</A>.
+To access a file in the PJ account in the backend processor,
+use the regular Java I/O classes.
+
+</BODY>
+</HTML>

@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Phidget Motor Control HC</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body ="">
+<h2> <img src="./MotorControlHC.png"> Phidget Motor Control HC for <strong>Phidget
+Module 1064_1</strong></h2>
+<p> This element allows you to control the angular velocity and
+acceleration of up to two high-current DC motors with a 1064 Phidget
+module.&nbsp;Many variations of brushed DC motors exist: permanent
+magnet motors, electromagnet motors, coreless motors, linear motors...
+the PhidgetMotorController can be used with any of these, as well as
+other devices like:</p>
+<ul>
+  <li> small solenoids,</li>
+  <li>incandescent light bulbs,&nbsp;</li>
+  <li>hydraulic or pneumatic devices like small pumps and valves. </li>
+</ul>
+<p>The 1064: </p>
+<ul>
+  <li> Provides bi-directional control for 2 DC motors </li>
+  <li> Requires external 6 to 15VDC Power Supply </li>
+  <li> USB port is isolated from the motor control outputs</li>
+</ul>
+<h3>Usage</h3>
+<p> To use any Phidget element, drag an drop its icon to the list of
+model elements of your model. Then, edit the connection parameters and
+invoke <i>phidget.connect()</i> in your code. </p>
+<p> All methods returning a boolean will return <i>true</i> on
+successful completion of the command, <i>false</i> otherwise. Methods
+returning a double value will return <i>Double.NaN</i> if there is any
+error when connecting to the phidget. </p>
+<p>Available method for this particular phidgets include: </p>
+<ul>
+  <li><span style="font-weight: bold;">public boolean connect();</span>
+// establish the connection. Returns true if successful</li>
+  <li><span style="font-weight: bold;">public boolean setPowerPWM(int
+index, double value);</span> // sets the power on the specified output</li>
+  <li><span style="font-weight: bold;">public double getPowerPWM(int
+index);</span> // reads the applied PWM excitation on the given output</li>
+  <li><span style="font-weight: bold;">public double set
+OutputRamping(int index, ,double&nbsp; percentage);</span> // Returns
+how fast a motor (a load) will be accelerated (powered) between given
+velocities (max and min ramping values).&nbsp;The valid range is
+between OutputRampingMax and OutputRampingMin. This parameter
+is&nbsp;measured in percent, where 100% is the fastest velocity ramping
+available.</li>
+  <li><span style="font-weight: bold;">public double
+getOutputRamping(int index);</span> // returns the output ramping value</li>
+  <li><span style="font-weight: bold;">public double getCurrent(int
+index);</span> // Returns the current (Amps) being consumed by a load
+connected to the interface.</li>
+  <li><span style="font-weight: bold;">public double
+getOutputRampingMax(int index); //</span> Returns the max value of
+output ramping</li>
+  <li><span style="font-weight: bold;">public double
+getOutputRampingMin(int index); //</span> Returns the min value of
+output ramping</li>
+</ul>
+<h3>Example of use</h3>
+<pre>// Init the module<br>if (!phidget1064.connect()) _view.alert(null,"Connection error","Can't connect to Motor Control phidget");<br>// set the PWM value<br>phidget1064.setPowerPWM(0, 25); // sets 25% of total power on the first output<br>// get the applied PWM excitation value and the current being consumed<br>double value = phidget1064.getPowerPWM(0);<br>double current = phidget1064.getCurrent(0);</pre>
+</body>
+</html>

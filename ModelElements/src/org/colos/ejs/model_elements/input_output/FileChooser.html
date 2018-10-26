@@ -1,0 +1,35 @@
+<html>
+  <head>
+  <title>File Chooser model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./FileChooser.png"> File Chooser model element 
+    </h2>
+    <p>
+      A file chooser encapsulates calls to OSPRuntime methods that let you choose a file for reading or writing.
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add a file chooser reader element to your model, drag the icon element to the list of your model elements and 
+      set the "Description"  and "Extensions" fields to a constant String (as in "My files" and "xml,txt", respectively) 
+      or link them to String model variables (as in <i>%myModelString%</i>).
+      </p>
+      <p>Use the buttons to the right of the fields for easier selection.
+    </p>
+    <p>
+    A call to the element method <i>String chooseFilename(Component _parentComponent, boolean _toSave)</i> will let you choose a file and return its name. 
+    The name is returned relative to your simulation's home directory.
+    </p>
+    <p>
+    The <i>_parentComponent</i> argument instructs the file chooser to appear on top of one of your view (Swing-based) elements. Using your main window is just fine. 
+    The <i>_toSave</i> boolean argument indicated whether you want this fale to save or read from it. This has the only eect of preparing the labels of the fiel chooser accordingly.
+    </p>
+    <h3>Example of use</h3>
+    <pre>
+    String filename = fileChooser.chooseFilename(_view.mainFrame,false); // false = to read from it
+    // Now, do whatever you want with this filename (like passing it to a variable linked to a DataReader element)...
+    </pre>
+  </body>
+</html>

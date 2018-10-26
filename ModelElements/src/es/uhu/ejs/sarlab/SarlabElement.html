@@ -1,0 +1,84 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Statistics model element</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+.auto-style1 {
+	text-align: center;
+}
+.auto-style2 {
+	margin-left: 40px;
+}
+  </style>
+</head>
+<body class="auto-style2">
+<h2> <img style="width: 48px; height: 48px;" src="SarlabElement.png"
+ alt="IconSARLAB">&nbsp;&nbsp;&nbsp;&nbsp;
+Sarlab element </h2>
+<p> <span id="result_box" lang="en"><span class="auto-style1">SARLAB</span>
+<span class="hps">element</span> <span class="hps">provides</span> <span
+ class="hps">remote connectivity</span> <span class="hps">to
+laboratory experiments</span> <span class="hps">that are managed</span>
+<span class="hps">by a&nbsp;</span><span class="hps">SARLAB server</span><span
+ class="">.</span></span></p>
+<p class="auto-style1"> <img alt="" src="forwardingL.png" height="92"
+ width="460"></p>
+<h3>Usage</h3>
+<p> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; To add a SARLAB
+element to your model, simply drag the icon element to the list of your
+model elements. <span id="result_box0" class="" lang="en"><span
+ class="hps">You must set</span> <span class="hps">the</span>
+following properties:</span></p>
+<ul>
+  <li><span id="result_box0" class="" lang="en"><span
+ style="font-weight: bold;">IP address</span> of the server.</span></li>
+  <li><span id="result_box0" class="" lang="en"><span
+ style="font-weight: bold;">Port</span> used by the server.</span></li>
+  <li><span id="result_box0" class="" lang="en"> <span
+ style="font-weight: bold;" class="hps">SARLAB</span><span
+ style="font-weight: bold;"> </span><span style="font-weight: bold;"
+ class="hps">lab experience identifier</span><span class="hps"></span></span><span
+ class="hps"><span id="result_box0" class="">.</span></span></li>
+  <li><span id="result_box0" class="" lang="en"><span
+ style="font-weight: bold;">Username</span> and <span
+ style="font-weight: bold;">password</span>. Optional. If not
+specified, the server will submit a popup login window.<br>
+    </span></li>
+</ul>
+<p><span id="result_box0" class="" lang="en"> <span class="hps"></span><span
+ class="hps"></span><span class="hps"></span><span class="hps"></span><span
+ class="hps"></span><span class="hps"></span><span class="hps"></span><span
+ class="hps"></span><span class="hps"></span><span class="hps"></span><span
+ class="hps"></span></span><span class="hps"><span id="result_box0"
+ class=""><span id="result_box3" class="" lang="en"><span class=""></span></span><span
+ class=""><span id="result_box3" class=""> If you pack&nbsp;the EJS
+application with Moodle support, the element will attempt to read the
+parameters from the applet. </span></span></span></span></p>
+<h3>Available methods</h3>
+<p> The element provides six methods:</p>
+<ul>
+  <li><span style="font-weight: bold;">public void connect()</span>;
+Establishs a connection to an experience using the SARLAB server.
+Reads the parameters from the element properties or from the applet.</li>
+  <li><span style="font-weight: bold;"> public void connect(String
+ipServer,String portServer,String idExp)</span>.</li>
+  <li style="font-weight: bold;"> public void connect(String
+ipServer,String portServer,String user,String password,String idExp).</li>
+  <li><span style="font-weight: bold;">public void disconnect()</span>;
+&nbsp;Disconnect from SARLAB server.</li>
+  <li><span style="font-weight: bold;"> reloadconnect()</span>:
+Recharges the connection.<span id="result_box7" class="short_text"
+ lang="en"><span class="hps"></span></span></li>
+  <li><span id="result_box7" class="short_text" lang="en"><span
+ class="hps"></span><span class="hps"></span></span><span class="hps"><span
+ id="result_box7" class="short_text"></span></span><span
+ style="font-weight: bold;">public boolean openconnect()</span>;
+Returns true if the connection is established, false otherwise.</li>
+</ul>
+<ul>
+</ul>
+<h3>Examples of use</h3>
+<pre>sarlab.connect();<br>//<br><br>sarlab.connect("192.168.1.3", "443", "VHDL Lab #1"); <br></pre>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<html>
+  <head>
+  <title>CoachLab II+ model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./CoachLabIIPlus.gif"> CoachLabII+ element </h2>
+    <p>EJS Element for CoachLab II+, a multifunctional interface for computerized measurement and control.</p>
+     <p> <b>Important notice:</b> Currently, the element only works under the Windows operating system.</p>
+    <h3>Usage</h3>
+      <p>
+      To add a CoachLabII+ element to your model, simply drag the icon element to the list of your model elements. 
+      In your model, call the element <i>reset()</i> method before any other method of the interface. 
+      </p>
+      <p>
+      Before running the simulation, though, make sure that:
+      <ol>
+        <li> the CoachLab II+ interface is connected to the computer on one if its USB ports,</li>
+        <li> you have installed the CoachLab II+ driver (use the CD included in the CoachLab II+ box),</li>
+        <li> you copy the DLL for your operating system anywhere in the java.library.path list of directories. 
+        (The DLLs can be found in the EJS bin/extension/DLLs directory.)
+          Under windows, rename the rxtxSerialXX.dll (XX=32 for a 32 bits Windows, 64 for a 64 bits Windows) to just rxtxSerial.dll,
+          and copy it, for instance, to C:\Windows\System32.
+          The Mac OS X DLL is not working right now.    
+        </li>
+      </ol>
+      </p>
+
+      <h3>Configuration methods</h3>
+      <ul>
+      <li> <i>void reset()</i>. Reset the interface at the default communication speed (833333 bd)</li>
+      <li> <i>void reset(int rate)</i>. Reset the interface at a given communication speed. Default is 300 (= 833333 bd)</li>
+      <li> <i>void reboot()</i>. Soft power-on reset of the interface</li>
+      <li> <i>void stop()</i>. Stop data communication to the port</li>
+      <li> <i>void resetInitialTime()</i>. Set the initial time. This is needed so that values read in sequence bear the correct time stamp</li>
+      <li> <i>void dispose()</i>. Free the communication channel on exit</li>
+      </ul>
+      </p>
+      
+      <h3>Input methods</h3> 
+      <p>
+      The following input methods require a channel (int in the range 1-4) and a sensor int value. 
+      The list of sensors currently supported is the following: <br>
+      (Use the integer number or the constant with the prefix es.uhu.serial.coach.CoachLabIIPlus, as in es.uhu.ejs.serial.CoachLabIIPlus.SENSOR_THERMOCOUPLE_0135i_m20_M110C)
+      <ul>
+      <li> <tt>  0 : SENSOR_ADC_OUTPUT </tt> </li> 
+      <li> <tt>  1 : SENSOR_GENERIC_SENSOR_m10M10V </tt> : Generic value in the range (-10 +10V) </li> 
+      <li> <tt>  2 : SENSOR_GENERIC_SENSOR_05V </tt> </li> 
+      <li> <tt> 10 : SENSOR_THERMOCOUPLE_0135i_m20_M110C </tt> : Temperature in the range (-20&degC +110&degC) </li> 
+      <li> <tt> 12 : SENSOR_THERMOCOUPLE_0135i_m200_M1300C </tt> : Temperature in the range (-200&degC +1300&degC)  </li> 
+      <li> <tt> 20 : SENSOR_FORCE_0663i_mM5N </tt> : Force in the range (-5N +5N) </li> 
+      <li> <tt> 22 : SENSOR_FORCE_0663i_mM50N </tt> : Force in the range (-50N +50N) </li> 
+      <li> <tt> 30 : SENSOR_MAGNETIC_FIELD_024i_m10M50mT </tt> : Magnetic field in the range (-10mT +50mT) </li> 
+      <li> <tt> 32 : SENSOR_MAGNETIC_FIELD_024i_m100M500mT </tt> : Magnetic field in the range (-100mT +500mT) </li> 
+      <li> <tt> 41 : SENSOR_CURRENT_m500M500mA </tt> : Current in the range (-500mA +500mA) </li> 
+      <li> <tt> 51 : SENSOR_DIFFERENTIAL_VOLTAGE_m10M10V </tt> : Voltage in the range (-10V +10V) </li> 
+      </ul>
+      </p>
+      <p>
+      The list of input methods is:
+      <ul>
+        <li> <i>double readValue (int channel, int sensorType)</i>. 
+        Read an analog channel (single reading). 
+        Returns the Normalized value of the measurement (V, N, A, mT...) or Double.NaN if failed to read
+        </li>
+        <li> <i>setTrigger (int channel, int sensorType, double level, boolean goingUp, int hysteresis, String methodName)</i>. 
+          Configure trigger options for subsequent reading of sequences of data (histeresis in the range 0 - 127).
+          When the signal reaches the trigger level, a sequence of data will be read. The object can wait in the background until the data is ready, 
+          and then invoke the given method of the simulation.
+          When the signal reaches the trigger level, a sequence of data will be read. When the data is ready, the program tries to set to true the value of a boolean variable
+          or call a public custom method (with no parameters) of the simulation. If no notification String is provided, the program waits until the data is ready.
+        </li>
+
+        <li> <i>readSequence(int channel, int sensorType, int nPoints, double totalTime)</i>. 
+        Reads one sequence of data from a single channel. If successful, the data can be obtained using:
+        <ul>
+          <li><i>double[] getSampledTimes()</i> : sampled times</li>
+          <li><i>double[] getSampledData(0)</i> : sampled data</li>
+        </ul> 
+        Returns true if successful, false otherwise.
+        </li>
+      
+        <li> <i>readSequence(int[] channels, int[] sensors, int nPoints, double totalTime)</i>. 
+        Reads one sequence of data from the given channels (up to four channels in the range 1-4). If successful, the data can be obtained using:
+        <ul>
+          <li><i>double[] getSampledTimes()</i> : sampled times</li>
+          <li><i>double[] getSampledData(i)</i> : sampled data on the i-th channel (from 0 to 3)</li>
+        </ul> 
+        Returns true if successful, false otherwise.
+        </li>
+      </ul>
+      </p>
+      
+      <h3>Output methods</h3>
+      <p>
+      The following output methods require a channel parameter which must be one of A1,A2,B1,B2,C1,C2,D1,D2:
+      <ul>
+      <li> <i>void setOutputEnabled(String channel, boolean enabled)</i>. Enable/Disable one of the output channels</li>
+      <li> <i>boolean setOutputMaskEnabled(int mask, boolean enabled)</i>. Enable several outputs at once. 
+      The mask is taken a a series of 0s and 1s, one for each of the outputs, in the same order as listed above.
+        Outputs which correspond to a '1' in the mask are set. 
+        Outputs corresponding to a '0' in the mask will remain unchanged.
+        Returns true if successful (the mask is in the range 0-255), false otherwise.
+      </li>
+      <li> <i>int getOutputStatus()</i>. Return a number between 0 and 255 with the current status of all the outputs.</li>
+      <li> <i>boolean setSwitch(String channel, boolean on)</i>. Turn on/of the switch module on the given channel.
+      Returns true if successful (correct channel), false otherwise.
+      </li>
+      <li> <i>boolean setPWM(String channel, int level)</i>. Set the PWM output level for a given channel. 
+      Outputs are dutycycled with a frecuency of 625 Hz in 16 levels (0-15).
+      Returns true if successful (correct channel), false otherwise.
+      </li>
+      <li> <i>boolean setAllOutputsEnabledTemporarily(String lastChannel, double time)</i>. 
+      Enables all outputs up to (and including) the given channel for a given period of time.
+      Returns true if successful (correct channel), false otherwise.
+      </li>
+      </ul>
+      </p>
+      <h3>More info</h3> 
+      <p>
+      A JavaDoc format description of the methods can be found at <a href="http://ccna1.diesia.uhu.es/coachEJS/">CoachLabII+</a>.
+      </p>
+      <h3>Example of input</h3>
+      <p>
+      (Connect the temperature sensor to the input channel "1>" on the interface.) 
+      <pre>
+coachLab.reset();
+double temperature = coachLab.readValue(1,10); // 10 is the temperature sensor in the range -20 +110 ¼C
+_println ("Temperature = "+temperature);
+    </pre>
+      <h3>Example of output</h3>
+      <p>
+      (Connect the switch module (D063) to A1 and A2 on the interface.)
+      </p>
+      <pre>
+coachLab.reset();
+coachLab.setOutputEnabled("A1",true);
+coachLab.setOutputEnabled("A2",true);
+coachLab.setSwitch("A1",true); // whatever is connected to the switch will power on 
+    </pre>
+  </body>
+</html>

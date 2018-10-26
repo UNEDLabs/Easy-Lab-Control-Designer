@@ -1,0 +1,46 @@
+<html>
+  <head>
+  <title>Parallel Sections model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./PJSections.png"> Parallel Sections model element 
+    </h2>
+    <p>
+      Parallel Sections defines a number of pages of code that are run as parallel sections on a shared memory parallel (SMP) computer 
+    </p>
+    <p> 
+    The element encapsulates access to <a href="http://www.cs.rit.edu/~ark/pj/doc/edu/rit/pj/ParallelSection.html">Parallel Section</a>
+    in the <a href="http://www.cs.rit.edu/~ark/pj.shtml">Parallel Java library</a>.
+    <h3>Usage</h3>
+      <p>
+      To add a set of parallel sections of code to your model, drag the icon element to the list of your model elements 
+      and enter the code for each of the parts of your parallel code. You can also modify the default region run code and the barrier action that synchronizes the sections.
+      </p>
+    <p>The element implements the following basic methods:
+    <ul>
+    <li><i>boolean execute(int nThreads)</i>: will run the parallel code defined for this region in nThreads parallel threads. 
+    The main thread blocks until all spanned threads finish their work. The number of threads must be bigger than 0, a value of 0 indicates
+    the computer should use the default number of threads (as specified by the "-Dpj.nt=4" command line directive) or just the maximum number of threads available.</li>
+    <li><i>int getThreadCount()</i>: returns the number of threads actually used in the last execution.</li>
+    <li><i>long getExecutionTime()</i>: returns the time (in milliseconds) of the last execution.</li>
+    <li><i>void resetInitialTime()</i>: resets the initial time to measure the execution time. (The initial time is reset automatically when the startAndReturn method is called.)</li>
+    <li><i>boolean isAlive()</i>: whether the code is currently running.</li>
+    <li><i>void release()</i>: releases the thread created for the element.(The element is released automatically when the simulation quits.)</li>
+    <li><i>void setAutoSimulationUpdate(boolean)</i>: whether the element should update the simulation after the final code. (Default is false.) If set to <i>false</i>, 
+             your code should probably call <i>_simulation.update()</i> in a suitable place for the fixed relations to execute and the view to reflect model changes.</li>
+    </ul>
+    </p>
+    
+    </p>
+        <h3>Example of use</h3>
+    <pre>
+pjSections.execute(4); // runs the parallel code using 4 threads 
+pjSections.execute(0); // runs the parallel code using the default number of threads
+_println ("The sections executed on "+pjSections.getThreadCount()+" threads,");
+_println ("and took "+pjSections.getExecutionTime()+" milliseconds.");
+    </pre>
+    </pre>
+  </body>
+</html>

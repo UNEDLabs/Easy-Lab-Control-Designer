@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Statistics model element</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+.auto-style2 {
+	margin-left: 40px;
+}
+  </style>
+</head>
+<body class="auto-style2">
+<h2> <img alt="" height="64" src="slavemodbus.png" width="64">&nbsp;&nbsp;&nbsp;&nbsp; 
+Slave Modbus Element</h2>
+<p> <span id="result_box" class="" lang="en"><span class="hps"></span></span></p>
+<h3>Other available methods.</h3>
+<p>From now on the most representative methods of the element are presented. Other advanced methods are included in an anexed page accesible by means of the icon &quot;Advanced methods&quot;.</p>
+<ul>
+	<li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short 	readAnalogInput(int ind)</strong>; //This function reads the value from an analog input pin.</span></li>
+	<li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short[] 	readAnalogInputs(int ind, int len)</strong>; //This function reads the value from several analog input pins.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short 	readAnalogRegister(int ind)</strong>; //This function reads an analog value from a register.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short[] 	readAnalogRegisters(int ind, int len)</strong>; //This function reads a list of analog value from registers and returns it as a short array.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>boolean 	readCoil(int ind)</strong>; //This function reads the value from the input digital pin whose position is passed as parameter.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>boolean[] </strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>readCoils(int ind, int len)</strong>; //This function reads the values from some input digital pins.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>boolean 	readDigitalInput(int ind)</strong>; //This function reads the value from the input digital pin whoe position is passed as parameter.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>boolean[] 	readDigitalInputs(int ind, int len)</strong>; //This function reads the values from a list of the input digital pins.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogInput(int ind, short value)</strong>; //This function writes a short value to an analog output pin.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogInputs(int ind, short[] value)</strong>; //This function writes an array of short values to several analog output pins.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogRegister(int ind, short value)</strong>; //This function writes a short value to an analog register.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogRegisters(int ind, short[] value)</strong>; //This function writes a list of short values to some analog registers.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeCoil(int ind, boolean value)</strong>; //This function writes the value passed as parameter to the output digital pin whose position is also passed as parameter.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeCoils(int ind, boolean[] value)</strong>; //This function writes the values passed as parameters to a list of output digital pins.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeDigitalInput(int ind, boolean value)</strong>; //This function writes the value passed as parameter to the output digital pin whose position is also passed as parameter.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeDigitalInputs(int ind, boolean[] value)</strong>; //This function writes the values passed as parameters to some output digital pins.</span></li>
+</ul>
+<h3>&nbsp;</h3>
+<h3><a href="slavemodbus_sec.html" target="_self">Advanced Methods</a></h3>
+<h3>&nbsp;</h3>
+<h3>Examples of use</h3>
+<pre>From now on the same example as the previous help sheet is implemented by the methods presented above
+
+if(slave.readDigitalInput(3)==true){
+	slave.writeCoil(0, true);
+	slave.writeAnalogInput(0,255);
+}</pre>
+<pre><br>
+</pre>
+</body>
+</html>

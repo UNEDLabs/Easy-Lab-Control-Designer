@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Statistics model element</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+.auto-style2 {
+	margin-left: 40px;
+}
+  </style>
+</head>
+<body class="auto-style2">
+<h2> <img alt="" height="64" src="SlaveModbusSarlabElement.png" width="64">&nbsp;&nbsp;&nbsp;&nbsp; 
+Slave Modbus Element</h2>
+<p> <span id="result_box" class="" lang="en"><span class="hps"></span><span class="hps">This is an EJS element that allows you to maintain an image of the values contained in the input / output pins of a data acquisition card. You can update the values of the output pins received from the master to the image and the values of the image of the input pins with the received from the card.</span></span></p>
+<h3>Usage</h3>
+<p> To add a Slave Modbus
+Element to your model, simply drag the icon element to the list of your
+model elements. <span id="result_box0" class="" lang="en"><span
+ class="hps">You must set</span> <span class="hps">the</span>
+following properties:</span></p>
+<ul>
+  <li><span id="result_box0" class="" lang="en"><span
+ style="font-weight: bold;">IP address</span> of the server.</span></li>
+  <li><span id="result_box0" class="" lang="en"><span
+ style="font-weight: bold;">Port</span> used by the server.</span></li>
+  <li><strong>idSlav</strong>e<span id="result_box0" class="" lang="en"><span
+ style="font-weight: bold;"> </span>
+  <span style="font-weight: bold;"
+ class="hps">&nbsp;</span><span
+ class="hps"><span lang="es">of the </span>identifier</span></span><span
+ class="hps"><span id="result_box0" class=""> slave</span></span><span id="result_box0" class=""><span class="hps"></span></span><span
+ class="hps"><span id="result_box0" class="">.</span></span></li>
+</ul>
+<h3>Available methods</h3>
+<p>To use this element an only method is really needed:</p>
+<ul>
+	<li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	run()</strong>; //This function updates the input pins with the internal structure.</span></li>
+</ul>
+<p>Once executed the method run, you can access the image of the process by means of the next variables:</p>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>boolean[] C = new boolean[numberCoilOutputs];</strong> //Variable to access the digital output pins of the  board.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>boolean[] I = new boolean[numberDigitalInputs];</strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong> //Variable to access the digital input pins of the  board.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short [] IR = new short[numberAnalogInputs];</strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong> //Variable to access the analog input pins of the  board.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong> short [] R = new short[numberAnalogRegister];</strong><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong> //Variable to access the analog output pins of the  board.</span></span></li>
+</ul>
+<p>Anyway there are some methods available to use the element. You can see them clicking <a href="slavemodbus_prim.html" target="_self">here</a></p>
+<h3>Examples of use</h3>
+<pre>slave.run();
+if(slave.I[3]==true){ //If the value of the digital input 3 is true, 
+	slave.C[0]=true; //then set the value of digital output 0 to TRUE
+	slave.R[0]=255; // and the value of the analog output 0 to 255
+}
+
+<br></pre>
+</body>
+</html>

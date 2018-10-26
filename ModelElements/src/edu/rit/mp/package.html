@@ -1,0 +1,157 @@
+<HTML>
+<HEAD>
+<TITLE>Package edu.rit.mp</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+Package edu.rit.mp contains the Message Protocol (MP),
+a transport layer protocol
+for sending messages using TCP.
+MP is intended
+for use in message passing parallel programming
+on cluster parallel computers.
+
+<P>
+<B>Operation</B>
+
+<P>
+A <B>source</B> process sends a message
+to a <B>destination</B> process
+through a <B>channel</B>.
+Each message includes a <B>tag</B>;
+this is just an integer that the source can use
+to convey metadata to the destination.
+Each message also includes a given number of <B>items</B>.
+Each item in a message is of a given <B>type</B>
+(the same type for all items in the message).
+The supported types are given in the table below.
+The table shows the Java type used to store the item in memory,
+the number of bytes used to represent the item in a message,
+and the range of values that can be represented.
+
+<P>
+For information on how to create channels
+and send and receive messages,
+see class <A HREF="ChannelGroup.html">ChannelGroup</A>.
+
+<P>
+<TABLE BORDER=1 CELLPADDING=4 CELLSPACING=1>
+<TR BGCOLOR="#E8E8E8">
+<TD ALIGN="center" VALIGN="baseline"><I>Type</I></TD>
+<TD ALIGN="center" VALIGN="baseline"><I>Stored&nbsp;As</I></TD>
+<TD ALIGN="center" VALIGN="baseline"><I>#&nbsp;of&nbsp;Bytes</I></TD>
+<TD ALIGN="center" VALIGN="baseline"><I>Range</I></TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Boolean</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>boolean</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">1</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>true</TT>,&nbsp;<TT>false</TT></TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Byte</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>byte</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">1</TD>
+<TD ALIGN="left" VALIGN="baseline">-128&nbsp;..&nbsp;127</TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Short</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>short</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">2</TD>
+<TD ALIGN="left" VALIGN="baseline">-32768&nbsp;..&nbsp;32767</TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Integer</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>int</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">4</TD>
+<TD ALIGN="left" VALIGN="baseline">-2147483648&nbsp;..&nbsp;2147483647</TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Signed&nbsp;8-bit&nbsp;integer</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>int</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">1</TD>
+<TD ALIGN="left" VALIGN="baseline">-128&nbsp;..&nbsp;127</TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Unsigned&nbsp;8-bit&nbsp;integer</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>int</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">1</TD>
+<TD ALIGN="left" VALIGN="baseline">0&nbsp;..&nbsp;255</TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Signed&nbsp;16-bit&nbsp;integer</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>int</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">2</TD>
+<TD ALIGN="left" VALIGN="baseline">-32768&nbsp;..&nbsp;32767</TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Unsigned&nbsp;16-bit&nbsp;integer</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>int</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">2</TD>
+<TD ALIGN="left" VALIGN="baseline">0&nbsp;..&nbsp;65535</TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Long</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>long</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">8</TD>
+<TD ALIGN="left" VALIGN="baseline">-9223372036854775808&nbsp;..&nbsp;9223372036854775807</TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Character</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>char</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">2</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>'\u0000'</TT>&nbsp;..&nbsp;<TT>'\uFFFF'</TT></TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Float</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>float</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">4</TD>
+<TD ALIGN="left" VALIGN="baseline">Same&nbsp;as&nbsp;<TT>float</TT></TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Double</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>double</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">8</TD>
+<TD ALIGN="left" VALIGN="baseline">Same&nbsp;as&nbsp;<TT>double</TT></TD>
+</TR>
+<TR>
+<TD ALIGN="left" VALIGN="baseline">Object</TD>
+<TD ALIGN="left" VALIGN="baseline"><TT>Object</TT></TD>
+<TD ALIGN="center" VALIGN="baseline">Varies</TD>
+<TD ALIGN="left" VALIGN="baseline">&nbsp;</TD>
+</TR>
+</TABLE>
+
+<P>
+<B>Message Format</B>
+
+<P>
+A message consists of the following sequence of bytes:
+<UL>
+<LI>
+A magic number, 30144596
+(an integer, four bytes, MSB first).
+<BR>&nbsp;
+<LI>
+The tag (an integer, four bytes, MSB first).
+<BR>&nbsp;
+<LI>
+The type of item (one byte).
+<BR>&nbsp;
+<LI>
+The number of items <I>N</I> (an integer, four bytes, MSB first).
+<BR>&nbsp;
+<LI>
+The item values,
+each item represented with the number of bytes
+given in the above table.
+For type = Object,
+the item values are represented
+as a sequence of bytes
+consisting of <I>N</I> objects
+serialized using Java Object Serialization.
+</UL>
+
+</BODY>
+</HTML>

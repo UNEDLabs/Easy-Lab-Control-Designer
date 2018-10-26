@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Phidget TextLCD</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2> <img style="width: 32px; height: 22px;" alt="TextLCD"
+ src="MotorControlHC.png"> Phidget Advanced Servo Controller<strong>
+(like the 1061 and 1066)</strong></h2>
+<p> This element allows you access
+to a&nbsp; Phidget AdvancedServo Controller&nbsp;device.&nbsp;</p>
+<ul>
+  <li>The PhidgetAdvancedServo 8-Motor (1061) allows you to control the
+position, velocity, and acceleration of up to 8 RC servo motors. It
+requires a 6-15VDC external power supply; its switching power supply
+allows the 1061 to efficiently operate from 6 to 15 VDC and can be used
+with a wide range of batteries.&nbsp;The 1061 has a high resolution of
+125 steps per degree; it measures the power consumption of each servo
+and its switching regulator protects the motors from overvoltage. It
+powers servo motors of up to 3.4 Amps.&nbsp;The 1061 continuously
+measures the current consumed by each motor with an accuracy of
+&plusmn;10%.
+  </li>
+</ul>
+<ul>
+  <li>The PhidgetAdvancedServo 1-Motor (1066) allows you to control the
+position, velocity, and acceleration of one RC servo motor. The 1066 is
+powered solely by the USB cable &ndash; no additional power source is
+required.&nbsp;The 1066 has a high resolution of 125 steps per degree;
+it measures the power consumption of the servo, and powers servo motors
+of up to 450mA.&nbsp;The AdvancedServo connects directly to a
+computer&rsquo;s USB port.
+With this element, you can
+access to the module directly (with the
+serial number) or through the network, using the WebService of the
+phidget's driver&nbsp;
+in a remote computer with the phidget AdvancedServo Controler
+connected (here, you need the IP, port and password too). </li>
+</ul>
+<h3>Usage</h3>
+<p> To use any Phidget element,
+drag an drop its icon to the list of
+model elements of your model. Then, edit the connection parameters and
+invoke <i>phidget.connect()</i>
+in your code. </p>
+<p> All methods returning a
+boolean will return <i>true</i>
+on
+successful completion of the command, <i>false</i>
+otherwise. Methods
+returning a double value will return <i>Double.NaN</i>
+if there is any
+error when connecting to the phidget. </p>
+<p>Available method for this
+particular phidgets include: </p>
+<ul>
+  <li><span style="font-weight: bold;">public boolean connect();</span>
+// establish the connection. Returns true if successful</li>
+</ul>
+....TODO
+<h3>Example of use</h3>
+<pre>// Init the module<br>myAdvancedServo.connect();<br>//<br>TODO<br><br></pre>
+</body>
+</html>

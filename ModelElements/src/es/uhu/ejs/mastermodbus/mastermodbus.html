@@ -1,0 +1,86 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Statistics model element</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+.auto-style2 {
+	margin-left: 40px;
+}
+  </style>
+</head>
+<body class="auto-style2">
+<h2> <img alt="" height="64" src="MasterModbus.png" width="64">&nbsp;&nbsp;&nbsp;&nbsp; 
+Master Modbus Element</h2>
+<p> <span id="result_box" class="" lang="en"><span class="hps"></span>This EJS element allows you to send values to the output pins of a  board and receive the values from its input pins by means of an image of the board structure</span>.</p>
+<h3>Usage</h3>
+<p>  To add a Master Modbus
+Element to your model, simply drag the icon element to the list of your
+model elements. <span id="result_box0" class="" lang="en"><span
+ class="hps">You must set</span> <span class="hps">the</span>
+following properties:</span></p>
+<ul>
+  <li><span id="result_box0" class="" lang="en"><span
+ style="font-weight: bold;">IP address</span> of the server.</span></li>
+  <li><span id="result_box0" class="" lang="en"><span
+ style="font-weight: bold;">Port</span> used by the server.</span></li>
+  <li><strong>idSlave</strong><span id="result_box0" class="" lang="en"> <span
+ class="hps"><span lang="es">of the </span>identifier</span></span><span
+ class="hps"><span id="result_box0" class=""> slave.</span></span></li>
+</ul>
+<h3>Available methods</h3>
+<p> From now on the most representative methods of the element are presented. Other advanced methods are included in an anexed page accesible by means of the icon &quot;Advanced methods&quot;</p>
+<ul>
+	<li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>boolean 
+	connect()</strong></span><span style="mso-ansi-language:EN-US">;//This function connects the MasterModbus class and the board using   default values of necessary parameters.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 
+  close(</strong></span><strong><span lang="EN-US" style="mso-ansi-language:EN-US">)</span></strong><span style="mso-ansi-language:EN-US">;</span>//This function disconnects the MasterModbus class and the  board.</li>
+</ul>
+<ul>
+  <li><strong>void 	monitorInit()</strong>; //This function creates a monitor to make easy the test of all the functions included in the MasterModbus class.</li>
+</ul>
+<ul>
+  <li><strong>short readAnalogInput(int ind);</strong> //This function reads the value from the image of an analog input.</li>
+</ul>
+<ul>
+  <li><strong>short[] readAnalogInputs(int start, int len);</strong> // This function reads the values from the image of several analog inputs  as short.</li>
+</ul>
+<ul>
+  <li><strong></strong><strong>short readAnalogRegister(int ind);</strong> // This function reads the value from an analog input of the image as short.</li>
+</ul>
+<ul>
+  <li><strong>short[] readAnalogRegisters(int start, int len);</strong> // This function reads the values from several analog inputs of the image as short.</li>
+</ul>
+<ul>
+  <li><strong>boolean readCoil(int ind);</strong> // This function reads the value from a digital input of the image.</li>
+</ul>
+<ul>
+  <li><strong></strong><strong>boolean[] 	readCoils(int start, int len);</strong> // This function reads the values from several digital inputs of the image.</li>
+</ul>
+<ul>
+  <li><strong>boolean 	readDigitalInput(int ind);</strong> //This function reads the value from a digital input of the image.</li>
+</ul>
+<ul>
+  <li><strong></strong><strong>boolean[] 	readDigitalInputs(int start, int len);</strong> //This function reads the values from several digital inputs of  the image.</li>
+</ul>
+<ul>
+  <li><strong></strong><strong>boolean 	writeAnalogRegister(int offset, int value);</strong> //This function writes the value from an analog output  to the image.</li>
+</ul>
+<ul>
+<li><strong>boolean 	writeAnalogRegisters(int start, short[] values);</strong> //This function writes the values to the image of several analog outputs.</li>
+</ul>
+<ul>
+  <li><strong>boolean 	writeCoil(int ind, boolean value)</strong><strong>;</strong> //This function writes a value in a digital output of Arduino to the image.</li>
+</ul>
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></p>
+<h3><a href="/es/uhu/ejs/mastermodbus/mastermodbus_par_ad.html" target="_blank">Methods with additional parameters</a></h3>
+<h3><a href="mastermodbus_sec.html" target="_blank">Advanced methods</a></h3>
+<h3>Examples of use</h3>
+<pre>master.connect();<br>if(master.readCoil(3)==true){ //If the value of the digital input 3 is true, 
+	master.writeCoil(0)=true; //then set the value of digital output 0 to TRUE
+	master.writeAnalogRegister(0, 255); // and the value of the analog output 0 to 255
+}<br></pre>
+</body>
+</html>

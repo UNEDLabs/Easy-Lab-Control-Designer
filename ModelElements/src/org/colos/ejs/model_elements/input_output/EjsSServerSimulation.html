@@ -1,0 +1,163 @@
+<html>
+  <head>
+  <title>EjsSServerSimulation model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="EjsSServerSimulation.png"> EjsSServerSimulation model element 
+    </h2>
+    <p>
+      EjsSServerSimulation encapsulates a WebSocket server to send/receive data to/from a remote EjsS WebSocket client. 
+      This element (differently to the basic WebSocketServer) implements a particular API for
+      communicating from this Java program (which typically acts as a model that provides data) to a remote
+      JavaScript EjsS simulation (which typically acts as a view). See EjsSClientSimulation model element 
+      for JavaScript simulations. 
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add an EjsSServerSimulation element to your program, drag the icon element to the 
+      list of your model elements and 
+      set the "Port" field to a constant integer (as in 8800, for example). If the port
+      is set, the service starts automatically. If the port is not set, then an explicit
+      call to <tt>start(portNumber)</tt> is required.
+      </p> 
+      <p>
+      	By default, the server waits for 30 seconds before proceeding with the simulation, 
+      	aborting it if no client connects to it. If all clients disconnect, it also waits
+      	a number of seconds before exiting the simulation.
+      	You can change the number of seconds to wait using the <tt>setWaitTime(seconds)</tt>
+      	method. 
+      </p>
+      <p>Optionally, modify the method that will be called if a message is received via the WebSocket connection.
+      This method is called only if none of the predefined command keywords is detected. Predefined keywords 
+      always start with an underscore character '_' (your extended API, if any, should therefore avoid this). 
+    </p>
+    <h3>Connection methods</h3>
+    <p>
+    The element implements the following connection methods:
+    <ul>
+    <li> <i>void start(int portNumber)</i> Starts the server service at the given port.</li>
+    <li> <i>void setWaitTime(int seconds)</i> Sets the number of seconds
+    	to wait for a connecting client, before exiting. Setting a time of 0 makes the
+    	server to wait for ever.</li>
+    <li> <i>boolean isConnected()</i> Whether there is a client connection open.</li>
+    <li> <i>int getPortnumber()</i> Returns the port number in which the serve runs.</li>
+    <li> <i>void stop()</i> Stops the server service at the given port.</li>
+    <li> <i>String[] getConnectionsIDs()</i> Reruns an array with the connected clients.</li>
+    </ul> 
+    <h3>Output methods</h3>
+    <p>
+    The API also includes the following output communication methods. All communication methods  return a true boolean 
+    if successful, false otherwise.
+    </p>
+    <ul>
+    <li> <i>boolean sendCommand(String keyword, Object... args)</i>. 
+      Sends the connected clients a command with a keyword and the values of one or more arguments.
+      The receiving model is responsible of processing the message through the user-defined
+      processing <i>function(String keyword, Object args)</i> for the input. (The object arguments 
+      has members of the form arg1, arg2, etc.) Example:
+      <pre>
+      function (keyword, args) { // At the JavaScript client simulation
+        if (keyword=="hello") console.log ("Hello world: "+args.arg1);
+      }
+      </pre>
+      Note: Do NOT use a keyword that starts with an underscore character '_'.
+    </li>
+    <li> <i>boolean sendVariables(String keyword, String... variables)</i>. 
+      Sends the connected clients a command with a keyword and the values of one or more variables of this 
+      simulation's model.
+      The receiving model is responsible of processing the message through the user-defined
+      processing <i>function (String keyword, Object args)</i> for the input. (The object arguments 
+      has members with the same names of the model variables) Example:
+      <pre>
+      ejssServer.sendVariables("update","t","x"); // In this simulation
+      </pre>
+      <pre>
+      function (keyword, args) { // At the JavaScript client
+        if (keyword=="update") console.log ("Value of (t,x) = ("+args.t+","+args.x+")");
+      }
+      </pre>
+      Note: Do NOT use a keyword that starts with an underscore character '_'.
+    </li>
+    <li> <i>boolean sendStatus()</i>. Sends the connected clients information about the playing status.
+    </li> 
+    </ul> 
+    <p>
+    Because the WebSocket client is typically an EjsS-generated simulation, the API also 
+    includes the following connection methods. They all use the sendCommand() method above, with
+    predefined keywords that all start with an underscore character '_'. Hence, for instance,
+    <i>client_play()</i> equals to <i>sendCommand("_play")</i>.
+    </p>
+    <ul>
+    <li> <i>boolean client_play()</i>. Equivalent to _play() in the remote client.</li>
+    <li> <i>boolean client_pause()</i>. Equivalent to _pause() in the remote client.</li>
+    <li> <i>boolean client_step()</i>. Equivalent to _step() in the remote client.</li>
+    <li> <i>boolean client_reset()</i>. Equivalent to _reset() in the remote client.</li>
+    <li> <i>boolean client_update()</i>. Equivalent to _update() in the remote client.</li>
+    <li> <i>boolean client_initialize()</i>. Equivalent to _initialize() in the remote client.</li>
+    <li> <i>boolean client_resetSolvers()</i>. Equivalent to _resetSolvers() in the remote client.</li>
+    <li> <i>boolean client_alert(String message)</i>. Equivalent to alert(message) in the remote client.</li>
+    <li> <i>boolean client_println(String message)</i>. Equivalent to _println(message) in the remote client.</li>
+    </ul> 
+    </p>
+    <h3>Input methods</h3>
+    <p>
+    This WebSocket server can also receive messages from the client. When this happens, some messages can
+    correspond to predefined commands but others are left for the user to process. The commands are
+    distinguished by a String keyword. Predefined commands have keywords that start with an underscore 
+    character '_' (such as "_play") and are generated by client functions (such as <i>server_play()</i>.)
+    </p>
+    <p>
+      Messages that are not recognized as predefined commands are passed to a user-defined 
+      <i>void processCommand(String keyword, Map<String,Object> data)</i>
+      method. It is the user responsibility to implement the proper response to the command. 
+      A simple implementation of <i>processCommand</i> follows:
+      <pre>
+      processCommand(String keyword, Map<String,Object> data) { // At this Java simulation
+        if (keyword.equals("values")) {
+          double t = getDouble(data,"t");
+          double x = getDouble(data,"x");
+          System.out.println ("Value of (t,x) = ("+t+","+x+")");
+        }
+      }
+      </pre>    
+      This example uses one of the element's utility methods:
+      <ul> 
+        <li><i>double getDouble(Map<String,Object> data, String variable)</i>. This method basically
+          calls <i>data.get("t")</i> but takes care of possible conversion problems (sometimes,
+          JavaScript variables can be coded as integers and one expects a double).
+        </li>
+        <li><i>double getString(Map<String,Object> data, String variable)</i>. 
+          This method returns the String associated to this variable name. Returns null
+          if the variable is not defined.
+        </li>
+      </ul> 
+    </p>
+    <p>
+    Alternatively, users interested in information about the client that sent the message can, instead, 
+    override the base class  
+      <i>void processCommand(org.java_websocket.WebSocket socket, String keyword, Map<String,Object> data)</i>
+      method. It is the user responsibility to implement the proper response to the command. 
+      The <i>socket</i> parameter can then be used to discriminate among clients.
+    </p>
+    <p>
+    If both methods are implemented, <i>processCommand(WebSocket, String, Map)</i> will be used and 
+    <i>void processCommand(String, Map)</i> will be ignored.
+    </p>
+    <p>
+    Finally, users interested can also run code when a new connection is established or an open connection 
+    is closed. For this, override the dummy base class 
+      <i>void onConnectionOpened(org.java_websocket.WebSocket socket)</i> 
+      and or
+      <i>void onConnectionClosed(org.java_websocket.WebSocket socket)</i>
+      methods.  
+      The <i>socket</i> parameter refers to the newly opened or just closed client. 
+    </p>
+    
+    <h3>Example of use</h3>
+    <pre>
+      ejssServer.sendVariables("update","t","x"); // In this simulation
+    </pre>
+  </body>
+</html>

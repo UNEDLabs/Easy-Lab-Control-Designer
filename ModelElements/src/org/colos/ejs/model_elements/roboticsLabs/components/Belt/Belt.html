@@ -1,0 +1,44 @@
+<html>
+  <head>
+  <title>Belt element</title>
+      <link rel="stylesheet" type="text/css" href="../style.css"></link>
+  </head>
+  <body">
+    <h2>
+        <img src="./Belt.gif"> Belt element 
+    </h2>
+    <p>
+     This element adds a belt element to the robotics lab. This element represents
+     a conveyor belt used to carry objects from one point to another. The object are moved, over a horizontal plane, 
+     in continuous motion.
+    </p>
+    <h3>Usage</h3>
+    <p>
+    The belt can be turned on and off using the connect() and disconnect() methods, respectively. 
+      </p>
+    The author can also edit a customization dialog for the belt. Typically, Length, Width and High customization fields must
+	be filled to change the dimensions of the belt.
+	  </p> 
+	As with the robots, the author also chooses a 3D group View element for display.
+	
+    <p>Other methods available for this element are:
+    <ul>
+    <p>- Information about the belt: 
+    <li><i>public double getLength()</i>: Gets the length of the belt </li>
+    <li><i>public double getWidth()</i>: Gets the width of the belt </li>
+    <li><i>public double getHigh()</i>: Gets the high of the belt </li>
+   
+   
+    <p>- Configuration of the belt: 
+    <li><i>public double getLinealDistance()</i>: Gets the linear distance of the belt in meters/seconds </li>
+    <li><i>public double getNumberOfPulses()</i>: Gets the number of encoder pulses </li>
+    <li><i>public int getVariatorFrequency()</i>: Gets the actual frequency of the belt variator </li>
+    <li><i>public void setVariatorFrequency(int variatorFrequency)</i>: Sets the variator frequency of the belt (unit in Hz) </li>
+  
+   	<p>- Configuration of the robotics laboratory: 
+   <li><i>public void attachObject(Element object)</i>: Puts the object in the belt </li>
+   <li><i>public void detachObject(Element object)</i>: Removes the object of the belt </li>
+   
+ 
+  </body>  
+</html>

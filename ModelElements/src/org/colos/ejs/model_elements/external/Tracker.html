@@ -1,0 +1,72 @@
+<html>
+  <head>
+  <title>Tracker model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./Tracker.png"> Tracker model element 
+    </h2>
+    <p>
+      This Tracker element allows your simulation to pass a data track from the EjsS model to the <a href="https://www.cabrillo.edu/~dbrown/tracker/">Tracker video 
+      analysis tool</a> (Tracker must be installed first). A data track consists of a series of points (t,x,y) that Tracker
+      displays on top of a video. You can configure the element, using its properties, to send data from your model
+      automatically after each evolution step. Alternatively, you can send data programmatically. See below for details. 
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add a Tracker element to your model, drag the icon element to the list of your model elements 
+      and edit the element properties. The properties include:
+      </p>
+    <ul>
+    <li><i>Name</i>: a descriptive name for the data to be sent to Tracker.</li> 
+    <li><i>Video file</i>: the video file to load when Tracker starts.</li> 
+    <li><i>TRK file</i>: the Tracker configuration file to load for that video.</li> 
+    <li><i>Start Frame</i>: the start frame for the video.</li> 
+    <li><i>End Frame</i>: the end frame for the video.</li> 
+    <li><i>Step Size</i>: the step size for the video.</li> 
+    <li><i>Use Data Time</i>: whether to use the data time.</li> 
+    <li><i>t</i>: the time component of the data track to be sent to Tracker.</li> 
+    <li><i>x</i>: the x (horizontal) component of the data track to be sent to Tracker.</li> 
+    <li><i>y</i>: the y (vertical) component of the data track to be sent to Tracker.</li> 
+    </ul>
+    <p>All properties are optional, except the Name, which must be unique within Tracker. 
+    You must specify all <i>t</i>, <i>x</i>, and <i>y</i> properties for the element to send data automatically to Tracker. The three components
+    of the data track must be of the same type: either double or double[].</p> 
+    <p>The Tracker model element contains an internal <a href="http://www.um.es/fem/Javadoc/OSP_EJS/org/opensourcephysics/display/DatasetManager.html">DatasetManager</a> object
+     that hosts the data. The typical operation with this model element is to connect to it and let the properties handle the communication with 
+     the element. Connection is done using the method:
+    <ul>
+    <li><i>boolean connect()</i>: connects to Tracker, starting it if needed, and sends all data to it
+    (configuration info + actual data). The method returns true, if successful, false otherwise 
+    (for instance, if Tracker is not installed or the connection fails for some reason).</li>
+    </ul>
+    <p>Data can be added or removed programmatically to (from) the track using the following methods:
+    <ul>
+      <li><i>void append(double t, double x, double y)</i>: appends the point (t,x,y) to the data.</li>
+      <li><i>void append(double[] t, double[] xpoints, double[] ypoints)</i>: appends the arrays of points (t[],x[],y[]) to the data.</li>
+      <li><i>void clear()</i>: clears all data in the track.</li>
+    </ul>
+    </p>
+    <p>Finally, you can access the internal DatasetManager object using the following method:
+    <ul>
+      <li><i>org.opensourcephysics.display.DatasetManager getDatasetManager()</i>: returns the internal DatasetManager object.</li>
+    </ul>
+    </p>
+    <p>
+    For more information, consult the <a href="http://www.um.es/fem/Javadoc/OSP_EJS">OSP Javadoc documentation</a> for objects in the <i>org.opensourcephysics.display package</i>.
+    </p> 
+    <h3>Example of use</h3>
+    <pre>
+// Usually, only tracker.connect() is needed, since properties will do the rest
+// But here is a more programmatic use.
+tracker.clear();
+tracker.setColumnNames("Time", "Distance", "Height");
+tracker.append(0.0, 0.0, 1.0); // Initial position at t=0 (x,y) = (0,1)    
+tracker.append(0.1, 0.1, 0.9); // Position at t=0.1    
+tracker.connect(); // Run Tracker and send the data (so far appended only locally) to it
+// ... somewhat later
+tracker.append(0.2, 0.2, 0.8); // Appends the data locally AND send it to Tracker
+    </pre>
+  </body>
+</html>

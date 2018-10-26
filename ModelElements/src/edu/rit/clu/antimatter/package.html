@@ -1,0 +1,61 @@
+<HTML>
+<HEAD>
+<TITLE>Package edu.rit.clu.antimatter</TITLE>
+</HEAD>
+<BODY>
+
+Package edu.rit.clu.antimatter
+provides the Antimatter Simulation,
+an example of an <I>N</I>-body problem.
+
+<P>
+The Antimatter Simulation program
+calculates the motion of a number of antiprotons
+moving in a two-dimensional plane.
+The antiprotons have equal, negative charges.
+Each antiproton experiences a repulsive force
+from every other antiproton
+that is directly proportional
+to the product of the antiprotons' charges
+and is inversely proportional
+to the square of the distance
+between the antiprotons.
+A magnetic field is imposed
+perpendicular to the plane of the antiprotons.
+As each antiproton moves,
+the magnetic field exerts a force on the antiproton
+that bends its path into a circle.
+
+<P>
+The Antimatter Simulation program
+maintains each antiproton's position, velocity, and acceleration.
+The program calculates the positions and velocities
+as a function of time
+by doing a series of discrete time steps.
+At each time step,
+the program calculates the total acceleration of each antiproton
+(due to repulsive forces from all other antiprotons
+plus the magnetic force),
+updates the velocity based on the acceleration,
+and updates the position based on the velocity and acceleration:
+<BR>&nbsp;
+<BR><B>v'</B> = <B>v</B> + <I>&delta;</I> <B>a</B>
+<BR>&nbsp;
+<BR><B>p'</B> = <B>p</B> + <I>&delta;</I> <B>v</B> + 1/2 <I>&delta;</I><SUP>2</SUP> <B>a</B>
+<BR>&nbsp;
+<BR>where <B>a</B> is the acceleration,
+<B>v</B> is the velocity before the time step,
+<B>v'</B> is the velocity after the time step,
+<B>p</B> is the position before the time step,
+<B>p'</B> is the position after the time step,
+and <I>&delta;</I> is the size of the time step.
+(These formulas represent the first few terms
+in the Taylor series expansions
+for velocity and position as a function of time.)
+
+<P>
+The cluster parallel programs in this package use Parallel Java (PJ)
+in package <A HREF="../../pj/package-summary.html">edu.rit.pj</A>.
+
+</BODY>
+</HTML>

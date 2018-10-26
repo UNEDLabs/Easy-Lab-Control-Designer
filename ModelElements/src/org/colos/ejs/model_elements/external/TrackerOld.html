@@ -1,0 +1,71 @@
+<html>
+  <head>
+  <title>Tracker model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./Tracker.png"> FreeFem++ model element 
+    </h2>
+    <p>
+      This Tracker element allows your simulation to pass video and data from the EjsS model to the <a href="https://www.cabrillo.edu/~dbrown/tracker/">Tracker video 
+      analysis tool</a> (Tracker must be installed first). 
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add a Tracker element to your model, drag the icon element to the list of your model elements 
+      and edit the element properties. The properties include:
+      </p>
+    <ul>
+    <li><i>Name</i>: a descriptive name for the data to be sent to Tracker.</li> 
+    <li><i>Video file</i>: the video file to load when Tracker starts.</li> 
+    <li><i>TRK file</i>: the Tracker configuration file to load for that video.</li> 
+    </ul>
+    <p>The Tracker model element contains an internal <a href="http://www.um.es/fem/Javadoc/OSP_EJS/org/opensourcephysics/display/DatasetManager.html">DatasetManager</a> object
+     that hosts one or more <a href="http://www.um.es/fem/Javadoc/OSP_EJS/org/opensourcephysics/display/Dataset.html">Dataset</a> objects. 
+    The typical operation with this model element is to add point data to the sets using the data methods below,
+    and then connect and send data to Tracker. The connection methods are the following:
+    <ul>
+    <li><i>boolean connect()</i>: connects to Tracker, starting it if needed, and sends all data to it (Name, clip and TRK files info + actual data).</li>
+    <li><i>boolean update()</i>: updates Tracker with the current state of the Data.</li>
+
+    <li><i>boolean disconnect()</i>: disconnects to Tracker (but does not close it). A new call to connect() is required to reconnect. </li>
+    <li><i>boolean isConnected()</i>: returns true if Tracker is running and connected to the simulation. Notice that it may take a few seconds from a call to connect() 
+    and Tracker actually being up and running.</li>
+    </ul>
+    </p>
+    <p>All these methods return true, if successful, false otherwise (for instance, if Tracker is not installed or the connection fails for some reason).
+    </p>
+
+    <p>Data is added to the Tracker model element using the following methods:
+    <ul>
+      <li><i>void clear();</i>: clears all data in all Datasets.</li>
+      <li><i>void clear(int datasetIndex);</i>: clears all data in the given Dataset.</li>
+      <li><i>void setXYColumnNames(int datasetIndex, String xColumnName, String yColumnName);</i>: sets the column names for the given Dataset.</li>
+      <li><i>void append(int datasetIndex, double x, double y);</i>: appends the point (x,y) to the given Dataset.</li>
+      <li><i>void append(int datasetIndex, double[] xpoints, double[] ypoints);</i>: appends the arrays of points (x[],y[]) to the given Dataset.</li>
+    </ul>
+    </p>
+    <p>Finally, you can access the internal DatasetManager and its Datasets using the following methods:
+    <ul>
+      <li><i>DatasetManager getDatasetManager();</i>: returns the internal DatasetManager object.</li>
+      <li><i>Dataset getDataset(int datasetIndex);</i>: returns the given Dataset.</li>
+    </ul>
+    </p>
+    <p>
+    For more information, consult the <a href="http://www.um.es/fem/Javadoc/OSP_EJS">OSP Javadoc documentation</a> for objects in the <i>org.opensourcephysics.display package</i>.
+    It may be also convenient that you add the following import statement to your simulation <i>Imports</i> field: <i>org.opensourcephysics.display.*</i>.
+    </p> 
+    <h3>Example of use</h3>
+    <pre>
+tracker.clear();
+tracker.setXYColumnNames(0,"time","x");
+tracker.append(0, 0.0, 0.0);    
+tracker.append(0, 0.1, 0.01);    
+tracker.connect(); // runs the script in the editor
+// ... somewhat later
+tracker.append(0, 0.2, 0.04);
+tracker.update();
+    </pre>
+  </body>
+</html>

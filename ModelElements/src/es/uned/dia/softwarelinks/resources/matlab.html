@@ -1,0 +1,63 @@
+<html>
+  <head>
+  <title>RIP-Matlab model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h2>
+      <img src="./matlabicon.png"> RIP-Matlab model element 
+    </h2>
+    <p>
+      A RIP-Matlab model element provides an implementation of the Remote Interoperability Protocol (RIP) and encapsulates the connection with Matlab software to control the execution of a VI.
+    </p>
+
+    <h3>Usage</h3>
+      <p>
+      To add a RIP-Matlab model element to your model, drag the icon element to the list of your model elements and
+      set the name of the variable for referring to the element.
+      The connection can be configured in the preferences window: the
+      address of the server, the port to establish the connection and, optionally, the variables that should be automatically synchronized
+      between EJS and MATLAB.
+      </p>
+    <p>
+
+  The RIP protocol provides an API to communicate with the server. The methods are categorized by functionality:
+	Connection control:
+	<ul>
+		<li> <i>connect()</i> Creates a new connection with MATLAB.</li>
+    <li> <i>disconnect()</i> Disconnects from MATLAB Server.</li>
+  </ul>
+  Data transmission:
+  <ul>
+		<li> <i>get(String[] variables)</i> Get the value of variables from the server.</li> 	
+		<li> <i>set(String[] variables, Object values[])</i> Set the value of variables in the server.</li> 	
+	</ul>
+  Command execution:
+  <ul>
+    <li> <i>eval(String command)</i> Evaluates a MATLAB command.</li>  
+  </ul>
+
+  Calling get() and set() method without arguments synchronizes only the variables defined in the element configuration dialog.
+
+    </p>
+    <h3>Example of use</h3>
+    <p>    
+    	The following code is usually included into an initialization page, and it must be executed to set up the connection (we use <i>matlab</i> as instance name of the element)
+    </p>
+    <pre>
+matlab.connect();
+    </pre>    
+    <p>
+    The following code is usually included into an evolution page, to exchange data periodically with the server.
+    </p>
+    <pre>
+matlab.step();
+    </pre>
+    <p>   	
+    The following code must be executed to finalize the execution properly.
+    </p>
+    <pre>
+matlab.disconnect();
+    </pre>
+  </body>
+</html>

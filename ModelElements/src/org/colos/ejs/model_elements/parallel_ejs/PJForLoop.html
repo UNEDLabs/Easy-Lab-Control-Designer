@@ -1,0 +1,44 @@
+<html>
+  <head>
+  <title>Parallel Java ForLoop model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./PJForLoop.png"> Parallel Java ForLoop model element 
+    </h2>
+    <p>
+      PJForLoop defines a for loop of integer or long index that runs in parallel on a shared memory parallel (SMP) computer 
+    </p>
+    <p> 
+    The element encapsulates access to both <a href="http://www.cs.rit.edu/~ark/pj/doc/edu/rit/pj/IntegerForLoop.html">IntegerForLoop</a> and
+    <a href="http://www.cs.rit.edu/~ark/pj/doc/edu/rit/pj/LongForLoop.html">LongForLoop</a>
+    in the <a href="http://www.cs.rit.edu/~ark/pj.shtml">Parallel Java library</a>.
+    <h3>Usage</h3>
+      <p>
+      To add a PJForLoop  element to your model, drag the icon element to the list of your model elements 
+      and edit it to select the number of processors to use, the index range, the scheduling policy, and to enter the code for each of the parts of your parallel for loop.
+      </p>
+    <p>The element implements the following basic methods:
+    <ul>
+    <li><i>long startAndWait(int nThreads)</i>: runs the code in nThreads parallel threads and waits for completion. Returns the time elapsed in milliseconds. 
+    <li><i>boolean startAndReturn(int nThreads)</i>: executes the code in parallel with nThreads starting in a separate Thread. (That it, the call returns immediately.) Returns true is successfully started. 
+    <li><i>int getThreadCount()</i>: returns the number of threads actually used in the last execution.</li>
+    <li><i>long getExecutionTime()</i>: returns the time (in milliseconds) of the last execution. -1 if the region has never been run.</li>
+    <li><i>void resetInitialTime()</i>: resets the initial time to measure the execution time. (The initial time is reset automatically when the startAndReturn method is called.)</li>
+    <li><i>boolean isAlive()</i>: whether the code is currently running.</li>
+    <li><i>void release()</i>: releases the thread created for the element.(The element is released automatically when the simulation quits.)</li>
+    <li><i>void setAutoSimulationUpdate(boolean)</i>: whether the element should update the simulation after the final code. (Default is false.) If set to <i>false</i>, 
+             your final code should probably call <i>_simulation.update()</i> in a suitable place for the fixed relations to execute and the view to reflect model changes.</li>
+    </ul>
+    </p>
+        <h3>Example of use</h3>
+    <pre>
+pjForLoop.startAndWait(4); // runs the parallel loop using 4 threads and waits for completion 
+pjForLoop.startAndWait(0); // runs the parallel loop using the default number of threads
+_println ("The loop executed on "+pjForLoop.getThreadCount()+" threads,");
+_println ("and took "+pjForLoop.getExecutionTime()+" milliseconds.");
+    </pre>
+    </pre>
+  </body>
+</html>

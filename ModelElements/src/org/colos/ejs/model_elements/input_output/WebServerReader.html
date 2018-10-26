@@ -1,0 +1,49 @@
+<html>
+  <head>
+  <title>Web Server Reader model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./WebServerReader.png"> Web Server model element 
+    </h2>
+    <p>
+      A web server reader sends commands to an HTTP web server and reads its response.
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add a web server reader element to your model, drag the icon element to the list of your model elements and 
+      set the "Server address" field to the base URL of your server or link it to a String model variable (as in <i>%myServerURLString%</i>) that will contain it.
+      </p>
+    </p>
+    <p>
+    A web server reader element does not connect to the web server until you instruct it to do so (in any suitable part) in your model code.
+    </p>
+    <p>
+    A call to the element method <i>String readOutput(String _command)</i> will send the _command string appened to the server address and will read
+    teh server's output. This makes it easy to send PHP commands to a given server or read different pages from the same server. The method returns a
+    String with the server response to the command, or null if there was any error in the process.
+    </p>
+    <p>
+    A call to the element method <i>String getServerAddress()</i> returns the address actually used by the element.
+    </p>
+    <p>
+    You can also change the server address programmatically, using the method <i>setServerAddress(String _serverAddress) </i>.
+    This sets the server address to a constant String (such as "http://www.um.es") or links it to a String model variable (such as "%myURLStringVariable%") 
+    which will need to provide the correct URL value.
+    </p>
+    <p> Notice that the element will correct the URL of the final command sent to the server. For instance, spaces are replaced by 
+    the more correct %20 special character combination. Similarly, 'and' characters (&) are replaced by %26.
+    <h3>Example of use</h3>
+    The following code reads the last version of EJS as indicated in the EJS wiki. (Notice that the call to <i>setServerAddress</i> can be removed by editing the element's properties.) 
+    <pre>
+webReader.setServerAddress("http://www.um.es/fem/EjsWiki");
+String responseStr = webReader.readOutput("/Site/EjsCurrentVersion?action=source");
+if (responseStr==null) {
+  _println("Could not read response from "+webReader.getServerAddress());
+  return;
+}
+_println("EJS current version is " + responseStr);
+    </pre>
+  </body>
+</html>

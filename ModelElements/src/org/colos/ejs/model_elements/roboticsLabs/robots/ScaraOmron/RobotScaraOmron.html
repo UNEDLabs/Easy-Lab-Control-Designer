@@ -1,0 +1,111 @@
+<html>
+  <head>
+  <title>Robots model element</title>
+      <link rel="stylesheet" type="text/css" href="../style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./Scara_Omron.gif"> Robot Scara Omron model element 
+    </h2>
+    <p>
+     This element provides access to a RobotScaraOmron
+     
+    </p>
+    <p> 
+    The element encapsulates access to a new Java API (Application Programming Interface), a API designed specifically for manipulator robots that implements all the functions
+    and algorithms necessary for the modeling of robotics systems.
+    
+    <h3>Usage</h3>
+      <p>
+      To add a robotScaraOmron element to your model, drag-and-dropping the robotScaraOmron element of our robotic model elements. This action adds both the model 
+      and the view features of a Scara robot to an existing EJS simulation.
+      </p>
+      The robot thus added can be configured to either just display on the EJS view (virtual laboratory), to control a real robot via Telnet (remote laboratory), 
+      or both. 
+	  
+      </p>
+    <p>The methods available for this element are:
+    <ul>
+    <p>- Information about the robot: 
+    <li><i>public int getDOF()</i>: Gets the number of degrees of freedom (DOF) of the robot </li>
+    <li><i>public int getCartesianArraysLength()</i>: Gets the length of arrays with Cartesian information of points</li>
+    <li><i>public double[] getHome()</i>: Returns the default position of the joints</li>  
+    <li><i>public double[] getCartesianHome()</i>: Returns the default position of the effector in Cartesian coordinates</li>  
+    <li><i>public double[] forwardKinematics(double[] q, double[] coordinates)</i>: Translates a point from joint coordinates to Cartesian coordinates</li>
+    <li><i>public double[] inverseKinematics(double[] coordinates, double[] q, boolean shoulder, boolean elbow, boolean wrist)</i>: Translates a point from Cartesian coordinates to joint coordinates</li>
+    
+    <p>- Positioning the robot:
+    <li><i>public void home() throws Exception</i>: Moves the robot to the initial position</li>  
+    <li><i>public double[] getCurrentQ()</i>: Returns the current position of the joints</li>  
+    <li><i>public void moveToQ(double[] q) throws Exception</i>: Moves the robot to the given joint position </li>
+    <li><i>public void moveToC(double[] point) throws Exception</i>: Moves the robot to the given Cartesian position </li>
+    
+    <p>- Trajectories:
+    <li><i>public Trajectory setLinearTrajectory(double[] qi, double[] qf, double duration)</i>: Defines and sets a Linear trajectory with the variables in joint coordinates </li>
+    <li><i>public Trajectory setCartesianLinearTrajectory(double[] xi, double[] xf, double duration)</i>: Defines and sets a Linear trajectory with the variables in Cartesian coordinates </li>
+    <li><i>public Trajectory setSplineTrajectory(double[] qi, double[] qInt, double[] qf, double tInt, double duration)</i>: Defines and sets a Spline trajectory with an intermediate point and the variables in joint coordinates </li>
+    <li><i>public Trajectory setCartesianSplineTrajectory(double[] xi, double[] xInt, double[] xf, double tInt, double duration)</i>: Defines and sets a Spline trajectory with an intermediate point and the variables in Cartesian coordinates </li> 
+    <li><i>public Trajectory setSpline2Trajectory(double[] qi, double[] qInt1, double[] qInt2, double[] qf, double tInt1, double tInt2, double duration)</i>: Defines and sets a Spline trajectory with two intermediate point and the variables in joint coordinates </li>
+    <li><i>public Trajectory setCartesianSpline2Trajectory(double[] xi, double[] xInt1, double[] xInt2, double[] xf, double tInt1, double tInt2, double duration)</i>: Defines and sets a Spline trajectory with two intermediate point and the variables in Cartesian coordinates </li>
+    <li><i>public Trajectory setTrapezoidTrajectory(double[] qi, double[] qf, double duration)</i>: Defines and sets a Trapezoid trajectory with the variables in joint coordinates </li>
+    <li><i>public Trajectory setCartesianTrapezoidTrajectory(double[] xi, double[] xf, double duration)</i>: Defines and sets a Trapezoid trajectory with the variables in Cartesian coordinates </li>  
+    <li><i>public Trajectory setTrapezoid2Trajectory(double[] qi, double[] qInt, double[] qf, double tInt, double duration)</i>: Defines and sets a Trapezoid trajectory with an intermediate point and the variables in joint coordinates </li>
+    <li><i>public Trajectory setTrapezoid2CartesianTrajectory(double[] xi, double[] xInt, double[] xf, double tInt, double duration)</i>: Defines and sets a Trapezoid trajectory with an intermediate point and the variables in Cartesian coordinates </li>
+    
+    <p>- Moving along a path:
+    <li><i>public void trajectoryHome() throws Exception</i>: Moves the robot to the starting point of the trajectory</li>
+    <li><i>public void trajectoryEnd() throws Exception</i>: Moves the robot to the end-point of the trajectory </li>
+    <li><i>public void trajectoryAtTime(double t) throws Exception</i>: Moves the robot to the point of the trajectory at time t </li>
+    <li><i>public void trajectoryStep(double step) throws Exception</i>: Moves the robot to the next point of the trajectory </li>
+    
+    <p>- Information of a path:
+    <li><i>public double[] trajectoryGetPoint(double t)</i>: Returns the point of the trajectory at time "t" </li>
+    <li><i>public double trajectoryTime()</i>: Returns the current time of the trajectory </li>
+    <li><i>public boolean trajectoryFinished(double deltaT)</i>: Returns whether the robot is at the end-point of the trajectory (after a move of "deltaT")</li>
+   
+    <p>-Visualizing paths:
+    <li><i>public void drawPoint(double t, boolean alsoInvalids)</i>: Draws the point of the trajectory to the instant "t"</li>
+    <li><i>public void drawPoints(double[] times, boolean alsoInvalids)</i>: Draws the points of the trajectory to the instants "times" </li>
+    <li><i>public void drawTrajectory(int nPoints, boolean alsoInvalids)</i>: Draws a number of points of the path</li>
+    <li><i>public void trajectorySetVisible(boolean show)</i>: Makes the path is visible or not </li>
+    <li><i>public void trajectoryClear()</i>: Clears the trajectory designed</li>
+    <li><i>public void trajectorySetColor(Color color)</i>: Sets a specific color to the trajectory </li>
+    <li><i>public void trajectorySetLineWidth(float width)</i>: Sets a specific width to the trajectory </li>
+  
+     <p>- Restrictions:
+    <li><i>public double getJointMinimum(int joint)</i>: Gets the minimum allowed value for the given joint</li>
+    <li><i>public double getJointMaximum(int joint)</i>: Gets the maximum allowed values of the given joint</li>
+    <li><i>public double getJointSpeedMaximum(int joint)</i>: Gets the maximum allowed velocity value for the given joint</li>
+    <li><i>public double getJointAccelerationMaximum(int joint)</i>: Gets the maximum allowed acceleration value for the given joint </li>
+    <li><i>public boolean setSpeedLimit(int joint, double maxSpeed)</i>: Sets the speed limit of the joint</li>
+    <li><i>public boolean setSpeed(int speed) throws Exception</i>: Sets the speed percent for the robot </li>
+    <li><i>public boolean setAccelLimit(int joint, double maxAccel)</i>: Sets the acceleration limit of the joint</li>
+    <li><i>public boolean setAccel(int accel) throws Exception</i>: Sets the acceleration percent for the robot </li>
+    <li><i>public boolean isvalidPoint(double x, double y, double z)</i>: Checks if a point (x,y,z) is valid or not </li>
+   
+    <p>- Remote communication with the robot:
+    <li><i>public void connect() throws Exception</i>: Establishes the remote connection </li>
+    <li><i>public void disconnect() throws Exception</i>: Closes the remote connection </li>
+    
+    <p>- Configuration of the robotics laboratory: 
+   <li><i>public void attachObject(Element object)</i>: The robot attaches an object of the laboratory  </li>
+   <li><i>public void detachObject(Element object)</i>: Removes the object of the robot </li>
+        <h3>Example of use</h3>
+    <pre>
+    //Establishes the connection with the real robot
+    try{
+      robotScaraOmron.connect();
+    }catch(Exception _exc){};
+    
+    //Moves the robots to the given joint position
+    double[] point = {45, 45, 0.02, 180}; 
+    try{
+      robotScaraOmron.moveToQ(point);
+    }catch(Exception _exc){};
+    //Closes the remote connection 
+    try{
+      robotScaraOmron.disconnect();
+    }catch(Exception _exc){};
+    </pre>
+  </body>
+</html>

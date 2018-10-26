@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>EJS-LabVIEW model element</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2>
+    <img src="./Labview.png"> EJS-LabVIEW model element
+</h2>
+<p>
+    A model elements that provides access to LabVIEW through internet (using XML-RPC in version 2.0) if JIL server is enabled.
+</p>
+<br>
+<h3>Usage</h3>
+<p>
+    To add a LabVIEW model element to your model, drag the icon element to the list of your model elements and
+    set the name of the variable for referring to the element.
+    The connection can be configured in the preferences window, the address of the server, the port to establish
+    the connection and the path to the LabVIEW VI.
+
+    The links between the EJS variables and the controls/indicators of LabVIEW also can be done	in this window.
+</p>
+<br>
+The element implements the following methods:
+<ul>
+    <li><i>String connect(String ServerIP)</i>: Connects with the JIL server in the given IP and port. Returns <i>"Ok"</i>
+        if the connection is successful.</li>
+    <li><i>String connect()</i>: If no argument is provided, this method will connect to the server address
+        indicated in its corresponding field in the preferences window of the element.</li>
+    <br>
+    <li><i>String openVI(String ViFilePath)</i>: Opens the .vi file in the server side, and obtains the indicators
+        and controls of the .vi.</li>
+    <li><i>String openVI()</i>: If no argument is provided, this method will open the .vi indicated in the FilePath
+        field in the preferences windows of the element.</li>
+    <br>
+    <li><i>String runVI()</i>: Runs the .vi and returns a message <i>"VI running"</i></li>
+    <br>
+    <li><i>step()</i>: Sends the new values of the controls and get the values of the indicators. Exchanges values
+        for all the	variables that have been linked in the preferences window.</li>
+    <br>
+    <li><i>Boolean getBoolean(var2get)</i>: Gets the value of a boolean indicator in the .vi called var2get and returns it.</li>
+    <br>
+    <li><i>Int getInt(var2get)</i>: Gets the value of an integer indicator in the .vi called var2get and returns it.</li>
+    <br>
+    <br>
+    <li><i>Double getDouble(var2get)</i>: Gets the value of a double indicator in the .vi called var2get and returns it.</li>
+    <br>
+    <li><i>Float getFloat(var2get)</i>: Gets the value of a float indicator in the .vi called var2get and returns it.</li>
+    <br>
+    <li><i>String getString(var2get)</i>: Gets the value of a string indicator in the .vi called var2get and returns it.</li>
+    <br>
+    <li><i>String setValue(var2set,value2set)</i>: Sets the value of the control in the .vi called var2set to value2set.</li>
+    <br>
+    <li><i>String stopVI()</i>: Stops the .vi in execution, and returns a message <i>"VI stopped"</i></li>
+    <br>
+    <li><i>String closeVI()</i>: Closes a .vi and returns a message <i>"VI closed successfully"</i></li>
+    <br>
+    <li><i>String disconnect()</i>: Disconnects from server and returns a message <i>"See you soon"</i></li>
+    <br>
+    <li><i>Boolean isConnected()</i>: Returns <i>true</i> if the connection with the JIL server is opened and correctly
+        working, and <i>false</i> otherwise.
+    <li><i>Boolean isRunning()</i>: Returns <i>true</i> if the LabVIEW VI is running and <i>false</i> if it is stopped.
+</ul>
+<br>
+<h3>Example of use</h3>
+<p>
+    The following code is usually included into an initialization page, and it must be executed to set up the connection.
+    This code use <i>labview</i> as the name given to the model element instance (replace it by <i>labVIEW_v1_0</i> if you
+    are using version 1.0 with its default name or by <i>labVIEW_v2_0</i> if you are using version 2.0 with its default name.
+</p>
+<pre>
+    labview.connect();
+    labview.openVI();
+    labview.runVI(false);
+</pre>
+<p>
+    The following code is usually included into an evolution page, to exchange data periodically with the server.
+</p>
+<pre>
+    labview.step();
+</pre>
+<p>
+    The following code must be executed to finalize the execution properly.
+</p>
+<pre>
+    labview.stopVI();
+    labview.closeVI();
+    labview.disconnect();
+</pre>
+</body>
+</html>

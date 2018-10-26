@@ -1,0 +1,37 @@
+<html>
+  <head>
+  <title>Socket Comm model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./SocketComm.png"> Socket Comm model element 
+    </h2>
+    <p>
+      A socket comm element allows establishing a socket communication mechanisms between applications.
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add a SocketComm reader element to your model, drag the icon element to the list of your model elements and 
+      edit the "Input"  and "Output" editors to provide the communication protocol.
+      </p>
+      <p>
+      The "Input" code is run autommatically whenever data is received through the socket. The "Output" code must be
+      explicitily invoked through the <i>sendData()</i> method.
+      </p>  
+    <p>The element implements the following basic methods:
+    <ul>
+    <li><i>boolean start()</i>: Starts the communication 
+    <li><i>boolean stops()</i>: Stops the communication 
+    <li><i>boolean sendData()</i>: Runs the "Output" code to prepare the output data and the sends it the streaming data. 
+    </ul>
+    </p>
+        <h3>Example of use</h3>
+    <pre>
+socketComm.start(); // Starts the connection 
+socketComm.sendData(); // Sends the output data
+socketComm.stop(); // Stops the connection 
+    </pre>
+
+  </body>
+</html>

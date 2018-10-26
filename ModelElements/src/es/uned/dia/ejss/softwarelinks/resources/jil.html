@@ -1,0 +1,82 @@
+<html>
+  <head>
+  <title>JIL model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./JiL.png"> JIL model element 
+    </h2>
+    <p>
+      JIL provides access to Labview through internet using XML-RPC if JIL server is enabled.
+    <h3>Usage</h3>
+      <p>
+      To add the JIL element to your model, drag the icon element to the list of your model elements.
+      </p>
+    <p>The element implements the following basic methods:
+    <ul>
+    <p>
+	<li><i>String connect(String ServerIP)</i>: Connects with the JIL server in the given IP and port. Returns <i>"Ok"</i> if the connection is successful. 
+	<li><i>String connect()</i> : Another option to connect using the server field in the editor of the EjsS element.
+	</li>
+    </p>
+	<p><li><i>String openVi(String ViFilePath)</i>: Open the .vi file in the server side, and obtains the indicators and control of the .vi.
+	<li><i>String openVi()</i>: Another option to open vi using the FilePath field in the editor of the EjsS element.Both methods update the structures controlName/controlType/controlValue and indicatorName/ indicatorType/ indicatorValue, if the connection is successful, and can be checked using:
+	<br>
+	<br>jiL.controlName	    //(Name of the control)
+	<br>jiL.indicatorName	  //(Name of the indicator)
+	<br>jiL.controlType	    //(Type of the control)
+	<br>jiL.indicatorType	  //(Type of the indicator)
+	<br>jiL.controlValue	  //(Value of the control)
+	<br>jiL.indicatorValue	//(Value of the indicator)
+	</li></p>
+    
+	<p><li><i>String runVi()</i>: Runs the open vi in the server side, and returns a message <i>"VI running"</i></li></p>
+	
+	<p><li><i> step()</i>: Synchronize the running vi variables with the server side. Exchanges all the linked variables and evaluate the code in the editor, like the next pseudocode  </li></p>
+	<pre>
+	jiL.step = function(){
+	// === Get and Set function calls ===
+	jiL.setVariable("doublein",	value2set );
+	valueGet =	jiL.getVariable("doubleout");
+	return;
+	</pre>
+}
+	
+	<p><li><i>Type_of_var2get getVariable(var2get)</i>: : Gets the value of the indicator called var2get and returns it.
+	
+	<p><li><i>String setVariable(var2set,value2set)</i>:  Sets the value of the control called var2set to value2set. Return <i>"OK"</i> if successfull
+	
+	<p><li><i>String stopVi()</i>: Stops the running vi in the server side, and returns a message <i>"VI stopped"</i></li></p>
+	
+	<p><li><i>String closeVi()</i>: Closes a stopped and open vi in the server side, and returns a message <i>"VI closed successfully"</i></li></p>
+	
+	<p><li><i>String disconnect()</i>: Disconnect from server, and returns a message <i>"See you soon"</i></li></p>
+	
+	</li>
+    </ul>
+    </p>
+        <h3>Example of use: Appropriate order when calling methods</h3>
+    <pre>
+	//jiL.messages contains all the incoming messages always. In this example, answer contains the response after
+	answer = jiL.connect("http://127.0.0.1:2055");	// or answer = jiL.connect(); if the element editor is used
+	answer = jiL.openVi("JiLTest.vi");	// or answer = jiL.openVi(); if the element editor is used
+	var viVars = "";
+	//The next lines can be added wherever between openVi and closeVi call. 
+	//viVars contains a string with the controls/indicators names and values, obtained from the vi. 
+	for(n=0; n  &lsaquo; jiL.controlType.length; n++){
+		viVars=viVars + "\n"+ jiL.controlName[n] + " = " + jiL.controlValue[n];
+	}
+	for(n=0; n &lsaquo; jiL.indicatorType.length; n++){
+		viVars=viVars + "\n"+ jiL.indicatorName[n] + " = "  +jiL.indicatorValue[n];
+	}
+	answer = jiL.runVi();
+	jiL.step();
+	answer = jiL.setVariable("doublein",0.55);  //sets the value of the control called "doublein" to 0.55
+	value = jiL.getVariable("stringout");      //gets the value of the indicator "stringout" and returns his value
+	answer = jiL.stopVi();
+	answer = jiL.closeVi();
+    </pre>
+  </body>
+</html>
+

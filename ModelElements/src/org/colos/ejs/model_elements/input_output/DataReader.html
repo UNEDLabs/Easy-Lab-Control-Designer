@@ -1,0 +1,68 @@
+<html>
+  <head>
+  <title>Data Reader model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./DataReader.png"> Data Reader model element 
+    </h2>
+    <p>
+      A data reader encapsulates an OSP DataFile class to read a text file with a double[][] array of data.
+    </p>
+    <p>
+    The file must consist of a number of character-delimited text lines, each containing one of:
+    <ul>
+      <li>A name for the data, specified by a line: <b># name:</b> Data from the model</li>
+      <li>Column names for the data columns, given by a line: <b># columnNames:</b> aName anotherName yetAnotherName</li>
+      <li>One or more columns of double data values, given by a line: data1 data2 data3</li>
+      <li>All other lines, starting with a <b>#</b> character are considered comments</li>
+    </ul>
+    Notice that the separator character must be the same all through the file (a blank space or a tab are excellent candidates),
+    and that the name of entries in all line must match.
+      </p>
+    <h3>Usage</h3>
+      <p>
+      To add a data reader element to your model, drag the icon element to the list of your model elements and 
+      set the "File to read" field to a file in your hard disk (under your simulation directory) 
+      or link it to a String model variable (as in <i>%myModelString%</i>).
+      </p>
+      <p>
+            You can also leave the "File to read" field empty and then use the convenience method provided by the
+      element which accepts a particular file path.
+      </p>
+      <p>Use the buttons to the right of the field for easier selection.
+    </p>
+    <p>
+    A data reader element does not read your data file until you instruct it to do so (in any suitable part) in your model code.
+    </p>
+    <p>
+    A call to the element method <i>double[][] readData()</i> will attempt to read the file and return the double[][] data array, 
+    if successful, or null if it failed to do so.
+    </p>
+    <p>
+    A call to the method <i>String[] getColumnNames(String _firstColumnName)</i> will return the String[] array of column names for the last data read.
+    The parameter <i>_firstColumnName</i> is an optional column name that will be added at the beginning of the array of column names. 
+    If set to null, it will be ignored. (Using this parameter is very helpful for array panels which display the row number, for instance.)
+    </p>
+    <p>
+    A call to the method <i>String getDataName()</i> will return the name of the last data read, if specified in the file.
+    </p>
+    <p>
+    Alternatively, the method <i>String getDataName(String path)</i> is a variant that allows reading a particular file (different from the one 
+    specified in the "File to read" field).
+    </p>
+    
+    <h3>Example of use</h3>
+    <pre>
+double[][] dataArray = dataReader.readData();
+if (dataArray==null) {
+  _println("Could not read data from "+dataReader.getFilename());
+  return;
+  }
+String dataName = dataReader.getDataName();
+String[] colNames = dataReader.getColumnNames("Row #");
+// Now, do whatever you want with this data...
+    </pre>
+  </body>
+</html>

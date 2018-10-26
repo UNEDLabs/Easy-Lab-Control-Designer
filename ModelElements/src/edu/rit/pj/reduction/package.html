@@ -1,0 +1,178 @@
+<HTML>
+<HEAD>
+<TITLE>Package edu.rit.pj.reduction</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+Package edu.rit.pj.reduction contains classes for parallel reduction.
+
+<P>
+Class <A HREF="Op.html">Op</A>
+is the abstract base class for a binary operation
+used to combine two values together during a reduction.
+The subclasses of class <A HREF="Op.html">Op</A>
+provide binary operations on different data types:
+
+<P>
+<CENTER>
+<TABLE BORDER=1 CELLPADDING=4 CELLSPACING=1>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN="center" VALIGN="top"><I>Type</I></TD>
+<TD ALIGN="center" VALIGN="top"><I>Class</I></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>boolean</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="BooleanOp.html">BooleanOp</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>byte</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="ByteOp.html">ByteOp</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>char</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="CharacterOp.html">CharacterOp</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>double</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="DoubleOp.html">DoubleOp</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>float</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="FloatOp.html">FloatOp</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>int</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="IntegerOp.html">IntegerOp</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>long</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="LongOp.html">LongOp</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>short</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="ShortOp.html">ShortOp</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>Object</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="ObjectOp.html">ObjectOp</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>
+Each of these subclasses provides an <TT>op()</TT> method
+that can be overridden to compute the desired binary operation.
+Each of these subclasses also provides static instances
+for commonly-used binary operations
+like sum, product, maximum, and minimum.
+
+<P>
+The following classes provide shared reduction variables
+for each of the primitive types as well as type Object.
+These classes are intended to be used
+in an SMP parallel program
+for data items shared among all the threads in the program.
+
+<P>
+<CENTER>
+<TABLE BORDER=1 CELLPADDING=4 CELLSPACING=1>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN="center" VALIGN="top"><I>Type</I></TD>
+<TD ALIGN="center" VALIGN="top"><I>Class</I></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>boolean</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedBoolean.html">SharedBoolean</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>byte</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedByte.html">SharedByte</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>char</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedCharacter.html">SharedCharacter</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>double</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedDouble.html">SharedDouble</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>float</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedFloat.html">SharedFloat</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>int</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedInteger.html">SharedInteger</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>long</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedLong.html">SharedLong</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>short</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedShort.html">SharedShort</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>Object</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedObject.html">SharedObject</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+<P>
+The following classes provide shared reduction variables
+for arrays of each of the primitive types
+as well as array of type Object.
+These classes are intended to be used
+in an SMP parallel program
+for data arrays shared among all the threads in the program.
+
+<P>
+<CENTER>
+<TABLE BORDER=1 CELLPADDING=4 CELLSPACING=1>
+<TR BGCOLOR="#E6E6E6">
+<TD ALIGN="center" VALIGN="top"><I>Type</I></TD>
+<TD ALIGN="center" VALIGN="top"><I>Class</I></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>boolean[]</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedBooleanArray.html">SharedBooleanArray</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>byte[]</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedByteArray.html">SharedByteArray</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>char[]</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedCharacterArray.html">SharedCharacterArray</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>double[]</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedDoubleArray.html">SharedDoubleArray</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>float[]</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedFloatArray.html">SharedFloatArray</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>int[]</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedIntegerArray.html">SharedIntegerArray</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>long[]</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedLongArray.html">SharedLongArray</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>short[]</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedShortArray.html">SharedShortArray</A></TD>
+</TR>
+<TR>
+<TD ALIGN="center" VALIGN="top"><TT>Object[]</TT></TD>
+<TD ALIGN="center" VALIGN="top"><A HREF="SharedObjectArray.html">SharedObjectArray</A></TD>
+</TR>
+</TABLE>
+</CENTER>
+
+</BODY>
+</HTML>

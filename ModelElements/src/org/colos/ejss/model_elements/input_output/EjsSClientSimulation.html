@@ -1,0 +1,158 @@
+<html>
+  <head>
+  <title>EjsSClientSimulation model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./EjsSClientSimulation.png"> EjsSClientSimulation model element 
+    </h2>
+    <p>
+      EjsSClientSimulation encapsulates a WebSocket client to send/receive data to/from a remote EjsS 
+      server simulation. 
+      This element (differently to the basic WebSocket element) implements a particular API for
+      communicating from this JavaScript program (which typically acts a a view) 
+      to a Java EjsS simulation (that typically acts as a model and provides data).
+      See the EjsSServerSimulation model element for Java simulations. 
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add an EjssClient Model element to your model, drag the icon element to the list of your 
+      model elements and optionally set one (but not both) of the fields:
+      <ul>
+        <li>
+          Setting the "Service" field states that you want to send an HTTP request to a web server
+          that will run a JAVA program and return network information
+          (in the form of an object with a <tt>webserver</tt> String) for the client to connect to 
+          a WebSocket server run by this program at an appropriated IP and port. 
+        </li>
+        <li>
+          Setting the "IP:portnumber" field states that you want the client to connect to 
+          a WebSocker server running at the specified IP and portnumber.</li>
+        </li>
+      </ul>
+      The client will not attempt any connection if both fields are left empty. In this case, an explicit call
+      to  <tt>start(String url)</tt> or <tt>startFromService(String url)</tt> is required prior to send
+      any communication command.
+      </p>
+      <p>
+      	By default, the client waits for 30 seconds before proceeding with the simulation, 
+      	aborting it if no server connects to it. If the server disconnects or any communication
+      	error is issued, the connection is considered closed (and you will need to start it again).
+      	You can change the number of seconds to wait using the <tt>setWaitTime(seconds)</tt>
+      	method. 
+      </p>
+      <p>Optionally, modify the method that will be called if a message is received via the WebSocket connection.
+      This method is called only if one of the predefined messages is not detected. Predefined messages 
+      always start with an underscore character '_' (your extended API, if any, should therefore avoid this). 
+    </p>
+    <h3>Connection functions</h3>
+    <p>
+    The element implements the following connection methods:
+    <ul>
+      <li> <i>void start(String url)</i>. Listen to the given url (in the form "ws://ip:port")</li>
+      <li> <i>void startFromService(String url)</i>. 
+           Send a GET HttpRequest to the given url and read the response <i>webserver</i> field.
+           Then call <i>start(response.webserver)</i></li>
+      <li> <i>void setWaitTime(int seconds)</i>. Sets the number of seconds
+    	   to wait for a connecting server, before signaling an error. Setting a time of 0 makes the
+           client to wait for ever.</li>
+      <li> <i>boolean isConnected()</i>. Whether the connection is open.</li>
+      <li> <i>void stop()</i>. Stops listening to the server.</li>
+    </ul>
+
+    <h3>Output functions</h3>
+    <p>
+      The API also includes the following output communication methods. All communication methods 
+      return a true boolean if successful, false otherwise.
+    </p>
+    <ul>
+      <li> <i>boolean sendCommand(keyword, data)</i>. 
+        Sends the connected server a command with a String keyword and an Object data.
+        The receiving model is responsible of processing the message through the user-defined
+        <i>void processCommand(String keyword, Map<String,Object> data)</i> method. See the EjsSServerSimulation
+        model element for Java EjsS simulations.
+        Example:
+        <pre>
+var t = 0, x = 0.1;
+ejssClient.sendCommand("values", { "t" : t, "x" : x });
+        </pre>
+        Note: Do NOT use a keyword that starts with an underscore character '_'.
+      </li>
+    </ul> 
+    
+    <p>
+      Because the WebSocket server is typically an EjsS-generated simulation, the API also 
+      includes the following connection functions. They all use the sendCommand() function above, with
+      predefined keywords that all start with an underscore character '_'. Hence, for instance,
+    <i>server_play()</i> equals to <i>sendCommand("_play")</i>.
+    <ul>
+      <li> <i>boolean server_play()</i>. Equivalent to _play() in the remote server.</li>
+      <li> <i>boolean server_pause()</i>. Equivalent to _pause() in the remote server.</li>
+      <li> <i>boolean server_step()</i>. Equivalent to _step() in the remote server.</li>
+      <li> <i>boolean server_reset()</i>. Equivalent to _reset() in the remote server.</li>
+      <li> <i>boolean server_update()</i>. Equivalent to _update() in the remote server.</li>
+      <li> <i>boolean server_initialize()</i>. Equivalent to _initialize() in the remote server.</li>
+      <li> <i>boolean server_resetSolvers()</i>. Equivalent to _resetSolvers() in the remote server.</li>
+    </ul> 
+    <h3>Input functions</h3>
+    <p>
+      This WebSocket client is designed to receive messages from the server. 
+      When this happens, some messages can correspond to predefined commands but others are left for the user to process. The commands are
+      distinguished by a String keyword. Predefined commands have keywords that start with an underscore 
+      character '_' (such as "_play") and are generated by specific server functions (such as <i>client_play()</i>.)
+    </p>
+    <p>
+      Messages that are not recognized as predefined commands are passed to a user-defined function
+      that must process the command. This function has the following signature:
+      <i>function(keyword, data)</i>. It is the user responsibility to implement the proper response 
+      to the command. There are two types of non-predefined messages, generated by the server's
+      <i>sendCommand()</i> and <i>sendVariables()</i> messages. They differ only in the way they name
+      the arguments. An example that deals with both cases follows:
+      <pre>
+      function (keyword, args) { // At the JavaScript client simulation
+        if (keyword=="hello") {
+          // The server issued ejssServer.sendCommand("hello","A message to the world"): 
+          // In this case, args are named "arg1", "arg2", etc...
+          console.log ("Hello world: "+args.arg1);
+        }
+        else if (keyword=="values") {
+          // The server issued ejssServer.sendVariables("values","t","x"); 
+          // In this case, args are named as the corresponding server variables
+          console.log ("Value of (t,x) = ("+args.t+","+args.x+")");
+        }
+      }
+      </pre>    
+    </p>
+    <h3>Utility functions</h3>
+    <p>
+      Finally, the element implements some utility functions: 
+    <ul>
+      <li> <i>boolean isServerPlaying()</i>.  Whether the server is playing. Equivalent to _isPlaying() in the remote server.</li>
+      <li> <i>boolean isServerPaused()</i>.   Whether teh server is paused. Equivalent to _isPaused() in the remote server.</li>
+      <li> <i>String toJSON(data)</i>.  Returns a JSON String coding of an object.</li>
+      <li> <i>var fromJSON(data)</i>.   Recovers an object from its String JSON coding.</li>
+      <li> <i>void setID(anId)</i>.   Tells the server to identify this client with the given string.</li>
+      <li> <i>void getConnectionList(listener)</i>.   Tells the server to send a message with the list of connected clients. 
+      The list is passed to the listener function, which must have a signature like this: <i>function(String[] list)</i>
+      </li>
+      <li> <i>boolean isServiceSpecifiedByPage()</i>.   
+      Parses the search string of the page, if any, and returns true if there is any server information there
+	  to specify a server and/or port load the HTML page as http://wahtever/page.html?url=aURL & portnumber=aPort.
+	  Returns true if there is any server information.
+	  </li>
+      <li> <i>String getServiceInformation()</i>.   
+	   Parses the search string of the page, if any, and returns the desired server URL and portnumber
+	   to specify a server and/or port load the HTML page as http://wahtever/page.html?url=aURL & portnumber=aPort.
+	   Returns an object describing the server { url, port}. 
+	  </li>
+      
+    </ul> 
+    </p>
+    <h3>Example of use</h3>
+    <pre>
+    ejssClient.sendCommand("init_conditions", { "t" : t, "x" : x });
+    ejssClient.server_play();
+    </pre>
+  </body>
+</html>

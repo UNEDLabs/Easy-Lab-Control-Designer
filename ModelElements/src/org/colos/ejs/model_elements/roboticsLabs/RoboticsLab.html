@@ -1,0 +1,37 @@
+<html>
+  <head>
+  <title>RoboticsLab model element</title>
+      <link rel="stylesheet" type="text/css" href="./style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./RoboticsLab.gif"> RoboticsLab model element 
+    </h2>
+    <p>
+     This element defines a new Robotics Lab
+     
+    </p>
+    <p> 
+    The element encapsulates access to a new Java library, a framework designed specifically for manipulator robots that implements all the functions
+    and algorithms necessary for the modeling of robotics systems. 
+      </p>
+      </p>  This element has been designed to coordinate the motion of several robots. 
+    
+    <h3>Usage</h3>
+      <p>
+      To add a RoboticsLab element to your model, drag-and-dropping the RoboticsLab element of our robotic model elements. This action adds both the model 
+      and the view features of a Robotics lab to an existing EJS simulation.
+      </p>
+      Then, the author instructs the RoboticsLab element to coordinate (previously added) individual robots using the addRobot(robot) method 
+      and completes the design of the lab with other components using the addComponent(component) method.  
+      This is typically done in an EJS model Initialization page. 
+      </p>
+     
+      <p> The RoboticsLab API provides methods to move the robots that will internally check and avoid collisions of any part of a robot with any other:
+    <ul>
+      <li><i>public void moveRobot(AbstractRobot robot, double [] q)</i>: Moves the robot to the given joint position </li>
+      <li><i>public void trajectoryStep(AbstractRobot robot, double step)</i>: Moves the robot to the next point of the trajectory </li>
+     
+    </pre>
+  </body>
+</html>

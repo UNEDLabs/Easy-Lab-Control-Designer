@@ -1,0 +1,95 @@
+<html>
+  <head>
+	  <title>EjsS-LabVIEW model element 2.0</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h2>
+      <img src="./JiL.png"> EjsS-LabVIEW model element 2.0
+    </h2>
+    <p>
+		A model elements that provides access to LabVIEW through internet using XML-RPC if JIL server is enabled.
+	</p>
+	<br>
+    <h3>Usage</h3>
+	<p>
+		To add a LabVIEW model element to your model, drag the icon element to the list of your model elements and
+		set the name of the variable for referring to the element.
+		The connection can be configured in the preferences window, the address of the server, the port to establish
+		the connection and the path to the LabVIEW VI.
+
+		The links between the EJS variables and the controls/indicators of LabVIEW also can be done	in this window.
+	</p>
+	<br>
+		The element implements the following methods:
+	<ul>
+    	<li><i>String connect(String ServerIP)</i>: Connects with the JIL server in the given IP and port. Returns <i>"Ok"</i>
+			if the connection is successful.</li>
+		<li><i>String connect()</i>: If no argument is provided, this method will connect to the server address
+			indicated in its corresponding field in the preferences window of the element.</li>
+		<br>
+    	<li><i>String openVi(String ViFilePath)</i>: Opens the .vi file in the server side, and obtains the indicators
+			and controls of the .vi.</li>
+		<li><i>String openVi()</i>: If no argument is provided, this method will open the .vi indicated in the FilePath
+			field in the preferences windows of the element.</li>
+		<br>
+		<p>
+		Both methods update the structures controlName/controlType/controlValue and indicatorName/indicatorType/indicatorValue,
+		if the connection is successful, and can be checked using:
+		<br>
+			labVIEW_v2_0.controlName[i] 		//Name of control <i>i</i>
+		<br>
+			labVIEW_v2_0.indicatorName[i] 	//Name of indicator <i>i</i>
+		<br>
+			labVIEW_v2_0.controlType[i]		//Type of control <i>i</i>
+		<br>
+			labVIEW_v2_0.indicatorType[i] 	//Type of indicator <i>i</i>
+		<br>
+			labVIEW_v2_0.controlValue[i] 	//Value of control <i>i</i>
+		<br>
+			labVIEW_v2_0.indicatorValue[i] 	//Value of indicator <i>i</i>
+		</p>
+		<br>
+		<li><i>String runVi()</i>: Runs the .vi and returns a message <i>"VI running"</i></li>
+		<br>
+		<li><i>step()</i>: Sends the new values of the controls and get the values of the indicators. Exchanges values
+			for all the	variables that have been linked in the preferences window.</li>
+		<br>
+		<li><i>Type_of_var2get getVariable(var2get)</i>: Gets the value of the indicator in the .vi called var2get and returns it.</li>
+		<br>
+		<li><i>String setVariable(var2set,value2set)</i>: Sets the value of the control in the .vi called var2set to value2set.
+			Returns <i>"OK"</i> if successful.</li>
+		<br>
+		<li><i>String stopVi()</i>: Stops the .vi in execution, and returns a message <i>"VI stopped"</i></li>
+		<br>
+		<li><i>String closeVi()</i>: Closes a .vi and returns a message <i>"VI closed successfully"</i></li>
+		<br>
+		<li><i>String disconnect()</i>: Disconnects from server and returns a message <i>"See you soon"</i></li>
+    </ul>
+	<br>
+	<h3>Example of use: Appropriate order when calling methods</h3>
+	<p>
+		This code uses the default <i>labVIEW_v2_0</i> name as the name given to the model element instance.
+	</p>
+    <pre>
+		//labVIEW_v2_0.messages contains all the incoming messages always. In this example, answer contains the response after
+		answer = labVIEW_v2_0.connect("http://127.0.0.1:2055");	// or answer = labVIEW_v2_0.connect(); if the field in the preferences window is used
+		answer = labVIEW_v2_0.openVi("JiLTest.vi");				// or answer = labVIEW_v2_0.openVi(); if the field in the preferences window is used
+		var viVars = "";
+		//The next lines can be added wherever between openVi and closeVi call.
+		//viVars contains a string with the controls/indicators names and values, obtained from the vi.
+		for(n=0; n  < labVIEW_v2_0.controlType.length; n++){
+			viVars=viVars + "\n"+ labVIEW_v2_0.controlName[n] + " = " + labVIEW_v2_0.controlValue[n];
+		}
+		for(n=0; n < labVIEW_v2_0.indicatorType.length; n++){
+			viVars=viVars + "\n"+ labVIEW_v2_0.indicatorName[n] + " = "  +labVIEW_v2_0.indicatorValue[n];
+		}
+		answer = labVIEW_v2_0.runVi();
+		labVIEW_v2_0.step();
+		answer = labVIEW_v2_0.setVariable("doublein",0.55);	//sets the value of the .vi control called "doublein" to 0.55
+		value = labVIEW_v2_0.getVariable("stringout");		//gets the value of the .vi indicator called "stringout" and returns its value
+		answer = labVIEW_v2_0.stopVi();
+		answer = labVIEW_v2_0.closeVi();
+    </pre>
+  </body>
+</html>

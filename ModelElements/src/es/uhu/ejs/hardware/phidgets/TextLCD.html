@@ -1,0 +1,87 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Phidget TextLCD</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2> <img style="width: 32px; height: 25px;" alt="TextLCD"
+ src="TextLCD.png"> Phidget TextLCD for <strong>Phidget
+Modules with LCD displays (like the 1203)</strong></h2>
+<p> This element allows you access
+to a&nbsp; PhidgetTextLCD device, like the 1203. This element only
+allows access to the LCD funtionality. <br>
+</p>
+<p>With this element, you can
+access to the module directly (with the
+serial number) or through the network, using the WebService of the
+phidget's driver&nbsp;
+in a remote computer with the phidget TextLCD
+connected (here, you need the IP, port and password too). </p>
+<h3>Usage</h3>
+<p> To use any Phidget element,
+drag an drop its icon to the list of
+model elements of your model. Then, edit the connection parameters and
+invoke <i>phidget.connect()</i>
+in your code. </p>
+<p> All methods returning a
+boolean will return <i>true</i>
+on
+successful completion of the command, <i>false</i>
+otherwise. Methods
+returning a double value will return <i>Double.NaN</i>
+if there is any
+error when connecting to the phidget. </p>
+<p>Available method for this
+particular phidgets include: </p>
+<ul>
+  <li><span style="font-weight: bold;">public boolean connect();</span>
+// establish the connection. Returns true if successful</li>
+  <li><span style="font-weight: bold;">public int getRowCount();</span>
+//Returns the number of rows available on the display.&nbsp;</li>
+  <li><span style="font-weight: bold;">public int
+getColumnCount();</span> //Returns
+the number of columns (characters per row) available on the
+display.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean
+setBacklight(boolean value);</span>
+//Sets the status of the backlight. The backlight is by default turned
+on.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean
+setBrightness(int value);</span>
+//Sets the brightness of the display. Changing the brightness can
+increase the readability of the display in certain viewing situation,
+such as at an odd angle. Not all TextLCDs support this method.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean
+setContrast(int value);</span>
+//Sets the contrast of the display. Changing the contrast can increase
+the readability of the display in certain viewing situation, such as at
+an odd angle.&nbsp;</li>
+  <li><span style="font-weight: bold;">public int getContrast();</span>
+//Returns the contrast of the display.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean
+setCursor(boolean value);</span>
+//Sets the state of the cursor. True indicates that the cursor on,
+False indicates that it is off. The cursor is an underscore which
+appears directly to the right of the last entered character on the
+display. The cursor is by default disabled.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean getCursor();</span>
+//Returns the status of the cursor.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean
+setCursorBlink(boolean value);</span>
+//Sets the state of the cursor blink. True indicates that the cursor
+blink is on, False indicates that it is off. The cursor blink is an
+flashing box which appears directly to the right of the last entered
+character on the display, in the same spot as the cursor if it is
+enabled. The cursor blink is by default disabled.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean
+getCursorBlink();</span> //Returns
+the status of the cursor blink.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean
+setDisplayString(int row, String str);</span>
+//Sets the display string of a certain row.&nbsp;</li>
+</ul>
+<h3>Example of use</h3>
+<pre>// Init the module<br>myTextLCD.connect();<br>// Adjusting contrast, brightness, cursor and backlight<br>myTextLCD.setContrast(100);<br>myTextLCD.setBrightness(50);<br>myTextLCD.setCursor(true);<br>myTextLCD.setCursorBlink(true);<br>myTextLCD.setBacklight(true);<br>// a message<br>myTextLCD.setDisplayString(0, "Hello from EJS..."); // 0 -&gt; first row<br><br></pre>
+</body>
+</html>

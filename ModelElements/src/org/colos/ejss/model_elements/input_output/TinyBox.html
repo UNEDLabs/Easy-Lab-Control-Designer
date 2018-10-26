@@ -1,0 +1,30 @@
+<html>
+  <head>
+  <title>TinyBox model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./TinyBox.png"> NumericJavascript model element 
+    </h2>
+    <p>
+      TinyBox encapsulates access to the <a href = "http://www.scriptiny.com/2011/03/javascript-modal-windows/">TinyBox2 package</a>.
+    <h3>Usage</h3>
+      <p>
+      To add the TinyBox element to your model, drag the icon element to the list of your model elements. 
+      </p>
+      <p>
+      The element declares a new global variable (object) called <em>TINY.box</em> which should be treated a reserved word in your simulation. 
+      You can use the function <em>show</em> of this new object either as function of the new object <em>TINY.box</em>, 
+      or of the object named as your element (which is just an alias for <em>TINY.box</em>). 
+      </p>
+      <p>
+    <p>The element implements a single function for creating modal windows in Javascript.
+    The script is executed by passing an object due to the large number of options. As in the example below:
+    <p>Read <a href= "http://www.scriptiny.com/2011/03/javascript-modal-windows">the author's page</a> for details.
+        <h3>Example of use</h3>
+    <pre>
+    tinyBox.show({html:'This is a warning!',animate:false,boxid:'error',top:5})
+    </pre>
+  </body>
+</html>

@@ -1,0 +1,45 @@
+<html>
+  <head>
+  <title>Parallel Region model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./PJRegion.png"> Parallel Region model element 
+    </h2>
+    <p>
+      ParallelRegion defines a piece of code that can be run in parallel on a shared memory parallel (SMP) computer 
+    </p>
+    <p> 
+    The element encapsulates access to <a href="http://www.cs.rit.edu/~ark/pj/doc/edu/rit/pj/ParallelRegion.html">Parallel Region</a>
+    in the <a href="http://www.cs.rit.edu/~ark/pj.shtml">Parallel Java library</a>.
+    <h3>Usage</h3>
+      <p>
+      To add a parallel region element to your model, drag the icon element to the list of your model elements 
+      and edit the desired code. This code can make use of the following predefined constants and methods:
+      </p>
+    <ul>
+    <li><i>int _threadCount</i>: the number of threads running</li> 
+    <li><i>int _threadIndex</i>: the index of the current thread</li>
+    <li><i>int _firstThreadIndex(int min, int max)</i>: divides the range into seevrl subintervals and returns the first index for the current thread</li> 
+    <li><i>int _lastThreadIndex(int min, int max)</i>: divides the range into seevrl subintervals and returns the first index for the current thread</li> 
+    </ul>
+    <p>The element implements the following basic methods:
+    <ul>
+    <li><i>boolean execute(int nThreads)</i>: will run the parallel code defined for this region in nThreads parallel threads. 
+    The main thread blocks until all spanned threads finish their work. The number of threads must be bigger than 0, a value of 0 indicates
+    the computer should use the default number of threads (as specified by the "-Dpj.nt=4" command line directive) or just the maximum number of threads available.</li>
+    <li><i>int getThreadCount()</i>: returns the number of threads actually used in the last execution.</li>
+    <li><i>long getExecutionTime()</i>: returns the time (in milliseconds) of the last execution.</li>
+    </ul>
+    </p>
+        <h3>Example of use</h3>
+    <pre>
+pjRegion.execute(4); // runs the parallel code using 4 threads 
+pjRegion.execute(0); // runs the parallel code using the default number of threads
+_println ("The region executed on "+pjRegion.getThreadCount()+" threads,");
+_println ("and took "+pjRegion.getExecutionTime()+" milliseconds.");
+    </pre>
+    </pre>
+  </body>
+</html>

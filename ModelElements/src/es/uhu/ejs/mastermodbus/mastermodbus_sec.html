@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Statistics model element</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+.auto-style2 {
+	margin-left: 40px;
+}
+  </style>
+</head>
+<body class="auto-style2">
+<h2> <img alt="" height="64" src="MasterModbus.png" width="64">&nbsp;&nbsp;&nbsp;&nbsp; 
+Master Modbus Element. Advanced Methods</h2>
+<p> <span id="result_box" class="" lang="en"><span class="hps"></span></span></p>
+<h3>Advanced methods to make complex operations</h3>
+<ul>
+  <li><strong>int 	getRetries()</strong>; //This function returns the connection number of retries.</li>
+  <li><strong>int 	getSlaveId()</strong>; //This function returns the slave id.</li>
+  <li><strong>int 	getTimeout()</strong>; //This function returns the value of the parameter timeout.</li>
+  
+  <li><strong>int 	getRetries()</strong>; //This function returns the connection number of retries.</li>
+</ul>
+<ul>
+  <li><strong>double readAnalogInputToDouble(int ind);</strong> // This function reads the value from the image of an analog input as double.</li>
+  <li><strong>double readAnalogInputToFloat(int ind);</strong> // This function reads the value from the image of an analog input as float.</li>
+  <li><strong>int readAnalogInputToInteger(int ind);</strong> // This function reads the value from the image of an analog input as integer.</li>
+  <li><strong>long readAnalogInputToLong(int ind);</strong> // This function reads the value from the image of an analog input as long.</li>
+  <li><strong>int readAnalogInputToShortUnsigned(int ind);</strong> // This function reads the value from the image of an analog input as unsigned short.</li>
+</ul>
+<ul>
+  <li><strong></strong><strong>double readAnalogRegisterToDouble(int ind);</strong> // This function reads the value from an analog input of the image as double.</li>
+  <li><strong>double  readAnalogRegisterToFloat(int ind);</strong> // This function reads the value from an analog input of the image as float.</li>
+  <li><strong>int readAnalogRegisterToInteger(int ind);</strong> // This function reads the value from an analog input of the image as int.</li>
+  <li><strong>long readAnalogRegisterToLong(int ind);</strong> // This function reads the value from an analog input of  the image as long.</li>
+  <li><strong>int readAnalogRegisterToShortUnsigned(int ind);</strong> // This function reads the value from an analog input of the image as unsigned short.</li>
+  <li><strong>int readAnalogRegisterToShortUnsigned(int slaveId, int ind);</strong> // This function reads the value from an analog input of  the image as unsigned short.</li>
+</ul>
+<ul>
+  <li><strong>byte 	readExceptionStatus(int slaveId);</strong> //This function read the status of the exceptions of the slave.</li>
+</ul>
+<ul>
+  <li><strong></strong><strong>byte[] 	reportSlaveId(int slaveId);</strong> //This function reads the Id of slave connected to the  board and return it as an array of bytes.</li>
+</ul>
+<ul>
+  <li><strong>void 	setRetries(int retries);</strong> //This function sets the default number of retries of MasterModbus class to the passed value.</li>
+  <li><strong>void 	setSlaveId(int slaveId);</strong> //This function sets the slave id to the passed value.</li>
+  <li><strong>void 	setTimeout(int timeout);</strong> //This function sets the default parameter Timeout of MasterModbus class to the passed value.</li>
+</ul>
+<ul>
+  <li><strong>boolean 	writeAnalogRegisterDouble(int ind, double value);</strong> //This function writes a double value to the image of the analog output of Arduino.</li>
+  <li><strong>boolean 	writeAnalogRegisterFloat(int ind, float value);</strong> //This function writes a float value to the image of the analog output of Arduino.</li>
+  <li><strong>boolean 	writeAnalogRegisterInteger(int ind, int value);</strong> //This function writes an int value to the image of the analog output of Arduino.</li>
+  <li><strong>boolean 	writeAnalogRegisterLong(int ind, long value)</strong><strong>;</strong> //This function writes a long value to the image of the analog output of Arduino.</li>
+  <li><strong>boolean 	writeAnalogRegisterShort(int ind, short value)</strong><strong>;</strong> //This function writes a short value to the image of the analog output of Arduino.</li>
+  <li><strong>boolean 	writeAnalogRegisterShortUnsigned(int ind, int value)</strong><strong>;</strong> //This function writes an unsigned short value to the image of the analog output of Arduino.</li>
+</ul>
+<ul>
+  <li><strong>void 	writeMaskRegister(int slaveId, int offset, int and, int or)</strong><strong>;</strong> //This function writes the value of the image of an analog outputs of Arduino using a mask.
+    <p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language:EN-US"><span style="mso-spacerun:yes">&nbsp;&nbsp; </span></span></p>
+  </li>
+</ul>
+</body>
+</html>

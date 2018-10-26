@@ -1,0 +1,24 @@
+<HTML>
+<HEAD>
+<TITLE>Package edu.rit.pj.job</TITLE>
+</HEAD>
+<BODY>
+
+<P>
+Package edu.rit.pj.job contains contains programs and classes
+for running groups of independent jobs
+on shared memory multiprocessor (SMP) parallel computers,
+cluster parallel computers,
+and hybrid SMP cluster parallel computers.
+
+<P>
+To run a group of jobs,
+first write a subclass
+of class <A HREF="JobGenerator.html">JobGenerator</A>
+to generate instances of class <A HREF="Job.html">Job</A>.
+Then run the <A HREF="Runner.html">Runner</A> program,
+specifying the JobGenerator subclass.
+The program runs the generated jobs in parallel.
+
+</BODY>
+</HTML>

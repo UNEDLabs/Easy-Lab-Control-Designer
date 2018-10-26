@@ -1,0 +1,34 @@
+<html>
+  <head>
+  <title>Linear Accelerometer model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./LinearAccelerometer.png"> Linear Accelerometer model element 
+    </h2>
+    <p>
+      LinearAccelerometer provides access to the built-in sensor for acceleration force along the x,y,z axes (excluding gravity).
+    <h3>Usage</h3>
+      <p>
+      To add the LinearAccelerometer element to your model, drag the icon element to the list of your model elements.
+      </p>
+    <p>The element implements the following basic methods:
+    <ul>
+    <li><i>boolean isPresent()</i>: whether the hardware includes an accelerometer</li>
+    <li><i>void start()</i>: turns the accelerometer on</li>
+    <li><i>Object readData()</i>: reads the x,y,z component of the acceleration force along the x,y,z axes (excluding gravity).
+    The function returns zero values if the linear accelerometer is not present or has not been started</li>
+    </ul>
+    </p>
+        <h3>Example of use</h3>
+    <pre>
+linearAccelerometer.start(); // Starts the accelerometer
+var data = linearAccelerometer.readData(); // Reads the current linear acceleration 
+_println("The acceleration on the X component is " + data.x);
+_println("The acceleration on the Y component is " + data.y);
+_println("The acceleration on the Z component is " + data.z);
+linearAccelerometer.stop(); // Stops the accelerometer
+    </pre>
+  </body>
+</html>

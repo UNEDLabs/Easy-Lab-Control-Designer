@@ -1,0 +1,61 @@
+<html>
+  <head>
+  <title>RIP-Node.js model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h2>
+        <img src="./rip-nodejs.png">RIP-Node.js model element
+    </h2>
+    <p>
+        A RIP model element provides an implementation of the Remote Interoperability Protocol (RIP) API.
+    </p>
+    <br>
+    <h3>Usage</h3>
+    <p>
+        To add a RIP model element to your model, drag the icon element to the list of your model elements and set the
+        name of the variable for referring to the element.
+        The connection can be configured in the preferences window, the address of the server, and the port to establish
+        the connection.
+
+        The links between the EJS variables and the server variables also can be done in this window.
+    </p>
+    <p>
+        The main methods of the API are:
+    </p>
+	<ul>
+		<li><i>connect()</i>: Creates a new connection with a RIP Server.</li>
+        <br>
+        <li><i>open()</i>: Opens a resource.</li>
+        <br>
+		<li><i>get()</i>: Reads one or more variables. </li>
+        <br>
+		<li><i>set()</i>: Writes one or more variables.</li>
+        <br>
+        <li><i>step()</i>: Writes one or more variables, execute a command and read one or more variables. </li>
+        <br>
+        <li><i>close()</i>: Closes an opened resource.</li>
+        <br>
+        <li><i>disconnect()</i>: Disconnects from server.</li>
+	</ul>
+    <h3>Example of use</h3>
+    <p>    
+    	The following code is usually included into an initialization page, and it must be executed to set up the connection (we use <i>ripclient</i> as instance name of the element)
+    </p>
+    <pre>
+        ripclient.connect();
+    </pre>    
+    <p>
+        The following code is usually included into an evolution page, to exchange data periodically with the server.
+    </p>
+    <pre>
+        ripclient.step();
+    </pre>   
+    <p>   	
+        The following code must be executed to finalize the execution properly.
+    </p>
+    <pre>
+        ripclient.disconnect();
+    </pre>
+  </body>
+</html>

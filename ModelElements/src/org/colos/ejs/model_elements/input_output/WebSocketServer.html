@@ -1,0 +1,84 @@
+<html>
+  <head>
+  <title>WebSocketServer model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"/>
+  </head>
+  <body>
+    <h2>
+      <img src="./WebSocketServer.png"> WebSocket model element 
+    </h2>
+    <p>
+      WebSocketServer encapsulates a WebSocket server to send/receive data from a client.
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add a WebSocketServer element to your model, drag the icon element to the list of your model elements and 
+      set the "Port" field to a constant integer (as in 8800, for example). If the port
+      is set, the service starts automatically. If the port is not set, then an explicit
+      call to <pre>start(portNumber)</pre> is required. 
+      </p>
+      <p>
+      	By default, the server waits for 30 seconds before proceeding with the simulation, 
+      	aborting it if no client connects to it. If all clients disconnect, it also waits
+      	a number of seconds before exiting the simulation.
+      	You can change the number of seconds to wait using the <pre>setWaitTime(seconds)</pre>
+      	method. 
+      </p>
+      <p>Optionally, modify the method that will be called if a message is received via the WebSocket connection.
+    </p>
+    <p>
+    The element implements the following methods:
+    <ul>
+    <li> <i>void start(int portNumber)</i> Starts the server service at the given port.</li>
+    <li> <i>void setWaitTime(int seconds)</i> Sets the number of seconds
+    	to wait for a connecting client, before exiting. Setting a time of 0 makes the
+    	server to wait for ever.</li>
+    <li> <i>boolean isConnected()</i> Whether there is a client connection open.</li>
+    <li> <i>int getPortnumber()</i> Returns the port number in which the serve runs.</li>
+    <li> <i>void stop()</i> Stops the server service at the given port.</li>
+    <li> <i>boolean sendMessage(String message)</i> Sends a message through the socket.</li>
+    <li> <i>String[] getConnectionsIDs()</i> Reruns an array with the connected clients.</li>
+    </ul> 
+    </p>
+    <h3>Input</h3>
+    <p>
+    This WebSocket server can also receive messages from the client. When this happens, the input 
+      is passed to a user-defined <i>void processInput(String input)</i>
+      method. It is the user responsibility to implement the proper response to the input. 
+      A simple implementation of <i>processInput</i> follows:
+      <pre>
+      processInput(String input) { // At this Java simulation
+        if (input.startsWith("time:")) {
+          double t = Double.parseDouble(input.substring(5));
+          System.out.println ("Time = "+t);
+        }
+      }
+      </pre>    
+    </p>
+    <p>
+    Alternatively, users interested in information about the client that sent the message can, instead, 
+    override the base class 
+      <i>void processInput(org.java_websocket.WebSocket socket, String input)</i>
+      method.  
+      The <i>socket</i> parameter can then be used to discriminate among clients. 
+      The default simple implementation of <i>processInput(WebSocket,String)</i> just calls <i>processInput(String)</i>;
+    </p>
+    <p>
+    If both methods are implemented, <i>processInput(WebSocket, String)</i> will be used and 
+    <i>void processInput(String)</i> will be ignored.
+    </p>
+    <p>
+    Finally, users interested can also run code when a new connection is established or an open connection 
+    is closed. For this, override the dummy base class 
+      <i>void onConnectionOpened(org.java_websocket.WebSocket socket)</i> 
+      and or
+      <i>void onConnectionClosed(org.java_websocket.WebSocket socket)</i>
+      methods.  
+      The <i>socket</i> parameter refers to the newly opened or just closed client. 
+    </p>
+    <h3>Example of use</h3>
+    <pre>
+    webSocketServer.sendMessage("t="+t);
+    </pre>
+  </body>
+</html>

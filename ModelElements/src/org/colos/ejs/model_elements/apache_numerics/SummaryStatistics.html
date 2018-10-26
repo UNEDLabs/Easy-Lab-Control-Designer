@@ -1,0 +1,46 @@
+<html>
+  <head>
+  <title>Summary Statistics model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./SummaryStatistics.gif"> Summary Statistics model element 
+    </h2>
+    <p>
+      Summary Statistics computes summary statistics of a number of double values without storing them. This makes this element more appropriate (efficient) to compute statistics of very large data streams.
+    </p>
+    <p> 
+    The element is just an object of the <a href="http://commons.apache.org/proper/commons-math/apidocs/org/apache/commons/math3/stat/descriptive/SummaryStatistics.html">SummaryStatistics</a> class
+    in the <a href="http://commons.apache.org/math/">Apache Common numerics library</a>.
+    <h3>Usage</h3>
+      <p>
+      To add a summary statistics element to your model, simply drag the icon element to the list of your model elements.
+      </p>
+    <p>
+    A call to the element method <i>void addValue(double value)</i> adds a double value to the data.
+    </p>
+    <p>
+    A call to the element method <i>void clear()</i> resets all statistics and storage.
+    </p>
+    <p>
+    The element provides several methods to retrieve descriptive statistics out of the data added. Here are just two of them:
+    <ul>
+      <li> <i>double getMean()</i> Returns the mean value of the dataset </li>
+      <li> <i>double getVariance()</i> Returns the variance of the dataset </li>
+    </ul>
+    A complete list of the methods provided can be found in the 
+    <a href="http://commons.apache.org/proper/commons-math/apidocs/org/apache/commons/math3/stat/descriptive/SummaryStatistics.html">SummaryStatistics</a> class web page.
+    </p>
+        <h3>Example of use</h3>
+    <pre>
+summaryStatistics.clear(); // Make sure the dataset is empty
+summaryStatistics.addValue(1);
+summaryStatistics.addValue(1);
+summaryStatistics.addValue(1);
+summaryStatistics.addValue(2);
+_println("Mean = "+summaryStatistics.getMean()); // prints: Mean = 1.25
+_println("Variance = "+summaryStatistics.getVariance()); // prints: Variance = 0.25
+    </pre>
+  </body>
+</html>

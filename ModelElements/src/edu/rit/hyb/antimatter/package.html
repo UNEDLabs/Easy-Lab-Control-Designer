@@ -1,0 +1,66 @@
+<HTML>
+<HEAD>
+<TITLE>Package edu.rit.hyb.antimatter</TITLE>
+</HEAD>
+<BODY>
+
+Package edu.rit.hyb.antimatter
+provides the Antimatter Simulation,
+an example of an <I>N</I>-body problem.
+
+<P>
+The Antimatter Simulation program
+calculates the motion of a number of antiprotons
+moving in a two-dimensional plane.
+The antiprotons have equal, negative charges.
+Each antiproton experiences a repulsive force
+from every other antiproton
+that is directly proportional
+to the product of the antiprotons' charges
+and is inversely proportional
+to the square of the distance
+between the antiprotons.
+The antiprotons are surrounded by an "antiproton trap" --
+a square metal cage with sides of length <I>R</I>,
+extending from coordinates (0,0) to (<I>R,R</I>)
+in the (<I>x,y</I>) plane.
+The antiproton trap has a negative charge.
+Thus, each antiproton experiences a repulsive force
+away from the sides of the trap.
+Since the antiprotons are repelled from the sides of the trap,
+the antiprotons will never touch the trap
+and matter-antimatter annihilation will not happen.
+
+<P>
+The Antimatter Simulation program
+maintains each antiproton's position and velocity.
+The program calculates the positions and velocities
+as a function of time
+by doing a series of discrete time steps.
+At each time step,
+the program calculates the total force on each antiproton
+(repulsive forces from all other antiprotons
+plus repulsive forces from the sides of the trap),
+updates the velocity based on the force,
+and updates the position based on the velocity and force:
+<BR>&nbsp;
+<BR><B>V'</B> = <B>V</B> + <B>F</B> &Delta;t
+<BR>&nbsp;
+<BR><B>P'</B> = <B>P</B> + <B>V</B> &Delta;t + 1/2 <B>F</B> &Delta;t<SUP>2</SUP>
+<BR>&nbsp;
+<BR>where <B>F</B> is the vector force on the antiproton,
+<B>V</B> is the antiproton's vector velocity before the time step,
+<B>V'</B> is the antiproton's vector velocity after the time step,
+<B>P</B> is the antiproton's vector position before the time step,
+<B>P'</B> is the antiproton's vector position after the time step,
+and &Delta;t is the size of the time step.
+(These formulas represent the first few terms
+in the Taylor series expansions
+for velocity and position as a function of time.)
+
+<P>
+The hybrid SMP cluster parallel programs in this package use Parallel Java (PJ)
+in package <A HREF="../../pj/package-summary.html">edu.rit.pj</A>.
+
+</BODY>
+</HTML>

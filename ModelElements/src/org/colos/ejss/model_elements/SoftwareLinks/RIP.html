@@ -1,0 +1,67 @@
+<html>
+  <head>
+  <title>RIP model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <h2>
+      <img src="./rip.png"> RIP model element
+    </h2>
+    <p>
+      RIP provides access to other software through internet using JSON-RPC if RIP server is enabled.
+	</p>
+	<br>
+    <h3>Usage</h3>
+      <p>
+      	To add a RIP model element to your model, drag the icon element to the list of your model elements and set the name
+		of the variable for referring to the element.
+      	The connection can be configured in the preferences window, the address of the server, and the port to establish
+		the connection.
+	  </p>
+      <li>The links between the EJS variables and the server variables also can be done in this window.</li>
+	  <li>The "initial code" will be run once</li>
+	  <li>The "expressions to evaluate" will be run in each step() call or using the eval method</li>
+	  <li>The "action after evaluation" can be edited, only advanced users, to parse or change how the linked variables
+		  are updated </li>
+    <p>
+		This element implements the following methods:
+    <p>
+    <ul>
+	<li><i>connect(callback)</i>: Connects with the RIP server in the given IP and port.</li>
+	<br>
+	<li><i>get(vars, callback)</i>: Reads the value of one or more variables (vars) from the server side.</li>
+	<br>
+	<li><i>set(vars, values, callback)</i>: Writes the value of one or more variables in the server side.</li>
+	<br>
+	<li><i>eval(code, callback)</i>: Evaluates a Matlab code in the server side.</li>
+	<br>
+	<li><i>step(vars, callback)</i>: Exchanges all the linked variables and evaluates the code in the editor. The next
+		pseudocode gives an idea of how it works. <i>x</i> and <i>y</i> are linked variables, and <i>y = evalFunction;</i>
+		is the function to evaluate.
+		<pre>
+			// === Step function ===
+			riP_Element.set("x",xvalue);
+			riP_Element.eval("y = evalFunction;");
+			aLocalVariable = riP_Element.get("y");
+			//To sychronize use the callback function
+			AlsoUseCallback(function(response){
+				var data = response[2].result;
+				callback(data);
+			});
+		</pre>
+	</li>
+	<li><i>disconnect(callback)</i>: Disconnects from server</li>
+	</ul>
+	<p>
+		Note: If not defined, all callback options will be replaced with an automated version
+	</p>
+	<h3>Example of use:s</h3>
+    <pre>
+		riP_Element.connect();							//Uses the server and port from de editor to connect
+		riP_Element.step(); 							//In the Evolution page, to exchange all the linked variables and evaluate the code in the editor
+		riP_Element.setVariable("doublein",0.55);  		//sets the value of the control called "doublein" to 0.55
+		value = riP_Element.getVariable("stringout");   //gets the value of the indicator "stringout" and returns his value
+		riP_Element.disconnect();
+    </pre>
+  </body>
+</html>

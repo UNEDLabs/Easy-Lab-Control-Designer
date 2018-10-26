@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Statistics model element</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style type="text/css">
+.auto-style2 {
+	margin-left: 40px;
+}
+  </style>
+</head>
+<body class="auto-style2">
+<h2> <img alt="" height="64" src="slavemodbus.png" width="64">&nbsp;&nbsp;&nbsp;&nbsp; 
+Slave Modbus Element. Advanced Methods</h2>
+<p> <span id="result_box" class="" lang="en"><span class="hps"></span></span></p>
+<h3>Advanced methods to make complex operations</h3>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short[] 	bytesArrayToShortsArray(byte[] bytes)</strong>; //This function converts from byte array to short array.</span></li>
+  <li><span style="mso-ansi-language:EN-US"><strong>byte[] shortArrayToByteArray (short[] shorts)</strong>; //This function converts from short array to byte array.</span></li>
+</ul>
+<ul>
+  <li><strong><span lang="EN-US" style="mso-ansi-language:EN-US">boolean 	isSwapped()</span></strong><span lang="EN-US" style="mso-ansi-language:EN-US">; //This function reads the value of the parameter swapped.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>double 	readAnalogInputsToDouble(int ind)</strong>; //This function reads the value from four analog input pins and converts them to double.</span></li>
+  <li><strong>f</strong><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>loat 	readAnalogInputsToFloat(int ind)</strong>; //This function reads the value from two analog input pins and converts them to float.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>int 	readAnalogInputsToInt(int ind)</strong>; //This function reads the value from two analog input pins and converts them to int.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>long 	readAnalogInputsToLong(int ind)</strong>; //This function reads the value from four analog input pins and converts them to long.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>double 	readAnalogRegistersToDouble(int ind)</strong>; //This function reads an analog value from four registers and returns it as a double value.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>float 	readAnalogRegistersToFloat(int ind)</strong>; //This function reads an analog value from two registers and returns it as a float value.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>int 	readAnalogRegistersToInteger(int ind)</strong>; //This function reads an analog value from two registers and returns it as an int value.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>long 	readAnalogRegistersToLong(int ind)</strong>; //This function reads an analog value from four registers and returns it as a long value.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	setSwapped(boolean swapped)</strong>; //This function sets the value of the parameter swapped to the sent as funtion parameter.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>double 	shortsArrayToDouble(short[] shorts)</strong>; //This function converts an array of shorts to a double value.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>float 	shortsArrayToFloat(short[] shorts)</strong>; //This function converts an array of shorts to a float value.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>int 	shortsArrayToInt(short[] shorts)</strong>; //This function converts an array of shorts to an int value.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>long 	shortsArrayToLong(short[] shorts)</strong>; //This function converts an array of shorts to a long value.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>byte[] 	toBytesArray(double value)</strong>; //This function converts a double value to an array of bytes.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>byte[] 	toBytesArray(float value)</strong>; //This function converts a float value to an array of bytes.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>byte[] 	toBytesArray(int value)</strong>; //This function converts an int value to an array of bytes.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>byte[] 	toBytesArray(long value)</strong>; //This function converts a long value to an array of bytes.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>byte[] 	toBytesArray(short value)</strong>; //This function converts a short value to an array of bytes.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short[] 	toShortsArray(double value)</strong>; //This function converts a double value to an array of short.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short[] 	toShortsArray(float value)</strong>; //This function converts a float value to an array of short.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short[] 	toShortsArray(int value)</strong>; //This function converts an int value to an array of short.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>short[] 	toShortsArray(long value)</strong>; //This function converts a long value to an array of short.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogInputs(int ind, float value)</strong>; //This function writes a float value to several analog output pins.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogInputs(int ind, int value)</strong>; //This function writes an int value to several analog output pins.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogInputs(int ind, long value)</strong>; //This function writes a long value to several analog output pins.</span></li>
+</ul>
+<ul>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong></strong></span><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogRegisters(int ind, double value)</strong>; //This function writes a double value to an analog register.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogRegisters(int ind, float value)</strong>; //This function writes a float value to an analog register.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogRegisters(int ind, int value)</strong>; //This function writes an int value to an analog register.</span></li>
+  <li><span lang="EN-US" style="mso-ansi-language:EN-US"><strong>void 	writeAnalogRegisters(int ind, long value)</strong>; //This function writes a long value to an analog register.</span></li>
+</ul>
+</body>
+</html>

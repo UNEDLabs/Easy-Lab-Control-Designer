@@ -1,0 +1,40 @@
+<html>
+  <head>
+  <title>Numeric Javascript model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./NumericJavascript.png"> NumericJavascript model element 
+    </h2>
+    <p>
+      NumericJavascript provides access to the <a href="http://numericjs.com">Numeric Javascript library</a> 
+      created by <a href="http://www.macs.hw.ac.uk/~sl398/">S&eacute;bastien Loisel</a>.
+    <h3>Usage</h3>
+      <p>
+      To add the NumericJavascript element to your model, drag the icon element to the list of your model elements. 
+      </p>
+      <p>
+      The element declares a new global variable (object) called <em>numerics</em> which should be treated a reserved word in your simulation. 
+      You can use the functions of this library either as function of the new object <em>numerics</em>, or of the object named as your element (which is just an alias for <em>numerics</em>). 
+      </p> 
+    <p>The element implements functions for :
+    <ul>
+    <li>Linear algebra</li>
+    <li>Complex numbers</li>
+    <li>Splines</li>
+    <li>ODE solver</li>
+    <li>Unconstrained optimization</li>
+    <li>PDE and sparse linear algebra</li>
+    </ul>
+    </p>
+    <p>Read <a href= "http://numericjs.com/documentation.html">the documentation</a> for details.
+        <h3>Example of use</h3>
+    <pre>
+var out = numericJS.exp([1,2]); // creates an array with the two numbers [ e, e^2], where e = 2.7182818284...
+var A = [[1,2,3],[4,5,6],[7,1,9]]; // Declares a 3x3 matrix 
+var Ainv = numeric.inv(A); // Uses the element to compute the inverse of A
+console.log("Ainv = "+Ainv); // should print  [[-0.9286,0.3571,0.07143],[-0.1429,0.2857,-0.1429],[0.7381,-0.3095,0.07143]]
+    </pre>
+  </body>
+</html>

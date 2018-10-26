@@ -1,0 +1,92 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Phidget InterfaceKit</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<h2> <img style="width: 32px; height: 22px;" alt="InterfaceKit"
+ src="InterfaceKit.png"> Phidget InterfaceKit<strong></strong></h2>
+<p> This element allows you access
+to &nbsp;PhidgetInterfaceKit devices, I/O boards with digital inputs,
+digital outputs and/or analog outputs., like devices 1010, 1011, 1012,
+1018, 1019 and 1203.&nbsp;</p>
+<p>The analog inputs are used to measure continuous quantities, such as
+temperature, humidity, position, pressure, etc. The digital outputs can
+be used to drive LEDs, solid state relays, transistors; in fact,
+anything that will accept a CMOS signal. The digital inputs can be used
+to convey the state of devices such as push buttons, limit switches,
+relays, and logic levels. <br>
+</p>
+<ul>
+</ul>
+With this element, you can access to the module directly (with the
+serial number) or through the network, using the WebService of the
+phidget's driver&nbsp; in a remote computer with the phidget
+Interfacekit
+connected (here, you need the IP, port and password too).
+<h3>Usage</h3>
+<p> To use any Phidget element,
+drag an drop its icon to the list of
+model elements of your model. Then, edit the connection parameters and
+invoke <i>phidget.connect()</i>
+in your code. </p>
+<p> All methods returning a
+boolean will return <i>true</i>
+on
+successful completion of the command, <i>false</i>
+otherwise. Methods
+returning a double value will return <i>Double.NaN</i>
+if there is any
+error when connecting to the phidget. </p>
+<p>Available method for this
+group of&nbsp;phidgets include: </p>
+<ul>
+  <li><span style="font-weight: bold;">public boolean connect();</span>
+// establish the connection. Returns true if successful</li>
+  <li><span style="font-weight: bold;">public int getAnalogCount();</span>
+//Returns the number of analog inputs on the Interface Kit.&nbsp;</li>
+  <li><span style="font-weight: bold;">public int getDigitalInCount();</span>
+//Returns the number of digital inputs on the Interface Kit.&nbsp;</li>
+  <li><span style="font-weight: bold;">public int getDigitalOutCount();</span>
+//Returns the number of digital outputs on the Interface Kit.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean setDigitalOut(int
+ind,&nbsp;boolean value);</span> //Sets the state of a digital output.
+Setting this to true will activate the output, False is the default
+state.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean
+digitalOutputStatus(int ind);</span> //Returns the state of a digital
+output. Depending on the Phidget, this value may be either the value
+that you last wrote out to the Phidget, or the value that the Phidget
+last returned. This is because some Phidgets return their output state
+and others do not. This means that with some devices, reading the
+output state of a pin directly after setting it, may not return the
+value that you just set.&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean getDigital(int
+ind);</span> //Returns the state of a digital input. Digital inputs
+read True where they are activated and false when they are in their
+default state.&nbsp;</li>
+  <li><span style="font-weight: bold;">public int
+readAnalogSensorValue(int ind);</span> //Returns the value of a analog
+input. The analog inputs are where analog sensors are attached on the
+InterfaceKit 8/8/8. The valid range is 0-1000.&nbsp;</li>
+  <li><span style="font-weight: bold;">public int readAnalogADValue(int
+ind);</span> //Returns the raw value of a analog input. This is a more
+accurate version of readAnalogSensorValue. The valid range is 0-4095
+(12-bits).&nbsp;</li>
+  <li><span style="font-weight: bold;">public boolean setDataRate(int
+ind,&nbsp;int value);</span> //Sets the data rate of a sensor, in
+milliseconds.&nbsp;</li>
+  <li><span style="font-weight: bold;">public int getDataRate(int ind);</span>
+//Gets the data rate of a sensor, in milliseconds.&nbsp;</li>
+  <li><span style="font-weight: bold;">public int getDataRateMax(int
+ind); </span>//Gets the maximum data rate of a sensor, in
+milliseconds.&nbsp;</li>
+  <li><span style="font-weight: bold;">public int getDataRateMin(int
+ind);</span> //Gets the minimum data rate of a sensor, in milliseconds.
+  </li>
+</ul>
+<h3>Example of use</h3>
+<pre>// Init the module<br>myInterfaceKit.connect();<br>// Some values on digital outputs<br>myInterfaceKit.setDigitalOut(7, true);<br>myInterfaceKit.setDigitalOut(1, !myInterfaceKit.getDigital(6));<br>// Reading sensors<br>Sensor0 = myInterfaceKit.readAnalogSensorValue(0)); // value from 0 to 1000<br>Sensor1 = myInterfaceKit.readAnalogADValue(0)); // More precision, value from 0 to 4095<br><br> <br></pre>
+</body>
+</html>

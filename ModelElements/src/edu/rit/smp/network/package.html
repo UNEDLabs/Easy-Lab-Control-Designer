@@ -1,0 +1,35 @@
+<HTML>
+<HEAD>
+<TITLE>Package edu.rit.smp.network</TITLE>
+</HEAD>
+<BODY>
+
+Package edu.rit.smp.network
+contains sequential and SMP parallel programs
+for network algorithms.
+
+<P>
+The SMP parallel programs in this package use Parallel Java (PJ)
+in package <A HREF="../../pj/package-summary.html">edu.rit.pj</A>.
+
+<P>
+To compare SMP parallel programming in Java/PJ
+with SMP parallel programming in C/OpenMP,
+the following programs are provided (source files only):
+<UL>
+<LI>
+<A HREF="doc_files/FloydRandom.java" TARGET="_top">FloydRandom.java</A> --
+Prepares input text files for the C programs below.
+<LI>
+<A HREF="doc_files/FloydSeq.c" TARGET="_top">FloydSeq.c</A> --
+Sequential version.
+<LI>
+<A HREF="doc_files/FloydSmpRow.c" TARGET="_top">FloydSmpRow.c</A> --
+SMP parallel version.
+<LI>
+<A HREF="doc_files/FloydSmpGuided.c" TARGET="_top">FloydSmpGuided.c</A> --
+SMP parallel version with a guided schedule.
+</UL>
+
+</BODY>
+</HTML>

@@ -1,0 +1,69 @@
+<html>
+  <head>
+  <title>RIP model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./rip.png"> RIP model element
+    </h2>
+    <p>
+      RIP provides access to other software through internet using JSON-RPC if RIP server is enabled.
+      The <i>Remote Interoperability Protocol</i> (RIP) is a means to ease the data exchanging and control of remote RIP-enabled hardware or software. 
+      The protocol is JSON based, so it is human friendly and at the same time can be easily processed by most programming languages.
+      It Also provides autodiscovery, meaning that the server informs about the specific capabilities it implements and some details that may be of interest to the user.
+        
+    <h3>Usage</h3>
+      <p>
+      To add the RIP element to your model, drag the icon element to the list of your model elements. In the configuration dialog, put the URL where the RIP server can be contacted, and click
+      'Get Server Info' button. If the handshake with the server was successful, the combo box 'experiences' presents a list of available experiences. Select one of them, and the view will update to show
+      the experience data: description, methods, variables, etc.
+      </p>
+      <p> 
+      The tab 'Reported Variables' shows the variables the server allows to be read or modified. By right-clicking on a variable of the list, one can link with an EJS variable, so the element will handled automatically the
+      data transmission, the user being unaware of the internals. 
+      </p>
+            
+    <p>The element implements the following basic methods:
+    <p>
+    <ul>
+	<li><i>connect(callback)</i>: Connects with the RIP server in the given IP and port. 
+	</li></p>
+	
+	<p><li><i>get(vars, callback)</i>: : Gets the value of the indicator called var2get and returns it.
+	
+	<p><li><i>set(vars, values, callback)</i>:  Sets the value of the control called var2set to value2set.
+	
+	<p><li><i>eval(code, callback)</i>: Evaluate the code in the server side
+	
+	<p><li><i>step(vars, callback)</i>: Exchanges all the linked variables and evaluate the code in the editor, like the next pseudocode, where x and y are linked variables, and y = evalFunction; is the function to evaluate
+	<pre>
+	// === Step function ===
+	riP_Element.set("x",xvalue);
+	riP_Element.eval("y = evalFunction;");
+	aLocalVariable = riP_Element.get("y");
+	//To sychronize use the callback function
+	AlsoUseCallback(function(response){
+		var data = response[2].result;
+		callback(data);
+	});
+	</pre>
+	<p><li><i>disconnect(callback)</i>: Disconnect from server
+	
+	</li>
+    </ul>
+    </p>
+	    <h3>Example of use:s</h3>
+    <pre>
+	//If not defined, all the callback options will be replaced with an automated version
+	//The initial code will be run once
+	//The expressions to evaluate will be run in each step() call
+	//The action after evaluation can be edited, only advanced users, to parse or change the variables updating 
+	riP_Element.connect();					//Uses the server and port from de editor to connect
+	riP_Element.step(); 					//In the Evolution page, to exchange all the linked variables and evaluate the code in the editor
+	riP.setVariable("doublein",0.55);  		//sets the value of the control called "doublein" to 0.55
+	value = riP.getVariable("stringout");   //gets the value of the indicator "stringout" and returns his value
+    </pre>
+  </body>
+</html>
+

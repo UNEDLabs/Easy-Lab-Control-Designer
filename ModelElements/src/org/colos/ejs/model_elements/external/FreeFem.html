@@ -1,0 +1,61 @@
+<html>
+  <head>
+  <title>FreeFem++ model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./FreeFem.png"> FreeFem++ model element 
+    </h2>
+    <p>
+      FreeFem++ defines a script that can be run on a external FreeFem++ program 
+    </p>
+    <p> 
+    The element encapsulates access to <a href="http://www.freefem.org">FreeFem++</a> either installed in your computer or running on a server.
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add a FreeFem++ element to your model, drag the icon element to the list of your model elements 
+      and edit the desired script. The script can make use of the following predefined method:
+      </p>
+    <ul>
+    <li><i>$(variable)</i>: will add to the script the value of the given variable of your model</li> 
+    </ul>
+    <p>The element implements the following basic methods:
+    <ul>
+    <li><i>String getScript()</i>: returns the actual script to run.</li>
+    <li><i>ScriptOutput runScript()</i>: runs the script provided in the editor.</li>
+    <li><i>ScriptOutput runScript(int nProcesses)</i>::same as before, but using nProcesses processes on an MPI installation.</li>
+    <li><i>ScriptOutput runScript(String script)</i>: runs the script of your choice.</li>
+    <li><i>ScriptOutput runScript(int nProcesses, String script)</i>::same as before, but using nProcesses processes on an MPI installation.</li>
+    <li><i>ScriptOutput continueReading(ScriptOutput output)</i>: continues reading a script that pause because of a wait=1 instruction 
+    <li><i>PDEData solveAndGet(int plotNumber, int dataNumber)</i>:runs the script in the editor and gets the PDEData at the given position for a given plot command</li>
+    <li><i>PDEData solveAndGet(int nProcesses, int plotNumber, int dataNumber)</i>:same as before, but using nProcesses processes on an MPI installation</li>
+    <li><i>FreeFem.ErrorCode getErrorCode()</i>: returns the error code after running the last script.</li>
+    <li><i>void setUserDirectory(String directory)</i>: sets the working directory on a server.</li>
+    </ul>
+    </p>
+    <p>
+    For more information, consult the <a href="http://www.um.es/fem/Javadoc/EJS_javadoc">EJS Javadoc documentation</a> for objects in the <i>org.colos.freefem package</i>.
+    It is also convenient that you add the following import statement to your simulation <i>Imports</i> field: <i>org.colos.freefem.*</i>.
+    </p> 
+    <p>
+    No further customization is required if the server URL, username, and password were provided in the element's editor.
+    </p>
+    <p>
+    Alternatively, you can choose to control directly the connection. In this case, you can use the following methods. 
+    <ul> 
+      <li><i>void setServer(String serverURL, int protNumber)</i>: sets the server URL and port number.</li>
+      <li><i>void setUserAndPassword(String username, String password)</i>: sets the user name and password required to access the server, if any.</li>
+    </ul>
+    </p>
+    <h3>Example of use</h3>
+    <pre>
+ScriptOutput output = freeFem.runScript(); // runs the script in the editor
+if (output!=null) {
+  _println ("Script was successful and its output contains: "+ output.getPlotCount()+" PLOT commands");
+}
+    </pre>
+    </pre>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<html>
+  <head>
+  <title>MathJax model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./mathjax.png"> MathJax model element 
+    </h2>
+    <p>
+      MathJax is an open-source JavaScript display engine for LaTeX, MathML, and AsciiMath notation</a> 
+      available at <a href="https://github.com/mathjax/MathJax">MathJax GitHub</a>.
+    <h3>Usage</h3>
+      <p>
+      To add the MathJax element to your model, drag the icon element to the list of your model elements. 
+      </p>
+      <p>
+      The element declares a new global variable (object) called <em>MathJax</em> which should be treated a reserved word in your simulation. 
+      </p> 
+    <p>Read <a href= "http://docs.mathjax.org/en/latest/start.html">the documentation</a> for details.
+
+        <h3>Internal configuration for default</h3>
+        <p> Ejs configures MathJAX using the following parameters:</p>
+    <pre>
+  MathJax.Hub.Config({
+	jax: ["input/TeX", "output/SVG"],
+	extensions: ["tex2jax.js", "fast-preview.js"],
+	TeX: {
+		extensions: ["AMSmath.js","AMSsymbols.js",
+				 "noErrors.js","noUndefined.js"]
+	}});
+    </pre>
+    </p>
+    	<h3>Refresing display</h3>
+    <pre>
+    	MathJax.Hub.Queue(["Typeset",MathJax.Hub]);
+    </pre>
+  </body>
+</html>

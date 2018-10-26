@@ -1,0 +1,32 @@
+package es.uhu.ejs.hardware.arduino;
+
+import javax.swing.ImageIcon;
+
+import org.colos.ejs.library.utils.ModelElementsUtilities;
+import org.colos.ejs.model_elements.AbstractModelElement;
+import org.opensourcephysics.tools.ResourceLoader;
+
+public class ArduinoOldElement extends AbstractModelElement {
+  static ImageIcon ELEMENT_ICON = ResourceLoader.getIcon("es/uhu/ejs/hardware/arduino/Arduino.png"); // This icon is included in this jar
+
+  // -------------------------------
+  // Implementation of ModelElement
+  // -------------------------------
+  
+  public ImageIcon getImageIcon() { return ELEMENT_ICON; }
+  
+  public String getGenericName() { return "Arduino"; }
+  
+  public String getConstructorName() { return "es.uhu.hardware.arduino.ArduinoOld"; }
+    
+  // -------------------------------
+  // Help and edition
+  // -------------------------------
+
+  public String getTooltip() {
+    return "provides an interface to control and Arduino card";
+  }
+  
+  protected String getHtmlPage() { return "es/uhu/ejs/hardware/arduino/Arduino.html"; }
+
+}

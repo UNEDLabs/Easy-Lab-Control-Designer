@@ -1,0 +1,64 @@
+<html>
+  <head>
+    <title>Code Controller Evaluator</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+  <h2>
+    <img src="./evaluator.png"> CodeControllerEvaluator Element
+  </h2>
+  <p>
+    The codeControllerEvaluator Element allows reading Java code from a Text Area in Ejs and evaluating it as the code for a controller. The codeControllerEvaluatorElement uses the Beanshell library, which is is a free, embeddable Java source interpreter with object scripting language features, written in Java.
+  </p>
+  <p>
+    The Interpreter class from BeanShell is used for the evaluation of the code. It is required to define an Interpreter before using calling some methods of the Element:
+  </p>
+<blockquote>
+  <p>	Object i  = (Interpreter) new Interpreter(); </p>
+</blockquote>
+<p><br />The following methods are defined in the codeControllerEvaluator Element:</p>
+<ul>
+  <li>double [] constructState(double... state)
+  <br /><br />
+  Receives as input the variables that we want to export to the Shell, and returns them as an array, that constitutes the state. 
+  <br /><br />E.g.: double[] state = constructState (x, t);</li>  <br /><br />
+  
+  <li>String [] constructStateTags(String... stateTags)
+  <br /><br />Receives as input the names of the variables that we want to export to the Shell, and returns them as an array, that constitutes the stateTags. It is required to execute it once.
+  <br /><br />E.g.: String[] stateTags = constructStateTags ("x", "t");</li><br /><br />
+  
+  <li>int getStateDim (double... state)
+  <br /><br />Receives as input the variables that we want to export to the Shell, and returns the number of variables.
+  <br /><br />E.g.: int dim = getStateDim (x, t);</li><br /><br />
+  
+  <li>double [] updateState(double... state)
+  <br /><br />
+  Receives as input the variables that we want to export to the Shell, and returns them as an array, that constitutes the state. It should be executed at each step, unless the state remains constant.
+  <br /><br />E.g.: double[] state = constructState (x, t);</li>  <br /><br />
+  
+  <li>public boolean exportState(double[] state, String[] stateTags, int dim, Object ip)
+  <br /><br />Receives as input the state, stateTags, the number of variales, and the Interpreter. The function exports these variables to the Shell.
+  <br /><br />E.g.: exportState (state, stateTags, dim, i);</li><br /><br />
+  
+  <li>public double[] evaluateCode(String cad, double[] state, String[] stateTags, int dim, Object ip, String... evVars)
+  <br /><br />Receives as input the code we want to evaluate as a String, the state, stateTags, dim, Interpreter, and the names of the variables we want to get the value back. It returns the value of these variables after evaluating the code.
+  <br /><br />E.g.: String cadena = "x=0.5; u=x/2;";<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double[] up = new double[1];<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up = evaluateCode (cadena,state,stateTags,dim,i,"u");</li></ul>
+  <h3><br />
+    <br />
+    How to use the element
+  </h3>
+  <p>In the initialization code:
+  </p>
+  <ul><li>Define an interpreter Object.</li>
+  <li>Define the state to be exported to the shell, i.e., execute constructState() and constructStateTags().</li></ul>
+  <p>In the evolution page:</p>
+  <ul>
+    <li>    Define the code to be evaluated with evaluateCode().</li>
+    <li>Update the state in the shell with updateState().</li>
+  </ul>
+  <p>&nbsp;</p>
+</ul>
+</body>
+</html>

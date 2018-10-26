@@ -1,0 +1,110 @@
+<html>
+  <head>
+  <title>WebSocket model element</title>
+      <link rel="stylesheet" type="text/css" href="style.css"></link>
+  </head>
+  <body">
+    <h2>
+      <img src="./WebSocket.png"> WebSocket model element 
+    </h2>
+    <p>
+      WebSocket encapsulates a WebSocket server to send/receive data from a client.
+    </p>
+    <h3>Usage</h3>
+      <p>
+      To add a WebSocket element to your model, drag the icon element to the list of your 
+      model elements and optionally set one (but not both) of the fields:
+      <ul>
+        <li>
+          Setting the "Service" field states that you want to send an HTTP request to a web server
+          that will run a JAVA program and return network information
+          (in the form of an object with a <tt>webserver</tt> String) for the client to connect to 
+          a WebSocket server run by this program at an appropriated IP and port. 
+        </li>
+        <li>
+          Setting the "IP:portnumber" field states that you want the client to connect to 
+          a WebSocker server running at the specified IP and portnumber.</li>
+        </li>
+      </ul>
+      The client will not attempt any connection if both fields are left empty. In this case, an explicit call
+      to  <tt>start(String url)</tt> or <tt>startFromService(String url)</tt> is required prior to send
+      any communication command.
+      </p>
+      <p>
+      	By default, the client waits for 30 seconds before proceeding with the simulation, 
+      	aborting it if no server connects to it. If the server disconnects or any communication
+      	error is issued, the connection is considered closed (and you will need to start it again).
+      	You can change the number of seconds to wait using the <tt>setWaitTime(seconds)</tt>
+      	method. 
+      </p>
+      <p>Typically, you will need to modify the method that will be called if a message is received via the WebSocket connection.
+    </p>
+    <h3>Connection functions</h3>
+    <p>
+    The element implements the following connection methods:
+    <ul>
+      <li> <i>void start(String url)</i>. Listen to the given url (in the form "ws://ip:port")</li>
+      <li> <i>void startFromService(String url)</i>. 
+           Send a GET HttpRequest to the given url and read the response <i>webserver</i> field.
+           Then call <i>start(response.webserver)</i></li>
+      <li> <i>void setWaitTime(int seconds)</i>. Sets the number of seconds
+    	   to wait for a connecting server, before signaling an error. Setting a time of 0 makes the
+           client to wait for ever.</li>
+      <li> <i>boolean isConnected()</i>. Whether the connection is open.</li>
+      <li> <i>void stop()</i>. Stops listening to the server.</li>
+    </ul>
+
+    <h3>Output functions</h3>
+    <p>
+      The API also includes the following output communication method. All communication methods 
+      return a true boolean if successful, false otherwise.
+    </p>
+    <ul>
+      <li> <i>boolean sendMessage(String message)</i>. 
+        Sends the connected server the given String message.
+        The receiving model is responsible of processing the message through the user-defined
+        <i>void processInput (WebSocket socket, String input)</i> or 
+        <i>void processInput (String input)</i> method. See the WebSocket Server
+        model element for Java EjsS simulations.
+        Example:
+        <pre>
+ejssClient.sendMessage("Hello world");
+        </pre>
+      </li>
+    </ul> 
+    
+    <h3>Input functions</h3>
+    <p>
+      This WebSocket client is designed to receive messages from the server. 
+    </p>
+    <p>
+      Messages to a user-defined function that must process it. 
+      This function has the following signature:
+      <i>function(message)</i>. 
+      It is the user responsibility to implement the proper response 
+      to the message. 
+      An example that deals with a simple message:
+      <pre>
+      function (message) { // At the JavaScript client simulation
+        if (message=="hello") {
+          // The server issued ejssServer.sendMessage("hello"). 
+          console.log ("The server says :  "+message);
+        }
+      }
+      </pre>    
+    </p>    
+    
+    <p>
+    Finally, users interested can also run code when a new connection is established or an open connection 
+    is closed. For this, set the element methods 
+      <i>onConnectionOpened(event)</i> 
+      and/or
+      <i>onConnectionClosed(event)</i>.
+      The <i>event</i> parameter refers to the newly opened or just closed event. 
+    </p>
+    
+    <h3>Example of use</h3>
+    <pre>
+    webSocketClient.sendMessage("t="+t);
+  </body>
+</html>
