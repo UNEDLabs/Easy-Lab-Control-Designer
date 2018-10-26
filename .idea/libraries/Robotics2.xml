@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Robotics2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/other/ModelElements/Hardware/_utils/Robotics2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

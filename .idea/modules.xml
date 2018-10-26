@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Ejs/Ejs.iml" filepath="$PROJECT_DIR$/Ejs/Ejs.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjsDL/EjsDL.iml" filepath="$PROJECT_DIR$/EjsDL/EjsDL.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EjsExtrasForJava8/EjsExtrasForJava8.iml" filepath="$PROJECT_DIR$/EjsExtrasForJava8/EjsExtrasForJava8.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ModelElements/ModelElements.iml" filepath="$PROJECT_DIR$/ModelElements/ModelElements.iml" />
+    </modules>
+  </component>
+</project>

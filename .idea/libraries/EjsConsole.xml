@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="EjsConsole">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/EjsConsole.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

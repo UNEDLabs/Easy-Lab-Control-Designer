@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="javascript">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/javascript/gson-2.2.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/javascript/js.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/javascript/html_view.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

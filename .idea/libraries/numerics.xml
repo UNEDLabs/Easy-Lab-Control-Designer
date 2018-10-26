@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="numerics">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/javascript/model_elements/Numerics/numerics.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

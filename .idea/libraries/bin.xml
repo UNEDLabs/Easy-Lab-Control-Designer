@@ -1,0 +1,21 @@
+<component name="libraryTable">
+  <library name="bin">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/bsh.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/comSun5.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/ejs_extras_java9.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/bcel.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/comSun8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/ejs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/osp.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/locales.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/ejs_extras_java8.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/comSun6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/ejs_lib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/comSun7.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/jfxrt1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

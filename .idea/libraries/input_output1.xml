@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="input_output1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/javascript/model_elements/InputOutput/input_output.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

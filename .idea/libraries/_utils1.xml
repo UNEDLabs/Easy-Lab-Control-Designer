@@ -1,0 +1,27 @@
+<component name="libraryTable">
+  <library name="_utils1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/ARElement.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/commons-cli.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/commons-codec-1.10.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/jackson-annotations-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/jackson-core-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/logback-core.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/LoaderAC3D.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/jackson-databind-2.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/javax.json-api-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/gstreamer-java.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/LoaderVRML.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/log4j-1.2.15.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/commons-logging-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/xuggle-xuggler.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/logback-classic.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/Parser_Lib_org.eclipse.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/jna.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/javax.json-1.0.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/_utils/Loader3DS.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

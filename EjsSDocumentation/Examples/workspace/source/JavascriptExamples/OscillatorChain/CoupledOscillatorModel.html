@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="../_ejs_library/css/ejsPage.css"/>
+    <title>Coupled Oscillator Model</title>
+</head>
+
+<body>
+
+    <h1>
+      Oscillator Chain Model
+    </h1>
+    <p>
+      Let y<sub>i</sub>= y(x<sub>i</sub>,t) represent the time-dependent displacement of a 
+      particle of mass M with horizontal position x<sub>i</sub>.&nbsp; Each particle is coupled to its nearest neighbors with a 
+      spring in order to form a chain of oscillators.&nbsp; It is assumed that the particles move only in the <i>y-</i>direction and 
+      that the force F<sub>i</sub> 
+      on the i-th particle depends on the relative displacement 
+      between that particle and its nearest neighbors. The force on the <i>i</i>-th particle can be written as
+    </p>
+    <p align="center">
+      <img src="osc_chain_force.gif"></p>
+    <p>
+      where K is the Hook's law coupling constant. Because the first and last particles 
+      in the lattice are fixed, we compute particle accelerations starting 
+      with the second particle and continuing through the lattice until we 
+      reach the next-to-last particle. This, the particles in a chain with N oscillators are labeled [0, 1, 2, <sup>....</sup> 
+      N-1, N, N+1].</p>
+    <p>
+      &nbsp;</p>
+	<p>
+      One way of understanding a chain of N coupled oscillators of length L 
+      and mass M is to study the motion of its normal modes. A normal mode is 
+      a special configuration (state) where every particle moves sinusoidally 
+      with the same angular frequency &#969;<sub>m</sub>. The <i>m</i>-th mode &#934;<sub>m</sub> of the 
+      oscillator chain of length L is
+    </p>
+    <p align="center">
+      <img src="osc_chain_mode.gif">
+      .
+    </p>
+    <p align="left">
+      The system stays in a single mode and every particle oscillates with 
+      constant angular frequency &#969;<sub>m</sub> if the oscillator chain is 
+      initialized in a single mode.
+    </p>
+    <p align="center">
+      <img src="osc_chain_frequency.gif">
+      
+    </p>
+    <p>
+      An arbitrary initial configuration 
+      can be expressed as sum of these normal modes.
+    </p>
+</body>
+
+</html>

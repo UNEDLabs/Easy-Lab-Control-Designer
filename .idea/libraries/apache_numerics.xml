@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="apache_numerics">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/model_elements/Apache/apache_numerics.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

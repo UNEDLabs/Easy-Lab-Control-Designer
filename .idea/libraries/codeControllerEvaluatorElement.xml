@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="codeControllerEvaluatorElement">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/other/UNED/codecontrollerevaluator/codeControllerEvaluatorElement.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

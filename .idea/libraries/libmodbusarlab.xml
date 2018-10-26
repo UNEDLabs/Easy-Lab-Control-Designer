@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libmodbusarlab">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/model_elements/External/_utils/libmodbusarlab.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

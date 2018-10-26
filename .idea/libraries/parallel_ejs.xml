@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="parallel_ejs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/model_elements/ParallelJava/parallel_ejs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

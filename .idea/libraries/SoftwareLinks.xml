@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="SoftwareLinks">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/javascript/model_elements/SoftwareLinks/SoftwareLinks.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

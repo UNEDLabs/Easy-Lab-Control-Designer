@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="library">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/nyar4psg-1.2.0/library/NyAR4psg.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/nyar4psg-1.2.0/library/NyARToolkit.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

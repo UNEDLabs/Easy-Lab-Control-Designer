@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="InputOutput">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/model_elements/InputOutput/input_output.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/model_elements/InputOutput/ARSystem.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

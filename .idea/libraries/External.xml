@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="External">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/other/ModelElements/External/modbussarlab.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/other/ModelElements/External/sarlab.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/other/ModelElements/External/external.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/other/ModelElements/External/mastermodbussarlab.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/other/ModelElements/External/audioplayer.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/other/ModelElements/External/labview.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

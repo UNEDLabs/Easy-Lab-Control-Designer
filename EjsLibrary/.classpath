@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/osp.jar" sourcepath="/osp_github/src"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/ARElement.jar" sourcepath="/ModelElements/src"/>
+	<classpathentry kind="lib" path="/Ejs/libraries/HotEqn.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/Loader3DS.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/LoaderAC3D.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/LoaderVRML.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/QTJava.zip"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/jackson-annotations-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/jackson-core-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/jackson-databind-2.1.1.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/bcel.jar"/>
+	<classpathentry kind="lib" path="libraries/java3d/j3dcore.jar"/>
+	<classpathentry kind="lib" path="libraries/java3d/j3dutils.jar"/>
+	<classpathentry kind="lib" path="libraries/java3d/vecmath.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/xuggle-xuggler.jar"/>
+	<classpathentry kind="lib" path="libraries/plugin.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/javax.json-1.0.4.jar"/>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/extensions/_utils/javax.json-api-1.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="/Ejs/distribution/bin/ejs_extras_java8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

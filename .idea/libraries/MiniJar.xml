@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MiniJar">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/EjsExtrasForJava8/bin/org/opensourcephysics/tools/minijar/MiniJar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

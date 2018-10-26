@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="other">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/other/pj.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/other/matlabcontrol-4.1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/other/phidgetlibsarlab.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/other/jfxrt1.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,411 @@
+% !TEX root = ../Guide de l'utilisateur de EjsS.tex
+
+\chapter{Examiner l'arôme Javascript de  \Ejs}\label{chapter:JavascriptEJS}
+
+\begin{quote}
+Le changement est la loi de la vie. Et ceux dont le regard est tourné vers le passé ou le présent sont certains de rater l'avenir. {\em John F. Kennedy}
+\end{quote}
+
+Pour offrir une perspective du processus de modélisation nous allons, dans ce chapitre, premièrement  ouvrir, examiner et  exécuter une simulation d'un oscillateur harmonique simple existant. Par la suite, nous allons modifier la simulation pour montrer comment \ejs\ engage l'utilisateur dans le processus de modélisation et réduit  en grande partie la quantité de programmation qui est nécessaire. Le chapitre utilise JavaScript  comme langage de programmation pour la modélisation et c'est un chapitre similaire au Chapitre~\ref{chapter:JavaEJS} (dans lequel Java est utilisé).
+
+% ------------------------
+    \section{Examiner la simulation}\label{section:03ExplorationJavascriptInspecting}\index{\Ejs!inspecting a simulation}
+% ------------------------
+
+Comme nous l'avons mentionné dans le Chapitre~\ref{chapter:EjsIntro}, \Ejs\ fournit trois panneaux de travail pour construire des  simulations. Le premier panneau, \lit{Description}, nous permet de créer et d'éditer un texte multimédia basé sur HTML qui décrit la simulation.\index{HTML}  
+Le deuxième panneau, \lit{Model,} est dédié au processus de modélisation. Nous utilisons cet espace pour créer des variables qui décrivent le modèle, pour initialiser ces variables et pour écrire des algorithmes qui décrivent comment ce modèle change dans le temps. Le troisième panneau, \lit{HtmlView}, est dédié à la tâche d' élaborer l'interface graphique utilisateur qui permet à l'utilisateur de contrôler la simulation et d'afficher les résultats ou données de sortie. 
+
+Pour comprendre comment les panneaux \lit{Description}, \lit{Model} et \lit{HtmlView}  fonctionnent collaborativement, nous allons examiner et exécuter une simulation existante. Une capture d'écran ne remplace pas une démonstration en direct et nous vous encourageons à continuer à suivre sur votre ordinateur au fur et mesure que vous lisez. 
+
+Cliquez sur l'icône \lit{Open} icon, \includegraphics[scale=\linescale]{../_common/icons_png/openSmall.png},  de la barre de tâche de \ejs. Une boîte de dialogue de fichier similaire à celle qui est sur la figure~\ref{fig:03ExplorationJavascript/OpenDialog}   s'affiche pour montrer le contenu du répertoire \file{source} de votre environnement de travail. Dirigez-vous sur le répertoire \file{JavascriptExamples} où vous trouverez un fichier intitulé \file{MassAndSpring.ejss}. Sélectionnez ce fichier et cliquez sur le bouton \lit{Open} de la boîte de dialogue. 
+
+\begin{figure}[htb]
+  \centering
+  \subfigure{\includegraphics[scale=0.2]{03ExplorationJavascript/images/OpenDialogCrossPlatform.png}}
+  \subfigure{\includegraphics[scale=0.2]{03ExplorationJavascript/images/OpenDialogNative.png}}  
+  \caption{La boîte de dialogue de fichier ouverte vous permet de naviguer sur votre disque dur et de ouvrir une simulation existante. L'apparence de la boîte de dialogue (deux types différents de \lit{look and feels} -- présentations -- sont affichés ici) peut varier en fonction de votre système d'exploitation et de la présentation sélectionnée. \label{fig:03ExplorationJavascript/OpenDialog}}
+\end{figure}
+
+Maintenant les choses deviennent réelles! \ejs\ lit le document \file{MassAndSpring.ejss} qui comble le panneau et un navigateur intitulé ``EjsS- PREVIEW'' apparaît sur votre écran comme indiqué dans la figure~\ref{fig:03ExplorationJavascript/SpringInterface}.~\footnote{Si le navigateur n'apparaît pas, de-sélectionnez la case à cocher  \lit{Keep preview hidden} (Garder la prévisualisation cachée) du panneau \lit{HtmlView}.}
+ Un petit avertissement. Vous pouvez déplacer les objets et cliquer sur des boutons de la maquette de la fenêtre mais le modèle ne représentera pas le comportement complet. Pour cela vous devez exécuter la simulation.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/SpringInterface.png}
+  \caption{La maquette de fenêtre de \ejs\ de la simulation \file{MassAndSpring}. La barre de titre et la bordure rouge indique que c'est une page de prévisualisation  HTML et que le programme ne s'exécute pas.}
+  \label{fig:03ExplorationJavascript/SpringInterface}
+\end{figure}
+
+\note{Les lecteurs impatients ou précoces peuvent être tentés de cliquer sur l'icône vert d'activation \includegraphics[scale=\linescale]{../_common/icons_png/launch.png} de la barre de tâches pour exécuter notre exemple avant de procéder avec le tutoriel. Les lecteurs qui feront cela n'interagiront plus directement avec \ejs,  mais avec un programme complet d'exécution de JavaScript sur une nouvelle page HTML.  Quittez le programme d'exécution en fermant ce nouveau page web \lit{Mass and Spring} avant de procéder.}
+
+\subsection{The panneau \lit{Description}}
+
+Sélectionnez le panneau \lit{Description}\index{Ejs!Description}  en cliquant sur le bouton radio correspondant dans la partie supérieure de \ejs\  et vous verrez deux pages de texte pour cette simulation. La première page affichée dans la figure~\ref{fig:03ExplorationJavascript/SpringDesc} contient un petit débat sur le modèle de masse-ressort. Cliquer sur la barre \lit{Activities} (activités) pour voir le deuxième texte. 
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/SpringDesc.png}
+  \caption{Les pages de description pour la simulation de la masse-ressort. Cliquez sur la barre pour afficher la page. Faites un clic-droit sur la barre pour éditer la page.}
+  \label{fig:03ExplorationJavascript/SpringDesc}
+\end{figure}
+
+Une \lit{Description} est un texte multimédia HTML\index{HTML}  ou XHTML\index{XHTML} qui fournit de l'information et des instructions sur la simulation.  HTML représente Hypertext Markup Language (langage de balisage d'hypertexte) et c'est le protocole le plus habituellement utilisé pour le formatage et l'affichage de documents sur le Web. Le X de XHTML signifie eXtensible. XHTML est essentiellement un HTML exprimé comme un XML valide ou, d'un mode plus simple,  un HTML parfaitement formaté.
+
+\ejs\  fournit un éditeur HTLM simple qui vous permet de créer et de modifier des pages sur \ejs. Vous pouvez aussi importer des pages HTML ou (préférablement) XHTML à \ejs\  en faisant un clic droit sur la barre de l'espace de travail \lit{Description}.  (Voir la Section~\ref{section:03ExplorationJavascriptModifyingDescription}.) Les pages de description sont une partie essentielle du processus de modélisation et ces pages sont inclus dans le modèle compilé quand le modèle est exporté pour sa distribution.
+
+
+\subsection{Le panneau \lit{Model}}\label{section:03ExplorationJavascriptModel}
+
+Le panneau \lit{Model} est l'espace où le modèle est défini pour qu'il puisse être converti en un programme par \ejs. Dans cette simulation, nous étudions le mouvement de la particule de masse m attaché à une extrémité du ressort sans masse de la longueur d'équilibre $L$.
+
+ Le ressort est fixé au mur par son autre extrémité et son mouvement est restreint en direction horizontale. Bien que la masse oscillante présente une solution analytique bien connue, il est utile de commencer par le modèle oscillateur harmonique simple pour que nos données de sortie puissent être comparées avec le résultat analytique exact. \index{Simple Harmonic Motion}
+ 
+Notre modèle assume des petites oscillations pour que le ressort réponde à un déplacement donné horizontal $\delta x$ de la longueur de l'équilibre $L$ sous une force déterminée par la Loi de Hooke,\index{Hooke's law} $F_x = - k \,\delta x$, dans laquelle $k$ est la constante élastique du ressort, qui dépend de ses caractéristiques physiques. Nous utilisons la deuxième Loi de Newton\index{Newton's second law} pour obtenir une équation différentielle du second ordre pour la position de la particule:
+\begin{equation}
+  \frac{d^2\ x}{dt^2} = -\frac{k}{m}\,(x-L). \label{eq:03ExplorationJavascript/SpringBasic}
+\end{equation}
+ Remarquez que nous utilisons un système de coordonnées avec l'axe-$x$  au long du ressort et son origine est à l'extrémité du ressort qui est fixée. La particule est placée à  $x$ et le déplacement de l'équilibre  $\delta x=x-L$ équivaut à zéro quand $x=L$ . Nous résolvons ce système numériquement pour étudier l'évolution de son état dans le temps.
+ 
+Voyons comment nous allons implémenter le modèle de masse-ressort en sélectionnant le bouton radio de \lit{Model} et en examinant chacun des six panneaux.
+
+\subsubsection{Déclaration des variables }
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/ModelVariables.png}
+    \caption{
+    Le panneau  \lit{Model} contient six sous-panneaux de travail. Le sous-panneau pour la définition des variables dynamiques masse-ressort est affiché. D'autres onglets dans ce sous-panneau de travail définissent les variables additionnelles telles que la longueur naturelle du ressort $L$ et l'énergie $E$. } 
+    \label{fig:03ExplorationJavascript/ModelVariables}
+\end{figure}
+
+Quand vous implémentez un modèle, une des bonnes choses à faire premièrement c'est identifier, définir et initialiser les variables qui décrivent le système. Le terme \emph{variable} est très général et fait référence à tout ce que l'on peut attribuer un nom, y compris une constante physique et un graphique.\index{Model!Variables} La figure~\ref{fig:03ExplorationJavascript/ModelVariables} affiche un panneau de variable \ejs. Chaque ligne définit une variable du modèle en précisant le nom de la variable, le type, la dimension et la valeur initiale.
+
+ Les variables dans les programmes informatiques peuvent être de différents types en fonction de l'information qu'elles détiennent. Les types plus habituellement utilisés sont  \code{boolean} pour les valeurs vrai/faux, \code{int} pour les nombres entiers, \code{double} pour les valeurs numériques à haute précision ($\approx 16$ chiffres significatifs) et  \code{String} pour les textes. Nous utiliserons tous ces types de variables dans ce document mais le modèle masse-ressort utilise seulement les variables de type  \code{double} et \code{boolean}.
+
+
+\note{Si vous avez déjà appris un peu de JavaScript, vous saurez probablement que JavaScript n'a aucun type pour les variables. Toutes les variables sont déclarées avec un mot-clé \code{var}. Ce qui veut dire que, en principe, JavaScript ne fait aucune différence entre integers (les nombres entiers), double (les nombres à haute précision) ou String (les textes), etc\ldots  Mais il le fait! Par exemple vous ne devez pas utiliser une  variable double comme index pour un tableau (\emph{array}, en anglais). C'est pour cela et parce qu'il vous aide à clarifier l'utilisation des variables dans votre modèle (quelles valeurs elles peuvent détenir et où vous pouvez ou vous ne pouvez pas les utiliser) nous vous recommandons d'attribuer un type à chaque variable de votre modèle.}
+
+Les variables peuvent s'utiliser comme paramètres, \index{Model!Parameters} comme variables d'état \index{Model!State variables} ou comme données d'entrée et de sortie du modèle.\index{Model!Input and Output} Les panneaus de la figure~\ref{fig:03ExplorationJavascript/ModelVariables}  définissent les variables utilisées dans notre modèle. Nous avons déclaré une variable pour la position-$x$  de la particule, \code{x}, pour sa vitesse dans la direction-$x$, \code{vx}, pour le temps, \code{t}, et pour l'incrément de temps à chaque étape de la simulation, \code{dt}. Nous définissons quelques variables dans cet onglet et dans d'autres qui n'apparaissent pas dans l'equation\eqref{eq:03ExplorationJavascript/SpringBasic}. Les raisons pour l'utilisation de variables auxiliaires telles que \code{vx}  ou les énergies cinétiques, potentielles ou totales seront indiquées clairement par la suite. La partie inférieure du panneau de variables contient un champ de commentaires qui fournit une description du rôle de chaque variable dans le modèle. Cliquez sur une variable pour afficher le commentaire correspondant.
+
+
+\subsubsection{Initialisation du modèle}
+Fixer les conditions initiales correctement est très important quand vous implémentez un modèle car le modèle doit commencer dans un état qui puisse se réaliser physiquement. Notre modèle est relativement simple et nous l'initialisons en introduisant des valeurs (ou des expressions simples de JavaScript telles que \code{0.5*m*vx*vx}) dans la colonne \lit{Initial value} (valeur initiale) du panneau de variables. \ejs\  utilise ces valeurs quand il initialise la simulation.
+
+
+\note{Les modèles avancés peuvent nécessiter un algorithme d'initialisation. Par exemple un modèle dynamique moléculaire peut fixer la vitesse de chaque particule pour un ensemble de particules. Le panneau \lit{Initialization} nous permet de définir une ou plusieurs pages de code JavaScript qui réalisent les calculs nécessaires. \ejs\  transforme ce code en une fonction JavaScript\index{Javascript!function} et reprend cette fonction au démarrage et chaque fois que la simulation est réinitialisée. Le panneau \lit{Initialization}  de masse-ressort n'est pas affiché parce qu'il est vide. Voir le Paragraphe~\ref{section:03ExplorationJavascriptInspectingRelations} pour un exemple de comment le code JavaScript apparaît sur \ejs.}
+
+
+\subsubsection{L'évolution du modèle}
+
+Le panneau \lit{Evolution} nous permet d'écrire le code JavaScript qui détermine comment le système masse-ressort évolue dans le temps et il utilisera cette option fréquemment pour les modèles qui ne sont pas basés sur des équations différentielles ordinaires (EDO, ODE en anglais). Cependant, il y a une deuxième option qui nous permet d'introduire des équations différentielles ordinaires telles que \eqref{eq:03ExplorationJavascript/SpringBasic} sans programmer. \ejs\ fournit un éditeur dédié qui nous permet de préciser des équations différentielles dans un format qui ressemble à des notations mathématiques et qui génère automatiquement le code JavaScript correct.
+
+Voyons comment l'éditeur d'équations différentielles fonctionne pour le modèle de masse-ressort. Étant donné que les algorithmes EDO résolvent des systèmes d'équations différentielles ordinaires de premier ordre, une équation d'ordre supérieur tel que \eqref{eq:03ExplorationJavascript/SpringBasic} doit être refondée dans un système de premier ordre. Nous pouvons faire cela en considérant la vitesse comme une variable indépendante qui obéit à sa propre équation:
+\begin{align}
+  \frac{d\ x} {dt} &= v_x                           \label{eq:03ExplorationJavascript/SpringBasicODE1} \\
+  \frac{d\ v_x}{dt} &= -\frac{k}{m}\,(x-L). \label{eq:03ExplorationJavascript/SpringBasicODE2}
+\end{align}
+La nécessité d'une équation différentielle additionnelle explique pourquoi nous déclarons la variable \code{vx}  dans notre panneau de variables.
+
+ En cliquant sur le panneau \lit{Evolution}, l'éditeur EDO représenté dans la figure~\ref{fig:03ExplorationJavascript/ModelEvolution} s'affiche.
+ 
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/ModelEvolution.png}
+    \caption{Le panneau évolution ODE (EDO en français) représente l'équation différentielle  et l'algorithme numérique de la masse-ressort.}
+    \label{fig:03ExplorationJavascript/ModelEvolution}
+\end{figure}
+Remarquez que l'éditeur EDO affiche \eqref{eq:03ExplorationJavascript/SpringBasicODE1} et \eqref{eq:03ExplorationJavascript/SpringBasicODE2} (en utilisant le caractère \lit{*} pour désigner la multiplication). Les champs qui se trouvent dans la partie supérieure de l'éditeur précisent la variable indépendante \code{t} et l'incrément de variable \code{dt}. Les algorithmes numériques estiment la solution EDO exacte en indiquant l'état dans les étapes distinctes et l'incrément détermine cette intervalle. Le bouton \lit{Prelim code} dans la partie supérieure droite de l'éditeur nous permet d'introduire un code préliminaire pour réaliser les calculs avant d'évaluer les équations (une circonstance nécessaire dans des situations plus complexes que celle dont nous nous occupons dans cet exemple). Un menu déroulant dans la partie inférieure de l'éditeur nous permet de sélectionner le \emph{solutionneur} EDO, un algorithme numérique qui anticipe la solution à partir de la valeur actuelle de temps, \code{t} à la suivante valeur \code{t+dt}. Le champ de tolérance (\lit{Tol}) est grisé et vide car Runge-Kutta 4 est une méthode à étape fixe qui ne nécessite pas de paramètres de tolérance. Le bouton \lit{Fine-tune\ldots} affiche un dialogue  qui nous permet de régler l'exécution de ce solutionneur bien que les valeurs par défaut soient normalement appropriées. Finalement le champ d'évènements (\lit{Events}) dans la partie inférieure du panneau nous indique que nous n'avons défini aucun évènement pour cette équation différentielle. Vous pourrez trouver des exemples avec des codes préliminaires et des évènements dans les pages suivantes de ce document. Les différents algorithmes de résolution et leurs paramètres sont commentés dans la bulle d'aide de \ejs.
+
+La partie gauche de l'espace de travail evolution comprend des champs qui déterminent à quel niveau de \emph{douceur} et à quelle vitesse la simulation s'exécute. L'option de \lit{frames per second} (\lit{FPS}) --- images par seconde --- qui peut être sélectionnée soit en utilisant un curseur, soit un champ de saisie, précise combien de fois par seconde nous voulons que notre simulation soit redessinée sur l'écran. Le champ de saisie \lit{steps per display} (\lit{SPD})  --- étape par affichage --- précise combien de fois nous voulons faire progresser le modèle avant de le redessiner. La valeur actuelle de \code{20} images par seconde produit une bonne animation qui, conjointement avec la valeur prescrite d'une étape par affichage et \code{0.05} pour \code{dt},  donne lieu à une simulation qui s'exécute (à peu près) en temps réel. Nous utiliserons pratiquement toujours le paramètre par défaut d'une étape par affichage. Néanmoins il y a des situations dans lesquelles les données de sortie graphique du modèle utilisent une quantité considérable de la puissance de traitement et au cours desquelles nous voulons accélérer les calculs numériques. Dans ce cas nous pouvons augmenter la valeur du paramètre d'étape par affichage pour que le modèle progresse plusieurs fois avant que la visualisation soit redessinée. La case à cocher \lit{Autoplay} indique si la simulation doit démarrer quand le programme  démarre. Cette case est désactivée pour que vous puissiez changer les conditions initiales avant de démarrer l'évolution.
+
+Le panneau \lit{Evolution} gère les aspects techniques du modèle EDO de masse-ressort sans programmer. La simulation fait progresser l'état du système en résolvant numériquement les équations différentielles du modèle et en utilisant l'algorithme intermédiaire. L'algorithme passe de l'état actuel à un temps  \code{t}  à un nouvel état à un nouveau temps \code{t + dt} avant que la visualisation soit redessinée. La simulation répète cette étape évolution \code{20} fois par seconde sur les ordinateurs ou dispositifs avec une puissance de traitement faible. La simulation peut s'exécuter plus lentement ou incorrectement sur des ordinateurs ou des dispositifs avec une puissance de traitement insuffisante ou si l'ordinateur est occupé mais il devrait fonctionner.
+
+\note{ Bien que le modèle masse-ressort puisse se résoudre avec un simple algorithme EDO, notre bibliothèque de méthodes numériques contient des algorithmes très sophistiqués et \ejs\ peut appliquer ces algorithmes à de grands systèmes d'équations différentielles de vecteur avec ou sans évènements discontinus.}
+
+\subsubsection{Relation entre les variables}\label{section:03ExplorationJavascriptInspectingRelations}
+Toutes les variables d'un modèle ne sont pas calculées en utilisant un algorithme du panneau Evolution. Les variables peuvent se calculer après que l'évolution soit appliquée. Nous faisons référence aux variables qui sont calculées en utilisant l'algorithme evolution comme des variables d'état ou des variables dynamiques et nous faisons référence aux variables qui dépendent de ces variables comme des variables auxiliaires ou de sortie. Dans le modèle masse-ressort les énergies cinétiques, potentielles et totales du système sont des variables de sortie parce qu'elles sont calculées à partir de variables d'état:
+\begin{align}
+  T &= \frac{1}{2} m {v_x}^2,     \label{eq:03ExplorationJavascript/SpringEnergy1} \\
+  V &= \frac{1}{2} k (x-L)^2,     \label{eq:03ExplorationJavascript/SpringEnergy2} \\
+  E &= T + V.                     \label{eq:03ExplorationJavascript/SpringEnergy3}
+\end{align}
+On dit qu'il existe des relations fixes entre les variables du modèle. 
+
+Le panneau \lit{Fixed relations} représenté dans la figure~\ref{fig:03ExplorationJavascript/ModelRelations}  s'utilise pour écrire des relations fixes entre les variables. Remarquez la facilité pour convertir \eqref{eq:03ExplorationJavascript/SpringEnergy1} jusqu'a \eqref{eq:03ExplorationJavascript/SpringEnergy3}  à travers de la syntaxe JavaScript. Assurez-vous d'utiliser le caractère de multiplication \lit{*} et d'écrire un point-virgule à la fin de chaque énoncé JavaScript. 
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/ModelConstraints.png}
+    \caption{Les relations fixes pour le modèle masse-ressort.}
+    \label{fig:03ExplorationJavascript/ModelRelations}
+\end{figure}
+
+\noindent \textbf{Voilà une importante remarque!} Vous vous demandez peut-être pourquoi nous n'écrivons pas des expressions de relation fixe en incorporant une deuxième page de code après la page ODE (EDO)  dans le panneau \lit{Evolution}. Après tout, les pages évolution exécutent séquentiellement et  une deuxième page d'evolution actualiserait correctement les variables de sortie après chaque étape\ldots La raison pour laquelle le panneau \lit{Evolution} ne doit pas être utilisé c'est parce que les relations fixes doivent \emph{toujours} se maintenir car il y a d'autres manières, telles que les actions de la souris, pour modifier les variables d'état. Par exemple, déplacer la masse change la variable $x$ et ce changement affecte l'énergie. \ejs\  évalue automatiquement les relations après l'initialisation, après chaque étape d'évolution et chaque fois qu'il y ait une interaction de l'utilisateur avec l'interface de la simulation. C'est pour cela que c'est important que les relations fixes entre variables soient annotées sur le panneau \lit{Fixed relations}.
+
+\subsubsection{Les pages personnalisées (\lit{Custom})}
+
+ Il y a un cinquième panneau dans le panneau \lit{Model}  intitulé  \lit{Custom} (Personnalisation). Ce panneau peut s'utiliser pour définir des fonctions JavaScript qu'on veut utiliser dans le modèle. Ce panneau est vide parce que notre modèle actuel ne nécessite pas de méthodes additionnelles mais nous utiliserons ce panneau quand nous modifierons l'exemple masse-ressort dans la Section~\ref{section:03ExplorationJavascriptModifying}. Une fonction personnalisée ne s'utilise pas à moins qu'elle soit explicitement indiquée par un autre panneau.
+ 
+\subsubsection{Les éléments du modèle}
+
+ Le sixième et dernier sous-panneau du panneau \lit{Model} est intitulé \lit{Elements} et il vous fournit un accès aux bibliothèques JavaScript externes en forme de icônes glisser-déposer. Vous incorporez ces bibliothèques à votre programme en glissant l'icône correspondant à la liste des éléments Model à utiliser pour ce modèle. Cela crée des objets JavaScript que vous pouvez utiliser dans votre code modèle. Ce panneau est aussi vide pour ce modèle parce que notre modèle masse-ressort ne nécessite pas de bibliothèques JavaScript  additionnelles.
+ 
+% ---------------------------------------------
+\subsection{Le panneau \lit{HtmlView}}
+% ---------------------------------------------
+
+\lit{HtlmView}  est le troisième panneau de \Ejs. Ce panneau nous permet de créer une interface graphique basée sur HTML qui comprend la visualisation, l'interaction de l'utilisateur et le contrôle du programme avec un minimum de programmation. La figure~\ref{fig:03ExplorationJavascript/SpringInterface}  représente un affichage basée sur HTML pour le modèle de masse-ressort. Sélectionnez le bouton radio \lit{HtlmView} pour examiner comment un affichage basé sur HTML est créé.
+
+ Le cadre de droite du panneau \lit{HtlmView} de \ejs\ représenté dans la figure~\ref{fig:03ExplorationJavascript/View} contient une collection d'éléments d'affichage (\emph{view elements})\index{Ejs!HtmlView elements} basé sur HTLM, regroupés en base à leur fonctionnalité. Les éléments d'affichage sont des blocs de construction qui peuvent se combiner pour former une complète interface utilisateur basé sur HTLM, et chaque élément d'affichage est un objet spécialisé avec une représentation sur l'écran. Pour afficher l'information d'un élément déterminé, cliquez sur son icône et tapez la touche \lit{F1} ou faites un clic droit pour sélectionner le menu \lit{Help} (aide) de l'objet. Pour créer une interface utilisateur, nous créons un affichage HTML vide (imaginez-le comme une page blanche HTML) et incorporez les éléments tels que le panneau, les boutons, les graphiques\ldots en utilisant glisser-déposer tel que décrit dans la Section~\ref{section:03ExplorationJavascriptModifying}.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/View.png}
+    \caption{Le panneau \lit{HtlmView} représentant le \lit{Tree of elements} ( l'arbre des éléments) pour l'interface utilisateur masse-ressort.}
+    \label{fig:03ExplorationJavascript/View}
+\end{figure}
+
+Le  \emph{Tree of elements} (l'arbre des éléments) représenté sur le côté gauche de la figure~\ref{fig:03ExplorationJavascript/View} affiche la structure de l'interface utilisateur masse-ressort. Remarquez que la simulation présente trois panneaux principaux: \code{labelPanel}, \code{centerPanel} et \code{bottomPanel} (panneau étiquette, panneau central et panneau inférieur) qui sont alignés verticalement sur la page HTML du navigateur. Ces trois panneaux appartiennent à la classe d'éléments \emph{Containers} (de conteneurs), dont le but principal est de regrouper (organiser) visuellement d'autres éléments sur l'interface utilisateur. L'arbre des éléments affiche des noms descriptifs et des icônes pour ces éléments. Faites un clic-droit sur un élément de l'arbre pour obtenir un menu qui aidera l'utilisateur à changer cette structure. Alternativement, vous pouvez glisser et déposer les éléments d'un conteneur dans un autre pour changer la relation parent-enfant ou dans un conteneur pour changer l'ordre des enfants. 
+
+\note{Il y a des conditions pour qu'un conteneur accepte un élément donné comme enfant. Par exemple un panneau d'affichage en deux dimensions peut seulement accepter des éléments d'affichage en 2D.}
+
+Chaque élément d'affichage présente une série de paramètres internes, dénominés \lit{Properties}\index{Ejs!view element properties} (propriétés) qui configurent l'apparence et le comportement de l'élément. Nous pouvons éditer ces propriétés en faisant double-clic sur l'élément de l'arbre pour afficher un panneau connu comme \emph{properties inspector} (le contrôleur des propriétés) Les propriétés d'apparence telles que la couleur sont souvent établies par une valeur constante tel que \code{"Red"} (rouge). Nous pouvons aussi utiliser une variable du modèle pour fixer la propriété d'un élément. Cette capacité pour connecter (relier) une propriété à une variable sans programmer est l'aspect essentiel pour transformer notre affichage en une visualisation dynamique et interactive.
+
+Voyons comment ce processus fonctionne dans la pratique. Faites double clic sur l'élément \code{massShape} (le suffixe `Shape' -- forme -- que nous ajoutons au nom de l'élément vous aide à savoir de quel type d'élément il s'agit) dans l'arbre pour afficher le contrôleur de propriétés des éléments. Cet élément est la masse qui est associée à l'extrémité libre du ressort. Le panneau de propriétés de \lit{massShape} apparait tel qu'il est représenté dans la figure~\ref{fig:03ExplorationJavascript/SpringBallProperties}.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/SpringBallProperties.png}
+    \caption{Le panneau de propriétés de l'élément  \code{massShape}.}
+    \label{fig:03ExplorationJavascript/SpringBallProperties}
+\end{figure}
+
+Observez les propriétés qui ont une valeur constante déterminée. Les propriétés  \code{ShapeType}, \code{SizeX}, \code{SizeY}, et \code{FillColor}  produisent une ellipse d'unité de grandeur \code{(0.2,0.2)} qui produit un cercle (colorié en couleur Magenta). Plus important encore, les propriétés \code{X} et \code{Y} de la forme sont reliés aux variables  \code{x} et \code{y} du modèle. Cette simple attribution établit une connexion bidirectionnelle entre le modèle et l'affichage. Ces variables changent conformément le modèle évolue et les formes suivent les valeurs  \code{x} et \code{y}. Si l'utilisateur glisse la forme à un nouvel emplacement, les variables \code{x} et \code{y} du modèle changent en conséquence. Remarquez cependant, que la propriété \code{Draggable} (glissable) est fixée pour vous permettre uniquement de déplacer horizontalement la masse.
+
+Les éléments peuvent aussi avoir des propriétés d'action\index{Ejs!action properties} qui peuvent s'associer à un code. (Les étiquettes des propriétés d'actions sont affichées en rouge.) Les actions de l'utilisateur telles que glisser ou cliquer, comporte leur correspondante propriété d'action qui fournit donc, une manière simple de contrôler la simulation. Quand l'utilisateur libère la masse après l'avoir glissée, le code suivant (précisé sur la propriété d'action \code{OnRelease}) est exécuté:
+\begin{listing}
+\begin{verbatim}
+vx = 0.0;      // sets the velocity to zero
+_view.reset(); // clears all plots
+\end{verbatim}
+\end{listing}
+\noindent Cliquez sur l'icône près du champ pour afficher un petit éditeur qui affichera ce code.
+
+\note{Comme le code d'action \code{OnRelease}  occupe plus d'une ligne, le champ de propriété dans le contrôleur affiche un fond (vert) plus sombre. D'autres types de données telles que les propriétés \lit{boolean} ont des éditeurs différents. Cliquez sur le deuxième icône pour afficher une boite de dialogue avec une liste des variables et des fonctions qui peuvent être utilisées pour fixer la valeur de la propriété.}
+
+\begin{exercise}[Les contrôleurs d'éléments]\label{ex:03ExplorationJavascript/properties}
+Le contrôleur de la masse affiche de différents types de propriétés et leurs possibles valeurs. Examinez les propriétés des autres éléments de l'affichage. Par exemple les éléments \code{displacementTrail} et \code{velocityTrail} correspondent au déplacement et à la vitesse tracés sur le panneau de représentation de tracés de l'extrême droite de l'affichage respectivement. Quel est le nombre maximum  de points qui peuvent être attribués à chaque tracé?
+\end{exercise}
+
+\subsection{La simulation complétée}
+
+ Nous avons vu que \Ejs\  est un puissant outil qui nous permet d'exprimer les connaissances d'un modèle à un haut niveau d'abstraction. Pour la modélisation masse-ressort, nous avons premièrement créé un panneau de variables qui décrivent le modèle et nous avons initialisé ces variables en utilisant une colonne du panneau. Nous avons ensuite utilisé un panneau evolution avec un éditeur à haut niveau pour les systèmes d'équations différentielles ordinaires de premier ordre pour préciser comment l'état progresse dans le temps. Par la suite nous avons écrit les relations pour calculer les variables auxiliaires ou de sortie qui peuvent être exprimées en utilisant des expressions comportant des variables d'état. Finalement l'interface graphique utilisateur du programme et des visualisations de haut niveau sont créés en glissant des objets de la palette Elements (éléments) jusqu'au arbre des éléments (\lit{Tree of elements}). Les propriétés des éléments sont fixées en utilisant un éditeur de propriété et quelques propriétés sont associées aux variables procédant du modèle.
+ 
+Il est important de remarquer que les trois lignes du code du panneau de  relations fixes ---  \lit{Fixed relations}, figure~\ref{fig:03ExplorationJavascript/ModelRelations}  ---  et les deux lignes du code de la méthode d'action de la particule sont les uniques codes JavaScript explicites nécessaires pour implémenter le modèle. \Ejs\ crée un programme JavaScript complet en processant l'information des panneaux quand l'icône exécuter est activé comme décrit dans la Section~\ref{section:03ExplorationJavascriptRunning}.
+
+% -----------------------------------------------------
+\section{Executer la Simulation}\label{section:03ExplorationJavascriptRunning}\index{Simulation!running}
+% -----------------------------------------------------
+
+Le moment est venu d'exécuter la simulation en cliquant sur l'icône  \lit{Run} (exécuter) de la barre des outils, \includegraphics[scale=\linescale]{../_common/icons_png/launch.png}. \ejs\ génère le code JavaScript, recueille les fichiers auxiliaires et de bibliothèque et génère et ouvre une page HTML qui contient le programme complet. Tout cela en un seul clic.
+ 
+ L'exécution d'une simulation initialise ses variables et exécute les relations fixes pour s'assurer que le modèle est dans un état consistant. L'évolution de temps du modèle démarre quand vous appuyez sur le bouton \lit{Play/Pause} de l'interface utilisateur (le bouton \lit{Play/Pause} affiche l'icône \includegraphics[scale=\linescale]{../_common/icons_png/play.png} quand la simulation est en pause et  \includegraphics[scale=\linescale]{../_common/icons_png/pause.png} quand elle est en marche.) Sur notre exemple actuel, le programme exécute une méthode numérique pour calculer l'équation différentielle d'oscillateur harmonique par unité de temps de $0.05$ et il exécute ensuite le code de relations fixes. Par la suite, les données sont passées au graphique et le graphique est redessiné. Ce processus est répété $20$ fois par seconde.  
+
+Quand nous exécutons une simulation, \ejs\ imprime des messages d'information qui indiquent que la simulation a été générée correctement et qu'elle est en fonctionnement. Remarquez que la maquette de la page du navigateur (si elle a été ouverte) est remplacée par une nouvelle mais très similaire page sans la bordure rouge autour du titre. (Alternativement, la simulation peut apparaître à une nouveau page sur votre navigateur HTML.) Ces affichages répondent maintenant aux actions de l'utilisateur.  Glissez et déposez la particule à la position horizontale initiale souhaitée et cliquez sur le bouton \lit{Play/Pause}. La particule oscille sur son point d'équilibre et le graphe affiche les données de déplacement et de vitesse tel que représenté dans la figure~\ref{fig:03ExplorationJavascript/SpringRunning}. Pour quitter le programme, fermez la page du navigateur.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/SpringRunning.png}
+  \caption{La simulation de masse-ressort affiche un dessin interactif du modèle et un graphique avec les données de déplacement et de vitesse.}
+  \label{fig:03ExplorationJavascript/SpringRunning}
+\end{figure}
+
+% -----------------------------------------------------
+\section{Distribution de la Simulation}\label{section:03ExplorationJavascriptDistributing}\index{Simulation!distribution}
+
+ Les simulations créées avec \ejs\ sont des programmes JavaScript autonomes qui peuvent être distribués sans  \ejs\  pour être utilisé par d'autres personnes. La manière plus facile de les distribuer c'est de compresser la simulation dans un unique fichier compressé exécutable en cliquant sur l'icône \lit{Package}, \includegraphics[scale=\linescale]{../_common/icons_png/package.png}. Un explorateur de fichier s'affiche et il vous permettra de choisir un nom pour le paquet de contenus autonomes. Le répertoire par défaut pour sauvegarder ce fichier c'est le répertoire \file{export} de votre environnement de travail mais vous pouvez choisir le nom de répertoire ou de paquets de votre choix. Le fichier compressé autonome est prêt pour être distribué sur un CD ou sur Internet. D'autres mécanismes de distribution sont disponibles en faisant un clic droit sur l'icône.
+ 
+\begin{exercise}[Distribution d'un modèle]\label{ex:03ExplorationJavascript/distribution}
+ Cliquez sur l'icône  \lit{Package} de la barre de tâches pour créer une archive compressée autonome de la simulation masse-ressort. Copiez ce fichier compressé dans un répertoire de travail  séparé de votre installation \ejs. Fermez \ejs\  et vérifiez que la simulation s'exécute comme une application autonome en décompressant le fichier et en faisant double-clic sur le fichier \file{MassAnsSpring.xhtml} qui est extrait du fichier compressé. 
+ \end{exercise}
+
+Une caractéristique pédagogique importante est que c'est très facile de distribuer votre code source de simulation pour que d'autres personnes puissent l'utiliser avec \ejs\  à tout moment pour examiner, modifier ou adapter le modèle. (\ejs\  doit, évidemment, être installé.) \ejs\  écrit toutes les informations de ses panneaux de travail dans un petit fichier de description Extensible Markup Language (XML)  -- Langage de Balisage Extensible -- et il peut aussi créer un unique fichier compressé ZIP avec toute l'information XML et tous les fichiers de ressources (tels que les images) que vous avez utilisés dans votre simulation. Ce fichier ZIP peut alors être distribué et, si vous essayez de l'ouvrir avec \ejs, cela extraira les fichiers nécessaires du ZIP et copiera les fichiers dans un dossier de votre environnement de travail et téléchargera \ejs\  avec la simulation. Si un modèle du même nom existe déjà, il peut être remplacé. L'utilisateur peut alors examiner, exécuter ou modifier le modèle exactement comme nous avons fait dans ce chapitre. Un étudiant peut, par exemple, obtenir un exemple ou un modèle procédant d'un enseignant  et il peut plus tard compresser à nouveau les sources du modèle modifié dans un nouveau fichier ZIP pour le rendre comme un exercice complété.
+
+\begin{exercise}[Compresser et extraire les fichiers source d'un modèle]\label{ex:03ExplorationJavascript/redistribution}
+ Faites un clic droit sur l'icône \lit{Package} et sélectionnez l'option \lit{ZIP the simulation source files} (les fichiers sources de la simulation) sur le menu qui s'affiche. Ouvrez le fichier ZIP créé avec \ejs\ et sélectionnez un dossier de destination (différent de \file{JavascriptExamples}) dans votre environnement de travail pour que \ejs\  décompresse les sources. Remarquez que \ejs\   copie pour vous tous les fichiers de l'exemple original et ouvre le nouveau fichier XML \file{MassAndSpring.ejss}. 
+\end{exercise}
+
+\ejs\  est conçu comme outil de modélisation et d'édition-création, et nous vous suggérons que vous expérimentiez avec celui-ci pour apprendre à créer et distribuer vos propres modèles. Pour commencer, nous vous recommandons que vous exécutiez la simulation masse-ressort et que vous examiniez les activités de la deuxième page du panneau \lit{Description}. Nous modifierons cette simulation dans la section suivante.
+
+% -----------------------------------------------------
+\section{Modifier la Simulation}\label{section:03ExplorationJavascriptModifying}
+% -----------------------------------------------------
+
+ Comme nous avons vu, un aspect important et caractéristique de \Ejs\ c'est qu'il nous permet de créer et étudier une simulation à un haut niveau d'abstraction. Nous avons examiné un modèle existant de masse-ressort et son interface utilisateur dans la section antérieure. Nous allons maintenant illustrer les possibilités additionnelles de \Ejs\  en incorporant une friction et une force motrice et en incorporant une visualisation de l'espace des phases du système.
+ 
+\subsection{Étendre le modèle}\label{section:03ExplorationJavascriptModifyingModel}
+Nous pouvons incorporer un amortissement dans notre modèle en introduisant une force visqueuse (Loi de Stoke) qui est proportionnelle au négatif de la vitesse $F_f = - b\,v_x$ dans laquelle $b$  est le coefficient amortisseur. Nous pouvons aussi incorporer une force motrice externe et temporellement dépendante qui prend la forme d'une fonction sinusoïdale  $F_e(t)=A\,\sin(\omega\, t)$.  L'introduction de ces deux forces change l'équation différentielle de second ordre  \eqref{eq:03ExplorationJavascript/SpringBasic} à 
+\begin{equation}
+  \frac{d^2\ x}{dt^2} = -\frac{k}{m}\,(x-L) - \frac{b}{m}\,\frac{d\ x}{dt} + \frac{1}{m}\,F_e(t), \label{eq:03ExplorationJavascript/SpringComplete}
+\end{equation}
+ou, comme dans les équations  \eqref{eq:03ExplorationJavascript/SpringBasicODE1} et  \eqref{eq:03ExplorationJavascript/SpringBasicODE2}:
+\begin{eqnarray}
+  \frac{d\ x} {dt} &=& v_x,                  \label{eq:03ExplorationJavascript/SpringCompleteODE1} \\
+  \frac{d\ v_x}{dt} &=& -\frac{k}{m}\,(x-L) - \frac{b}{m}\,v_x + \frac{1}{m}\,F_e(t). \label{eq:03ExplorationJavascript/SpringCompleteODE2}
+\end{eqnarray}
+
+\subsubsection{Incorporer des variables}
+ L'introduction de nouveaux termes de force nécessite de l'incorporation de variables pour le coefficient de friction dynamique et pour l'amplitude et la fréquence de la force motrice sinusoïdale. Retournez sur le panneau  \lit{Model}  de \ejs\ et sélectionnez le panneau \lit{Variables}. Faites un clic-droit sur la barre de la page existante de variables pour voir le menu déroulant, comme dans la figure~\ref{fig:03ExplorationJavascript/ModifyVariables1}. Sélectionnez l'entrée \lit{Add a new page} (ajoutez une nouvelle page) comme indiqué dans la figure~\ref{fig:03ExplorationJavascript/ModifyVariables1}.  Tapez \code{Damping and Driving Vars} pour dénommer le nouveau panneau et un panneau vide s'affichera. 
+ 
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/ModifyVariables1.png}
+    \caption{Le menu déroulant pour une page de variables.}
+    \label{fig:03ExplorationJavascript/ModifyVariables1}
+\end{figure}
+
+ Nous allons  maintenant utiliser le nouveau panneau pour déclarer les variables nécessaires. Nous pourrions avoir utilisé des panneaux déjà existants mais déclarer des pages multiples nous aidera à organiser les variables par catégories. Faites double clic sur une cellule du panneau pour l'éditer et naviguer sur le panneau en utilisant les flèches et la touche tabulation. Tapez \code{b} dans la cellule \lit{Name} (nom) de la première ligne et introduisez la valeur \code{0.1} dans la cellule \lit{Initial value} (valeur initiale) à droite. Vous ne devez faire rien de plus car le type \code{double} sélectionné est correct. \ejs\ vérifie la syntaxe de la valeur introduite et l'évalue. Si nous introduisons une valeur fausse, le fond de la cellule de valeur s'affichera en rose. 
+Remarquez que quand vous complétez le nom d'une variable, une nouvelle ligne s'affiche automatiquement. Procédez de manière identique pour déclarer une nouvelle variable pour l'amplitude \code{amp} de la force motrice  avec une valeur \code{0.2} et pour sa fréquence  \code{freq} avec une valeur \code{2.0}. Expliquez la définition de ces variables en tapant un petit commentaire pour chacune d'entre elles dans la partie inférieure du panneau. Notre panneau final de variables est représenté dans la figure~\ref{fig:03ExplorationJavascript/ModifyVariables2}. Vous pouvez ignorer les lignes vides à la fin du panneau ou les éliminer en faisant un clic droit sur chaque ligne et en sélectionnant \lit{Delete} du menu déroulant qui s'affiche.
+	
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/ModifyVariables2.png}
+    \caption{Le nouveau panneau avec les thermes d'amortissement et de force.}
+    \label{fig:03ExplorationJavascript/ModifyVariables2}
+\end{figure}
+
+\subsubsection{Modifier l'évolution}
+
+ Maintenant nous allons modifier l'équation différentielle de la page d'évolution en incorporant des expressions pour les nouveaux termes de l'équation~\eqref{eq:03ExplorationJavascript/SpringCompleteODE2}. Dirigez-vous au panneau evolution, faites double clic sur la cellule \lit{Rate} de la deuxième équation et éditez-la pour lire:
+ 
+\begin{listing}
+\begin{verbatim}
+-k/m * (x-L) - b*vx/m + force(t)/m
+\end{verbatim}
+\end{listing}
+
+Remarquez que nous utilisons une fonction intitulée \code{force} qui n'a pas encore été définie. Nous pourrions avoir utilisé une expression explicite pour la fonction sinusoïdale. Cependant définir la méthode \code{force} favorise un code plus claire et plus lisible et qui nous permet d'introduire des functions personnalisées.
+
+\subsubsection{Incorporer un code personnalisé}
+
+La fonction \code{force} est définie en utilisant le panneau \lit{Custom} de \lit{Model}. Dirigez-vous sur ce panneau et cliquez sur la zone centrale vide pour créer une nouvelle page de code personnalisé. Intitulez cette page \lit{force}. Vous remarquerez que cette page est créée avec un modèle de code qui définit la fonction. Éditez ce code pour lire: 
+
+\begin{listing}
+\begin{verbatim}
+function force (time) {
+  return amp*Math.sin(freq*time); // sinusoidal driving force
+}
+\end{verbatim}
+\end{listing}
+Tapez exactement ce code tel qu'il est indiqué y compris  les majuscules car les compilateurs  réagissent négativement aux erreurs de syntaxe. 
+
+Remarquez que nous indiquons le temps auquel nous voulons calculer la force motrice à la fonction \code{force} comme un paramètre d'entrée. Indiquer la valeur de temps est très important. Ce serait incorrect de demander à la méthode d'utiliser la valeur de la variable \code{t} comme dans :
+
+\begin{listing}
+\begin{verbatim}
+function force () { // incorrect implementation of the force method
+  return amp*Math.sin(freq*t); 
+}
+\end{verbatim}
+\end{listing}
+
+\noindent La raison pour laquelle le temps doit être indiqué dans méthode est que le temps change  au cours de l'étape evolution. Pour que le solutionneur EDO calcule correctement la force temporellement dépendante pendant l'étape evolution, le temps doit être indiqué dans la méthode qui calcule la valeur. 
+
+\note{Les variables qui changent (évoluent) doivent être indiquées dans les méthodes qui sont utilisées pour calculer la valeur car les solutionneurs numériques évaluent la colonne \lit{Rate} (valeur) dans le panneau EDO avec des valeurs intermédiaires entre $t$ et $t+dt$. Autrement dit, la variable indépendante et tout autre variable dynamique qui est différenciée dans la colonne \lit{State} de l'éditeur EDO doivent être indiquées pour toute méthode qui est signalée dans la colonne \lit{Rate}. Les variables qui demeurent constantes pendant l'étape evolution peuvent s'utiliser sans être indiqué comme paramètre d'entrée car la valeur de la variable au début de l'étape evolution peut être utilisée.}
+
+\subsection{Améliorer l'affichage}\label{section:03ExplorationJavascriptModifyingView}
+Nous allons maintenant introduire une visualisation de l'espace des phases (déplacement versus vitesse) de l'évolution du système dans \lit{HtmlView}. Nous allons aussi incorporer de nouveaux champs de saisie pour afficher et modifier la valeur des paramètres d'amortissement, amplitude et fréquence. 
+
+Dirigez-vous au panneau \lit{HtmlView} et  remarquez que la palette \lit{Interface} contient plusieurs sous-panneaux. Cliquez sur l'onglet avec l'icône \includegraphics[scale=\linescale]{../_common/icons_png/Groups/Containers.png} pour afficher la palette \lit{Windows, containers and drawing panels} des éléments d'affichage. Cliquez sur l'icône pour obtenir un panneau de représentation de tracés dans cette palette, \includegraphics[scale=\linescale]{../_common/icons_png/Elements/PlottingPanel.png}. Vous pouvez poser (maintenir) le curseur de la souris sur un icône pour afficher une indication qui décrit l'élément si vous avez des problèmes pour reconnaître cet icône. Quand vous sélectionnez un élément,  une bordure en couleur autour de l'icône de la palette s'active et transforme le curseur en une baguette magique, \includegraphics[scale=\linescale]{../_common/icons_png/create.png}. Ces changements indiquent que \ejs\  est prêt pour créer un élément du type sélectionné. (Retourner au mode design --- faites disparaître la baguette magique --- en cliquant sur n'importe quelle zone blanche sur the \lit{Tree of Elements} ou  appuyez sur la touche \lit{Esc}.)
+
+Cliquez sur l'élément \lit{Simulation view} intitulé \code{centerPanel} comme indiqué dans la figure~\ref{fig:03ExplorationJavascript/ModifyViewAddPlottingPanel}  pour incorporer le panneau de traçage à l'affichage (comme enfant de ce panneau).
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/ModifyViewAddPlottingPanel.png}
+    \caption{Création d'un panneau de traçage comme un nouveau (et dernier) enfant du panneau central.}
+    \label{fig:03ExplorationJavascript/ModifyViewAddPlottingPanel}
+\end{figure}
+
+\ejs\ vous demandera le nom du nouveaux élément et il crée alors l'élément comme un nouvel enfant du panneau central. Un nouveau \lit{plot} (traçage) s'affiche sur la droite de l'antérieur mais la fenêtre du navigateur est peut-être trop petite et c'est possible qu'il l'affiche sous les autres deux panneaux. (Il y a d'autres manières d'améliorer cette configuration mais nous ne nous occuperons pas de cela maintenant.) Redimensionner la fenêtre de votre navigateur et changer la dimension de la prévisualisation en éditant les champs \lit{Width} et \lit{Height} (largeur et hauteur) de la partie inférieure de l'arbre des éléments HtmlView. La dimension de la fenêtre est utile pour vous orienter sur l'aspect de la simulation finale sur des dispositifs qui ont une résolution de l'écran fixe (tels que les tablettes). Finalement éditez le panneau des propriétés de l'élément récemment créé du panneau de traçage pour fixer la propriété \code{Title} à \code{Phase Space}, la propriété \code{TitleX} à \code{Displacement} et la propriété \code{TitleY} à \code{Velocity}. (\ejs\ incorpore les citations principales et de traçage à ces ressorts pour conformer la syntaxe JavaScript correcte). Fixez le minimum et le maximum des échelles $x$ et $y$ à \code{-1} et \code{1}, respectivement, et ne variez pas les autres propriétés.
+
+Le panneau de représentation de tracés est, comme son nom l'indique, le conteneur pour la tracé de l'espace des phases. Les données de l'espace des phases sont représentées sur ce panneau en utilisant un élément 2D du type \lit{Trail}, \includegraphics[scale=\linescale]{../_common/icons_png/Elements/Trail.png}. Retrouver l'élément \lit{Trail} sur la palette \lit{2D Drawables} et suivez le même processus qu'antérieurement. Sélectionnez l'élément \lit{Trail} et créez un élément de ce type en cliquant avec la baguette magique sur le nouveau panneau de traçage d'espace des phases. Finalement éditez les propriétés du nouveau élément \lit{Trail} pour fixer la propriété \code{InputX} à \code{x - L} et la propriété \code{InputY} à \code{vx}. Cette attribution fera que la simulation incorporera un nouveau point \code{(x - L, vx)} au traçage après chaque étape evolution et par la suite réalisera le traçage de l'espace des phases représenté dans la figure~\ref{fig:03ExplorationJavascript/ModifyRunning}.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/ModifyRunning.png}
+  \caption{Le nouveau traçage de l'espace des phases incorporé à l'affichage de la simulation.}
+  \label{fig:03ExplorationJavascript/ModifyRunning}
+\end{figure}
+
+Pour finir les modifications nous incorporons un nouveau panneau qui affiche les paramètres de la force motrice sinusoïdale.
+
+\begin{bulletlist}
+
+\item Sélectionnez l'icône élément \code{Panel}, \includegraphics[scale=\linescale]{../_common/icons_png/Elements/Panel.png}, sur le sous-groupe \lit{Windows containers and drawing panels} de la palette \lit{Interface}. Cliquez avec la baguette magique sur le n\oe{}ud racine \code{Simulation view} dans le \lit{Tree of Elements} pour créer un nouveau panneau intitulé \code{forceParamPanel} comme étant son dernier enfant. Faites un clic-droit et utilisez l'option \lit{Move up} pour le placer avant le panneau de traçage de l'espace des phases.
+(Vous pouvez aussi le glisser et le déposer dans sa nouvelle position sur l'arbre des éléments.)
+
+\item Sélectionnez l'icône élément \code{Label}, \includegraphics[scale=\linescale]{../_common/icons_png/Elements/Label.png}, sur le sous-groupe \lit{Buttons and decorations} de la palette \lit{Interface} et créez un nouveau élément de ce type dans le panneau \code{forceParamPanel} et fixez la propriété du texte de l'étiquette à \code{"frequency ="}.
+
+\item Sélectionnez l'icône élément \code{Field}, \includegraphics[scale=\linescale]{../_common/icons_png/Elements/ParsedField.png}, et créez un nouveau élément intitulé \code{freqField} dans le panneau de paramètre de la force. Éditez le panneau des propriétés de \code{freqField} tel que indiqué dans la figure~\ref{fig:03ExplorationJavascript/ModifyField}. La connexion à la variable \code{freq} est établie en utilisant la propriété \code{Value}. Cliquez sur le deuxième icône de la droite du champ propriété, \includegraphics[scale=\linescale]{../_common/icons_png/link.png}, et choisissez la variable appropriée. La liste des variables affiche toutes les variables de modèles qui peuvent être utilisés pour fixer le champ propriété. La propriété \code{Format} indique le nombre de chiffres décimaux avec lesquels nous pouvons afficher la valeur de la variable.
+
+\item Répéter ce processus pour incorporer la variable \code{amp} à l'interface utilisateur
+\end{bulletlist}
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/ModifyField.png}
+    \caption{Le panneau des propriétés de l'élément \code{freqField}.}
+    \label{fig:03ExplorationJavascript/ModifyField}
+\end{figure}
+
+\subsection{Changer la description}\label{section:03ExplorationJavascriptModifyingDescription}
+
+ Une fois que nous avons changé le modèle et l'affichage, nous devons modifier les pages de description de notre simulation. Dirigez-vous au panneau \code{Description} et cliquez sur l'onglet de la première page, celui intitulé \code{Introduction}. Une fois que vous visualisez cette page, cliquez sur l'icône \lit{Click to modify the page}, \includegraphics[scale=\linescale]{../_common/icons_png/edit.png}. La page description changera pour éditer le mode comme indiqué dans la figure~\ref{fig:03ExplorationJavascript/ModifyHTML} et un éditeur simple s'affichera pour vous  fournir un accès direct aux caractéristiques HTML plus habituelles.
+ 
+  Si vous préférez utiliser votre propre éditeur vous pouvez copier-coller des fragments HTML de votre éditeur sur l'éditeur de \ejs. Si vous connaissez la syntaxe HTML, vous pouvez introduire directement un texte étiqueté (balisé) en cliquant sur l'icône \lit{Source}, \includegraphics[scale=\linescale]{03ExplorationJavascript/images/SourceHK.png}, de la barre des outils. Vous pouvez même importer des pages HTML complètes à  \ejs\  en cliquant sur l'icône \lit{Link/Unlink page to external file}, \includegraphics[scale=\linescale]{../_common/icons_png/unlinked.png}.
+  
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{03ExplorationJavascript/images/ModifyHTML.png}
+    \caption{L'éditeur HTML de \ejs. Les flèches rouges supplémentaires signalent les icônes de mode d'édition et le code d'édition et source.}
+    \label{fig:03ExplorationJavascript/ModifyHTML}
+\end{figure}
+
+Éditez les pages de description selon votre convenance. Changez au moins  le texte du modèle pour incorporer les forces motrices et d'amortissements. Une fois que cela soit fait, sauvegardez la nouvelle simulation sous un nom différent en cliquant sur l'icône \lit{Save as} de la barre d'outils de \ejs, \includegraphics[scale=\linescale]{../_common/icons_png/saveAsSmall.png}. Lorsqu'on vous le demande, introduisez un nouveau nom pour le fichier XML de votre simulation. La simulation modifiée est enregistrée dans le fichier \file{MassAndSpringComplete.ejss}  dans le répertoire \file{source} pour ce chapitre.
+
+
+% -----------------------------------------------------
+\section{Problems et Projets}\label{section:03ExplorationJavascriptProjects}
+% -----------------------------------------------------
+
+%\subsection*{Problem 1}
+\begin{problem}[Énergie]
+Incorporez un troisième panneau de traçage à la fenêtre de dialogue de la simulation \file{MassAndSpringComplete.ejss} qui affichera l'évolution des énergies cinétiques, potentielles et totales.
+\end{problem}
+
+%\subsection*{Problem 2}
+\begin{problem}[Traceur de fonction]
+La solution analytique pour un oscillateur harmonique simple déroulé est
+\begin{equation}
+  x(t)=A \sin(w_0 t + \phi)
+\end{equation}
+ dans laquelle $A$ est l'amplitude (déplacement maximum), $w_0= \sqrt{k/m}$  est la fréquence naturelle d'oscillation et $\phi$ est l'angle de phase. Consultez un manuel de mécanique pour déterminer la relation entre l'amplitude et la phase d'angle et le déplacement initial et la vitesse. Utilisez la simulation  \file{FunctionPlotter.ejss} dans les répertoires exemples pour comparer la solution analytique à la solution numérique générée par le modèle \file{MassAndSpringComplete.ejss}.  
+\end{problem}
+
+%\subsection*{Project 2}
+\begin{project}[Oscillateur bidimensionnel]
+Modifiez le modèle de la simulation masse-ressort pour considérer que le mouvement n'est pas restreint à la direction horizontale. Assumez que un deuxième ressort avec une constante de ressort  $k'$ produit une force de restauration verticale $F_y(\delta y) = - k' \,\delta y$. Modifiez la simulation pour permettre à l'utilisateur de préciser les constantes de la Loi de Hooke ainsi que les conditions initiales dans les deux directions. Décrivez le mouvement produit sans une force motrice mais sous de différentes conditions initiales et avec des constantes de ressort différentes. (Essayez $k=1$ et $k'=9$.) Démontrez qu'il est possible d'obtenir un mouvement circulaire si $k=k'$.
+\end{project}
+
+%\subsection*{Project 3}
+\begin{project}[Une pendule simple]
+Créez une simulation similaire à celle qui est décrite dans ce chapitre pour une pendule dont l'équation différentielle de second ordre de mouvement est
+\begin{equation}
+  \frac{d^2\theta}{dt^2} = -\frac{g}{L} \sin (\theta),
+\end{equation}
+dans laquelle $\theta$ est l'angle de la pendule avec la verticale, $g$ l'accélération causée par la gravité et $L$ est la longueur des bras de leviers. Utilisez des relations fixes pour calculer la position de $x$  et de $y$  du balancier de la pendule en utilisant les équations:
+\begin{align*}
+   x   &=  L \, \sin (\theta) \\
+   y   &= -L \, \cos (\theta).
+\end{align*}
+\end{project}

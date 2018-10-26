@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="_utils">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/model_elements/Hardware/_utils/serial.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/model_elements/Hardware/_utils/phidget21.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="extensions">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/slf4j-api.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/commons-math3-3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/djep.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/jsoup-1.8.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/QTJava.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

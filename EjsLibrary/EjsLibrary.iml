@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/osp.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/ARElement.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/libraries/HotEqn.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/Loader3DS.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/LoaderAC3D.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/LoaderVRML.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/QTJava.zip!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/jackson-annotations-2.1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/jackson-core-2.1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/jackson-databind-2.1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/bcel.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/java3d/j3dcore.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/java3d/j3dutils.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/java3d/vecmath.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/xuggle-xuggler.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/plugin.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/javax.json-1.0.4.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/javax.json-api-1.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/../Ejs/distribution/bin/ejs_extras_java8.jar!/" />
+    <src_description expected_position="0">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="0" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="osp.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/osp.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file:///osp_github/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ARElement.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/ARElement.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../ModelElements/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="HotEqn.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/libraries/HotEqn.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Loader3DS.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/Loader3DS.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="LoaderAC3D.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/LoaderAC3D.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="LoaderVRML.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/LoaderVRML.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="QTJava.zip">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/QTJava.zip!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jackson-annotations-2.1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/jackson-annotations-2.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jackson-core-2.1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/jackson-core-2.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jackson-databind-2.1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/jackson-databind-2.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="bcel.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/bcel.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="j3dcore.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/java3d/j3dcore.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="j3dutils.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/java3d/j3dutils.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="vecmath.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/java3d/vecmath.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="xuggle-xuggler.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/xuggle-xuggler.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="plugin.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/plugin.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javax.json-1.0.4.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/javax.json-1.0.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javax.json-api-1.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/extensions/_utils/javax.json-api-1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library">
+      <library name="ejs_extras_java8.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../Ejs/distribution/bin/ejs_extras_java8.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="SoftwareLinks2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/SoftwareLinks/httpcore-4.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/SoftwareLinks/rpcmatlab-common.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/SoftwareLinks/httpclient-4.3.2.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/SoftwareLinks/libjsonrpc.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,532 @@
+\chapter{Introducción a \Ejs}\label{chapter:EjsIntro}
+% Hamming quote moved to Chapter 1
+%\begin{quote}
+%Machines should work. People should think.  {\em Richard Hamming}
+%\end{quote}
+
+\begin{quote}
+Un buen ejemplo es el mejor sermón.  {\em Benjamin Franklin}
+\end{quote}
+
+Este capítulo nos ofrece una visión general de \Ejs\ (de forma abreviada \ejs), el programa de modelado de alto nivel y herramienta de autor que utilizaremos para construir nuestros modelos y ejecutarlos de forma que podamos estudiar su comportamiento. Para proporcionar una perspectiva del proceso de modelado, primero cargaremos, inspeccionaremos y pondremos en funcionamiento una simulación existente de un oscilador armónico simple. Posteriormente, modificaremos esta simulación para mostrar cuál es el papel del usuario de \ejs\ en el proceso de modelado y cómo realmente reduce la mayoría del trabajo de programación necesario.
+
+
+% ------------------------
+  \section{Sobre \Ejs}
+% ------------------------
+
+El modelado por ordenador está íntimamente ligado a la simulación por ordenador. Un modelo es una representación conceptual de un sistema físico y sus propiedades y el modelado es el proceso por el que construimos dicha representación. El modelado por ordenador necesita  (1) una descripción y  análisis del problema, (2) la identificación de las variables y los algoritmos, (3) la implementación de una plataforma específica de hardware y software, (4) la ejecución de lo implementado y el análisis de los resultados, (5) el refinamiento y generalización, y (6) la presentación de resultados. Una simulación es una implementación de un modelo de forma que nos permita probarlo bajo diferentes condiciones con el objetivo de aprender sobre su comportamiento.\index{Simulation} La aplicación de los resultados de la simulación al sistema (físico) real depende de lo bien que el modelo describa la realidad.\index{Simulation!Model} El proceso de concebir modelos más generales y más ajustados es el objetivo primordial de la ciencia.
+
+La implementación de un modelo y la visualización de sus salidas requiere que programemos un ordenador. Programar puede ser divertido, ya que nos da un completo control de cada detalle visual y numérico del mundo de la simulación. Sin embargo programar es también una tarea técnica que puede intimidarnos. Esta barrera técnica puede, sin embargo,  rebajarse si usamos la herramienta apropiada. \Ejs\ es una herramienta de modelado que ha sido diseñada para permitir a los científicos, y no sólo a los informáticos, crear simulaciones en Java. \ejs\ simplifica esta tarea desde el punto de vista técnico y conceptual.
+
+\ejs\ proporciona una simple pero poderosa estructura conceptual para construir simulaciones. La herramienta ofrece una secuencia de paneles de trabajo que usamos para implementar el modelo y su interfaz gráfica de usuario. \ejs\ automatiza tareas como las de  resolución de ecuaciones diferenciales ordinarias (con diferentes \emph{hilos}  -- threads, en inglés -- de Java) \index{ODE}y de animación. La comunicación de bajo nivel entre el programa y el usuario final que tiene lugar en el momento de la ejecución, incluyendo las acciones que a través del ratón podemos llevar a cabo sobre la interfaz gráfica de la simulación, se logra sin necesidad de una programación de bajo nivel.
+
+Obviamente, parte de la tarea depende todavía de nosotros. Usted es el responsable de  proporcionar un modelo para el fenómeno y de diseñar y seleccionar una visualización que muestre los aspectos principales del mismo. Estas tareas de alto nivel están más relacionadas con la ciencia que con la programación. Se le anima, pues, a dedicar su tiempo y esfuerzos a estudiar la ciencia, algo que la máquina no puede hacer. El propósito de este capítulo es demostrar que este modelado por ordenador no sólo es posible, si no que además es relativamente sencillo, con ayuda de \Ejs.
+
+% ------------------------
+    \section{Instalación y arranque del software}\label{section:02Installation}\index{\Ejs!installing and running}
+% ------------------------
+
+
+Vamos a empezar instalando y ejecutando \Ejs. \ejs\ es un programa en Java que puede ejecutarse bajo cualquier sistema operativo que soporte una Máquina Virtual  Java (VM). Ya que Java es una plataforma independiente, la interfaz de \ejs\ en Mac OS X, Windows y Linux será prácticamente idéntica a la interfaz  de Windows que se muestra en este libro.
+
+Para instalar y ejecutar \ejs\ procederemos como sigue:
+\begin{numberlist}
+
+\item \textbf{Instalar el entorno de ejecución de Java.} \ejs\ precisa del entorno de ejecución de Java (JRE), en su versión 1.5 o posterior. El JRE puede estar ya instalado en su ordenador, pero, de no ser así, utilice la copia proporcionada en el CD que acompaña a este libro, o mejor, visite la página oficial de Java en \link{http://java.sun.com} y siga las instrucciones de cómo descargar  e instalar la última versión.
+
+\item \textbf{Copiar \ejs\ en su disco duro.} Encontrará \ejs\ en un archivo comprimido ZIP llamado algo así como \file{EJS\_X.x\_yymmdd.zip} en el CD del libro. Aquí los caracteres \texttt{X.x} se refieren a la versión actual del software y \texttt{yymmdd} indica la fecha en que esta versión ha sido creada. (Por ejemplo, puede encontrar algo como \file{EJS\_4.1\_081007}.). Descomprima el archivo en su disco duro para crear una carpeta llamada \file{EJS\_X.x} (\file{EJS\_4.1} en este caso). Esta carpeta contiene todo lo necesario para ejecutar \ejs.
+\footnote{En sistemas tipo Unix, el directorio \file{EJS\_X.x} podría ser descomprimido con permisos de sólo lectura. En este caso, habilite los permisos de escritura para el directorio \file{EJS\_X.x} y todos sus subdirectorios.}
+
+
+\item \textbf{Ejecutar la consola \ejs.} Dentro de la recién creada carpeta \file{EJS\_X.x}, podemos encontrar un archivo llamado \file{EjsConsole.jar}. \index{jar files!EjsConsole.jar}\index{Easy Java Simulations!console}Haciendo doble clic sobre éste ejecutaremos la consola de \ejs\ que se muestra en la Figura~\ref{fig:02EjsIntro/EjsConsole}.
+
+\note{ Si la consola no se ejecutara al hacer doble clic, abra un terminal del sistema operativo, cambie el directorio de rabajo a \file{Ejs}, y escriba el comando:  \code{java -jar EjsConsole.jar}. Necesitará cualificar completamente el comando de \code{java} si éste no está en el PATH de su sistema.}
+
+\begin{figure}[htb]
+  \centering
+%  \subfigure[Console's basic options tab.]{\includegraphics[scale=\scale]{02EjsIntro/images/EjsConsole1.eps}}
+%  \subfigure[Console's output area.]{\includegraphics[scale=\scale]{02EjsIntro/images/EjsConsole2.eps}}
+%  \caption{Two views of the \ejs\ console.}
+  \includegraphics[scale=\scale]{02EjsIntro/images/EjsConsole1.eps}
+  \caption{Consola de \ejs.}
+  \label{fig:02EjsIntro/EjsConsole}
+\end{figure}
+
+\end{numberlist}
+
+La consola debería verse en su pantalla como en la Figura~\ref{fig:02EjsIntro/EjsConsole}. Esta consola no es parte de \ejs, sino una utilidad usada para lanzar una o varias copias de \ejs\ y llevar a cabo otras tareas relacionadas con \ejs. La consola muestra por pantalla información del programa y mensajes de error y nos referiremos a ella en alguna que otra ocasión a lo largo de este libro. La consola crea una instancia (copia) de \ejs\ al inicio y termina automáticamente cuando se cierra la última instancia de \ejs\ en funcionamiento. Otras propiedades de la consola, como su capacidad de procesar colecciones de modelos \ejs, se describen en los apéndices.
+
+Sin embargo, antes de  que la consola de \ejs\ se ejecute tras la instalación, aparecerá la ventana que puede ver en la Figura~\ref{fig:02EjsIntro/WorkspaceChooser}, donde se le pedirá elegir el directorio de su disco duro que servirá de \emph{espacio de trabajo}.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/WorkspaceChooser.eps}
+  \caption{Elección del directorio para el Espacio de Trabajo.}
+  \label{fig:02EjsIntro/WorkspaceChooser}
+\end{figure}
+
+\ejs\ utiliza el concepto de espacio de trabajo para organizar su trabajo. El espacio de trabajo es un directorio en su disco duro donde \ejs\ almacena los archvos de las simulaciones de un proyecto determinado, pudiendo almacenar un número ilimitado de éstos. Dentro de un espacio de trabajo, \ejs\ crea cuatro subdirectorios:
+
+\index{\Ejs!directory structure}
+\begin{bulletlist}
+  \item \file{config} es el directorio donde \ejs\ guarda la configuración determinada por el usuario y otros archivos de opciones.
+  \item \file{export} es el directorio de destino propuesto por \ejs\ cuando se generan archivos listos para su distribución.
+  \item \file{output} es el directorio usado por \ejs\ para situar los archivos temporales generados cuando compilamos una simulación.
+  \item \file{source} es el directorio donde debe usted colocar todos los archivos necesarios para sus simulaciones (tanto los fuente como los auxiliares).
+\end{bulletlist}
+
+La primera vez que se ejecuta \ejs, la consola nos pide que elijamos un directorio para nuestro espacio de trabajo. Éste debe ser un directorio con permiso de escritura, situado en cualquier lugar de nuestro disco duro. Se puede elegir el espacio de trabajo incluido en la distribución, es decir, el directorio \file{workspace} de la carpeta \file{EJS\_X.x} creada al descomprimir el paquete de \ejs. Aunque se recomienda crear una nueva carpeta en su directorio habitual destinada a ello. El cuadro de diálogo que le permite elegir el espacio de trabajo tiene una casilla que, si se marca, hará una copia de los archivos de ejemplo que contiene la distribución en el nuevo espacio de trabajo. Deje la casilla marcada y encontrará algunos subdirectorios en el directorio \file{source} de su espacio de trabajo que contienen simulaciones de muestra. En particular, el directorio \file{ModelizandoLaCiencia} incluye los modelos de \ejs\ de los que se habla en este libro.
+
+\note{Se puede crear más de un espacio de trabajo para diferentes proyectos o tareas. La consola contiene un selector que permite cambiar el espacio de trabajo en uso y \ejs\ recordará el actual espacio de trabajo de una sesión a otra o incluso si se reinstala el programa. En el Apéndice~\ref{appendix:Distribution} se describe cómo configurar y usar \ejs\ en una instalación para más de un usuario.}
+
+Finalmente, también la primera vez que ejecute \ejs, el programa le solicitará que introduzca su nombre y filiación. Este paso es opcional aunque recomendado, ya que le ayudará a documentar sus futuras simulaciones. Puede usted introducir o modificar esta información posteriormente a través del icono de opciones de la barra de tareas de \ejs.
+
+Ahora ya estamos preparados para centrar nuestra atención en la herramienta de modelado \ejs, que se muestra en la Figura~\ref{fig:02EjsIntro/EjsInterface} con algunas anotaciones. A pesar de presentar una interfaz sencilla, \ejs\ contiene todas las herramientas necesarias para el ciclo completo de modelización.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/EjsInterface.eps}
+  \caption{Interfaz de \Ejs\ con anotaciones.}
+  \label{fig:02EjsIntro/EjsInterface}
+\end{figure}
+
+La barra de tareas \index{\Ejs!taskbar} de la derecha muestra una serie de iconos para crear, abrir, buscar en y guardar un archivo, configurar \ejs, mostrar información sobre el programa y ayuda. Además, posee iconos para ejecutar una simulación y para almacenar una o más simulaciones en un solo archivo comprimido de tipo jar. Haciendo clic con el botón derecho de su ratón sobre los iconos de la barra de tareas podrá elegir otras acciones alternativas relacionadas que iremos describiendo conforme vayan siendo necesarias. La parte inferior de la interfaz  contiene un área de mensajes\index{\Ejs!output area} donde \ejs\ nos muestra información. La parte central de la interfaz contiene los paneles de trabajo donde se construye la simulación.
+
+\Ejs\ contiene tres paneles de trabajo. El primer panel, llamado \lit{Descripción}, nos permite crear un documento multimedia en HTML que describa nuestro modelo.\index{HTML} Cada página aparece en una pestaña dentro del panel y, haciendo clic con el botón derecho del ratón sobre la pestaña, el usuario podrá editar la página o importar otras existentes. El segundo panel, \lit{Modelo}, está dedicado al proceso de modelado. Usaremos este panel para crear variables que describan el modelo, para inicializar dichas variables y para escribir algoritmos que describan cómo nuestro modelo cambia con el tiempo. El tercer panel, \lit{Vista}, está dedicado a la tarea de construir la interfaz gráfica para el usuario final que permitirá controlar la simulación y mostrar sus salidas. Construiremos la interfaz eligiendo elementos de las distintas paletas y añadiéndolos a la vista del \lit{árbol de elementos}. Por ejemplo, la paleta de \lit{Interfaz} contiene botones, barras de desplazamiento y campos de texto, y la paleta de \lit{Elementos de dibujo 2D} contiene elementos para trazar datos en dos dimensiones.
+
+% ------------------------
+    \section{Inspeccionando la Simulación}\label{section:02Inspecting}\index{\Ejs!inspecting a simulation}
+% ------------------------
+
+Para entender cómo los paneles de trabajo, \lit{Descripción}, \lit{Modelo} y \lit{Vista}, funcionan coordinadamente, vamos a inspeccionar y ejecutar una simulación ya existente.  Las salidas por pantalla no pueden sustituir a una demostración en vivo por lo que le animamos a que realice las acciones en su ordenador conforme avance en la lectura.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/OpenDialog.eps}
+  \caption{El cuadro de diálogo \lit{Abrir} le permite buscar en su disco duro y cargar simulaciones existentes.}
+  \label{fig:02EjsIntro/OpenDialog}
+\end{figure}
+
+Haga clic en el icono \lit{Abrir} \includegraphics[scale=\linescale]{images/openSmall.eps} en la barra de tareas de \ejs\ y aparecerá un cuadro de diálogo parecido al que se muestra en la Figura~\ref{fig:02EjsIntro/OpenDialog} mostrándonos el contenido del directorio \file{source} de su espacio de trabajo. Vaya al directorio \file{ModelizandoLaCiencia} y abra el subdirectorio \file{Cap02\_Intro} allí encontrará un archivo llamado \file{MasaYMuelle.xml}. Seleccione este archivo y haga clic en el botón \lit{Abrir} de la ventana.
+
+¡Ahora las cosas cobran vida! \ejs\ lee el documento \file{MasaYMuelle.xml} a partir de cuyo contenido rellena los paneles de trabajo y aparecen dos nuevas ventanas de \ejs\ en su pantalla, como muestra la Figura~\ref{fig:02EjsIntro/SpringInterface}. Una advertencia: Los objetos pueden ser arrastrados sobre la ventana de la maqueta pero esto determinará las condiciones iniciales. Normalmente es mejor determinar las condiciones elementales utilizando la tabla de variables que se describe en la Sección~\ref{section:02Model}.
+
+
+\begin{figure}[htb]
+  \centering
+  \subfigure{\includegraphics[scale=\scale]{02EjsIntro/images/SpringInterface1.eps}}
+  \subfigure{\includegraphics[scale=\scale]{02EjsIntro/images/SpringInterface2.eps}}
+  \caption{Ventana de la maqueta de \ejs\ para la simulación \file{Masa y Muelle}. El título de la ventana muestra que son ventanas de \ejs\ y que el programa no está ejecutándose.}
+  \label{fig:02EjsIntro/SpringInterface}
+\end{figure}
+
+\note{Los lectores más impacientes o precoces puede que hayan intentado hacer clic sobre el botón verde de ejecución \includegraphics[scale=\linescale]{images/launch.eps} de la barra de tareas para ejecutar nuestro ejemplo antes de continuar con este tutorial. Aquellos lectores que hayan hecho esto no estarán interactuando con \ejs\ sino con un programa Java compilado y ejecutado. Salga de la ejecución del programa cerrando la ventana \lit{Masa y muelle} o haciendo clic con el botón derecho en el botón de ejecución \includegraphics[scale=\linescale]{images/launchRed.eps}(ahora en color rojo) antes de continuar.}
+
+\subsection{El panel de la \lit{Descripción}}
+
+Seleccione el panel de \lit{Descripción}\index{Ejs!Description} haciendo clic sobre el selector en la parte superior de la ventana de \ejs\ y podrá ver dos páginas de narración sobre esta simulación. La primera página, que se muestra en la Figura~\ref{fig:02EjsIntro/SpringDesc}, contiene una breve explicación sobre el modelo de masa y muelle. Haga clic en la pestaña \lit{Actividades} para ver la segunda página.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/SpringDesc.eps}
+  \caption{Páginas de descripción para la simulación de la masa y el muelle. Haga clic en una pestaña para mostrar la página correspondiente. Haga clic con el botón derecho para editarla.}
+  \label{fig:02EjsIntro/SpringDesc}
+\end{figure}
+
+Una \lit{Descripción} es un texto multimedia en formato HTML\index{HTML} que proporciona información e instrucciones sobre la simulación. HTML significa Lenguaje de Marcas de Hipertexto (HyperText Markup Language) y es el protocolo más usado para dar formato a los documentos de las páginas Web. \ejs\ proporciona un sencillo editor de HTML que permite crear y modificar páginas desde \ejs. También se pueden importar páginas haciendo clic con el botón derecho sobre una de las pestañas del panel de trabajo (Ver Sección~\ref{section:02ModifyingDescription}.) Las páginas de descripción son una parte esencial del proceso de modelado y estas páginas se distribuyen junto con el modelo compilado cuando el modelo es distribuido como una aplicación Java o  publicado en un servidor Web como un subprograma (applet). Estas opciones de distribución se describen en el Apéndice ~\ref{appendix:Distribution}.
+
+\subsection{El panel del \lit{Modelo}}\label{section:02Model}
+
+El panel de trabajo \lit{Modelo} es donde se define el modelo de modo que pueda ser convertido en un programa por \ejs. En esta simulación, estudiaremos el movimiento de una partícula de masa $m$ unida a uno de los extremos de un muelle de masa despreciable y de longitud en equilibrio $L$. El muelle está unido a una pared por su otro extremo y se mueve estrictamente en horizontal. Aunque la masa oscilante tiene una solución analítica bien conocida, es útil empezar con un modelo del oscilador armónico simple con el fin de poder comparar nuestra solución numérica con el resultado analítico exacto.\index{Simple Harmonic Motion}
+
+Nuestro modelo asume que se producen únicamente oscilaciones pequeñas, de modo que el muelle responde a un desplazamiento (horizontal), $\delta x$, desde su posición de equilibrio, $L$, con una fuerza dada por la ley de Hooke,\index{Hooke's law} $F_x = - k \,\delta x$, donde $k$ es la constante de elasticidad del muelle que depende de las características físicas del mismo. Usamos la segunda ley de Newton\index{Newton's second law} para obtener una ecuación diferencial de segundo orden  para la posición de la partícula:
+
+\begin{equation}
+  \frac{d^2\ x}{dt^2} = -\frac{k}{m}\,(x-L). \label{eq:02EjsIntro/SpringBasic}
+\end{equation}
+Observe que usamos un sistema de coordenadas con el eje X situado a lo largo del muelle y con origen en el extremo fijo del muelle. La partícula se encuentra en la posición $x$ y su desplazamiento desde la posición de equilibrio, $\delta x=x-L$, es cero cuando $x=L$. Resolvemos este sistema numéricamente para estudiar cómo evoluciona el modelo con el paso del tiempo.
+
+Vamos a examinar cómo hemos implementado el modelo de masa y muelle eligiendo el selector \lit{Modelo} e inspeccionando cada uno de sus cinco paneles.
+
+\subsubsection{Declaración de variables}
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/ModelVariables.eps}
+    \caption{El panel de trabajo \lit{Modelo} contiene cinco subpaneles. Se muestra el subpanel para la definición de las variables dinámicas del ejemplo. Otras pestañas en este subpanel definen variables adicionales tales como la longitud del muelle $L$ y la energía $E$.} \label{fig:02EjsIntro/ModelVariables}
+\end{figure}
+
+Cuando implementamos un modelo, un buen primer paso es identificar, definir e inicializar las variables que describen nuestro sistema. El término \emph{variable} es muy general y se refiere a cualquier cosa a la que podemos dar un nombre, incluyendo una constante física o un gráfico\index{Model!Variables}. La Figura~\ref{fig:02EjsIntro/ModelVariables} nos muestra una tabla de variables en \ejs. Cada fila define una variable del modelo especificando para ella un nombre, un tipo, una dimensión y un valor inicial.
+
+Las variables en los programas de ordenador pueden ser de varios tipos dependiendo de la información que guardan. Los tipos más frecuente son \code{boolean} que se utiliza para los valores verdadero/falso, \code{int} para enteros, \code{double} para números de alta precisión ($\approx 16$ dígitos significativos) y \code{String} para textos. Usaremos los distintos tipos a lo largo del libro pero el modelo de masa y muelle sólo utiliza  variables de tipo double y boolean.
+
+Las variables pueden ser utilizadas como parámetros, \index{Model!Parameters} variables de estado,\index{Model!State variables} o para entradas y salidas del modelo.\index{Model!Input and Output} Nosotros hemos declarado una variable para el tiempo, \code{t}, otra para la posición de la partícula, \code{x}, y otra para la velocidad en la dirección del eje X, \code{vx}. Además hemos definido variables que no aparecen en \eqref{eq:02EjsIntro/SpringBasic}. La razón de estas variables auxiliares, como la energía cinética, la energía potencial y la energía total, se aclarará más adelante. En la parte inferior del panel de variables encontramos un campo para comentarios que proporciona una descripción del papel de cada variable en el modelo. Haciendo clic en cada una de las variables podremos ver el comentario correspondiente.
+
+\subsubsection{Inicialización del modelo}
+Establecer correctamente las condiciones iniciales del modelo es importante en su implementación ya que el modelo ha de comenzar en una situación físicamente posible. Nuestro modelo es relativamente simple y lo inicializamos  con valores enteros (o expresiones simples en Java como \code{0.5*m*vx*vx}) en la columna \lit{Valor inicial} de la tabla de variables y \ejs\ utiliza dichos valores cuando se inicia la simulación.
+
+\note{Modelos más avanzados pueden requerir un algoritmo de inicialización. Por ejemplo, un modelo molecular dinámico debe establecer las velocidades de un conjunto de partículas. El panel de \lit{Inicialización} nos permite definir una o más páginas de código Java que realicen el cálculo necesario. \ejs\ convierte este código en un método Java\index{Java!method}\footnote{Un método Java es algo parecido a una función o una subrutina en lenguajes de programación procedimental.} y llama a este método al empezar y siempre que la simulación sea reiniciada. El panel de la \lit{Inicialización} del modelo de masa y muelle no se muestra aquí porque está vacío. Vaya a la Sección~\ref{section:02InspectingRelations} para ver un ejemplo de cómo aparece en \ejs\ el código Java.}
+
+\subsubsection{La evolución del modelo}
+
+El panel de \lit{Evolución} nos permite escribir código Java que determine cómo el sistema masa-muelle se desarrolla en el tiempo y usaremos esta opción frecuentemente para modelos no basados en ecuaciones diferenciales ordinarias (EDOs). Hay sin embargo una segunda opción que nos permite introducir ecuaciones diferenciales ordinarias, como \eqref{eq:02EjsIntro/SpringBasic}, sin utilizar programación. \ejs\ proporciona un editor dedicado a esta tarea que nos permite especificar ecuaciones diferenciales en un formato que utiliza la notación matemática y que genera automáticamente el código Java necesario.
+
+Veamos cómo el editor de ecuaciones diferenciales funciona para nuestro modelo de masa y muelle. Como los algoritmos de resolución de EDO resuelven sistemas de primer orden, una ecuación de orden superior, como \eqref{eq:02EjsIntro/SpringBasic}, debe ser reducida a un sistema de primer orden. Conseguimos ésto estableciendo la velocidad como una variable independiente que obedece a su propia ecuación:
+\begin{align}
+  \frac{d\ x} {dt} &= v_x                  \label{eq:02EjsIntro/SpringBasicODE1} \\
+  \frac{d\ v_x}{dt} &= -\frac{k}{m}\,(x-L). \label{eq:02EjsIntro/SpringBasicODE2}
+\end{align}
+La necesidad de una ecuación diferencial adicional explica por qué habíamos declarado la variable \code{vx} en nuestra tabla de variables
+
+Haciendo clic en el panel de \lit{Evolución} se muestra el editor de EDO que aparece en la Figura~\ref{fig:02EjsIntro/ModelEvolution}.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/ModelEvolution.eps}
+    \caption{El panel de evolución de EDO mostrando la ecuación diferencial del modelo de masa y muelle y el algoritmo numérico.}
+    \label{fig:02EjsIntro/ModelEvolution}
+\end{figure}
+
+ Nótese que el editor de EDO  muestra las ecuaciones \eqref{eq:02EjsIntro/SpringBasicODE1} y \eqref{eq:02EjsIntro/SpringBasicODE2} (usando el símbolo \lit{*} para denotar la multiplicación). Los campos en la parte superior del editor especifican la variable independiente \code{t} y la variable incremento \code{dt}. Los algoritmos numéricos aproximan la solución exacta a la ecuación avanzando el estado en pasos discretos donde el incremento determina el tamaño del paso. El botón \lit{Prelim} en la parte superior derecha del editor nos permite introducir un código preliminar que se encargue de los cálculos previos a la evaluación de las ecuaciones (circunstancia que se precisa en situaciones más complejas que la que tratamos en este ejemplo).
+Un menú desplegable en la parte inferior del editor nos permite seleccionar el algoritmo numérico de resolución de EDOs a emplear, el cual avanza la solución desde el valor actual para el tiempo, \code{t}, al siguiente valor, \code{t + dt}. El campo de eventos de la parte inferior del panel nos dice que no hemos definido ningún evento para esta ecuación diferencial. Podemos encontrar ejemplos con código preliminar y eventos en el Capítulo~\ref{chapter:Events}.
+
+La parte izquierda del panel de trabajo \lit{Evolución} incluye campos para determinar cómo de suave y rápidamente queremos que funcione la simulación. El número de \lit{imágenes por segundo} (\lit{IPS}) especifica cuántas veces por segundo queremos que nuestra simulación sea repintada en la pantalla. El número de \lit{pasos por visualización} (\lit{PPV}) especifica cuántas veces (pasos) queremos que avance el modelo antes de repintar. El valor actual de \code{20} imágenes por segundo produce una animación fluida que, junto con el valor por defecto de un paso por visualización y el valor de \code{0.05} para \code{dt}, resulta en una simulación que funciona (aproximadamente) en tiempo real. Nosotros utilizaremos casi siempre la elección por defecto de un paso por visualización. Sin embargo, hay situaciones donde la salida gráfica del modelo consume una cantidad significativa de capacidad de proceso y necesitaremos acelerar los cálculos numéricos. En este caso incrementaremos el número de pasos por visualización de forma que el modelo avance varias veces antes de que se vuelva a dibujar la visualización. La casilla de \lit{Arranque} indica si la simulación debe ponerse en marcha cuando el programa comience. En este caso, la casilla no está marcada así que podremos cambiar las condiciones iniciales antes de que empiece la evolución.
+
+El panel de \lit{Evolución} maneja los aspectos técnicos del modelo de masa y muelle sin necesidad de programar. La simulación avanza el estado del sistema en el tiempo mediante métodos numéricos de resolución de ecuaciones diferenciales utilizando el algoritmo del punto medio. El algoritmo pasa del estado actual en el momento \code{t} a un nuevo estado en un nuevo momento \code{t + dt} antes de que la visualización se redibuje. La simulación repite esta evolución \code{20} veces cada segundo en ordenadores de una capacidad de procesamiento modesta. La simulación podría fluir más lenta y no tan suave en ordenadores con una capacidad insuficiente o si el ordenador está ocupado en otra tarea, pero no suele fallar.
+\note{El modelo de masa y muelle puede resolverse con un simple algoritmo para EDOs. Nuestra librería de métodos numéricos contiene algoritmos mucho más sofisticados y \ejs\ puede aplicar dichos algoritmos a sistemas grandes con ecuaciones diferenciales vectoriales con o sin puntos de discontinuidad.}
+
+\subsubsection{Relaciones entre variables}\label{section:02InspectingRelations}
+
+No todas las variables del modelo se calculan utilizando algoritmos del panel de Evolución. Algunas variables pueden ser también calculadas después de que la evolución se haya aplicado. Nos referiremos a las variables que se calculan utilizando el algoritmo de evolución como variables de estado o variables dinámicas, y nos referiremos a las variables que dependen de esas variables como variables auxiliares o de salida. En nuestro modelo la energía cinética, potencial y la energía total del sistema son variables de salida porque se calculan a partir de las variables de estado.
+\begin{align}
+  T &= \frac{1}{2} m {v_x}^2,     \label{eq:02EjsIntro/SpringEnergy1} \\
+  V &= \frac{1}{2} k (x-L)^2,     \label{eq:02EjsIntro/SpringEnergy2} \\
+  E &= T + V.                     \label{eq:02EjsIntro/SpringEnergy3}
+\end{align}
+
+Decimos entonces que existen \emph{relaciones fijas} entre las variables del modelo.
+El panel de \lit{Relaciones fijas}, mostrado en la Figura~\ref{fig:02EjsIntro/ModelRelations}, se usa para escribir las relaciones entre variables. Nótese qué fácil es convertir \eqref{eq:02EjsIntro/SpringEnergy1} a \eqref{eq:02EjsIntro/SpringEnergy3} a la sintaxis de Java. Asegúrese siempre de utilizar el símbolo \lit{*} para la multiplicación y de escribir un punto y coma al final de cada sentencia.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/ModelConstraints.eps}
+    \caption{Relaciones fijas en el modelo de masa y muelle.}
+    \label{fig:02EjsIntro/ModelRelations}
+\end{figure}
+
+Puede que se pregunte por qué no escribimos las expresiones correspondientes a relaciones fijas añadiendo una segunda página de código después de la página EDO en el panel de \lit{Evolución}. Después de todo las páginas de evolución se ejecutan secuencialmente y una segunda página podría actualizar correctamente la salida después de cada paso. La razón de que no se use el panel de \lit{Evolución} es que las relaciones deben mantenerse \emph{siempre} y hay acciones, como las hechas con el ratón, que pueden afectar a las variables indicadas. Por ejemplo, arrastrando la masa cambiamos la variable $x$ y este cambio afecta a la energía. \ejs\ automáticamente evalúa las relaciones después de la inicialización, después de cada paso y si hay alguna interacción del usuario con la interfaz de la simulación. Por esta razón, es importante que las relaciones fijas se escriban en el panel destinado a ello.
+
+\subsubsection{Páginas \lit{Propio}}
+
+En el panel de trabajo \lit{Modelo} hay un quinto panel llamado \lit{Propio}. Este panel puede usarse para definir métodos Java (funciones) que pueden ser usadas a lo largo del modelo. Este panel está vacío porque el modelo actual no requiere métodos adicionales, aunque haremos uso de este panel cuando modifiquemos nuestro ejemplo de masa y muelle en la Sección~\ref{section:02Modifying}. Un método propio no se usa a menos que sea llamado explícitamente desde otro panel de trabajo.
+
+
+% ---------------------------------------------
+\subsection{El panel de la \lit{Vista}}
+% ---------------------------------------------
+
+El tercer panel de trabajo de \Ejs\ es el panel de la \lit{Vista}. Este panel de trabajo permite crear una interfaz gráfica que incluye la visualización, la interacción del usuario y el control del programa con una cantidad mínima de programación. La Figura~\ref{fig:02EjsIntro/SpringInterface} muestra la vista del modelo masa y muelle. Marque el selector \lit{Vista} para examinar cómo ha sido creada la vista.
+
+El marco de la derecha del panel de la vista, mostrado en la Figura~\ref{fig:02EjsIntro/View}, contiene una colección de \emph{elementos para la vista}\index{Ejs!view elements} agrupados según su función. Los elementos para la vista funcionan como bloques de construcción que pueden ser combinados para formar una interfaz de usuario completa. Cada elemento para la vista es un objeto especializado con una representación específica en pantalla. Para ver información sobre un elemento, haga clic en su icono y presione la tecla \lit{F1} o haga clic con el botón derecho del ratón y seleccione \lit{Ayuda} en el menú emergente que aparecerá. Para crear una interfaz de usuario creamos una ventana y añadimos elementos, como botones y gráficos, con sólo arrastrar y soltar, como se describe en la Sección~\ref{section:02Modifying}.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/View.eps}
+    \caption{El panel de trabajo \lit{Vista} mostrando el \emph{Árbol de elementos} para la interfaz del modelo de masa y muelle.}
+    \label{fig:02EjsIntro/View}
+\end{figure}
+
+El \emph{Árbol de elementos}, mostrado a la izquierda en la Figura~\ref{fig:02EjsIntro/View}, muestra la estructura de la interfaz del modelo de masa y muelle. Nótese que la simulación tiene dos ventanas, una del tipo (\code{Ventana}) y otra del tipo (\code{VentanaDiálogo}), que aparecen en la pantalla de su ordenador. Estos elementos pertenecen al grupo de elementos \emph{contenedores}, cuyo principal cometido es organizar y agrupar visualmente otros elementos de la interfaz. El árbol muestra nombres descriptivos e iconos para estos elementos. Haciendo clic con el botón derecho del ratón en los elementos del árbol aparece un menú que ayuda al usuario a modificar dicha estructura.
+
+Cada elemento para la vista tiene un conjunto de parámetros internos llamados \emph{propiedades}\index{Ejs!view element properties} que configuran su apariencia y comportamiento. Podemos editar dichas propiedades haciendo doble clic en el elemento del árbol para mostrar una tabla a la que llamamos \emph{inspector de propiedades}. A las propiedades de apariencia, como por ejemplo el color, se les asigna a menudo un valor constante, por ejemplo, \code{RED} (rojo, en inglés). Podemos también utilizar una variable del modelo para establecer el valor de una propiedad del elemento. Esta posibilidad de conectar una propiedad a una variable sin programar es la clave para obtener fácilmente una visualización dinámica e interactiva.
+
+Veamos cómo se lleva a cabo este proceso en la práctica. Haga doble clic en el elemento \code{masaForma} (el sufijo `Forma' que añadimos al nombre de los elementos nos ayuda a reconocer el tipo del elemento) en el árbol para mostrar su inspector de propiedades. Este elemento es la masa unida al lado que queda libre del muelle. La tabla de propiedades de este objeto aparece como se muestra en la Figura~\ref{fig:02EjsIntro/SpringBallProperties}.
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/SpringBallProperties.eps}
+    \caption{Tabla de propiedades del elemento \code{masaForma}.}
+    \label{fig:02EjsIntro/SpringBallProperties}
+\end{figure}
+
+Observe las propiedades que tienen valores constantes. El \code{Estilo}, \code{Tamaño X}, \code{Tamaño Y} y el \code{Color (de) Relleno} producen una elipse de tamaño \code{(0.2,0.2)} unidades (es decir, un círculo) relleno de color magenta. Mayor relevancia tiene el hecho de que las propiedades \code{Pos X} y \code{Pos Y} de la forma estén ligadas a las variables \code{x} e \code{y} del modelo. Esta simple asignación establece una conexión bidireccional entre el modelo y la vista. Estas variables cambian conforme el modelo se desarrolla y la forma sigue los valores de \code{x} y de \code{y}. Si el usuario arrastra la forma a una nueva posición, las variables \code{x} e \code{y} del modelo también cambian. Nótese que la propiedad \code{Movible} está sólo permitida cuando la animación está en pausa.
+
+Los elementos pueden tener también \emph{propiedades de acción}\index{Ejs!action properties}, que pueden estar asociadas a código Java. (Las propiedades de acción aparecen en letras rojas.) Las acciones del usuario, como arrastrar o hacer clic, llaman a sus correspondientes propiedades de acción, de modo que permiten una forma sencilla de controlar la simulación. Si el usuario arrastra la masa, el código que aparece en la propiedad \code{Al Arrastrar} restringe el movimiento de la forma en la dirección horizontal obligando a que la variable \code{y} valga \code{0}. Finalmente, cuando se suelta el botón del ratón se ejecuta el siguiente código:
+
+\begin{listing}
+\begin{verbatim}
+vx = 0.0;            // pone la velocidad a cero
+_view.resetTraces(); // limpia todas las gráficas
+\end{verbatim}
+\end{listing}
+
+\noindent Haciendo clic en el icono junto al campo de texto aparece un pequeño editor que muestra este código.
+
+\note{Como el código para la acción de \code{Al Soltar} supera el espacio para una línea, el fondo del campo aparece más oscuro (en verde). Otros tipos de datos como las propiedades booleanas, tienen editores diferentes. Haciendo clic en el segundo icono aparece una ventana de diálogo con una lista de variables y métodos a elegir para esta propiedad.}
+
+\begin{exercise}[Inspectores de elementos]\label{ex:02EjsIntro/properties}
+El inspector de propiedades para la masa muestra distintos tipos de propiedades con sus posibles valores. Explore las propiedades de la vista. Por ejemplo, los elementos \code{desplazamientoRastro} y \code{velocidadRastro} correspondientes a las gráficas del desplazamiento y de la velocidad frente al tiempo que puede encontrar en la segunda ventana de la vista. ¿Cuál es el máximo número de puntos que se pueden añadir a cada gráfica?
+\end{exercise}
+
+\subsection{La simulación completa}
+
+Hemos visto que \Ejs\ es una poderosa herramienta que nos permite expresar nuestro conocimiento de un modelo con un alto nivel de abstracción. Cuando hicimos el modelo de masa y muelle primero creamos una tabla de variables que describiesen el modelo e inicializamos dichas variables utilizando una columna de la tabla. Entonces usamos un panel de evolución con un editor de alto nivel para sistemas de ecuaciones diferenciales ordinarias de primer orden con el fin de especificar cómo cambiaba su estado respecto al tiempo. Después escribimos relaciones para calcular las variables auxiliares y las de salida que podían expresarse utilizando variables de estado. Finalmente, creamos la interfaz gráfica para el usuario y visualizaciones de alto nivel tan sólo arrastrando objetos desde la \lit{Paleta} hasta el \lit{Árbol de elementos}. Configuramos las propiedades de los elementos mediante un editor de propiedades y algunas propiedades fueron asociadas con variables del modelo.
+
+Es importante hacer ver que las tres líneas de código en el panel de relaciones fijas (Figura~\ref{fig:02EjsIntro/ModelRelations}) y las dos líneas de código del método de acción de la forma son el único código explícito en Java necesario para implementar el modelo. \Ejs\ crea un programa en Java completo, procesando la información de los paneles de trabajo cuando presionamos el botón de ejecución, como se describe en la Sección~\ref{section:02Running}.
+
+
+% -----------------------------------------------------
+\section{Ejecutando la simulación}\label{section:02Running}\index{Simulation!running}
+% -----------------------------------------------------
+
+Es el momento de ejecutar la simulación haciendo clic en el botón de \lit{Ejecución}, \includegraphics[scale=\linescale]{images/launch.eps}. \ejs\ genera el código Java y lo compila, recoge archivos auxiliares y de librería y ejecuta el programa compilado. Todo con un único clic de ratón.
+
+Al ejecutar la simulación se inicializan sus variables y se evalúan las relaciones fijas para asegurar que el modelo está en un estado consistente. La evolución respecto del tiempo del modelo empieza cuando el botón de marcha/paro de la interfaz del usuario se presiona. (El botón marcha/paro muestra el icono \includegraphics[scale=\linescale]{images/OSPicons/play.eps} cuando la simulación está parada y el icono \includegraphics[scale=\linescale]{images/OSPicons/pause.eps} cuando está en marcha.) En nuestro ejemplo, el programa ejecuta un método numérico para avanzar la ecuación diferencial del oscilador armónico cada $0.05$ unidades de tiempo y ejecuta entonces el código de relaciones. Los datos se pasan entonces al gráfico y el gráfico se redibuja. Este proceso se repite $20$ veces por segundo.
+
+Cuando ejecutamos una simulación, \ejs\ cambia el icono de ejecución a color rojo y muestra mensajes de información diciendo que la simulación se ha generado correctamente y que está funcionando. Advierta que las dos ventanas de \ejs\ desaparecen y son reemplazadas por unas ventanas nuevas, aunque similares, sin el sufijo en sus títulos. Estas vistas sí que responden a las acciones del usuario. Haga clic y arrastre la partícula hasta la posición inicial deseada y entonces pulse en el botón de marcha/paro. La masa oscila alrededor de su posición de equilibrio y la gráfica muestra los datos de velocidad y desplazamiento como se muestra en la Figura~\ref{fig:02EjsIntro/SpringRunning}.
+
+Detenga la simulación y haga clic con el botón derecho sobre cualquiera de las áreas de dibujo de la simulación. En el menú emergente que aparece seleccione \code{Opciones de los elementos->panelConEjes->Herramientas de Datos} y pulse para mostrar y analizar los datos generados por el modelo. Este mismo menú ofrece otras opciones sobre la ejecución, como la captura de pantalla. Para salir del programa, cierre la ventana principal de la simulación.
+
+\begin{figure}[htb]
+  \centering
+  \subfigure{\includegraphics[scale=\scale]{02EjsIntro/images/SpringRunning1.eps}}
+  \subfigure{\includegraphics[scale=\scale]{02EjsIntro/images/SpringRunning2.eps}}
+  \caption{ La simulación de masa y muelle muestra un dibujo interactivo del modelo y una gráfica con los datos de desplazamiento y velocidad.}
+  \label{fig:02EjsIntro/SpringRunning}
+\end{figure}
+
+
+% -----------------------------------------------------
+\section{Distribución de la simulación}\label{section:02Distributing}\index{Simulation!distribution}
+%
+
+Las simulaciones creadas con \ejs\ son por sí mismas programas Java independientes que pueden distribuirse sin necesidad de que los destinatarios utilicen \ejs. La forma más sencilla para hacer esto es empaquetar la simulación en un único archivo ejecutable de tipo jar haciendo clic en el icono \lit{Empaquetar}, \includegraphics[scale=\linescale]{images/package.eps}. Aparece una explorador de archivos que le permitirá elegir un nombre para el paquete jar. La dirección por defecto donde se situará este archivo es el directorio \file{export} de su espacio de trabajo, pero puede elegir tanto el directorio como el nombre del paquete. Este archivo independiente está preparado para ser distribuido en un CD o via Internet. Otros mecanismos de distribución están disponibles  haciendo clic con el botón derecho en el icono como se describe en el Apéndice~\ref{appendix:Distribution}.
+
+\begin{exercise}[Distribución del modelo]\label{ex:02EjsIntro/distribution}
+Haga clic en el icono \lit{Empaquetar} de la barra de tareas para crear un archivo jar independiente con la simulación de masa y muelle. Copie este archivo jar en un directorio de trabajo diferente del de su instalación de \ejs. Cierre \ejs\ y verifique que la simulación funciona como una aplicación independiente.\end{exercise}
+
+Aunque el archivo jar de nuestra simulación está listo para ser usado y distribuido, un importante hecho pedagógico es que este archivo jar se ha creado de tal manera que los usuarios puedan volver a \ejs\ en cualquier momento para examinar, modificar y adaptar el modelo. (Siempre y cuando se tenga \ejs\ instalado, por supuesto.) El archivo jar contiene un pequeña descripción en \emph{Lenguaje de Marcas Ampliable} (XML) de cada modelo y haciendo clic con el botón derecho en un panel de dibujo del modelo se obtiene un menú desplegable con una opción para copiar el archivo en \ejs. Esta acción extraerá los archivos necesarios del archivo jar, buscará \ejs\ en el disco duro del usuario, copiará los archivos en la localización correcta y ejecutará \ejs\ con la simulación cargada. Si ya existiera un modelo con el mismo nombre, este puede ser reemplazado. El usuario puede inspeccionar, ejecutar y modificar el modelo tal y como hemos hecho en este capítulo. Un estudiante puede, por ejemplo, conseguir un modelo o una plantilla por parte del profesor y más tarde reempaquetar el modelo una vez modificado en un nuevo archivo jar como propuesta de un ejercicio completo.
+
+\begin{exercise}[Extraer un modelo]\label{ex:02EjsIntro/redistribution}
+Ejecute el archivo jar independiente que contiene el modelo de masa y muelle creado en el Ejercicio~\ref{ex:02EjsIntro/distribution}. Haga clic con el botón derecho sobre la gráfica o el dibujo del modelo y seleccione el item \lit{Abrir Modelo \ejs} del menú desplegable para copiar el modelo empaquetado de vuelta a \ejs.
+\end{exercise}
+
+\ejs\ ha sido diseñado para ser al mismo tiempo una herramienta de modelado y de autor, y proponemos ahora que experimente con ella para aprender cómo puede usted crear y distribuir sus propios modelos. Para empezar, recomendamos que ejecute la simulación de masa y muelle y realice las actividades de la segunda página del panel de \lit{Descripción}. En la siguiente sección modificaremos la simulación.
+
+
+% -----------------------------------------------------
+\section{Modificando la simulación}\label{section:02Modifying}
+% -----------------------------------------------------
+
+Como hemos visto, una característica importante y distintiva de \Ejs\ es que nos permite crear y estudiar una simulación con un alto nivel de abstracción. En la sección anterior, hemos inspeccionado un modelo existente de una masa y un muelle, así como su interfaz de usuario. Ahora vamos a mostrar otras capacidades adicionales de \Ejs\ añadiendo fricción y una fuerza externa al modelo, así como la visualización del espacio de fases del sistema.
+
+\subsection{Extendiendo el modelo}\label{section:02ModifyingModel}
+
+Podemos añadir rozamiento en nuestro modelo introduciendo una fuerza viscosa (ley de Stoke) que es proporcional al opuesto de la velocidad $F_f = - b\,v_x$, donde $b$ es el coeficiente de rozamiento. Tambien añadimos una fuerza externa, dependiente del tiempo, que toma la forma de una función sinusoidal $F_e(t)=A\,\sin(\omega\, t)$. La inclusión de estas fuerzas cambia la ecuación diferencial de segundo orden \eqref{eq:02EjsIntro/SpringBasic} a:
+\begin{equation}
+  \frac{d^2\ x}{dt^2} = -\frac{k}{m}\,(x-L) - \frac{b}{m}\,\frac{d\ x}{dt} + \frac{1}{m}\,F_e(t), \label{eq:02EjsIntro/SpringComplete}
+\end{equation}
+o, como en las ecuaciones \eqref{eq:02EjsIntro/SpringBasicODE1} y \eqref{eq:02EjsIntro/SpringBasicODE2},
+\begin{eqnarray}
+  \frac{d\ x} {dt} &=& v_x,                  \label{eq:02EjsIntro/SpringCompleteODE1} \\
+  \frac{d\ v_x}{dt} &=& -\frac{k}{m}\,(x-L) - \frac{b}{m}\,v_x + \frac{1}{m}\,F_e(t). \label{eq:02EjsIntro/SpringCompleteODE2}
+\end{eqnarray}
+
+\subsubsection{Añadiendo variables}
+
+Introducir nuevas fuerzas requiere que añadamos variables para el coeficiente de fricción dinámica y para la amplitud y frecuencia de la fuerza externa sinusoidal. Vuelva al panel del \lit{Modelo} de \ejs\ y seleccione su panel de \lit{Variables}. Haga clic con el botón derecho en la pestaña de la página de variables existente para ver su menú desplegable, como en la Figura~\ref{fig:02EjsIntro/ModifyVariables1}. Seleccione \lit{Añadir una página}. Introduzca como nombre de la nueva tabla \code{Fricción y fuerza} y aparecerá una tabla vacía.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/ModifyVariables1.eps}
+    \caption{El menú desplegable de una página de variables.}
+    \label{fig:02EjsIntro/ModifyVariables1}
+\end{figure}
+
+Ahora usamos la nueva tabla para declarar las variables que necesitamos. Podríamos haber usado una de las tablas ya existentes, pero declararlas en varias páginas nos ayuda a organizar mejor las variables por categorías. Haga doble clic en una de las celdas de la tabla para hacerla editable y muévase a través de la tabla utilizando las flechas o el tabulador. Escriba \code{b} en la celda destinada al \lit{Nombre} de la primera fila, e introduzca el valor \code{0.1} en la celda \lit{Valor inicial} justo a su derecha. No necesitamos hacer nada más, ya que el \lit{Tipo} elegido ya es correcto. \ejs\ comprueba la sintaxis del valor introducido y lo evalúa. Si introducimos un valor erróneo, el fondo de la celda se mostrará en color rosa.
+
+Nótese que cuando rellene el nombre de una nueva variable aparece una nueva fila automáticamente. Proceda de forma similar para declarar una nueva variable para la amplitud de la fuerza externa (\code{amp}) con valor \code{0.2} y para su frecuencia (\code{frec}) con valor \code{2.0}. Puede dejar una explicación sobre el significado de estas variables escribiendo un pequeño comentario para cada una de ellas en la parte inferior de la tabla. Nuestra nueva tabla de variables se muestra en la Figura~\ref{fig:02EjsIntro/ModifyVariables2}. Puede ignorar la fila vacía del final de la tabla o eliminarla haciendo clic con el botón derecho sobre esta fila y seleccionando \lit{Eliminar} del menú desplegable que aparece.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/ModifyVariables2.eps}
+    \caption{La nueva tabla de variables para los términos del rozamiento y la fuerza externa.}
+    \label{fig:02EjsIntro/ModifyVariables2}
+\end{figure}
+
+\subsubsection{Modificando la evolución}
+
+Ahora, vamos a modificar la ecuación diferencial de la página de evolución añadiendo expresiones para los nuevos términos de la ecuación \eqref{eq:02EjsIntro/SpringCompleteODE2}. Vaya al panel de \lit{Evolución}, haga doble clic en la celda de \lit{Derivada} de la segunda ecuación y escriba:
+
+\begin{listing}
+\begin{verbatim}
+-k/m * (x-L) - b*vx/m + fuerza(t)/m
+\end{verbatim}
+\end{listing}
+Dése cuenta de que utilizamos un método (función) llamado \code{fuerza} que no ha sido definido todavía. Podríamos haber escrito directamente una expresión explícita para la función sinusoidal. Sin embargo, definimos un método fuerza para que quede un código más limpio y fácil de leer y que además nos permita discutir ahora los métodos propios.
+
+\subsubsection{Añadiendo métodos propios}
+
+El método \code{fuerza} se define usando el panel \lit{Propio} del modelo. Vaya a este panel y haga clic en el área central que estará vacía para crear una nueva página de código propio. Llame a la página \lit{fuerza}. Notará que la página se crea con un código plantilla que define el método. Edite el código para que se lea:
+
+\begin{listing}
+\begin{verbatim}
+public double fuerza (double tiempo) {
+  return amp*Math.sin(frec*tiempo); // fuerza externa sinusoidal
+}
+\end{verbatim}
+\end{listing}
+Teclee este código exactamente como se muestra aquí, incluyendo las mayúsculas. El compilador producirá errores al generar la simulación si hay cualquier error de sintaxis.
+
+Observe que estamos pasamos al método \code{fuerza}, como parámetro de entrada, el valor del tiempo que queremos utilizar para calcular la fuerza externa. Pasarle el valor del tiempo es importante. Sería incorrecto pedirle al método que usase el valor de la variable t como sigue:
+
+\begin{listing}
+\begin{verbatim}
+public double fuerza () {
+  return amp*Math.sin(frec*t);// implementación incorrecta del método
+}
+\end{verbatim}
+\end{listing}
+
+\noindent La razón de que debamos pasar el tiempo como parámetro es que el tiempo cambia a lo largo del paso de la evolución. Para que el algoritmo de resolución de la ecuación diferencial calcule correctamente la fuerza dependiente del tiempo en instantes intermedios de un paso de integración numérica, el tiempo debe pasarse al método que calcula la derivada.
+
+\note{Las variables que cambian (evolucionan) deben pasarse a los métodos que se usan en el cálculo de la derivada porque los métodos numéricos evalúan la columna \lit{Derivada} en el panel de trabajo de las EDO en valores intermedios entre $t$ y $t+dt$. (véase el capitulo~\ref{chapter:ODE}.) En otras palabras, la variable independiente y cualquier otra variable dinámica que aparezca en la columna \lit{Estado} del editor de EDO debe pasarse a cualquier método al que se haga referencia en la columna \lit{Derivada}. Aquellas variables que permanecen constantes  durante el paso de evolución podrían utilizarse sin ser pasadas por parámetros de entrada ya que se puede utilizar el valor que tenía la variable al inicio del paso.}
+
+\subsection{Mejorando la Vista}\label{section:02ModifyingView}
+
+Ahora vamos a añadir a la \lit{Vista} una visualización del espacio de fases (desplazamiento frente a velocidad) de la evolución del sistema. También vamos a añadir campos de entrada para mostrar y modificar el valor de los parámetros de rozamiento, amplitud y frecuencia.
+
+Vaya al panel de la \lit{Vista} y fíjese que la paleta de \lit{Interfaz} contiene varios subpaneles. Haga clic en la pestaña con el icono \includegraphics[scale=\linescale]{images/Groups/Containers.eps} para mostrar la paleta \lit{Ventanas, contenedores y paneles de dibujo}. Haga clic en el icono de Panel con ejes, \includegraphics[scale=\linescale]{images/Elements/PlottingPanel.eps}, en esta misma paleta. Puede mantener el cursor sobre cualquiera de los iconos para que se muestre una nota que describe el elemento brevemente en caso de que tenga dificultades para reconocer el icono. Al seleccionar un elemento, éste muestra un marco de color alrededor del icono en la paleta y el cursor se convierte en una varita mágica, \includegraphics[scale=\linescale]{images/create.eps}. Estos cambios indican que \ejs\ está listo para crear un elemento del tipo seleccionado.
+
+Haga clic en el elemento \code{ventanaDialogo} en el \lit{Árbol de elementos} como muestra la Figura~\ref{fig:02EjsIntro/ModifyViewAddPlottingPanel} para añadir un panel con ejes a la vista.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/ModifyViewAddPlottingPanel.eps}
+    \caption{Creación de un panel con ejes como hijo del elemento \code{diálogo} de la vista.}
+    \label{fig:02EjsIntro/ModifyViewAddPlottingPanel}
+\end{figure}
+
+\ejs\ nos pide un nombre para el nuevo elemento y entonces lo crea como hijo del ya existente, \code{ventanaDialogo}. Aparece una nueva gráfica, pero la ventana de diálogo es demasiado pequeña. Vuelva al modo de diseño (líbrese de la varita mágica) haciendo clic en cualquier área en blanco del \lit{Árbol de elementos} o presionando la tecla \lit{Esc}. Puede reescalar la ventana arrastrando su esquina o haciendo doble clic en el elemento \code{ventanaDialogo} en el árbol para mostrar su tabla de propiedades y cambiar alli su \code{Tamaño} a \texttt{"385,530"} de forma que doblará su altura. Finalmente, edite la tabla de propiedades  del panel con ejes recién creado para cambiar el \code{Título} a \code{Espacio de fases}, el \code{Título X} a \code{Desplazamiento} y el \code{Título Y} a \code{Velocidad}. (\ejs\ añadirá comillas a estas cadenas de texto para adecuarse a la sintaxis de Java.) Seleccione el mínimo y máximo para las escalas X e Y en \code{-1} y \code{1}, respectivamente, y deje las otras propiedades tal y como están.
+
+El panel con ejes es un contenedor para la gráfica del espacio de fases. Los datos del espacio de fases se dibujan en este panel utilizando un elemento del tipo \code{Rastro}, \includegraphics[scale=\linescale]{images/Elements/Trail.eps}. Encuentre el elemento \code{Traza} en la \code{Paleta de Elementos de Dibujo 2D} y cree un elemento de este tipo haciendo clic con la varita mágica sobre el panel de espacio de fases. Finalmente, edite las propiedades del nuevo elemento para establecer su \code{Entrada X} a \code{x - L} y su \code{Entrada Y} a \code{vx}. Estas asignaciones hacen que la simulación  añada un nuevo punto \code{(x - L,vx)} a la traza después de cada paso de evolución, de forma que se dibuje la gráfica de espacio de fases que se muestra en la Figura~\ref{fig:02EjsIntro/ModifyRunning}.
+
+\begin{figure}[htb]
+  \centering
+  \subfigure{\includegraphics[scale=\scale]{02EjsIntro/images/ModifyRunning1.eps}}
+  \subfigure{\includegraphics[scale=\scale]{02EjsIntro/images/ModifyRunning2.eps}}
+  \caption{La simulación modificada. La ventana de diálogo incluye ahora una gráfica frente al tiempo y una gráfica del espacio de fases.}
+  \label{fig:02EjsIntro/ModifyRunning}
+\end{figure}
+
+Para terminar con las modificaciones, vamos a añadir un nuevo panel en la parte superior de la imagen que muestre los parámetros de la fuerza externa sinusoidal.
+
+\begin{bulletlist}
+
+\item Seleccione el icono de \code{Panel}, \includegraphics[scale=\linescale]{images/Elements/Panel.eps}, en el grupo de \lit{Ventanas, contenedores y paneles de dibujo} dentro de la paleta \lit{Interfaz}. Haga clic con la varita mágica en el elemento llamado \code{ventana} en el \lit{Árbol de elementos} para crear un nuevo panel llamado \code{paramFuerzaPanel} en la parte superior de la ventana. Utilice el inspector de propiedades para elegir el diseño del panel como \lit{FLOW:center,0,0} y su tipo de borde como \texttt{LOWERED\_ETCHED}.
+\item Seleccione el icono del elemento \code{Etiqueta}, \includegraphics[scale=\linescale]{images/Elements/Label.eps}, en el subgrupo \lit{Botones y decoración} de la paleta de \lit{Interfaz} y cree un nuevo elemento de este tipo en el panel de parámetros de la fuerza. Cambie el texto de la etiqueta a \texttt{"frecuencia="}.
+\item Seleccione el elemento de \code{Campo Numérico}, \includegraphics[scale=\linescale]{images/Elements/ParsedField.eps}, y cree un nuevo elemento llamado \code{frecCampo} en el panel de parámetros de la fuerza. Edite su tabla de propiedades como muestra la Figura~\ref{fig:02EjsIntro/ModifyField}. La conexión con la variable \code{frec} se establece usando la propiedad \code{Variable}. Haga clic en el segundo icono de la derecha del campo de texto de la propiedad, \includegraphics[scale=\linescale]{images/link.eps}, y elija la variable apropiada. La lista de variables muestra todas las variables del modelo que pueden ser utilizadas en este campo. La propiedad \code{Formato} indica el número de cifras decimales que desea que muestre el valor de la variable.
+\item Repita todo el proceso para añadir la variable \code{amp} a la interfaz de usuario.
+\end{bulletlist}
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/ModifyField.eps}
+    \caption{Tabla de propiedades del elemento \code{freqCampo}.}
+    \label{fig:02EjsIntro/ModifyField}
+\end{figure}
+
+\subsection{Cambiando la descripción}\label{section:02ModifyingDescription}
+
+Ahora que hemos cambiado el modelo y su vista deberíamos modificar también las páginas de descripción de nuestra simulación. Vaya al panel de trabajo \lit{Descripción} y haga clic con el botón derecho sobre la pestaña de la primera página, con el nombre \code{Introducción}, para mostrar el menú desplegable para esa página. Seleccione la opción \lit{Editar/Ver} esta página. La página de descripción cambiará al modo de edición, tal y como muestra la Figura~\ref{fig:02EjsIntro/ModifyHTML}, y aparecerá un sencillo editor que proporciona acceso directo a las funciones más comunes de HTML.
+
+Si prefiere usted usar su propio editor, puede copiar y pegar fragmentos de HTML desde su editor al editor de \ejs. Si conoce la sintaxis HTML puede además editar el código fuente directamente haciendo clic sobre el icono \includegraphics[scale=\linescale]{02EjsIntro/images/SourceHK.eps} en la barra de utilidades. Puede además importar páginas HTML completas a \ejs\ haciendo clic con el botón derecho sobre una de las pestañas del panel.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/ModifyHTML.eps}
+    \caption{El editor de HTML de \ejs. El cursor señala el icono para cambiar al modo de edición de código fuente.}
+    \label{fig:02EjsIntro/ModifyHTML}
+\end{figure}
+
+Edite las páginas de descripción como crea conveniente. Al menos cambie la discusión del modelo para incluir el rozamiento y la fuerza externa. Cuando haya terminado, guarde la nueva simulación con un nombre diferente haciendo clic sobre el icono \lit{Guardar Como} de la barra de tareas de \ejs, \includegraphics[scale=\linescale]{images/saveAsSmall.eps}. Cuando se le pida, introduzca un nuevo nombre para el archivo XML de su simulación. Nosotros guardamos la simulación modificada en el archivo \file{MasaYMuelleCompleto.xml} en el directorio de este capítulo.
+
+
+% -----------------------------------------------------
+\section{Buscando modelos}\label{section:02FindingModels}
+% -----------------------------------------------------
+
+Ahora que hemos cubierto los aspectos básicos de \ejs\ y ya sabe cómo cargar, inspeccionar, ejecutar y hasta modificar un ejemplo, puede que esté interesado en encontrar más ejemplos para ver qué han hecho otros usuarios con \ejs. Es posible que pueda encontrar un modelo existente que se ajuste a sus necesidades o que pueda usted modificar fácilmente para usarlo en sus clases.
+
+Hay dos sitios donde puede usted mirar en busca de más modelos.
+El primer sitio a mirar es el directorio \file{source} de muestra que viene con su distribución de \ejs. En el directorio \file{source} del espacio de trabajo de la distribución encontrará algunos subdirectorios con simulaciones de muestra. Estos directorios de muestra se copiaron también en su propio espacio de trabajo (salvo que indicara usted lo contrario) cuando ejecutó \ejs\ por primera vez.
+
+El segundo, y quizá más interesante, lugar (de hecho, lugares) para buscar nuevos modelos está accesible a través de Internet. El icono de la barra de herramientas de \ejs\ de librerías digitales, \includegraphics[scale=\linescale]{images/netOpen.eps}, abre una ventana que le permite conectar con repositorios de modelos de \ejs\ accesibles a través de Internet. Esta ventana, que se muestra en la Figura~\ref{fig:02EjsIntro/EJSDigitalLibraries}, contiene un selector en su parte superior con la lista de librerías digitales disponibles. Seleccione una de estas librerías o haga clic en el botón \lit{Leer el catálogo} para obtener el listado de modelos de \ejs\ en ella. Todas las librerías funcionan de manera similar. Nosotros usaremos el repositorio de la librería digital \textbf{comPADRE} para ilustrar cómo se accede a ellas desde \ejs.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/EJSDigitalLibraries.eps}
+    \caption{La ventana de \ejs\ de librerías digitales. Seleccione uno de los repositorios disponibles usando el selector en la parte superior de la ventana, o haga clic en el botón \lit{Leer el catálogo} para obtener el listado de modelos disponibles.}
+    \label{fig:02EjsIntro/EJSDigitalLibraries}
+\end{figure}
+
+La librería \textbf{comPADRE Pathway}, que es parte de la Librería Digital de Ciencia de los Estados Unidos de América, es una red en expansión de colecciones de recursos educativos que sirven de apoyo a profesores y estudiantes de Física y Astronomía. De especial relevancia para nosotros es la colección Open Source Physics en comPADRE, disponible en \link{http://www.compadre.org/OSP}. Esta colección (en inglés) contiene recursos computacionales para la enseñanza en forma de simulaciones ejecutables y recursos curriculares que involucran a los estudiantes en actividades de física, computación y modelado por computadora. En particular, contiene modelos de \ejs\ a cuyos archivos de código fuente (XML) puede accederse directamente desde \ejs\ usando el icono de librerías digitales.
+
+Si está conectado a Internet, seleccione la entrada \lit{OSP collection on the comPADRE digital library} del selector y \ejs\ se conectará a la librería para obtener el más reciente catálogo de modelos de \ejs\ en esta librería. En el momento de escribir estas líneas, hay cerca de 90 modelos organizados en diferentes categorías y subcategorías, y se espera que la colección siga creciendo. Como muestra el marco izquierdo de la Figura~\ref{fig:02EjsIntro/OSPCollection}, la colección está organizada en categorías y subcategorías. Cuando el nombre de una subcategoría aparezca en rojo, haga doble-clic sobre él para expandir el nodo con la lista de modelos de la subcategoría. Como muchos modelos tienen clasificiones principal y secundarias, el botón selector en la parte superior, justo debajo del selector de librería, le permite decidir si quiere que los modelos se listen únicamente según su clasificación primaria, o que aparezcan en todas las categorías en las que estén clasificados (apareciendo, por tanto, más de una vez).
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{02EjsIntro/images/OSPCollection.eps}
+    \caption{La colección OSP en la librería digital comPADRE. La colección está organizada en categorías y subcategorías. El nodo para un modelo proporciona información sobre el mismo.}
+    \label{fig:02EjsIntro/OSPCollection}
+\end{figure}
+
+Cuando hace clic en el nodo de un modelo, el marco de la derecha muestra información sobre dicho modelo obtenida de manera instantánea desde la librería. La información describe el modelo e incluye un enlace directo a la librería comPADRE para información adicional. Al hacer doble-clic en el nodo de un modelo, o al pulsar el botón \lit{Descargar}, \ejs\ obtiene los archivos del modelo y auxiliares desde la librería, le solicita un destino en el directorio \file{source} de su espacio de trabajo para descargarlos, y abre el modelo en \ejs\ cuando se completa la descarga. Como los ficheros fuente son típicamente pequeños, la descarga tiene lugar casi instantáneamente. Ya puede inspeccionar, ejecutar o modificar el modelo de la misma forma que hicimos anteriormente en este mismo capítulo para el modelo de la masa y el muelle.
+
+La colección OSP de la librería digital comPADRE es un lugar altamente recomendado (si puede leer en inglés) para buscar modelos de \ejs\ y material curricular de acompañamiento. Nosotros incluiremos a menudo referencias a la librería digital comPADRE en este libro, siempre que estén relacionadas con lo descrito en el texto.
+
+% -----------------------------------------------------
+\section{Resumen}\label{section:02Review}
+% -----------------------------------------------------
+
+Este libro trata sobre el modelado y el uso de modelos para estudiar y visualizar un amplio rango de fenómenos, desde los más simples a los más complejos. Una forma adecuada de llevar a cabo este estudio es a través de simulaciones por ordenador, ésto es, usar un ordenador para obtener datos numéricos a partir de nuestros modelos conforme se desarrollan con el tiempo, y mostrar estos datos de forma que sean entendibles.
+
+\Ejs\ es una herramienta de modelado y de autor expresamente dedicada a esta tarea. Ha sido diseñado para permitirnos trabajar a un alto nivel conceptual, concentrando la mayoría de nuestro tiempo y esfuerzo en los aspectos científicos de la simulación y pidiendo al ordenador que realice automáticamente todas aquellas tareas necesarias pero fácilmente automatizables.
+Toda herramienta, incluida \ejs, tiene una curva de aprendizaje. La primera parte del libro contiene una serie de ejemplos detallados para que se familiarice con las posibilidades de modelado de \ejs\ y con los elementos para la vista que se usan con mayor frecuencia. La segunda parte de este libro está dedicada a ejemplos más avanzados y enfatiza el contenido científico de los modelos y su comportamiento. Los apéndices cubrirán cuestiones adicionales, como una revisión de Java y una serie de pautas que le ayudarán en el inevitable momento en que cometa sus primeros errores de programación.
+
+Modelar es tanto una ciencia como un arte. Este libro le proporciona un sólido punto de partida en la parte científica, un repaso a las técnicas requeridas por el arte y ejemplos que son útiles en la práctica.
+
+% -----------------------------------------------------
+\section{Problemas y Proyectos}\label{section:02Projects}
+% -----------------------------------------------------
+
+%\subsection*{Problem 1}
+\begin{problem}[Energía]
+Añada un tercer panel con ejes a la ventana de diálogo de la simulación \file{Masa y muelle completo.xml} que muestre la evolución de las energías cinética, potencial y total.
+\end{problem}
+
+%\subsection*{Problem 2}
+\begin{problem}[Trazador de funciones]
+La solución analítica para un oscilador armónico simple sin rozamiento es
+\begin{equation}
+  x(t)=A \sin(w_0 t + \phi)
+\end{equation}
+donde $A$ es la amplitud (máximo desplazamiento), $w_0= \sqrt{k/m}$ es la frecuencia natural de la oscilación y $\phi$ es el ángulo de fase. Consulte un libro de mecánica para encontrar la relación entre la amplitud y el ángulo de fase y el desplazamiento y velocidad iniciales. Utilice la simulación \file{TrazadorDeFunciones.xml} del directorio de este capítulo para comparar la solución analítica con la solución numérica generada por el modelo \file{MasaYMuelleCompleto.xml}.
+\end{problem}
+
+%\subsection*{Project 2}
+\begin{project}[Oscilador en dos dimensiones]
+Modifique el modelo de simulación para masa y muelle para considerar un movimiento que no esté restringido a la dirección horizontal. Asuma que un segundo muelle con constante $k'$ produce una fuerza restauradora vertical $F_y(\delta y) = - k' \,\delta y$. Modifique la simulación para permitir al usuario especificar las constantes de la ley de Hooke, y las condiciones iniciales en ambas direcciones. Describa el movimiento que se produce sin fuerza de rozamiento pero bajo diferentes condiciones iniciales y con distintas constantes para los muelles. (Pruebe $k=1$ y $k'=9$.) Muestre que es posible conseguir un movimiento circular haciendo $k=k'$.
+\end{project}
+
+%\subsection*{Project 3}
+\begin{project}[Péndulo simple]
+Cree una simulación parecida a la que se describe en este capítulo para un péndulo simple cuyo movimiento se describe mediante la ecuación diferencial de segundo orden
+\begin{equation}
+  \frac{d^2\theta}{dt^2} = -\frac{g}{\ell} \sin (\theta),
+\end{equation}
+donde $\theta$ es el ángulo del péndulo respecto de la vertical, $g$ es la aceleración debida a la gravedad y $\ell$ es la longitud del hilo. Utilice relaciones fijas para calcular la posición $x$ e $y$ de la masa puntual del péndulo utilizando las ecuaciones:
+\begin{align*}
+   x   &=  \ell \, \sin (\theta) \\
+   y   &= -\ell \, \cos (\theta).
+\end{align*}
+\end{project}

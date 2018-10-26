@@ -1,0 +1,37 @@
+[General]
+img_extIsRegExp=false
+img_extensions=.eps .jpg .jpeg .png .pdf .ps .fig .gif
+kileprversion=2
+kileversion=2.0
+lastDocument=Modeling-Science.tex
+masterDocument=Modeling-Science.tex
+name=PupSpanish
+pkg_extIsRegExp=false
+pkg_extensions=.cls .sty
+src_extIsRegExp=false
+src_extensions=.tex .ltx .latex .dtx .ins
+
+[Tool/MakeIndex/Default]
+options='%S.idx'
+
+[Tools]
+MakeIndex=Default
+QuickBuild=LaTeX+DVItoPDF+ViewPDF
+
+[item:Modeling-Science.tex]
+archive=true
+column=0
+encoding=UTF-8
+highlight=LaTeX
+line=1
+open=true
+order=0
+
+[item:pupspanish.kilepr]
+archive=true
+column=138061704
+encoding=
+highlight=
+line=0
+open=false
+order=-1

@@ -1,0 +1,68 @@
+%\documentclass[10pt,final]{flbook12}
+%\documentclass[10pt,draft]{flwide10}
+\documentclass[10pt,final]{flwide10}
+
+\usepackage[latin1]{inputenc}
+\usepackage[cyr]{aeguill}
+\usepackage[francais]{babel}
+
+  %\usepackage[LY1]{fontenc}
+  %\usepackage[LY1,mtbold]{pupfonts}
+  \usepackage[LY1,mtbold]{}
+  \usepackage{bm}
+  \usepackage{epsfig}
+  \usepackage{latexsym}
+  \usepackage{makeidx}
+  
+  % Our own definitions
+  \input{../_common/modeling_macros}
+
+  \makeindex
+
+  %\includeonly{01Introduction/mainIntro,02ExplorationJava/mainJava}
+  \includeonly{01Introduction/mainIntro,03ExplorationJavascript/mainJS}
+ % \includeonly{04JavatoJS/mainJavaToJS}
+  %\includeonly{appendixA/mainEvents}
+
+\begin{document}
+
+  \frontmatter
+  \title{\center \Ejs \linebreak 
+    {\Large(Simulations Simples en Java/JavaScript)} \linebreak\linebreak
+    Guide de l'utilisateur}
+
+    %\shorttitle{Modeling Science}
+    %\subtitle{None}
+
+  \author{\center Wolfgang Christian \linebreak {\Large et} \linebreak Francisco Esquembre}
+
+    %\makehalftitle
+    \maketitle
+
+% ------------------------------------------
+  \frontmatter
+    %\include{preface/foreword}
+    %\tableofcontents
+
+% ------------------------------------------
+  \mainmatter
+ 
+      \include{01Introduction/mainIntro}          % Chapter: Introduction to Ejs
+ 
+      \include{02ExplorationJava/mainJava}          % Chapter: Introduction to Ejs
+      \include{03ExplorationJavascript/mainJS}          % Chapter: Introduction to Ejs
+      \include{04JavatoJS/mainJavaToJS}          % Chapter: Introduction to Ejs
+
+    \appendix
+      \include{appendixA/mainEvents} % Appendix: Distribution of Ejs models as Launcher packages
+      %\include{appendixB/mainJava}         % Appendix: A bit of Java goes very far
+      %\include{appendixC/mainErrors}       % Appendix: Error messages and debugging
+
+% ------------------------------------------
+  \backmatter
+    \bibliography{bibliography}
+    \bibliographystyle{plain}
+
+    %\printindex
+
+\end{document}

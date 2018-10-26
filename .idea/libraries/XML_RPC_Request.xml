@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="XML-RPC-Request">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/XML-RPC-Request/xmlrpc-common-3.1.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/XML-RPC-Request/org-apache-commons-logging.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/XML-RPC-Request/xmlrpc-server-3.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/XML-RPC-Request/org-apache-ws-commons-util.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/XML-RPC-Request/org.apache.commons.httpclient.jar!/" />
+      <root url="jar://$PROJECT_DIR$/ModelElements/lib/XML-RPC-Request/xmlrpc-client.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

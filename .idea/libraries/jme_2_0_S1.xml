@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="jme-2.0-S1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/extensions/model_elements/RoboticsLabs/_utils/jme-2.0-S1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,24 @@
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="../../../../../_ejs_library/css/ejsPage.css"/>
+    <title> Free Fall Model</title>
+  </head>
+  <body> 
+    <h1>Free Fall 3D Model</h1>
+    <p align="center"><img border="0" src="freefall3D_view.jpg"><br>
+    View elements are used to create the model's user interface. </p>
+    <p align="left">Selecting View in the Ejs workspace displays the structure of the simulation's user interface as shown above. 
+    Although a small number of user interface elements, such as buttons, are important for controlling the temporal evolution of 
+    the model, the view also reveals relationships between the model and the geometric representation of the model. For example, 
+    the ball in the Free Fall simulation is represented using a red sphere. Right-clicking on the ball in the <i>Tree of Elements</i> 
+    and selecting the properties menu item display a table of properties.</p>
+    <p align="center"><img border="0" src="freefall3D_ball_properties.jpg"><br>
+    Table of properties for the ball (Sphere 3D) in the Free Fall 3D model.</p>
+    <p align="left">The ball (Sphere 3D) properties table establishes relationships between a ball's internal properties and the 
+    model.&nbsp; For example, the table binds the ball's x, y, and z position properties to the model's x, y, and z variables.&nbsp; 
+    Constants, such as 0.2 for the radius and red for the color, can also be used to set properties.&nbsp; If the element's 
+    interaction is enabled, the element can execute Java code in response to mouse actions. In this example, the x and y values 
+    are set to zero within the <i>On Drag</i> action so that this mouse action only affects the z coordinate of the ball.&nbsp; 
+    The complete On Drag code fragment can be seen by clicking on the editor icon next to the property name.</p>
+    </body>
+</html>

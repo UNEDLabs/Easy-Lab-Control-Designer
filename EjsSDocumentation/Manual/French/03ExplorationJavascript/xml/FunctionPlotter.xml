@@ -1,0 +1,398 @@
+<!-- This XML file has been created by Easy Java Simulations (Ejs). Visit http://www.um.es/fem/Ejs. -->
+<!-- Please, save the file to your hard disk on your Ejs' user directory and open it with Ejs. -->
+<Osejs version="4.1">
+<Osejs.Information>
+<Title><![CDATA[]]></Title>
+<Author><![CDATA[]]></Author>
+<Keywords><![CDATA[]]></Keywords>
+<Level><![CDATA[]]></Level>
+<Language><![CDATA[]]></Language>
+<Abstract><![CDATA[]]></Abstract>
+<AdditionalLibraries>
+</AdditionalLibraries>
+<ImportStatements>
+</ImportStatements>
+<AuxiliaryFiles><![CDATA[]]></AuxiliaryFiles>
+<DetectedFiles><![CDATA[]]></DetectedFiles>
+</Osejs.Information>
+<Osejs.Description>
+<Osejs.Description.Page>
+<Type>DESCRIPTION_EDITOR</Type>
+<Name>Ejs Function Plotter</Name>
+<Active>true</Active>
+<Content>
+<![CDATA[
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <p style="margin-top: 0">
+      The Function Plotter simulation devaluates a function f(x) at 200 points 
+      from xmin to xmax. The y-axis is autoscaled but you may set this scale 
+      manually by right-clicking within the panel and selecting the 
+      appropriate menu.
+    </p>
+    <p style="margin-top: 0">
+      
+    </p>
+    <p style="margin-top: 0">
+      Ejs uses an expression <i>parser</i> to convert a sequence of characters 
+      (a string) into a mathematical function that can be evaluated. The 
+      parser interpretes the following expressions as well as the usual 
+      mathematical operators for addition +, subtraction -, multiplication *, 
+      divistion /, and exponentiation ^.
+    </p>
+    <p style="margin-top: 0">
+      
+    </p>
+    <div align="center">
+      <table id="table1" cellpadding="4" border="1">
+        <tr>
+          <td align="center">
+            abs(a)
+          </td>
+          <td align="center">
+            acos(a)
+          </td>
+          <td align="center">
+            acosh(a)
+          </td>
+          <td align="center">
+            asin(a)
+          </td>
+          <td align="center">
+            asinh(a)
+          </td>
+          <td align="center">
+            atan(a)
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            atanh(a)
+          </td>
+          <td align="center">
+            ceil(a)
+          </td>
+          <td align="center">
+            cos(a)
+          </td>
+          <td align="center">
+            cosh(a)
+          </td>
+          <td align="center">
+            exp(a)
+          </td>
+          <td align="center">
+            frac(a)
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            floor(a)
+          </td>
+          <td align="center">
+            int(a)
+          </td>
+          <td align="center">
+            ln(a)
+          </td>
+          <td align="center">
+            log(a)
+          </td>
+          <td align="center">
+            random(a)
+          </td>
+          <td align="center">
+            round(a)
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            sign(a)
+          </td>
+          <td align="center">
+            sin(a)
+          </td>
+          <td align="center">
+            sinh(a)
+          </td>
+          <td align="center">
+            sqr(a)
+          </td>
+          <td align="center">
+            sqrt(a)
+          </td>
+          <td align="center">
+            step(a)
+          </td>
+        </tr>
+        <tr>
+          <td align="center">
+            tan(a)
+          </td>
+          <td align="center">
+            tanh(a)
+          </td>
+          <td align="center">
+            atan2(a,b)
+          </td>
+          <td align="center">
+            max(a,b)
+          </td>
+          <td align="center">
+            min(a,b)
+          </td>
+          <td align="center">
+            mod(a,b)
+          </td>
+        </tr>
+      </table>
+    </div>
+    <p>
+      Predict the shape of the following functions: int(x), floor(x), 
+      frac(2*sin(x)), and sign(sin(x)).
+    </p>
+    <p>
+      The atan2(a,b) function is far more useful than the atan(a) function 
+      because it properly resolves angles in the second and third Cartesian 
+      quadrants. Note that the length of the side opposte the angle should be 
+      the first argument when this function is called, atan(y,x). Other 
+      two-parameter functions are useful for generating periodic behavior. Try 
+      the following functions and observe the resulting graphs: mod(x,1) and 
+      max(0,sin(x)).<br>
+    </p>
+  </body>
+</html>
+
+]]>
+
+</Content>
+</Osejs.Description.Page>
+</Osejs.Description>
+<Osejs.Model>
+<Osejs.Model.FramesPerSecond>25</Osejs.Model.FramesPerSecond>
+<Osejs.Model.StepsPerDisplay>1</Osejs.Model.StepsPerDisplay>
+<Osejs.Model.Autostart>true</Osejs.Model.Autostart>
+<Osejs.Model.Variables>
+<Osejs.Model.Variables.Page>
+<Type>VARIABLE_EDITOR</Type>
+<Name>plotter vars</Name>
+<Active>true</Active>
+<Content>
+<PageComment><![CDATA[]]></PageComment>
+<Variable>
+<Name><![CDATA[functionString]]></Name>
+<Value><![CDATA["exp(-x^2)"]]></Value>
+<Type><![CDATA[String]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[The function to be plotted.]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[n]]></Name>
+<Value><![CDATA[500]]></Value>
+<Type><![CDATA[int]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[xmin]]></Name>
+<Value><![CDATA[-10.0]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[xmax]]></Name>
+<Value><![CDATA[10.0]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[]]></Comment>
+</Variable>
+
+</Content>
+</Osejs.Model.Variables.Page>
+</Osejs.Model.Variables>
+<Osejs.Model.Initialization>
+<Osejs.Model.Initialization.Page>
+<Type>CODE_EDITOR</Type>
+<Name>plotFunction</Name>
+<Active>true</Active>
+<Content>
+<Comment><![CDATA[]]></Comment>
+<Code><![CDATA[
+double x=xmin;
+double dx=(xmax-xmin)/(n-1);
+_view.trace.clear(); 
+for(int i=0; i<n; i++){
+    double y = _view.function.evaluate(x);
+    //System.out.println("x="+x+"   y="+y);
+    _view.trace.addPoint(x,y);
+    x+=dx;
+}
+]]></Code>
+
+</Content>
+</Osejs.Model.Initialization.Page>
+</Osejs.Model.Initialization>
+<Osejs.Model.Evolution>
+</Osejs.Model.Evolution>
+<Osejs.Model.Constraints>
+</Osejs.Model.Constraints>
+<Osejs.Model.Library>
+</Osejs.Model.Library>
+</Osejs.Model>
+<Osejs.View>
+<Osejs.View.Creation>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Frame</Type>
+<Property name="name">plottingFrame</Property>
+<Property name="_ejs_mainWindow">true</Property>
+<Property name="title"><![CDATA[Function Plotter]]></Property>
+<Property name="layout"><![CDATA[border]]></Property>
+<Property name="visible"><![CDATA[true]]></Property>
+<Property name="location"><![CDATA[0,0]]></Property>
+<Property name="size"><![CDATA["709,270"]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.PlottingPanel</Type>
+<Property name="name">plottingPanel</Property>
+<Property name="parent">plottingFrame</Property>
+<Property name="position">center</Property>
+<Property name="autoscaleX"><![CDATA[true]]></Property>
+<Property name="autoscaleY"><![CDATA[true]]></Property>
+<Property name="minimumX"><![CDATA[xmin]]></Property>
+<Property name="maximumX"><![CDATA[xmax]]></Property>
+<Property name="yMarginPercentage"><![CDATA[10]]></Property>
+<Property name="titleX"><![CDATA[x]]></Property>
+<Property name="titleY"><![CDATA[f(x)]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Trace</Type>
+<Property name="name">trace</Property>
+<Property name="parent">plottingPanel</Property>
+<Property name="norepeat"><![CDATA[true]]></Property>
+<Property name="connected"><![CDATA[true]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Property name="name">controlPanel</Property>
+<Property name="parent">plottingFrame</Property>
+<Property name="position">south</Property>
+<Property name="layout"><![CDATA[border:0,0]]></Property>
+<Property name="borderType"><![CDATA[LOWERED_ETCHED]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Property name="name">buttonsPanel</Property>
+<Property name="parent">controlPanel</Property>
+<Property name="position">west</Property>
+<Property name="layout"><![CDATA[grid:1,3,0,0]]></Property>
+<Property name="size"><![CDATA[180,0]]></Property>
+<Property name="border"><![CDATA[0,0,0,0]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Button</Type>
+<Property name="name">plotButton</Property>
+<Property name="parent">buttonsPanel</Property>
+<Property name="text"><![CDATA[Plot]]></Property>
+<Property name="action"><![CDATA[_initialize()]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Button</Type>
+<Property name="name">resetButton</Property>
+<Property name="parent">buttonsPanel</Property>
+<Property name="text"><![CDATA[Reset]]></Property>
+<Property name="action"><![CDATA[_reset();
+_initialize();]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Property name="name">functionPanel</Property>
+<Property name="parent">controlPanel</Property>
+<Property name="position">center</Property>
+<Property name="layout"><![CDATA[BORDER:0,0]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Label</Type>
+<Property name="name">fxLabel</Property>
+<Property name="parent">functionPanel</Property>
+<Property name="position">west</Property>
+<Property name="text"><![CDATA[" f(x)="]]></Property>
+<Property name="alignment"><![CDATA[RIGHT]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Function</Type>
+<Property name="name">function</Property>
+<Property name="parent">functionPanel</Property>
+<Property name="position">center</Property>
+<Property name="variable"><![CDATA[%functionString%]]></Property>
+<Property name="value"><![CDATA["exp(-x^2)"]]></Property>
+<Property name="independent"><![CDATA[x]]></Property>
+<Property name="javaSyntax"><![CDATA[false]]></Property>
+<Property name="action"><![CDATA[_initialize()]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Property name="name">parametersPanel</Property>
+<Property name="parent">controlPanel</Property>
+<Property name="position">east</Property>
+<Property name="layout"><![CDATA[flow:left,0,0]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Label</Type>
+<Property name="name">nLabel</Property>
+<Property name="parent">parametersPanel</Property>
+<Property name="position">center</Property>
+<Property name="text"><![CDATA[" n="]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.ParsedField</Type>
+<Property name="name">nField</Property>
+<Property name="parent">parametersPanel</Property>
+<Property name="variable"><![CDATA[n]]></Property>
+<Property name="format"><![CDATA[000]]></Property>
+<Property name="action"><![CDATA[_initialize()]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Label</Type>
+<Property name="name">xminLabel</Property>
+<Property name="parent">parametersPanel</Property>
+<Property name="text"><![CDATA[" x min="]]></Property>
+<Property name="alignment"><![CDATA[RIGHT]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.ParsedField</Type>
+<Property name="name">xminField</Property>
+<Property name="parent">parametersPanel</Property>
+<Property name="variable"><![CDATA[xmin]]></Property>
+<Property name="value"><![CDATA[-10.0]]></Property>
+<Property name="action"><![CDATA[_initialize()]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Label</Type>
+<Property name="name">xmaxLabel</Property>
+<Property name="parent">parametersPanel</Property>
+<Property name="text"><![CDATA[" x max="]]></Property>
+<Property name="alignment"><![CDATA[RIGHT]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.ParsedField</Type>
+<Property name="name">xmaxField</Property>
+<Property name="parent">parametersPanel</Property>
+<Property name="variable"><![CDATA[xmax]]></Property>
+<Property name="value"><![CDATA[10.0]]></Property>
+<Property name="action"><![CDATA[_initialize()]]></Property>
+</Osejs.View.Creation.Element>
+</Osejs.View.Creation>
+</Osejs.View>
+<Osejs.Experiment>
+</Osejs.Experiment>
+</Osejs>

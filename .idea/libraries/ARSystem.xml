@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ARSystem">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/other/ModelElements/InputOutput/ARSystem.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

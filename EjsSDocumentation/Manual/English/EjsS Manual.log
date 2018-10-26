@@ -1,0 +1,1440 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.1)  24 JAN 2018 14:05
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"EjsS Manual.tex"
+(./EjsS Manual.tex
+LaTeX2e <2017-04-15>
+Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+(./flwide10.cls
+Document Class: flwide10 2003/007/28 v1.0 Princeton University Press class
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks14
+\thm@bodyfont=\toks15
+\thm@headfont=\toks16
+\thm@notefont=\toks17
+\thm@headpunct=\toks18
+\thm@preskip=\skip41
+\thm@postskip=\skip42
+\thm@headsep=\skip43
+\dth@everypar=\toks19
+)
+\chapterdrop=\skip44
+\schapterdrop=\skip45
+\partdrop=\skip46
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen102
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2017/04/11 v1.8q multicolumn formatting (FMi)
+\c@tracingmulticols=\count88
+\mult@box=\box26
+\multicol@leftmargin=\dimen103
+\c@unbalance=\count89
+\c@collectmore=\count90
+\doublecol@number=\count91
+\multicoltolerance=\count92
+\multicolpretolerance=\count93
+\full@width=\dimen104
+\page@free=\dimen105
+\premulticols=\dimen106
+\postmulticols=\dimen107
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box27
+\last@line=\box28
+\maxbalancingoverflow=\dimen108
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count94
+\c@finalcolumnbadness=\count95
+\last@try=\dimen109
+\multicolovershoot=\dimen110
+\multicolundershoot=\dimen111
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\mc@col@check@num=\count96
+)
+\c@NumList=\count97
+\NumWidth=\skip51
+\c@theorem=\count98
+\c@example=\count99
+\c@theo=\count100
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2017/04/14 v1.1b Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2017/01/12 v0.06k Graphics/color for pdfTeX
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count101
+))
+\Gin@req@height=\dimen112
+\Gin@req@width=\dimen113
+)
+\epsfxsize=\dimen114
+\epsfysize=\dimen115
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+(../_common/modeling_macros.tex
+(/usr/local/texlive/2017/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip52
+\subfigcapskip=\skip53
+\subfigcaptopadj=\dimen116
+\subfigbottomskip=\skip54
+\subfigcapmargin=\dimen117
+\subfiglabelskip=\skip55
+\c@subfigure=\count102
+\c@lofdepth=\count103
+\c@subtable=\count104
+\c@lotdepth=\count105
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2017/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip56
+\subfig@bottom=\skip57
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 67.
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@tempdima=\dimen121
+\caption@indent=\dimen122
+\caption@parindent=\dimen123
+\caption@hangindent=\dimen124
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \xtable 
+\vskip \abovecaptionskip \fontsize {9}{11pt}\selectfont \sbox \@tempboxa {{#1}\
+enspace #2}\ifdim \wd \@tempboxa >\hsize \@hangfrom {#1\enspace }#2\par \else \
+global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi \vskip 
+8.3pt \else \vskip \abovecaptionskip \fontsize {9}{11pt}\selectfont \sbox \@tem
+pboxa {{#1}\enspace #2}\ifdim \wd \@tempboxa >\hsize \@hangfrom {#1\enspace }#2
+\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil 
+}\fi \vskip \belowcaptionskip \fi .
+\c@ContinuedFloat=\count106
+Package caption Info: subfigure package is loaded.
+) (/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2016/11/05 v2.16a AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks21
+\ex@=\dimen125
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+LaTeX Info: Redefining \boldsymbol on input line 28.
+\pmbraise@=\dimen126
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2016/03/08 v2.02 operator names
+)
+\inf@bad=\count107
+LaTeX Info: Redefining \frac on input line 213.
+\uproot@=\count108
+\leftroot@=\count109
+LaTeX Info: Redefining \overline on input line 375.
+\classnum@=\count110
+\DOTSCASE@=\count111
+LaTeX Info: Redefining \ldots on input line 472.
+LaTeX Info: Redefining \dots on input line 475.
+LaTeX Info: Redefining \cdots on input line 596.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen127
+LaTeX Font Info:    Redeclaring font encoding OML on input line 712.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 713.
+\macc@depth=\count112
+\c@MaxMatrixCols=\count113
+\dotsspace@=\muskip10
+\c@parentequation=\count114
+\dspbrk@lvl=\count115
+\tag@help=\toks22
+\row@=\count116
+\column@=\count117
+\maxfields@=\count118
+\andhelp@=\toks23
+\eqnshift@=\dimen128
+\alignsep@=\dimen129
+\tagshift@=\dimen130
+\tagwidth@=\dimen131
+\totwidth@=\dimen132
+\lineht@=\dimen133
+\@envbody=\toks24
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2817.
+LaTeX Info: Redefining \] on input line 2818.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count119
+\lst@gtempboxa=\box54
+\lst@token=\toks26
+\lst@length=\count120
+\lst@currlwidth=\dimen134
+\lst@column=\count121
+\lst@pos=\count122
+\lst@lostspace=\dimen135
+\lst@width=\dimen136
+\lst@newlines=\count123
+\lst@lineno=\count124
+\lst@maxwidth=\dimen137
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
+\lst@framebox=\box55
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2015/06/04 1.6 listings configuration
+))
+Package: listings 2015/06/04 1.6 (Carsten Heinz)
+\c@exerciseEnv=\count127
+\c@problem=\count128
+\c@project=\count129
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+))
+\@indexfile=\write3
+\openout3 = `"EjsS Manual.idx"'.
+
+
+Writing index file "EjsS Manual".idx
+(./EjsS Manual.aux (./01Introduction/mainIntro.aux)
+(./02ExplorationJava/mainJava.aux) (./03ExplorationJavascript/mainJS.aux)
+(./04JavatoJS/mainJavaToJS.aux) (./appendixA/mainEvents.aux
+
+LaTeX Warning: Label `chapter:JavascriptEJS' multiply defined.
+
+))
+\openout1 = `"EjsS Manual.aux"'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+ (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count130
+\scratchdimen=\dimen138
+\scratchbox=\box56
+\nofMPsegments=\count131
+\nofMParguments=\count132
+\everyMPshowfont=\toks27
+\MPscratchCnt=\count133
+\MPscratchDim=\dimen139
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
+\everyMPtoPDFconversion=\toks28
+) (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2017/03/19 v0.25 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2017/03/15 v3.2 Provides the ifpdf switch
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+))
+(/usr/local/texlive/2017/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+
+(/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count136
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 34.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <20> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 34.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sl' in size <20> not available
+(Font)              size <20.74> substituted on input line 34.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <14> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 34.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 34.
+
+[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+
+]
+[2
+
+]
+\openout2 = `01Introduction/mainIntro.aux'.
+
+ (./01Introduction/mainIntro.tex
+Chapter 1.
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 3.
+
+
+Overfull \hbox (6.34404pt too wide) in paragraph at lines 9--10
+[]\OT1/cmr/m/n/10.95 This in-tro-duc-tory chap-ter pro-vides an overview of \OT
+1/cmr/m/it/10.95 Easy Java/-JavaScript
+ []
+
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 26.
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 26.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 26.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 26.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 26.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 26.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 26.
+
+LaTeX Font Info:    Try loading font information for U+lasy on input line 26.
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 26.
+
+[1
+
+
+
+]
+Overfull \vbox (0.17627pt too high) has occurred while \output is active []
+
+
+[2] <01Introduction/images/EjsConsole1.png, id=26, 684.5575pt x 316.18124pt>
+File: 01Introduction/images/EjsConsole1.png Graphic file (type png)
+
+<use 01Introduction/images/EjsConsole1.png>
+Package pdftex.def Info: 01Introduction/images/EjsConsole1.png used on input li
+ne 80.
+(pdftex.def)             Requested size: 205.36882pt x 94.8551pt.
+
+<01Introduction/images/WorkspaceChooser.png, id=27, 589.20125pt x 455.7025pt>
+File: 01Introduction/images/WorkspaceChooser.png Graphic file (type png)
+
+<use 01Introduction/images/WorkspaceChooser.png>
+Package pdftex.def Info: 01Introduction/images/WorkspaceChooser.png used on inp
+ut line 89.
+(pdftex.def)             Requested size: 176.76173pt x 136.71179pt.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <8> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 96.
+
+[3 <./01Introduction/images/EjsConsole1.png>]
+Overfull \vbox (5.13095pt too high) has occurred while \output is active []
+
+
+[4 <./01Introduction/images/WorkspaceChooser.png>]
+<01Introduction/images/NameAndAffiliation.png, id=45, 807.015pt x 646.415pt>
+File: 01Introduction/images/NameAndAffiliation.png Graphic file (type png)
+
+<use 01Introduction/images/NameAndAffiliation.png>
+Package pdftex.def Info: 01Introduction/images/NameAndAffiliation.png used on i
+nput line 114.
+(pdftex.def)             Requested size: 242.10637pt x 193.926pt.
+
+<01Introduction/images/EjsInterface.png, id=46, 787.94376pt x 642.4pt>
+File: 01Introduction/images/EjsInterface.png Graphic file (type png)
+
+<use 01Introduction/images/EjsInterface.png>
+Package pdftex.def Info: 01Introduction/images/EjsInterface.png used on input l
+ine 129.
+(pdftex.def)             Requested size: 236.38495pt x 192.72148pt.
+ [5 <./01Introduction/images/NameAndAffiliation.png>] [6 <./01Introduction/imag
+es/EjsInterface.png>]
+<01Introduction/images/EjsInterfaceJS.png, id=56, 762.85pt x 639.38875pt>
+File: 01Introduction/images/EjsInterfaceJS.png Graphic file (type png)
+
+<use 01Introduction/images/EjsInterfaceJS.png>
+Package pdftex.def Info: 01Introduction/images/EjsInterfaceJS.png used on input
+ line 158.
+(pdftex.def)             Requested size: 228.85677pt x 191.8181pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./01Introduction/images/EjsInterfaceJS.png>]
+<../_common/icons_png/netOpen.png, id=60, 21.07875pt x 20.075pt>
+File: ../_common/icons_png/netOpen.png Graphic file (type png)
+
+<use ../_common/icons_png/netOpen.png>
+Package pdftex.def Info: ../_common/icons_png/netOpen.png used on input line 17
+5.
+(pdftex.def)             Requested size: 12.64732pt x 12.04507pt.
+
+<01Introduction/images/EJSDigitalLibraries.png, id=61, 822.07124pt x 489.83pt>
+File: 01Introduction/images/EJSDigitalLibraries.png Graphic file (type png)
+
+<use 01Introduction/images/EJSDigitalLibraries.png>
+Package pdftex.def Info: 01Introduction/images/EJSDigitalLibraries.png used on 
+input line 179.
+(pdftex.def)             Requested size: 246.62328pt x 146.95012pt.
+ [8 <../_common/icons_png/netOpen.png> <./01Introduction/images/EJSDigitalLibra
+ries.png>]
+<01Introduction/images/OSPCollection.png, id=68, 905.3825pt x 647.41875pt>
+File: 01Introduction/images/OSPCollection.png Graphic file (type png)
+
+<use 01Introduction/images/OSPCollection.png>
+Package pdftex.def Info: 01Introduction/images/OSPCollection.png used on input 
+line 190.
+(pdftex.def)             Requested size: 271.61684pt x 194.22711pt.
+ [9 <./01Introduction/images/OSPCollection.png>]) [10]
+\openout2 = `02ExplorationJava/mainJava.aux'.
+
+ (./02ExplorationJava/mainJava.tex
+Chapter 2.
+
+<02ExplorationJava/images/OpenDialogCrossPlatform.png, id=76, 541.02126pt x 372
+.39125pt>
+File: 02ExplorationJava/images/OpenDialogCrossPlatform.png Graphic file (type p
+ng)
+ <use 02ExplorationJava/images/OpenDialogCrossPlatform.png>
+Package pdftex.def Info: 02ExplorationJava/images/OpenDialogCrossPlatform.png u
+sed on input line 27.
+(pdftex.def)             Requested size: 108.20233pt x 74.47693pt.
+
+<02ExplorationJava/images/OpenDialogNative.png, id=77, 693.59125pt x 428.60126p
+t>
+File: 02ExplorationJava/images/OpenDialogNative.png Graphic file (type png)
+ <use 02ExplorationJava/images/OpenDialogNative.png>
+Package pdftex.def Info: 02ExplorationJava/images/OpenDialogNative.png used on 
+input line 28.
+(pdftex.def)             Requested size: 138.71579pt x 85.71872pt.
+
+<../_common/icons_png/openSmall.png, id=78, 21.07875pt x 20.075pt>
+File: ../_common/icons_png/openSmall.png Graphic file (type png)
+
+<use ../_common/icons_png/openSmall.png>
+Package pdftex.def Info: ../_common/icons_png/openSmall.png used on input line 
+34.
+(pdftex.def)             Requested size: 12.64732pt x 12.04507pt.
+ [11
+
+
+
+ <../_common/icons_png/openSmall.png>]
+<02ExplorationJava/images/SpringInterface1.png, id=84, 420.57124pt x 401.5pt>
+File: 02ExplorationJava/images/SpringInterface1.png Graphic file (type png)
+
+<use 02ExplorationJava/images/SpringInterface1.png>
+Package pdftex.def Info: 02ExplorationJava/images/SpringInterface1.png used on 
+input line 47.
+(pdftex.def)             Requested size: 126.17235pt x 120.45091pt.
+
+<02ExplorationJava/images/SpringInterface2.png, id=85, 418.56375pt x 401.5pt>
+File: 02ExplorationJava/images/SpringInterface2.png Graphic file (type png)
+
+<use 02ExplorationJava/images/SpringInterface2.png>
+Package pdftex.def Info: 02ExplorationJava/images/SpringInterface2.png used on 
+input line 48.
+(pdftex.def)             Requested size: 125.57008pt x 120.45091pt.
+
+<../_common/icons_png/launch.png, id=86, 12.045pt x 12.045pt>
+File: ../_common/icons_png/launch.png Graphic file (type png)
+
+<use ../_common/icons_png/launch.png>
+Package pdftex.def Info: ../_common/icons_png/launch.png used on input line 55.
+
+(pdftex.def)             Requested size: 7.22704pt x 7.22704pt.
+
+<../_common/icons_png/stop.png, id=87, 13.04875pt x 13.04875pt>
+File: ../_common/icons_png/stop.png Graphic file (type png)
+
+<use ../_common/icons_png/stop.png>
+Package pdftex.def Info: ../_common/icons_png/stop.png used on input line 55.
+(pdftex.def)             Requested size: 7.8293pt x 7.8293pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [12 <./02ExplorationJava/images/OpenDialogCrossPlatform.png> <./02ExplorationJ
+ava/images/OpenDialogNative.png> <./02ExplorationJava/images/SpringInterface1.p
+ng> <./02ExplorationJava/images/SpringInterface2.png> <../_common/icons_png/lau
+nch.png> <../_common/icons_png/stop.png>]
+<02ExplorationJava/images/SpringDesc.png, id=93, 768.8725pt x 359.3425pt>
+File: 02ExplorationJava/images/SpringDesc.png Graphic file (type png)
+
+<use 02ExplorationJava/images/SpringDesc.png>
+Package pdftex.def Info: 02ExplorationJava/images/SpringDesc.png used on input 
+line 66.
+(pdftex.def)             Requested size: 230.66353pt x 107.80357pt.
+ [13 <./02ExplorationJava/images/SpringDesc.png>]
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <11> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 101.
+
+
+
+<02ExplorationJava/images/ModelVariables.png, id=98, 772.8875pt x 472.76625pt>
+File: 02ExplorationJava/images/ModelVariables.png Graphic file (type png)
+
+<use 02ExplorationJava/images/ModelVariables.png>
+Package pdftex.def Info: 02ExplorationJava/images/ModelVariables.png used on in
+put line 104.
+(pdftex.def)             Requested size: 231.86803pt x 141.83096pt.
+ [14 <./02ExplorationJava/images/ModelVariables.png>] [15]
+<02ExplorationJava/images/ModelEvolution.png, id=108, 769.87625pt x 472.76625pt
+>
+File: 02ExplorationJava/images/ModelEvolution.png Graphic file (type png)
+ <use 02ExplorationJava/images/ModelEvolution.png>
+Package pdftex.def Info: 02ExplorationJava/images/ModelEvolution.png used on in
+put line 152.
+(pdftex.def)             Requested size: 230.96466pt x 141.83096pt.
+ [16 <./02ExplorationJava/images/ModelEvolution.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [17]
+<02ExplorationJava/images/ModelConstraints.png, id=116, 767.86874pt x 471.7625p
+t>
+File: 02ExplorationJava/images/ModelConstraints.png Graphic file (type png)
+ <use 02ExplorationJava/images/ModelConstraints.png>
+Package pdftex.def Info: 02ExplorationJava/images/ModelConstraints.png used on 
+input line 205.
+(pdftex.def)             Requested size: 230.3624pt x 141.52983pt.
+ [18 <./02ExplorationJava/images/ModelConstraints.png>]
+<02ExplorationJava/images/View.png, id=120, 762.85pt x 469.755pt>
+File: 02ExplorationJava/images/View.png Graphic file (type png)
+
+<use 02ExplorationJava/images/View.png>
+Package pdftex.def Info: 02ExplorationJava/images/View.png used on input line 2
+44.
+(pdftex.def)             Requested size: 228.85677pt x 140.92758pt.
+ [19]
+<02ExplorationJava/images/SpringBallProperties.png, id=124, 850.17625pt x 393.4
+7pt>
+File: 02ExplorationJava/images/SpringBallProperties.png Graphic file (type png)
+
+ <use 02ExplorationJava/images/SpringBallProperties.png>
+Package pdftex.def Info: 02ExplorationJava/images/SpringBallProperties.png used
+ on input line 265.
+(pdftex.def)             Requested size: 255.05484pt x 118.0419pt.
+ [20 <./02ExplorationJava/images/View.png>]
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7.69997> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 297.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5.5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 297.
+
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 297.
+
+[21 <./02ExplorationJava/images/SpringBallProperties.png>]
+File: ../_common/icons_png/launch.png Graphic file (type png)
+
+<use ../_common/icons_png/launch.png>
+Package pdftex.def Info: ../_common/icons_png/launch.png used on input line 309
+.
+(pdftex.def)             Requested size: 7.22704pt x 7.22704pt.
+
+<../_common/icons_png/play.png, id=131, 6.7452pt x 13.0086pt>
+File: ../_common/icons_png/play.png Graphic file (type png)
+
+<use ../_common/icons_png/play.png>
+Package pdftex.def Info: ../_common/icons_png/play.png used on input line 311.
+(pdftex.def)             Requested size: 4.04713pt x 7.8052pt.
+
+<../_common/icons_png/pause.png, id=132, 9.636pt x 10.5996pt>
+File: ../_common/icons_png/pause.png Graphic file (type png)
+
+<use ../_common/icons_png/pause.png>
+Package pdftex.def Info: ../_common/icons_png/pause.png used on input line 311.
+
+(pdftex.def)             Requested size: 5.78163pt x 6.3598pt.
+ [22 <../_common/icons_png/play.png> <../_common/icons_png/pause.png>]
+<02ExplorationJava/images/SpringRunning1.png, id=139, 402.50375pt x 373.395pt>
+File: 02ExplorationJava/images/SpringRunning1.png Graphic file (type png)
+
+<use 02ExplorationJava/images/SpringRunning1.png>
+Package pdftex.def Info: 02ExplorationJava/images/SpringRunning1.png used on in
+put line 324.
+(pdftex.def)             Requested size: 120.75204pt x 112.01936pt.
+
+<02ExplorationJava/images/SpringRunning2.png, id=140, 401.5pt x 373.395pt>
+File: 02ExplorationJava/images/SpringRunning2.png Graphic file (type png)
+
+<use 02ExplorationJava/images/SpringRunning2.png>
+Package pdftex.def Info: 02ExplorationJava/images/SpringRunning2.png used on in
+put line 325.
+(pdftex.def)             Requested size: 120.45091pt x 112.01936pt.
+
+<../_common/icons_png/package.png, id=141, 15.05624pt x 16.06pt>
+File: ../_common/icons_png/package.png Graphic file (type png)
+
+<use ../_common/icons_png/package.png>
+Package pdftex.def Info: ../_common/icons_png/package.png used on input line 33
+4.
+(pdftex.def)             Requested size: 9.0338pt x 9.63606pt.
+ [23 <./02ExplorationJava/images/SpringRunning1.png> <./02ExplorationJava/image
+s/SpringRunning2.png> <../_common/icons_png/package.png>]
+Overfull \hbox (1.38605pt too wide) in paragraph at lines 356--360
+\OT1/cmr/m/n/10.95 As we have seen, a promi-nent and dis-tinc-tive fea-ture of 
+\OT1/cmr/m/it/10.95 Easy Java/-JavaScript
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [24]
+<02ExplorationJava/images/ModifyVariables1.png, id=150, 775.89874pt x 316.18124
+pt>
+File: 02ExplorationJava/images/ModifyVariables1.png Graphic file (type png)
+ <use 02ExplorationJava/images/ModifyVariables1.png>
+Package pdftex.def Info: 02ExplorationJava/images/ModifyVariables1.png used on 
+input line 381.
+(pdftex.def)             Requested size: 232.77141pt x 94.8551pt.
+ [25 <./02ExplorationJava/images/ModifyVariables1.png>]
+<02ExplorationJava/images/ModifyVariables2.png, id=155, 780.9175pt x 312.16624p
+t>
+File: 02ExplorationJava/images/ModifyVariables2.png Graphic file (type png)
+ <use 02ExplorationJava/images/ModifyVariables2.png>
+Package pdftex.def Info: 02ExplorationJava/images/ModifyVariables2.png used on 
+input line 392.
+(pdftex.def)             Requested size: 234.27705pt x 93.65059pt.
+ [26 <./02ExplorationJava/images/ModifyVariables2.png>]
+<../_common/icons_png/Groups/Containers.png, id=160, 11.04124pt x 10.0375pt>
+File: ../_common/icons_png/Groups/Containers.png Graphic file (type png)
+
+<use ../_common/icons_png/Groups/Containers.png>
+Package pdftex.def Info: ../_common/icons_png/Groups/Containers.png used on inp
+ut line 447.
+(pdftex.def)             Requested size: 6.62479pt x 6.02254pt.
+
+<../_common/icons_png/Elements/PlottingPanel.png, id=161, 24.09pt x 19.07124pt>
+File: ../_common/icons_png/Elements/PlottingPanel.png Graphic file (type png)
+<use ../_common/icons_png/Elements/PlottingPanel.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/PlottingPanel.png used o
+n input line 449.
+(pdftex.def)             Requested size: 14.45409pt x 11.44283pt.
+
+<../_common/icons_png/create.png, id=162, 16.06pt x 14.0525pt>
+File: ../_common/icons_png/create.png Graphic file (type png)
+
+<use ../_common/icons_png/create.png>
+Package pdftex.def Info: ../_common/icons_png/create.png used on input line 452
+.
+(pdftex.def)             Requested size: 9.63606pt x 8.43155pt.
+ [27 <../_common/icons_png/Groups/Containers.png> <../_common/icons_png/Element
+s/PlottingPanel.png>]
+<02ExplorationJava/images/ModifyViewAddPlottingPanel.png, id=168, 770.88pt x 47
+3.77pt>
+File: 02ExplorationJava/images/ModifyViewAddPlottingPanel.png Graphic file (typ
+e png)
+ <use 02ExplorationJava/images/ModifyViewAddPlottingPanel.png>
+Package pdftex.def Info: 02ExplorationJava/images/ModifyViewAddPlottingPanel.pn
+g used on input line 461.
+(pdftex.def)             Requested size: 231.26578pt x 142.1321pt.
+
+<../_common/icons_png/Elements/Trail.png, id=169, 13.04875pt x 15.05624pt>
+File: ../_common/icons_png/Elements/Trail.png Graphic file (type png)
+
+<use ../_common/icons_png/Elements/Trail.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/Trail.png used on input 
+line 476.
+(pdftex.def)             Requested size: 7.8293pt x 9.0338pt.
+
+<02ExplorationJava/images/ModifyRunning.png, id=170, 817.0525pt x 576.1525pt>
+File: 02ExplorationJava/images/ModifyRunning.png Graphic file (type png)
+
+<use 02ExplorationJava/images/ModifyRunning.png>
+Package pdftex.def Info: 02ExplorationJava/images/ModifyRunning.png used on inp
+ut line 485.
+(pdftex.def)             Requested size: 245.11765pt x 172.84708pt.
+
+Underfull \vbox (badness 1087) has occurred while \output is active []
+
+ [28 <../_common/icons_png/create.png> <./02ExplorationJava/images/ModifyViewAd
+dPlottingPanel.png> <../_common/icons_png/Elements/Trail.png>]
+<../_common/icons_png/Elements/Panel.png, id=177, 16.06pt x 11.04124pt>
+File: ../_common/icons_png/Elements/Panel.png Graphic file (type png)
+
+<use ../_common/icons_png/Elements/Panel.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/Panel.png used on input 
+line 494.
+(pdftex.def)             Requested size: 9.63606pt x 6.62479pt.
+
+<../_common/icons_png/Elements/Label.png, id=178, 18.0675pt x 12.045pt>
+File: ../_common/icons_png/Elements/Label.png Graphic file (type png)
+
+<use ../_common/icons_png/Elements/Label.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/Label.png used on input 
+line 495.
+(pdftex.def)             Requested size: 10.84058pt x 7.22704pt.
+
+<../_common/icons_png/Elements/ParsedField.png, id=179, 17.06375pt x 14.0525pt>
+File: ../_common/icons_png/Elements/ParsedField.png Graphic file (type png)
+<use ../_common/icons_png/Elements/ParsedField.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/ParsedField.png used on 
+input line 496.
+(pdftex.def)             Requested size: 10.23831pt x 8.43155pt.
+
+<../_common/icons_png/link.png, id=180, 16.06pt x 13.04875pt>
+File: ../_common/icons_png/link.png Graphic file (type png)
+
+<use ../_common/icons_png/link.png>
+Package pdftex.def Info: ../_common/icons_png/link.png used on input line 496.
+(pdftex.def)             Requested size: 9.63606pt x 7.8293pt.
+
+<02ExplorationJava/images/ModifyField.png, id=181, 830.10126pt x 298.11375pt>
+File: 02ExplorationJava/images/ModifyField.png Graphic file (type png)
+
+<use 02ExplorationJava/images/ModifyField.png>
+Package pdftex.def Info: 02ExplorationJava/images/ModifyField.png used on input
+ line 502.
+(pdftex.def)             Requested size: 249.0323pt x 89.43481pt.
+
+<../_common/icons_png/edit.png, id=182, 16.06pt x 14.0525pt>
+File: ../_common/icons_png/edit.png Graphic file (type png)
+
+<use ../_common/icons_png/edit.png>
+Package pdftex.def Info: ../_common/icons_png/edit.png used on input line 509.
+(pdftex.def)             Requested size: 9.63606pt x 8.43155pt.
+
+Underfull \vbox (badness 6741) has occurred while \output is active []
+
+ [29 <./02ExplorationJava/images/ModifyRunning.png> <../_common/icons_png/Eleme
+nts/Panel.png> <../_common/icons_png/Elements/Label.png> <../_common/icons_png/
+Elements/ParsedField.png> <../_common/icons_png/link.png>]
+<02ExplorationJava/images/SourceHK.png, id=192, 16.863pt x 12.045pt>
+File: 02ExplorationJava/images/SourceHK.png Graphic file (type png)
+
+<use 02ExplorationJava/images/SourceHK.png>
+Package pdftex.def Info: 02ExplorationJava/images/SourceHK.png used on input li
+ne 511.
+(pdftex.def)             Requested size: 10.11786pt x 7.22704pt.
+File: ../_common/icons_png/link.png Graphic file (type png)
+
+<use ../_common/icons_png/link.png>
+Package pdftex.def Info: ../_common/icons_png/link.png used on input line 511.
+(pdftex.def)             Requested size: 9.63606pt x 7.8293pt.
+
+<../_common/icons_png/unlinked.png, id=193, 16.06pt x 13.04875pt>
+File: ../_common/icons_png/unlinked.png Graphic file (type png)
+
+<use ../_common/icons_png/unlinked.png>
+Package pdftex.def Info: ../_common/icons_png/unlinked.png used on input line 5
+11.
+(pdftex.def)             Requested size: 9.63606pt x 7.8293pt.
+
+<02ExplorationJava/images/ModifyHTML.png, id=194, 788.9475pt x 474.77374pt>
+File: 02ExplorationJava/images/ModifyHTML.png Graphic file (type png)
+
+<use 02ExplorationJava/images/ModifyHTML.png>
+Package pdftex.def Info: 02ExplorationJava/images/ModifyHTML.png used on input 
+line 515.
+(pdftex.def)             Requested size: 236.68607pt x 142.43321pt.
+
+<../_common/icons_png/saveAsSmall.png, id=195, 15.05624pt x 15.05624pt>
+File: ../_common/icons_png/saveAsSmall.png Graphic file (type png)
+
+<use ../_common/icons_png/saveAsSmall.png>
+Package pdftex.def Info: ../_common/icons_png/saveAsSmall.png used on input lin
+e 520.
+(pdftex.def)             Requested size: 9.0338pt x 9.0338pt.
+ [30 <./02ExplorationJava/images/ModifyField.png> <../_common/icons_png/edit.pn
+g> <./02ExplorationJava/images/SourceHK.png> <../_common/icons_png/unlinked.png
+> <./02ExplorationJava/images/ModifyHTML.png> <../_common/icons_png/saveAsSmall
+.png>]) [31]
+\openout2 = `03ExplorationJavascript/mainJS.aux'.
+
+
+(./03ExplorationJavascript/mainJS.tex [32
+
+
+
+]
+Chapter 3.
+
+<03ExplorationJavascript/images/OpenDialogCrossPlatform.png, id=213, 541.02126p
+t x 372.39125pt>
+File: 03ExplorationJavascript/images/OpenDialogCrossPlatform.png Graphic file (
+type png)
+
+<use 03ExplorationJavascript/images/OpenDialogCrossPlatform.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/OpenDialogCrossPlatform
+.png used on input line 27.
+(pdftex.def)             Requested size: 108.20233pt x 74.47693pt.
+
+<03ExplorationJavascript/images/OpenDialogNative.png, id=214, 693.59125pt x 428
+.60126pt>
+File: 03ExplorationJavascript/images/OpenDialogNative.png Graphic file (type pn
+g)
+ <use 03ExplorationJavascript/images/OpenDialogNative.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/OpenDialogNative.png us
+ed on input line 28.
+(pdftex.def)             Requested size: 138.71579pt x 85.71872pt.
+File: ../_common/icons_png/openSmall.png Graphic file (type png)
+
+<use ../_common/icons_png/openSmall.png>
+Package pdftex.def Info: ../_common/icons_png/openSmall.png used on input line 
+34.
+(pdftex.def)             Requested size: 12.64732pt x 12.04507pt.
+ [33]
+<03ExplorationJavascript/images/SpringInterface.png, id=218, 947.54pt x 666.49p
+t>
+File: 03ExplorationJavascript/images/SpringInterface.png Graphic file (type png
+)
+ <use 03ExplorationJavascript/images/SpringInterface.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/SpringInterface.png use
+d on input line 46.
+(pdftex.def)             Requested size: 284.26419pt x 199.94853pt.
+File: ../_common/icons_png/launch.png Graphic file (type png)
+
+<use ../_common/icons_png/launch.png>
+Package pdftex.def Info: ../_common/icons_png/launch.png used on input line 54.
+
+(pdftex.def)             Requested size: 7.22704pt x 7.22704pt.
+ [34 <./03ExplorationJavascript/images/OpenDialogCrossPlatform.png> <./03Explor
+ationJavascript/images/OpenDialogNative.png> <./03ExplorationJavascript/images/
+SpringInterface.png>]
+<03ExplorationJavascript/images/SpringDesc.png, id=223, 769.87625pt x 344.28625
+pt>
+File: 03ExplorationJavascript/images/SpringDesc.png Graphic file (type png)
+ <use 03ExplorationJavascript/images/SpringDesc.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/SpringDesc.png used on 
+input line 65.
+(pdftex.def)             Requested size: 230.96466pt x 103.28667pt.
+ [35 <./03ExplorationJavascript/images/SpringDesc.png>]
+<03ExplorationJavascript/images/ModelVariables.png, id=229, 759.83875pt x 451.6
+875pt>
+File: 03ExplorationJavascript/images/ModelVariables.png Graphic file (type png)
+
+ <use 03ExplorationJavascript/images/ModelVariables.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/ModelVariables.png used
+ on input line 103.
+(pdftex.def)             Requested size: 227.95337pt x 135.5073pt.
+ [36 <./03ExplorationJavascript/images/ModelVariables.png>] [37]
+<03ExplorationJavascript/images/ModelEvolution.png, id=237, 772.8875pt x 454.69
+875pt>
+File: 03ExplorationJavascript/images/ModelEvolution.png Graphic file (type png)
+
+ <use 03ExplorationJavascript/images/ModelEvolution.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/ModelEvolution.png used
+ on input line 153.
+(pdftex.def)             Requested size: 231.86803pt x 136.41068pt.
+ [38]
+Underfull \vbox (badness 2181) has occurred while \output is active []
+
+ [39 <./03ExplorationJavascript/images/ModelEvolution.png>]
+<03ExplorationJavascript/images/ModelConstraints.png, id=245, 776.9025pt x 453.
+695pt>
+File: 03ExplorationJavascript/images/ModelConstraints.png Graphic file (type pn
+g)
+ <use 03ExplorationJavascript/images/ModelConstraints.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/ModelConstraints.png us
+ed on input line 206.
+(pdftex.def)             Requested size: 233.07254pt x 136.10954pt.
+ [40] [41 <./03ExplorationJavascript/images/ModelConstraints.png>]
+<03ExplorationJavascript/images/View.png, id=254, 767.86874pt x 470.75874pt>
+File: 03ExplorationJavascript/images/View.png Graphic file (type png)
+
+<use 03ExplorationJavascript/images/View.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/View.png used on input 
+line 245.
+(pdftex.def)             Requested size: 230.3624pt x 141.22871pt.
+ [42 <./03ExplorationJavascript/images/View.png>]
+<03ExplorationJavascript/images/SpringBallProperties.png, id=259, 894.34125pt x
+ 496.85625pt>
+File: 03ExplorationJavascript/images/SpringBallProperties.png Graphic file (typ
+e png)
+ <use 03ExplorationJavascript/images/SpringBallProperties.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/SpringBallProperties.pn
+g used on input line 265.
+(pdftex.def)             Requested size: 268.30444pt x 149.05801pt.
+
+Overfull \hbox (1.68307pt too wide) in paragraph at lines 270--275
+\OT1/cmtt/m/n/10.95 SizeX\OT1/cmr/m/n/10.95 , \OT1/cmtt/m/n/10.95 SizeY\OT1/cmr
+/m/n/10.95 , and \OT1/cmtt/m/n/10.95 FillColor \OT1/cmr/m/n/10.95 prop-er-ties 
+pro-duce an el-lipse of size \OT1/cmtt/m/n/10.95 (0.2,0.2)
+ []
+
+[43 <./03ExplorationJavascript/images/SpringBallProperties.png>] [44]
+File: ../_common/icons_png/launch.png Graphic file (type png)
+
+<use ../_common/icons_png/launch.png>
+Package pdftex.def Info: ../_common/icons_png/launch.png used on input line 307
+.
+(pdftex.def)             Requested size: 7.22704pt x 7.22704pt.
+File: ../_common/icons_png/play.png Graphic file (type png)
+ <use ../_common/icons_png/play.png>
+Package pdftex.def Info: ../_common/icons_png/play.png used on input line 309.
+(pdftex.def)             Requested size: 4.04713pt x 7.8052pt.
+File: ../_common/icons_png/pause.png Graphic file (type png)
+
+<use ../_common/icons_png/pause.png>
+Package pdftex.def Info: ../_common/icons_png/pause.png used on input line 309.
+
+(pdftex.def)             Requested size: 5.78163pt x 6.3598pt.
+
+<03ExplorationJavascript/images/SpringRunning.png, id=267, 965.6075pt x 529.98p
+t>
+File: 03ExplorationJavascript/images/SpringRunning.png Graphic file (type png)
+ <use 03ExplorationJavascript/images/SpringRunning.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/SpringRunning.png used 
+on input line 321.
+(pdftex.def)             Requested size: 289.68448pt x 158.99521pt.
+File: ../_common/icons_png/package.png Graphic file (type png)
+
+<use ../_common/icons_png/package.png>
+Package pdftex.def Info: ../_common/icons_png/package.png used on input line 32
+9.
+(pdftex.def)             Requested size: 9.0338pt x 9.63606pt.
+ [45]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46 <./03ExplorationJavascript/images/SpringRunning.png>]
+Overfull \hbox (1.38605pt too wide) in paragraph at lines 351--355
+\OT1/cmr/m/n/10.95 As we have seen, a promi-nent and dis-tinc-tive fea-ture of 
+\OT1/cmr/m/it/10.95 Easy Java/-JavaScript
+ []
+
+[47]
+<03ExplorationJavascript/images/ModifyVariables1.png, id=279, 762.85pt x 306.14
+375pt>
+File: 03ExplorationJavascript/images/ModifyVariables1.png Graphic file (type pn
+g)
+ <use 03ExplorationJavascript/images/ModifyVariables1.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/ModifyVariables1.png us
+ed on input line 376.
+(pdftex.def)             Requested size: 228.85677pt x 91.84383pt.
+
+<03ExplorationJavascript/images/ModifyVariables2.png, id=280, 761.84625pt x 305
+.14pt>
+File: 03ExplorationJavascript/images/ModifyVariables2.png Graphic file (type pn
+g)
+ <use 03ExplorationJavascript/images/ModifyVariables2.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/ModifyVariables2.png us
+ed on input line 387.
+(pdftex.def)             Requested size: 228.55563pt x 91.5427pt.
+ [48 <./03ExplorationJavascript/images/ModifyVariables1.png> <./03ExplorationJa
+vascript/images/ModifyVariables2.png>] [49]
+File: ../_common/icons_png/Groups/Containers.png Graphic file (type png)
+ <use ../_common/icons_png/Groups/Containers.png>
+Package pdftex.def Info: ../_common/icons_png/Groups/Containers.png used on inp
+ut line 442.
+(pdftex.def)             Requested size: 6.62479pt x 6.02254pt.
+File: ../_common/icons_png/Elements/PlottingPanel.png Graphic file (type png)
+
+<use ../_common/icons_png/Elements/PlottingPanel.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/PlottingPanel.png used o
+n input line 444.
+(pdftex.def)             Requested size: 14.45409pt x 11.44283pt.
+File: ../_common/icons_png/create.png Graphic file (type png)
+
+<use ../_common/icons_png/create.png>
+Package pdftex.def Info: ../_common/icons_png/create.png used on input line 447
+.
+(pdftex.def)             Requested size: 9.63606pt x 8.43155pt.
+
+<03ExplorationJavascript/images/ModifyViewAddPlottingPanel.png, id=290, 745.786
+25pt x 453.695pt>
+File: 03ExplorationJavascript/images/ModifyViewAddPlottingPanel.png Graphic fil
+e (type png)
+
+<use 03ExplorationJavascript/images/ModifyViewAddPlottingPanel.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/ModifyViewAddPlottingPa
+nel.png used on input line 456.
+(pdftex.def)             Requested size: 223.7376pt x 136.10954pt.
+ [50 <./03ExplorationJavascript/images/ModifyViewAddPlottingPanel.png>]
+File: ../_common/icons_png/Elements/Trail.png Graphic file (type png)
+
+<use ../_common/icons_png/Elements/Trail.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/Trail.png used on input 
+line 469.
+(pdftex.def)             Requested size: 7.8293pt x 9.0338pt.
+
+<03ExplorationJavascript/images/ModifyRunning.png, id=295, 512.91624pt x 358.33
+875pt>
+File: 03ExplorationJavascript/images/ModifyRunning.png Graphic file (type png)
+ <use 03ExplorationJavascript/images/ModifyRunning.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/ModifyRunning.png used 
+on input line 478.
+(pdftex.def)             Requested size: 153.87605pt x 107.50244pt.
+File: ../_common/icons_png/Elements/Panel.png Graphic file (type png)
+
+<use ../_common/icons_png/Elements/Panel.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/Panel.png used on input 
+line 487.
+(pdftex.def)             Requested size: 9.63606pt x 6.62479pt.
+ [51 <./03ExplorationJavascript/images/ModifyRunning.png>]
+File: ../_common/icons_png/Elements/Label.png Graphic file (type png)
+ <use ../_common/icons_png/Elements/Label.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/Label.png used on input 
+line 489.
+(pdftex.def)             Requested size: 10.84058pt x 7.22704pt.
+File: ../_common/icons_png/Elements/ParsedField.png Graphic file (type png)
+
+<use ../_common/icons_png/Elements/ParsedField.png>
+Package pdftex.def Info: ../_common/icons_png/Elements/ParsedField.png used on 
+input line 490.
+(pdftex.def)             Requested size: 10.23831pt x 8.43155pt.
+File: ../_common/icons_png/link.png Graphic file (type png)
+
+<use ../_common/icons_png/link.png>
+Package pdftex.def Info: ../_common/icons_png/link.png used on input line 490.
+(pdftex.def)             Requested size: 9.63606pt x 7.8293pt.
+
+<03ExplorationJavascript/images/ModifyField.png, id=300, 818.05624pt x 368.3762
+5pt>
+File: 03ExplorationJavascript/images/ModifyField.png Graphic file (type png)
+ <use 03ExplorationJavascript/images/ModifyField.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/ModifyField.png used on
+ input line 496.
+(pdftex.def)             Requested size: 245.41876pt x 110.51372pt.
+File: ../_common/icons_png/edit.png Graphic file (type png)
+
+<use ../_common/icons_png/edit.png>
+Package pdftex.def Info: ../_common/icons_png/edit.png used on input line 503.
+(pdftex.def)             Requested size: 9.63606pt x 8.43155pt.
+
+<03ExplorationJavascript/images/SourceHK.png, id=301, 16.863pt x 12.045pt>
+File: 03ExplorationJavascript/images/SourceHK.png Graphic file (type png)
+
+<use 03ExplorationJavascript/images/SourceHK.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/SourceHK.png used on in
+put line 505.
+(pdftex.def)             Requested size: 10.11786pt x 7.22704pt.
+File: ../_common/icons_png/link.png Graphic file (type png)
+
+<use ../_common/icons_png/link.png>
+Package pdftex.def Info: ../_common/icons_png/link.png used on input line 505.
+(pdftex.def)             Requested size: 9.63606pt x 7.8293pt.
+File: ../_common/icons_png/unlinked.png Graphic file (type png)
+ <use ../_common/icons_png/unlinked.png>
+Package pdftex.def Info: ../_common/icons_png/unlinked.png used on input line 5
+05.
+(pdftex.def)             Requested size: 9.63606pt x 7.8293pt.
+
+<03ExplorationJavascript/images/ModifyHTML.png, id=302, 788.9475pt x 474.77374p
+t>
+File: 03ExplorationJavascript/images/ModifyHTML.png Graphic file (type png)
+ <use 03ExplorationJavascript/images/ModifyHTML.png>
+Package pdftex.def Info: 03ExplorationJavascript/images/ModifyHTML.png used on 
+input line 509.
+(pdftex.def)             Requested size: 236.68607pt x 142.43321pt.
+File: ../_common/icons_png/saveAsSmall.png Graphic file (type png)
+
+<use ../_common/icons_png/saveAsSmall.png>
+Package pdftex.def Info: ../_common/icons_png/saveAsSmall.png used on input lin
+e 514.
+(pdftex.def)             Requested size: 9.0338pt x 9.0338pt.
+ [52 <./03ExplorationJavascript/images/ModifyField.png> <./03ExplorationJavascr
+ipt/images/SourceHK.png>] [53 <./03ExplorationJavascript/images/ModifyHTML.png>
+]) [54]
+\openout2 = `04JavatoJS/mainJavaToJS.aux'.
+
+
+(./04JavatoJS/mainJavaToJS.tex
+Chapter 4.
+[55
+
+
+
+] <04JavatoJS/images/FlavorDetection.png, id=319, 479.7925pt x 196.735pt>
+File: 04JavatoJS/images/FlavorDetection.png Graphic file (type png)
+
+<use 04JavatoJS/images/FlavorDetection.png>
+Package pdftex.def Info: 04JavatoJS/images/FlavorDetection.png used on input li
+ne 39.
+(pdftex.def)             Requested size: 143.93884pt x 59.02094pt.
+File: ../_common/icons_png/saveAsSmall.png Graphic file (type png)
+
+<use ../_common/icons_png/saveAsSmall.png>
+Package pdftex.def Info: ../_common/icons_png/saveAsSmall.png used on input lin
+e 53.
+(pdftex.def)             Requested size: 9.0338pt x 9.0338pt.
+
+<04JavatoJS/images/ForgetJavaView.png, id=320, 447.6725pt x 192.72pt>
+File: 04JavatoJS/images/ForgetJavaView.png Graphic file (type png)
+
+<use 04JavatoJS/images/ForgetJavaView.png>
+Package pdftex.def Info: 04JavatoJS/images/ForgetJavaView.png used on input lin
+e 59.
+(pdftex.def)             Requested size: 134.30278pt x 57.81644pt.
+ [56 <./04JavatoJS/images/FlavorDetection.png>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 77.
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <11> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 77.
+
+<04JavatoJS/images/LinkHTMLPage.png, id=324, 773.38937pt x 241.40187pt>
+File: 04JavatoJS/images/LinkHTMLPage.png Graphic file (type png)
+
+<use 04JavatoJS/images/LinkHTMLPage.png>
+Package pdftex.def Info: 04JavatoJS/images/LinkHTMLPage.png used on input line 
+84.
+(pdftex.def)             Requested size: 232.0186pt x 72.42111pt.
+
+Underfull \vbox (badness 1264) has occurred while \output is active []
+
+ [57 <./04JavatoJS/images/ForgetJavaView.png>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [58 <./04JavatoJS/images/LinkHTMLPage.png>]
+Overfull \hbox (13.6647pt too wide) in paragraph at lines 111--111
+[]\OT1/cmtt/m/n/10.95 double[][] myArray = new double { {1.0,2.0,3.0}, {3.0,4.0
+,5.0} };[] 
+ []
+
+[59] [60] [61]
+<04JavatoJS/images/JavaView.png, id=342, 779.91376pt x 708.6475pt>
+File: 04JavatoJS/images/JavaView.png Graphic file (type png)
+
+<use 04JavatoJS/images/JavaView.png>
+Package pdftex.def Info: 04JavatoJS/images/JavaView.png used on input line 206.
+
+(pdftex.def)             Requested size: 155.97998pt x 141.72699pt.
+
+<04JavatoJS/images/JavascriptView.png, id=343, 781.92125pt x 704.6325pt>
+File: 04JavatoJS/images/JavascriptView.png Graphic file (type png)
+
+<use 04JavatoJS/images/JavascriptView.png>
+Package pdftex.def Info: 04JavatoJS/images/JavascriptView.png used on input lin
+e 207.
+(pdftex.def)             Requested size: 156.38147pt x 140.924pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [62]
+Overfull \vbox (0.95032pt too high) has occurred while \output is active []
+
+
+[63 <./04JavatoJS/images/JavaView.png> <./04JavatoJS/images/JavascriptView.png>
+] <04JavatoJS/images/FlowTree.png, id=350, 192.72pt x 234.8775pt>
+File: 04JavatoJS/images/FlowTree.png Graphic file (type png)
+
+<use 04JavatoJS/images/FlowTree.png>
+Package pdftex.def Info: 04JavatoJS/images/FlowTree.png used on input line 235.
+
+(pdftex.def)             Requested size: 134.90306pt x 164.41312pt.
+
+<04JavatoJS/images/FlowView.png, id=351, 278.54062pt x 234.8775pt>
+File: 04JavatoJS/images/FlowView.png Graphic file (type png)
+
+<use 04JavatoJS/images/FlowView.png>
+Package pdftex.def Info: 04JavatoJS/images/FlowView.png used on input line 236.
+
+(pdftex.def)             Requested size: 194.9771pt x 164.41312pt.
+
+Overfull \vbox (2.03227pt too high) has occurred while \output is active []
+
+
+[64 <./04JavatoJS/images/FlowTree.png> <./04JavatoJS/images/FlowView.png>]
+<04JavatoJS/images/InlinePlots.png, id=358, 632.3625pt x 494.59781pt>
+File: 04JavatoJS/images/InlinePlots.png Graphic file (type png)
+
+<use 04JavatoJS/images/InlinePlots.png>
+Package pdftex.def Info: 04JavatoJS/images/InlinePlots.png used on input line 2
+82.
+(pdftex.def)             Requested size: 189.7102pt x 148.38048pt.
+ [65 <./04JavatoJS/images/InlinePlots.png>] [66]
+<04JavatoJS/images/RelativePosition.png, id=367, 535.2497pt x 502.87875pt>
+File: 04JavatoJS/images/RelativePosition.png Graphic file (type png)
+
+<use 04JavatoJS/images/RelativePosition.png>
+Package pdftex.def Info: 04JavatoJS/images/RelativePosition.png used on input l
+ine 336.
+(pdftex.def)             Requested size: 160.57614pt x 150.86478pt.
+
+Underfull \vbox (badness 6477) has occurred while \output is active []
+
+ [67 <./04JavatoJS/images/RelativePosition.png>]) [68]
+\openout2 = `appendixA/mainEvents.aux'.
+
+ (./appendixA/mainEvents.tex
+Appendix A.
+
+Overfull \hbox (7.91602pt too wide) in paragraph at lines 17--17
+[]\OT1/cmtt/m/n/10.95 v = v + a*dt; // Update the velocity, v (using the accele
+ration)[] 
+ []
+
+[69
+
+
+
+] <appendixA/images/events_image.png, id=378, 410.2828pt x 191.21437pt>
+File: appendixA/images/events_image.png Graphic file (type png)
+
+<use appendixA/images/events_image.png>
+Package pdftex.def Info: appendixA/images/events_image.png used on input line 4
+2.
+(pdftex.def)             Requested size: 123.08578pt x 57.36475pt.
+
+
+LaTeX Warning: Reference `fig:events' on page 70 undefined on input line 47.
+
+[70 <./appendixA/images/events_image.png>]
+<appendixA/images/event_complete.png, id=382, 336.50719pt x 201.75375pt>
+File: appendixA/images/event_complete.png Graphic file (type png)
+
+<use appendixA/images/event_complete.png>
+Package pdftex.def Info: appendixA/images/event_complete.png used on input line
+ 55.
+(pdftex.def)             Requested size: 100.95293pt x 60.52658pt.
+ [71 <./appendixA/images/event_complete.png>]
+
+LaTeX Warning: Reference `fig:events' on page 72 undefined on input line 63.
+
+
+LaTeX Warning: Reference `fig:events_complete' on page 72 undefined on input li
+ne 63.
+
+
+LaTeX Warning: Reference `fig:events_complete' on page 72 undefined on input li
+ne 70.
+
+
+LaTeX Warning: Reference `fig:events_complete' on page 72 undefined on input li
+ne 76.
+
+[72]
+
+LaTeX Warning: Reference `fig:events_complete' on page 73 undefined on input li
+ne 81.
+
+
+Overfull \hbox (22.97598pt too wide) in paragraph at lines 81--82
+[]\OT1/cmr/m/n/10.95 As a fi-nal ex-am-ple, again se-lect ``State event,'' but 
+now spec-ify [][]\OT1/cmtt/m/n/10.95 v = -0.9*v;
+ []
+
+) [73] [74
+
+
+]
+No file "EjsS Manual".bbl.
+(./EjsS Manual.aux (./01Introduction/mainIntro.aux)
+(./02ExplorationJava/mainJava.aux) (./03ExplorationJavascript/mainJS.aux)
+(./04JavatoJS/mainJavaToJS.aux) (./appendixA/mainEvents.aux))
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 0.74pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 5716 strings out of 492995
+ 96153 string characters out of 6132704
+ 169470 words of memory out of 5000000
+ 9056 multiletter control sequences out of 15000+600000
+ 22238 words of font info for 80 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 39i,12n,41p,1720b,386s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></
+usr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/
+2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl8.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/2017/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2017/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pfb></usr/local/texlive/2017/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2017/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2017/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2017/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/local/texlive/2017/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2017/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2017/texmf-dist/fon
+ts/type1/public/amsfonts/latxfont/lasyb10.pfb>
+Output written on "EjsS Manual.pdf" (76 pages, 3889831 bytes).
+PDF statistics:
+ 493 PDF objects out of 1000 (max. 8388607)
+ 261 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 361 words of extra memory for PDF output out of 10000 (max. 10000000)
+

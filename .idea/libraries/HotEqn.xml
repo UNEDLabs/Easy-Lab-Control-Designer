@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="HotEqn">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/libraries/HotEqn.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

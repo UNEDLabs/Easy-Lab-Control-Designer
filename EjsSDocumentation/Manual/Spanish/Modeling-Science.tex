@@ -1,0 +1,79 @@
+%\documentclass[10pt,final]{flbook12}
+%\documentclass[10pt,draft]{flwide10}
+\documentclass[10pt,final]{flwide10}
+
+  \input{modeling_macros}
+
+  %\usepackage[LY1]{fontenc}
+  %\usepackage[LY1,mtbold]{pupfonts}
+  \usepackage[LY1,mtbold]{}
+  \usepackage{bm}
+  \usepackage{epsfig}
+  \usepackage{latexsym}
+  \usepackage{makeidx}
+  % Our own definitions
+
+  \makeindex
+
+  %\includeonly{06Oscillation/mainOscillation, 07Chaos/mainChaos}
+  %\includeonly{02EjsIntro/mainEjsIntro,03Explicit/mainExplicit,04ODE/mainODE,12Self/mainSelf}
+  %\includeonly{02EjsIntro/mainEjsIntro,Basics/mainBasics,Drawing/mainDrawing,04ODE/mainODE,03Explicit/mainExplicit}
+  %\includeonly{02EjsIntro/mainEjsIntro,Basics/mainBasics}
+  %\includeonly{02EjsIntro/mainEjsIntro,Basics/mainBasics,04ODE/mainODE,03Explicit/mainExplicit}
+  %\includeonly{Basics/mainBasics}
+  \includeonly{02EjsIntro/mainEjsIntro}
+  %\includeonly{Drawing/mainDrawing}
+
+\begin{document}
+
+  \frontmatter
+  \title{Modeling Science: From Free Fall to Chaos}
+
+    %\shorttitle{Modeling Science}
+    \subtitle{Versi\'{o}n en castellano}
+
+  \author{Wolfgang Christian y \linebreak Francisco Esquembre}
+
+    %\makehalftitle
+    \maketitle
+
+% ------------------------------------------
+  \frontmatter
+    %\include{preface/foreword}
+    %\tableofcontents
+
+% ------------------------------------------
+  \mainmatter
+    \part{Modeling With \Ejs} % Focus on learning what Ejs can do and how to do it.
+      \include{01Modeling/mainModeling}          % Chapter: Modeling in Science
+      \include{02EjsIntro/mainEjsIntro}          % Chapter: Introduction to Ejs
+      \include{Basics/mainBasics}                % Chapter: Ejs and Java basic concepts
+      \include{Drawing/mainDrawing}              % Chapter: 2D and 3D drawing
+      \include{04ODE/mainODE}                    % Chapter: Introduction to ODEs
+      %\include{04ODE_WC/mainODE}
+      \include{03Explicit/mainExplicit}          % Chapter: Explicit evolution algorithms
+      \include{05Events/mainEvents}              % Chapter: Events
+     \include{06Systems/mainSystems}            % Chapter: Systems of particles
+    \part{From Free Fall to Chaos} %Focus on the science.
+      \include{06Oscillation/mainOscillation} % Chapter: Oscillations and analysis tools/techniques
+      \include{07Chaos/mainChaos}     % Chapter: The chaotic motion of Dynamical Systems
+      \include{08Orbits/mainOrbits} % Chapter: Planetary motion
+      \include{09Geometry/mainGeometry}   % Chapter: Geometry, quaternions, and rigid body motion
+      \include{10PDE/mainPDE}         % Chapter: Partial differential equations
+      \include{12Self/mainSelf}       % Chapter: Self-organized systems
+      \include{13Biology/mainBiology} % Chapter: Biological Systems
+      \include{14Social/mainSocial}   % Chapter: Social Science Systems
+
+    \appendix
+      \include{appendixA/mainDistribution} % Appendix: Distribution of Ejs models as Launcher packages
+      \include{appendixB/mainJava}         % Appendix: A bit of Java goes very far
+      %\include{appendixC/mainErrors}       % Appendix: Error messages and debugging
+
+% ------------------------------------------
+  \backmatter
+    \bibliography{bibliography}
+    \bibliographystyle{plain}
+
+    %\printindex
+
+\end{document}

@@ -1,0 +1,176 @@
+% !TEX root = ../Guide de l'utilisateur de EjsS.tex
+
+\chapter{Installation et exécution de \Ejs}\label{chapter:EjsIntro}
+
+\begin{quote}
+Les machines doivent travailler. Les personnes penser.  {\em Richard Hamming}
+\end{quote}
+
+Ce chapitre d'introduction nous offre une vue d'ensemble sur \Ejs\ -- Simulations Simples en Java/JavaScript -- (\ejs\ sous forme abrégée),  l'outil de modélisation et de création de haut niveau que nous utilisons pour enseigner la modélisation et la simulation. Nous allons premièrement décrire le processus d'installation et la structure de fichiers de notre programme et par la suite exécuter la console \ejs\  pour obtenir notre premier programme \ejs\  sur l'écran. Nous décrivons comment \Ejs\  supporte des différents langages de programmation pour le processus de modélisation. Les chapitres ultérieurs de ce document fournissent une introduction étape par étape des différentes parties de l'interface graphique utilisateur. Finalement nous vous donnons les instructions pour télécharger les modèles créés avec \ejs\ existants sur notre bibliothèques numériques en ligne.
+
+% ------------------------
+  \section{À propos d' \Ejs}
+% ------------------------
+
+La modélisation informatique est intimement liée à la simulation informatique. Un modèle est une représentation conceptuelle d'un système physique et de ses propriétés, la modélisation est le processus par lequel nous élaborons cette représentation. La modélisation informatique nécessite de (1) la description et de l'analyse d'un problème, (2) de l'identification des variables et des algorithmes, (3) de la mise en oeuvre sur une plate-forme de matériel et logiciel, (4) de l'exécution de l'implémentation et de l'analyse des résultats, (5) de l'affinage et de la généralisation et (6) de la présentation des résultats. Une simulation informatique est une implémentation qui nous permet de tester le modèle sous de différentes conditions dans le but d'apprendre sur le comportement du modèle. L'applicabilité des résultats de la simulation à ceux du système (physique) authentique dépend de jusqu'à quel point le modèle décrit la réalité. La science consiste à mettre au point des modèles plus généraux ou plus précis.  
+
+ L'implémentation d'un modèle et la visualisation des données de sortie nous force à programmer un ordinateur. Programmer peut être amusant parce que cela nous donne un contrôle total de tous les détails visuels et numériques du monde simulé. Mais programmer c'est aussi une tâche technique qui peut intimider. Cependant cette barrière technique peut être réduite  si vous utilisez un outil approprié. \Ejs\  est un outil de modélisation qui a été conçu pour permettre aux scientifiques, et non seulement aux scientifiques d'informatique, de créer des simulations dans de différents langages de programmation.~\footnote{Actuellement, \ejs\ supporte les langages de programmation Java et Javascript.}  \ejs\  simplifie cette tâche autant d'un point de vue technique comme conceptuel.  
+
+ \ejs\  nous fournit une simple mais puissante structure conceptuelle pour élaborer des simulations. Cet outil fournit une séquence de panneaux de travail pour implémenter le modèle et l'interface graphique utilisateur. \ejs\ automatise des tâches telles que la résolution numérique d'équations différentielles ordinaires et l'animation (en utilisant des traits séparés, en cas nécessaire). La  communication de bas niveau entre le programme et l'utilisateur final qui a lieu lors de l'exécution, qui inclut le traitement des actions de la souris dans l'interface graphique de simulation, s'accomplit sans une  programmation de bas niveau.
+
+ Évidemment une partie du travail dépend toujours de nous. Vous devez fournir un modèle pour le phénomène et concevoir et sélectionner une visualisation des données de sortie qui montre les principales caractéristiques du modèle. Ces tâches de haut niveau sont plus liées à la science qu'à la programmation. Nous vous encourageons de consacrer votre temps et énergie à étudier la science, tâche que l'ordinateur ne peut pas faire. L'objet de ce document est de prouver que cette modélisation par ordinateur n'est non seulement possible pour les non-programmeurs, mais aussi relativement facile, à l'aide de \Ejs.
+ 
+% ------------------------
+    \section{Installer et executer le logiciel}\label{section:02Installation}\index{\Ejs!installing and running}
+% ------------------------
+
+Commençons par installer  et exécuter \Ejs. \ejs\  est un programme Java qui peut s'exécuter sous tout système d'exploitation qui supporte une Machine Virtuelle (VM en anglais) Java. Comme Java est conçue comme une plate-forme indépendante, l'interface utilisateur \ejs\  sur Mac OS X, Windows et Linux présente une apparence très similaire bien qu'il puisse y avoir quelques petites différences. (Nous montrons l'interface Mac OS X dans les illustrations de ce document.) 
+
+Si  \Ejs\ n'est pas installé sur votre ordinateur, vous devez l'installer. Pour \textbf{installer} \ejs, suivez ces indications:
+
+\begin{numberlist}
+
+\item \textbf{Installez Java Runtime Environment.} \ejs\ nécessite de Java Runtime Environment (JRE)  --- l'environnement d'exploitation de Java --- \textbf{version 1.8 ou ultérieure}.  C'est possible que le JRE soit déjà installé sur votre ordinateur mais s'il ne l'est pas, visitez le site Java sur \link{http://java.com} et suivez les instructions pour télécharger et installer la dernière version. 
+
+\item \textbf{Copiez le fichier d'installation de \ejs\ sur votre ordinateur.} \ejs\ est distribué dans un dossier compressé ZIP qui peut être téléchargé sur le site web de \ejs\  \link{http://www.um.es/fem/EjsWiki}. Le fichier d'installation sera intitulé d'une manière similaire à celui-ci: \file{EjsS\_X.x\_yymmdd.zip}. Les caractères  \file{X.x} indiquen la version actuelle du logiciel et  \file{yymmdd} indique la date à laquelle cette version a été créée. (Par exemple vous pouvez obtenir un titre similaire à \file{EjsS\_5.2\_161123.zip}.)
+
+\item \textbf{Décompressez  \ejs.} Décompressez le fichier d'installation \ejs\ sur le disque dur de votre ordinateur pour créer un répertoire intitulé  \file{EjsS\_X.x} (\file{EjsS\_5.2} dans l'exemple). Le nouveau répertoire contient le programme \ejs\ complet.
+
+\note{Dans les systèmes comme Unix, le répertoire \file{EjsS\_X.x} peut-être décompressé comme à lecture seule. Activez les accès d'écriture pour le répertoire \file{EjsS\_X.x}  et tous ses sous-répertoires.}
+
+\end{numberlist}
+
+Et voilà!  C'est tout ce que vous devez faire pour installer \ejs. Une fois que  \Ejs\  est installé sur votre ordinateur, suivez ces indications pour \textbf{exécuter} \ejs:
+
+\begin{description}
+\item \textbf{Exécutez la console \ejs.} Dans le répertoire \file{EjsS\_X.x} récemment créé, vous trouverez un fichier intitulé \file{EjsConsole.jar}.\index{jar files!EjsConsole.jar}\index{Easy Java Simulations!console} Double-cliquez pour exécuter la console \ejs\ comme indiqué dans la figure~\ref{fig:01Introduction/EjsConsole}.
+
+\note{ Si le double-clic n'exécute pas la console, ouvrez une fenêtre de terminal, changez au répertoire \file{EjsS\_X.x} et tapez la commande: \code{java-jar EjsConsole.jar}. Vous devrez écrire le nom complet de la commande Java s'il n'est pas dans le \lit{PATH} de votre système.}
+\end{description}
+
+
+\begin{figure}[htb]
+  \centering
+%  \subfigure[Console's basic options tab.]{\includegraphics[scale=\scale]{01Introduction/images/EjsConsole1.eps}}
+%  \subfigure[Console's output area.]{\includegraphics[scale=\scale]{01Introduction/images/EjsConsole2.eps}}
+%  \caption{Two views of the \ejs\ console.}
+  \includegraphics[scale=\scale]{01Introduction/images/EjsConsole1.png}
+  \caption{La console \ejs.}
+  \label{fig:01Introduction/EjsConsole}
+\end{figure}
+
+Vous devriez voir la console (Figure~\ref{fig:01Introduction/EjsConsole}) et le dialogue de sélection de fichiers de la figure~\ref{fig:01Introduction/WorkspaceChooser}, décrite ci-dessous, sur votre écran.
+
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{01Introduction/images/WorkspaceChooser.png}
+  \caption{Sélecteur de fichier pour choisir votre répertoire d'environnement de travail.}
+  \label{fig:01Introduction/WorkspaceChooser}
+\end{figure}
+
+La console \ejs\  n'est pas une partie de \ejs, mais une utilité qui s'utilise pour lancer un ou plusieurs exemples (copies) de \ejs\  et pour effectuer d'autres tâches liées à \ejs. Vous pouvez utiliser la console pour personnaliser quelques aspects de l'apparence et du fonctionnement de \ejs\ au démarrage.~\footnote{Par exemple, fixez le \lit{look and feel} (la représentation) à  \lit{CROSS\_PLATFORM}, la représentation spécifique qui est identique sur toutes les plateformes, et lancez une nouvelle copie de \ejs\ pour appliquer le changement. Nous fixons  la représentation par défaut à \lit{SYSTEM} (système), la valeur par défaut pour votre plate-forme. Celle qui est signalée dans ce document correspond à la représentation par défaut (appelée \lit{Aqua}) de Mac OS X.}
+La console montre aussi l'information du programme \ejs\  et les messages d'erreur sur son onglet \lit{Output area} (sortie),  auquel nous ferons référence de temps en temps dans ce document. La console crée un exemple de \ejs\   au démarrage et le quitte automatiquement quand vous fermez le dernier exemple de \ejs\  en cours.
+ 
+Cependant, avant que la console puisse exécuter \ejs\  juste après son installation, le sélecteur de fichier affiché sur la figure~\ref{fig:01Introduction/WorkspaceChooser}  apparaîtra et vous permettra de sélectionner dans le disque dur de l'ordinateur le répertoire que vous voulez utiliser comme environnement de travail (\emph{workspace}). \ejs\ utilise le concept d'environnement de travail pour organiser votre travail. Un environnement de travail est un répertoire dans votre disque dur sur lequel \ejs\  enregistre vos fichiers de simulation d'un projet déterminé. Un environnement de travail peut contenir un nombre illimité de simulations. Dans un répertoire d'environnement de travail, \ejs\ crée quatre sous-répertoires:\index{\Ejs!directory structure}
+
+\begin{bulletlist}
+  \item \file{config} qui est le répertoire pour des fichiers de configuration et des options de l'utilisateur .
+  \item \file{export}  qui est le répertoire proposé par défaut quand \ejs\  génère des fichiers pour la distribution.
+  \item \file{output} qui est le répertoire utilisé par \ejs\  pour placer les fichiers temporaires qui sont générés quand vous compilez une simulation.
+  \item \file{source} qui est le répertoire dans lequel tous les fichiers de simulation (sources et auxiliaires) doivent être placés.
+\end{bulletlist}
+
+Quand vous exécutez pour la première fois  \ejs,  la console vous demande de choisir un répertoire de votre disque dur comme votre environnement de travail (\emph{workspace}). Celui-ci doit être un répertoire enregistrable n'importe où dans votre disque dur.
+ Vous pouvez décider d'utiliser l'environnement de travail qui est inclus dans la distribution par exemple, le répertoire d'environnement de travail dans le répertoire \file{EjsS\_X.x} qui est créé quand vous décompressez le paquet \ejs. Mais il est \textbf{fortement recommandé} de créer un nouveau répertoire dans votre répertoire personnel habituel (ou mieux encore, un répertoire sur le cloud --- comme \lit{Dropbox} \link{http://dropbox.com}  ou similaire). Le dialogue de sélection de fichier qui vous permet de choisir l'environnement de travail dispose d'une case qui, une fois cochée, copie tous les exemples de fichiers de distribution dans le nouvel environnement de travail. Maintenez cette case cochée et vous trouverez quelques sous-répertoires dans le répertoire \file{source} de votre environnement de travail qui contient des exemples de simulations. En particulier vous trouverez les répertoires \file{JavaExamples} (Exemples de Java) et \file{JavascriptExamples}  (Exemples de JavaScript) décrits dans les chapitres ultérieures de ce document.
+  
+
+\note{Bien que cela ne soit pas nécessaire en général, vous pouvez créer et utiliser plus d'un environnement de travail pour de différents projets ou tâches. La console prévoit un sélecteur qui vous permet de changer l'environnement de travail en cours et \ejs\  retiendra l'environnement de travail actuel entre les séances, même si vous réinstallez \ejs.}
+
+Finalement la première fois que vous exécutez \ejs, le programme vous demandera d'indiquer votre nom et affiliation (Figure~\ref{fig:01Introduction/NameAndAffiliation}). Cette démarche est optionnelle mais elle est recommandée car elle vous aidera à documenter vos simulations futures. Vous pouvez décider de saisir ou de modifier cette information plus tard en utilisant l'icône \lit{\ejs\ options}, \includegraphics[scale=\linescale]{../_common/icons_png/edit.png}, de la barre des tâches de \ejs.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{01Introduction/images/NameAndAffiliation.png}
+  \caption{Optionellement indiquez votre nom et affiliation.}
+  \label{fig:01Introduction/NameAndAffiliation}
+\end{figure}
+
+% ------------------------
+    \section{Interface graphique utilisateur}\label{section:01GUI}\index{\Ejs!graphical user interface}
+% ------------------------
+
+Vous êtes prêt maintenant pour diriger votre attention sur l'outil de modélisation \ejs, affiché avec des annotations à la figure~\ref{fig:01Introduction/EjsInterface}. En dépit de son interface simple, \ejs\  présente tous les outils nécessaires pour un cycle de modélisation complet.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{01Introduction/images/EjsInterface.png}
+  \caption{L'interface utilisateur de \ejs\ avec des annotations.}
+  \label{fig:01Introduction/EjsInterface}
+\end{figure}
+
+La barre de tâche\index{\Ejs!taskbar} de la droite fournit une série d'icônes pour effacer, ouvrir, rechercher et enregistrer un fichier, pour configurer \ejs, et pour afficher l'information du programme et la bulle d'aide. Elle fournit aussi des icônes pour exécuter une simulation et pour stocker une ou plusieurs simulations sur un fichier autonome. Si vous faites un clic droit sur les icônes de la barre de tâche, des actions alternatives (mais en relation) s'affichent, celles-ci seront décrites en fonction de la nécessité. La partie inférieure de l'interface contient une zone de données de sortie\index{\Ejs!output area}  sur laquelle  \ejs\  affiche des messages. La partie centrale de l'interface contient des panneaux (espaces) de travail sur lesquels la modélisation est élaborée.
+
+
+\Ejs\  fournit trois panneaux de travail pour la modélisation. Le premier panneau \lit{Description} nous permet de créer et d'éditer un texte multimédia basé sur HTML qui décrit le modèle.\index{HTML}  Chaque page qui contient un texte apparaît dans un panneau étiqueté dans le panneau de travail et  un clic droit sur la barre étiqueté permet à l'utilisateur d'éditer le texte ou d'importer un texte additionnel. Le deuxième panneau de travail, \lit{Model} (Modèle) est dédié au processus de modélisation. Nous utilisons ce panneau pour créer des variables qui décrivent le modèle, pour initialiser ces variables et pour écrire des algorithmes qui décrivent comment ce modèle change dans le temps. Le troisième panneau de travail \lit{View} (Vue) ou \lit{HtmlView} (Vue Html, pour les interfaces basées sur HTML5) est dédié à la tâche d'élaborer l'interface graphique utilisateur qui permet à l'utilisateur de contrôler la simulation et d'afficher les données de sortie. Nous élaborons l'interface en sélectionnant les éléments de la palette et en les ajoutant au \lit{Tree of elements} (arbre des éléments) de la vue. Par exemple, la palette \lit{Interface} contient des boutons, des sliders (curseurs) et des champs de saisie, et la palette  \lit{2D Drawables} contient des éléments pour représenter les données en 2D.
+
+% ------------------------
+   % \subsection{Programming languages support}\label{section:02Languages}\index{\Ejs!programming languages}
+% ------------------------
+
+\Ejs\ supporte plus d'un langage de programmation pour implémenter les algorithmes nécessaires pour le processus de modélisation. L'interface pour tous ces langages est basée sur les mêmes principes, donc si vous apprenez à l'utiliser pour un de ces langages, vous arriverez à tous les comprendre. Quelquefois nous faisons référence à de différentes interfaces de \Ejs\ pour de différents langages de programmation comme  \emph{les arômes} de \ejs. Donc, nous pouvons, par exemple, faire référence à \emph{l'arôme Java} ou à \emph{l'arôme JavaScript} de \ejs .
+
+La console \ejs\  lance, par défaut, un exemple-copie de \ejs\  qui supporte le langage de programmation Java (c'est-à-dire un exemple de l'arôme Java de \ejs). Vous pouvez changer le langage de programmation supporté -- ou l'arôme -- en utilisant le sélecteur \lit{Programming language} (langage de programmation) dans la barre \lit{Basic options} de la console \ejs, et lancer un autre exemple de \ejs\  pour ce langage de programmation en cliquant le bouton \lit{Launch \ejs}. La figure~\ref{fig:01Introduction/EjsInterfaceJS} affiche  l'interface graphique utilisateur pour la création de modèles JavaScript sur \Ejs.
+
+\begin{figure}[htb]
+  \centering
+  \includegraphics[scale=\scale]{01Introduction/images/EjsInterfaceJS.png}
+  \caption{L'interface utilisateur de  \Ejs\ pour le support Javascript.}
+  \label{fig:01Introduction/EjsInterfaceJS}
+\end{figure}
+
+Les deux chapitres suivants de ce document vous guideront pour voir en détail et exécuter une simulation existante dans chaque langage de programmation supporté. (La simulation montre le même phénomène physique dans tous les cas.) Cela vous aidera à comprendre comment  les panneaux  \lit{Description}, \lit{Model} et \lit{View} (ou \lit{HtmlView}) fonctionnent collaborativement pour vous aider à modéliser une simulation. Si vous êtes débutant sur \Ejs, veuillez lire le chapitre de l'arôme \ejs\  qui vous intéresse le plus avant d'examiner un des modèles existants dans notre bibliothèque numérique.
+
+% -----------------------------------------------------
+\section{Trouver des modèles}\label{section:01FindingModels}
+% -----------------------------------------------------
+
+Une fois que vous avez abordé les éléments basiques de \ejs\   et que vous savez comment télécharger, examiner, exécuter et même modifier un exemple, vous serez sûrement intéressé à trouver des simulations existantes pour voir ce que d'autres utilisateurs ont fait avec \ejs. Vous trouverez peut-être un modèle qui s'adapte à vos besoins ou que vous pouvez facilement modifier pour son utilisation en cours.
+
+Il y a deux lieux que vous pouvez consulter pour trouver plus de modèles. Le premier lieu à consulter c'est le répertoire exemple \file{source} qui est associé à la distribution de \ejs. Dans le répertoire \file{source} de l'environnement de travail de distribution, vous trouverez quelques répertoires avec des exemples de simulations. Ces répertoires exemples ont été aussi copiés sur votre propre environnement de travail (à moins que vous ayez désactivé cette option) quand vous avez exécuté pour la première fois \ejs.
+	
+Le deuxième lieu (en fait, lieux), et probablement le plus intéressant, pour chercher des nouveaux modèles est disponible sur Internet. L'icône de la bibliothèque numérique de \ejs\  sur la barre d'outils, \includegraphics[scale=\linescale]{../_common/icons_png/netOpen.png}, ouvre une fenêtre qui nous permet de nous connecter à des référentiels de modèles \ejs\  disponibles sur Internet. Cette fenêtre, affichée dans la figure~\ref{fig:01Introduction/EJSDigitalLibraries}, contient une boîte combinée dans sa partie supérieure qui fournit une liste des bibliothèques numériques disponibles. Une deuxième boîte combinée vous permet de sélectionner le langage de programmation souhaité pour les modèles. Sélectionnez une de ces bibliothèques, le langage de programmation ou cliquez sur le bouton \lit{Refresh} (actualiser) pour obtenir une liste des modèles disponibles. Toutes ces bibliothèques fonctionnent d'une manière similaire et nous utilisons le référentiel de bibliothèque numérique \textbf{comPADRE} pour illustrer comment nous y accédons sur \ejs.
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{01Introduction/images/EJSDigitalLibraries.png}
+    \caption{La fenêtre de bibliothèque numérique de \ejs. Sélectionnez un des référentiels disponibles en utilisant la boîte combinée dans la partie supérieure de la fenêtre, le langage de programmation souhaité ou cliquez sur le bouton \lit{Refresh} pour obtenir la liste des modèles disponibles.}
+    \label{fig:01Introduction/EJSDigitalLibraries}
+\end{figure}
+
+Le \textbf{comPADRE Pathway} (sentier \emph{comPADRE}), qui est une partie de la Bibliothèque Nationale Numérique de Sciences des États-Unis, est un réseau en expansion de collections de ressources éducatives conçu pour venir en aide aux enseignants et aux étudiants de physique et en astronomie.  De spéciale relevance pour nos intérêts, c'est la collection Open Source Physics (OSP) --- physique de  source ouverte --- de comPADRE, disponible sur \link{http://www.compadre.org/OSP}. Cette collection contient des ressources informatiques pour l'enseignement sous forme de simulations exécutables et des ressources pédagogiques qui attire l'attention des étudiants vers la physique, le calcul numérique et la modélisation informatique. En particulier, elle contient des modèles auxquels nous pouvons accéder à travers de leurs codes source (XML)  directement à partir de \ejs\  en utilisant l'icône de bibliothèques numériques.
+
+Si vous êtes connecté à Internet, sélectionnez la saisie \lit{OSP collection on the comPADRE digital library}  (la collection OSP de la bibliothèque numérique comPADRE) de la boîte combinée supérieure et  \ejs\   vous connectera à la bibliothèque pour obtenir le tout dernier catalogue des modèles \ejs\  de la bibliothèque. Au moment de rédiger ce document, il y avait plus de 500 modèles Java et de 200 modèles JavaScript organisés dans de différentes catégories et sous-catégories et on estime que la collection devrait augmenter. Comme nous indique le cadre de gauche de la figure~\ref{fig:01Introduction/OSPCollection} la collection est organisée en catégories et sous-catégories. Quand le nom d'une sous-catégorie apparaît en rouge, faites un double clic pour ouvrir le n\oe{}ud avec la liste des modèles de la sous-catégorie. Comme beaucoup de modèles ont une classification primaire et secondaire, une case à cocher dans le volet supérieur à côté du champ de recherche (\lit{Search}) vous permet de décider si vous voulez que les modèles soient énumérés uniquement sous leur classification primaire ou qu'ils apparaissent dans toutes les catégories correspondantes (dans ce cas ils apparaîtront plus d'une fois)
+
+\begin{figure}[htb]
+    \centering
+  \includegraphics[scale=\scale]{01Introduction/images/OSPCollection.png}
+    \caption{La collection OSP de la bibliothèque numérique comPADRE. Cette collection est organisée en catégories et sous-catégories. La saisie pour un modèle vous fournit de l'information sur le modèle.}
+    \label{fig:01Introduction/OSPCollection}
+\end{figure}
+
+Quand vous cliquez sur un n\oe{}ud modèle, le cadre de droite vous affiche l'information sur le modèle obtenu instantanément de la bibliothèque. L'information décrit le modèle et inclut un lien direct à la bibliothèque comPADRE pour des informations supplémentaires. Faites double clic sur l'entrée du modèle ou cliquez le bouton \lit{Download} pour extraire le modèle et les fichiers auxiliaires de la bibliothèque,  on vous demandera un emplacement dans votre répertoire \file{source} de votre environnement de travail pour les  télécharger, et découvrira le modèle sur \ejs\ quand le téléchargement est complété. Comme les fichiers sources sont normalement petits, le téléchargement se fera d'une manière presque immédiate. Maintenant vous pouvez examiner, exécuter, modifier le modèle tel que signalé dans les chapitres d'exploration ci-dessous pour le modèle de masse-ressort.
+
+La collection OSP de la bibliothèque numérique comPADRE est fortement recommandée pour chercher des modèles  \ejs\  et du matériel pédagogique d'accompagnement.
+
+% -----------------------------------------------------
+\section{Résumé}\label{section:02Review}
+% -----------------------------------------------------
+
+\Ejs\ est un outil de modélisation et d'édition-création expressément dédié à la création de simulations informatiques pour étudier et afficher une grande variété de phénomènes qui vont du plus simples au plus complexes. Ces simulations informatiques sont utilisées pour obtenir des données numériques à partir de nos modèles en fonction de la progression dans le temps et pour  montrer ces données d'une manière que l'être humain puisse les comprendre. 
+
+\ejs\  a été conçu pour nous permettre de travailler à un haut niveau conceptuel, pour concentrer la plupart de notre temps aux aspects scientifiques de notre simulation et demander à l'ordinateur de réaliser automatiquement toutes les tâches nécessaires mais qui sont facilement automatisées. 
+Chaque outil, y compris \ejs,  présente une courbe d'apprentissage. Le reste de ce document contient une série d'exemples  détaillés qui vous permettront de vous familiariser avec les possibilités de modélisation, visualisation et interaction de EjsS.
+
+ La modélisation est une science et un art. \Ejs\ est un outil qui vous permet d'exprimer vos connaissances en sciences en vous facilitant les techniques nécessaires de l'art, et en vous fournissant un accès simple a beaucoup d'exemples de modélisation créés par d'autres auteurs.
+

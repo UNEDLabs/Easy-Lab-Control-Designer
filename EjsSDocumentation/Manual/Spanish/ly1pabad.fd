@@ -1,0 +1,61 @@
+
+
+\ProvidesFile{ly1phv.fd}
+   [1997/01/26  LY1/pabad]
+
+\DeclareFontFamily{LY1}{pabad}{}
+
+\DeclareFontShape{LY1}{pabad}{b}{n}{
+   <-> abel
+}{}
+
+\DeclareFontShape{LY1}{pabad}{b}{sc}{
+   <-> sub pabad/b/n
+}{}
+
+\DeclareFontShape{LY1}{pabad}{b}{sl}{
+   <-> abeli
+}{}
+
+\DeclareFontShape{LY1}{pabad}{bc}{n}{
+   <-> sub pabad/m/n
+}{}
+
+\DeclareFontShape{LY1}{pabad}{bc}{sc}{
+   <-> sub pabad/bc/n
+}{}
+
+\DeclareFontShape{LY1}{pabad}{bc}{sl}{
+   <-> sub pabad/m/sl
+}{}
+
+\DeclareFontShape{LY1}{pabad}{m}{n}{
+   <-> abel
+}{}
+
+\DeclareFontShape{LY1}{pabad}{m}{sc}{
+   <-> sub pabad/m/n
+}{}
+
+\DeclareFontShape{LY1}{pabad}{m}{sl}{
+   <-> abeli
+}{}
+
+\DeclareFontShape{LY1}{pabad}{mc}{n}{
+   <-> sub pabad/m/m
+}{}
+
+\DeclareFontShape{LY1}{pabad}{mc}{sc}{
+   <-> sub pabad/m/n
+}{}
+
+\DeclareFontShape{LY1}{pabad}{mc}{sl}{
+   <-> sub pabad/m/sl
+}{}
+
+\DeclareFontShape{LY1}{pabad}{b}{it}{<->ssub * pabad/b/sl}{}
+\DeclareFontShape{LY1}{pabad}{l}{it}{<->ssub * pabad/l/sl}{}
+\DeclareFontShape{LY1}{pabad}{m}{it}{<->ssub * pabad/m/sl}{}
+\DeclareFontShape{LY1}{pabad}{mc}{it}{<->ssub * pabad/mc/sl}{}
+
+\endinput

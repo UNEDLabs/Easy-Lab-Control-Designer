@@ -1,0 +1,484 @@
+<!-- This XML file has been created by Easy Java Simulations (Ejs). Visit http://www.um.es/fem/Ejs. -->
+<!-- Please, save the file to your hard disk on your Ejs' user directory and open it with Ejs. -->
+<Osejs version="4.1">
+<Osejs.Information>
+<Title><![CDATA[Masa y muelle]]></Title>
+<Author><![CDATA[Wolfgang Christian y Francisco Esquembre]]></Author>
+<Keywords><![CDATA[Muelle, Ley de Hooke, Oscilador harmónico simple]]></Keywords>
+<Level><![CDATA[]]></Level>
+<Language><![CDATA[]]></Language>
+<Abstract><![CDATA[Ésta es la simulación del movimiento de una masa m situada en el extremo de un muelle de longitud L y masa despreciable. El movimiento está restringido al eje horizontal. ]]></Abstract>
+<AdditionalLibraries>
+</AdditionalLibraries>
+<ImportStatements>
+</ImportStatements>
+<AuxiliaryFiles><![CDATA[]]></AuxiliaryFiles>
+<DetectedFiles><![CDATA[./MasaYMuelle.gif;]]></DetectedFiles>
+</Osejs.Information>
+<Osejs.Description>
+<Osejs.Description.Page>
+<Type>DESCRIPTION_EDITOR</Type>
+<Name>Introducción</Name>
+<Active>true</Active>
+<Content>
+<![CDATA[
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h1>
+      Sistema de Masa y Muelle
+    </h1>
+    <table>
+      <tr>
+        <td>
+          &#201;sta es la simulaci&#243;n del movimiento de un masa <i>m</i> 
+          situada en el extremo de un muelle de longitud <i>L</i> y masa 
+          despreciable. El movimiento se restringe al eje horizontal. (Hemos 
+          elegido un sistema de coordenadas en el plano con origen establecido 
+          en el extremo fijo del muelle y con el eje X en la direcci&#243;n del 
+          muelle.)
+        </td>
+        <td width="120">
+          <img src="./MasaYMuelle.gif">
+          
+        </td>
+      </tr>
+    </table>
+    <p>
+      Asumimos que la reacci&#243;n del muelle al desplazamiento dx desde la 
+      posici&#243;n de equilibrio puede modelarse mediante la Ley de Hooke, <i>F(dx) 
+      = -k dx </i>, donde <i>k</i> es una constante que depende de las 
+      caracter&#237;sticas f&#237;sicas del muelle. Usamos la segunda Ley de Newton para 
+      obtener una ecuaci&#243;n diferencial de segundo orden para la posici&#243;n de la 
+      part&#237;cula:
+    </p>
+    <div align="center">
+      <i>d<sup>2</sup>x / dt<sub><sup>2</sup></sub> = -k/m (x-L)</i>,
+    </div>
+    donde <i>x</i> es la posici&#243;n horizontal del extremo libre del muelle.
+
+    <p>
+      En la simulaci&#243;n resolvemos num&#233;ricamente esta ecuaci&#243;n y visualizamos 
+      los resultados.
+    </p>
+  </body>
+</html>
+
+]]>
+
+</Content>
+</Osejs.Description.Page>
+<Osejs.Description.Page>
+<Type>DESCRIPTION_EDITOR</Type>
+<Name>Actividades</Name>
+<Active>true</Active>
+<Content>
+<![CDATA[
+<html>
+  <head>
+    
+  </head>
+  <body>
+    <h1>
+      Actividades
+    </h1>
+    <ol>
+      <li>
+        Mida el periodo del movimiento para las condiciones iniciales dadas.
+      </li>
+      <li>
+        Arrastre con el rat&#243;n la bola a una nueva posici&#243;n y mida el periodo 
+        de nuevo. &#191;Qu&#233; observa?
+      </li>
+      <li>
+        Modifique la masa de la bola y pruebe con varios valores distintos 
+        (manteniendo <i>k</i> constante) . Haga una gr&#225;fica en su cuaderno que 
+        muestre c&#243;mo cambia el periodo dependiendo de la masa.
+      </li>
+      <li>
+        Repita el ejercicio anterior para la constante el&#225;stica del muelle, <i>k.</i>
+      </li>
+      <li>
+        &#191;Se atrever&#237;a a dar una f&#243;rmula expl&#237;cita que refleje la dependencia 
+        del periodo con respecto a la masa y respecto a <i>k</i>?
+      </li>
+      <li>
+        &#191;Se conserva la energ&#237;a total del modelo?
+      </li>
+      <li>
+        &#191;Por qu&#233; piensa que la energ&#237;a total de la simulaci&#243;n aumenta 
+        lentamente? (Pista: Pruebe con un m&#233;todo de resoluci&#243;n de ecuaciones 
+        mejor, por ejemplo Runge-Kutta, y compruebe qu&#233; sucede.)
+      </li>
+    </ol>
+  </body>
+</html>
+
+]]>
+
+</Content>
+</Osejs.Description.Page>
+</Osejs.Description>
+<Osejs.Model>
+<Osejs.Model.FramesPerSecond>20</Osejs.Model.FramesPerSecond>
+<Osejs.Model.StepsPerDisplay>1</Osejs.Model.StepsPerDisplay>
+<Osejs.Model.Autostart>false</Osejs.Model.Autostart>
+<Osejs.Model.Variables>
+<Osejs.Model.Variables.Page>
+<Type>VARIABLE_EDITOR</Type>
+<Name>Variables dinámicas</Name>
+<Active>true</Active>
+<Content>
+<PageComment><![CDATA[variables que describen la dinámica]]></PageComment>
+<Variable>
+<Name><![CDATA[x]]></Name>
+<Value><![CDATA[1.5]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[coordenada x (sin desplazamiento) del extremo del muelle]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[vx]]></Name>
+<Value><![CDATA[0.0]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[componente x de la velocidad del extremo del muelle]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[t]]></Name>
+<Value><![CDATA[0.0]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[tiempo]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[dt]]></Name>
+<Value><![CDATA[0.05]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[incremento de tiempo en cada paso]]></Comment>
+</Variable>
+
+</Content>
+</Osejs.Model.Variables.Page>
+<Osejs.Model.Variables.Page>
+<Type>VARIABLE_EDITOR</Type>
+<Name>Constantes y auxiliares</Name>
+<Active>true</Active>
+<Content>
+<PageComment><![CDATA[constantes y variables auxiliares]]></PageComment>
+<Variable>
+<Name><![CDATA[mostrar]]></Name>
+<Value><![CDATA[true]]></Value>
+<Type><![CDATA[boolean]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[mostrar o no la gráfica]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[y]]></Name>
+<Value><![CDATA[0.0]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[coordenada Y del extremo del muelle]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[m]]></Name>
+<Value><![CDATA[1.0]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[masa en el extremo del muelle]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[k]]></Name>
+<Value><![CDATA[1.0]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[constante elástica del muelle]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[L]]></Name>
+<Value><![CDATA[1.0]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[longitud del muelle en equilibrio]]></Comment>
+</Variable>
+
+</Content>
+</Osejs.Model.Variables.Page>
+<Osejs.Model.Variables.Page>
+<Type>VARIABLE_EDITOR</Type>
+<Name>Variables de salida</Name>
+<Active>true</Active>
+<Content>
+<PageComment><![CDATA[variables calculadas en el panel de Relaciones fijas]]></PageComment>
+<Variable>
+<Name><![CDATA[T]]></Name>
+<Value><![CDATA[0.5*m*vx*vx]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[energía cinética del sistema]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[V]]></Name>
+<Value><![CDATA[0.5*k*(x-L)*(x-L)]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[energía potencial del sistema]]></Comment>
+</Variable>
+<Variable>
+<Name><![CDATA[E]]></Name>
+<Value><![CDATA[T + V]]></Value>
+<Type><![CDATA[double]]></Type>
+<Dimension><![CDATA[]]></Dimension>
+<Comment><![CDATA[energía total del sistema]]></Comment>
+</Variable>
+
+</Content>
+</Osejs.Model.Variables.Page>
+</Osejs.Model.Variables>
+<Osejs.Model.Initialization>
+</Osejs.Model.Initialization>
+<Osejs.Model.Evolution>
+<Osejs.Model.Evolution.Page>
+<Type>ODE_EDITOR</Type>
+<Name>Equations</Name>
+<Active>true</Active>
+<Content>
+<PreliminaryCode>
+<Comment><![CDATA[]]></Comment>
+<Code><![CDATA[
+
+]]></Code>
+</PreliminaryCode>
+<IndependentVariable>t</IndependentVariable>
+<Increment>dt</Increment>
+<Increment>dt</Increment>
+<Rate state="x">vx</Rate>
+<Rate state="vx">-k/m *(x-L)</Rate>
+<Method>MidPoint</Method>
+<Tolerance></Tolerance>
+<Comment><![CDATA[Segunda Ley de Newton]]></Comment>
+
+</Content>
+</Osejs.Model.Evolution.Page>
+</Osejs.Model.Evolution>
+<Osejs.Model.Constraints>
+<Osejs.Model.Constraints.Page>
+<Type>CODE_EDITOR</Type>
+<Name>Energía</Name>
+<Active>true</Active>
+<Content>
+<Comment><![CDATA[calcula la energía despues de cada paso y después de cada interacción.]]></Comment>
+<Code><![CDATA[
+T = 0.5*m*vx*vx;
+V = 0.5*k*(x-L)*(x-L);
+E = T + V;
+
+]]></Code>
+
+</Content>
+</Osejs.Model.Constraints.Page>
+</Osejs.Model.Constraints>
+<Osejs.Model.Library>
+</Osejs.Model.Library>
+</Osejs.Model>
+<Osejs.View>
+<Osejs.View.Creation>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Frame</Type>
+<Property name="name">ventana</Property>
+<Property name="_ejs_mainWindow">true</Property>
+<Property name="title"><![CDATA["Masa y muelle"]]></Property>
+<Property name="layout"><![CDATA[border]]></Property>
+<Property name="visible"><![CDATA[true]]></Property>
+<Property name="location"><![CDATA["0,0"]]></Property>
+<Property name="size"><![CDATA["383,330"]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.DrawingPanel</Type>
+<Property name="name">panelDeDibujo</Property>
+<Property name="parent">ventana</Property>
+<Property name="position">center</Property>
+<Property name="autoscaleX"><![CDATA[false]]></Property>
+<Property name="autoscaleY"><![CDATA[false]]></Property>
+<Property name="minimumX"><![CDATA[0]]></Property>
+<Property name="maximumX"><![CDATA[2]]></Property>
+<Property name="minimumY"><![CDATA[-1.0]]></Property>
+<Property name="maximumY"><![CDATA[1.0]]></Property>
+<Property name="square"><![CDATA[true]]></Property>
+<Property name="BRmessage"><![CDATA["time="+_format(t,"0.00")]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Shape2D</Type>
+<Property name="name">paredForma2D</Property>
+<Property name="parent">panelDeDibujo</Property>
+<Property name="x"><![CDATA[0]]></Property>
+<Property name="y"><![CDATA[0]]></Property>
+<Property name="sizeX"><![CDATA[0.2]]></Property>
+<Property name="sizeY"><![CDATA[0.6]]></Property>
+<Property name="enabledPosition"><![CDATA[false]]></Property>
+<Property name="style"><![CDATA[RECTANGLE]]></Property>
+<Property name="fillColor"><![CDATA[DARKGRAY]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Spring2D</Type>
+<Property name="name">muelle2D</Property>
+<Property name="parent">panelDeDibujo</Property>
+<Property name="x"><![CDATA[0.1]]></Property>
+<Property name="y"><![CDATA[0]]></Property>
+<Property name="sizeX"><![CDATA[x-0.2]]></Property>
+<Property name="sizeY"><![CDATA[y]]></Property>
+<Property name="enabledSize"><![CDATA[false]]></Property>
+<Property name="radius"><![CDATA[0.05]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Shape2D</Type>
+<Property name="name">masaForma2D</Property>
+<Property name="parent">panelDeDibujo</Property>
+<Property name="x"><![CDATA[x]]></Property>
+<Property name="y"><![CDATA[y]]></Property>
+<Property name="sizeX"><![CDATA[0.2]]></Property>
+<Property name="sizeY"><![CDATA[0.2]]></Property>
+<Property name="enabledPosition"><![CDATA[_isPaused]]></Property>
+<Property name="dragAction"><![CDATA[y=0]]></Property>
+<Property name="releaseAction"><![CDATA[vx = 0.0;            // pone la velocidad a cero
+_view.resetTraces(); // limpia todas las gráficas]]></Property>
+<Property name="style"><![CDATA[ELLIPSE]]></Property>
+<Property name="fillColor"><![CDATA[MAGENTA]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Property name="name">controlPanel</Property>
+<Property name="parent">ventana</Property>
+<Property name="position">south</Property>
+<Property name="layout"><![CDATA[border:0,0]]></Property>
+<Property name="borderType"><![CDATA[LOWERED_ETCHED]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Property name="name">botonesPanel</Property>
+<Property name="parent">controlPanel</Property>
+<Property name="position">west</Property>
+<Property name="layout"><![CDATA[grid:1,2,0,0]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.TwoStateButton</Type>
+<Property name="name">botonDosEstados</Property>
+<Property name="parent">botonesPanel</Property>
+<Property name="variable"><![CDATA[_isPaused]]></Property>
+<Property name="tooltip"><![CDATA["Inicia/Pausa la simulación"]]></Property>
+<Property name="imageOn"><![CDATA[/org/opensourcephysics/resources/controls/images/play.gif]]></Property>
+<Property name="actionOn"><![CDATA[_play()]]></Property>
+<Property name="imageOff"><![CDATA[/org/opensourcephysics/resources/controls/images/pause.gif]]></Property>
+<Property name="actionOff"><![CDATA[_pause()]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Button</Type>
+<Property name="name">reinicioBoton</Property>
+<Property name="parent">botonesPanel</Property>
+<Property name="image"><![CDATA[/org/opensourcephysics/resources/controls/images/reset.gif]]></Property>
+<Property name="action"><![CDATA[_reset()]]></Property>
+<Property name="tooltip"><![CDATA["Reinicia la simulación"]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>false</Expanded>
+<Type>Elements.Panel</Type>
+<Property name="name">parametrosPanel</Property>
+<Property name="parent">controlPanel</Property>
+<Property name="position">center</Property>
+<Property name="layout"><![CDATA[hbox]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Label</Type>
+<Property name="name">kEtiqueta</Property>
+<Property name="parent">parametrosPanel</Property>
+<Property name="text"><![CDATA[" k = "]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.ParsedField</Type>
+<Property name="name">kCampo</Property>
+<Property name="parent">parametrosPanel</Property>
+<Property name="variable"><![CDATA[k]]></Property>
+<Property name="format"><![CDATA[0.###]]></Property>
+<Property name="editable"><![CDATA[_isPaused]]></Property>
+<Property name="size"><![CDATA[40,20]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Label</Type>
+<Property name="name">energiaEtiqueta</Property>
+<Property name="parent">parametrosPanel</Property>
+<Property name="text"><![CDATA[" E = "]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.ParsedField</Type>
+<Property name="name">energiaCampo</Property>
+<Property name="parent">parametrosPanel</Property>
+<Property name="variable"><![CDATA[E]]></Property>
+<Property name="format"><![CDATA[0.###]]></Property>
+<Property name="editable"><![CDATA[false]]></Property>
+<Property name="size"><![CDATA[40,20]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.CheckBox</Type>
+<Property name="name">graficaSelector</Property>
+<Property name="parent">controlPanel</Property>
+<Property name="position">east</Property>
+<Property name="variable"><![CDATA[mostrar]]></Property>
+<Property name="text"><![CDATA["Ver gráfica"]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Dialog</Type>
+<Property name="name">ventanaDialogo</Property>
+<Property name="title"><![CDATA["Evolución en el tiempo"]]></Property>
+<Property name="layout"><![CDATA[GRID:0,1]]></Property>
+<Property name="visible"><![CDATA[mostrar]]></Property>
+<Property name="location"><![CDATA["400,-3"]]></Property>
+<Property name="size"><![CDATA["385,265"]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Expanded>false</Expanded>
+<Type>Elements.PlottingPanel</Type>
+<Property name="name">panelConEjes</Property>
+<Property name="parent">ventanaDialogo</Property>
+<Property name="position">center</Property>
+<Property name="autoscaleX"><![CDATA[true]]></Property>
+<Property name="autoscaleY"><![CDATA[true]]></Property>
+<Property name="minimumY"><![CDATA[-1]]></Property>
+<Property name="maximumY"><![CDATA[1]]></Property>
+<Property name="titleX"><![CDATA["Tiempo"]]></Property>
+<Property name="titleY"><![CDATA["Desplazamiento y Velocidad"]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Trail2D</Type>
+<Property name="name">desplazamientoTraza2D</Property>
+<Property name="parent">panelConEjes</Property>
+<Property name="inputX"><![CDATA[t]]></Property>
+<Property name="inputY"><![CDATA[x-L]]></Property>
+<Property name="maximumPoints"><![CDATA[300]]></Property>
+<Property name="norepeat"><![CDATA[true]]></Property>
+<Property name="connected"><![CDATA[true]]></Property>
+<Property name="lineColor"><![CDATA[BLUE]]></Property>
+</Osejs.View.Creation.Element>
+<Osejs.View.Creation.Element>
+<Type>Elements.Trail2D</Type>
+<Property name="name">velocidadTraza2D</Property>
+<Property name="parent">panelConEjes</Property>
+<Property name="inputX"><![CDATA[t]]></Property>
+<Property name="inputY"><![CDATA[vx]]></Property>
+<Property name="maximumPoints"><![CDATA[300]]></Property>
+<Property name="norepeat"><![CDATA[true]]></Property>
+<Property name="connected"><![CDATA[true]]></Property>
+<Property name="lineColor"><![CDATA[RED]]></Property>
+</Osejs.View.Creation.Element>
+</Osejs.View.Creation>
+</Osejs.View>
+<Osejs.Experiment>
+</Osejs.Experiment>
+</Osejs>

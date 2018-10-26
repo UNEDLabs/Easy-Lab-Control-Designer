@@ -1,0 +1,54 @@
+\RequirePackage{subfigure}
+\RequirePackage{graphicx}
+\RequirePackage{color,graphics}
+\RequirePackage{caption}
+\RequirePackage{amsmath} % This is for numbering equations
+\RequirePackage{listings}
+
+
+% The scale for figures
+
+\newcommand{\scale}{0.3}
+\newcommand{\linescale}{0.6}
+\newcommand{\smallscale}{0.5}
+
+\captionsetup{margin=10pt,font=small,labelfont=bf}
+
+% ------------------- Other definitions
+
+\newcommand{\ejs}{\emph{EjsS}}
+\newcommand{\Ejs}{\emph{Easy Java/JavaScript Simulations}}
+\newcommand{\osp}{\emph{OSP}}
+\newcommand{\Osp}{\emph{Open Source Physics}}
+
+\newcommand{\file}[1]{\textbf{#1}} % the name of a file or directory
+\newcommand{\code}[1]{{\ttfamily #1}} % a variable
+
+\newcommand{\url}[1]{{\ttfamily #1}} % a variable
+\newcommand{\lit}[1]{{\sl #1}}  % literal text
+%\newcommand{\lit}[1]{``#1''}  % literal text
+\newcommand{\link}[1]{\emph{$<$#1$>$}}  %URL Links
+\newcommand{\note}[1]{\begin{quote}\small #1\end{quote}}  % a big note with color background
+
+%Use special environments for listings, exercises, problems, and projects.
+\newenvironment{listing} {\ttfamily\small}{}
+%exerciseEnv is used to define the exercise environment
+\newtheorem{exerciseEnv}{\hspace{-\parindent} Exercise}[chapter]
+%The exercise environment adds a box at the end of the exercise narrative to indicate the end of the exercise.
+\newenvironment{exercise}[1][]{\begin{exerciseEnv}{\textbf{#1}\newline}}{\boldmath $\Box$ \end{exerciseEnv}}
+%problems and projects appear at the end of each chapter
+\newtheorem{problem}{\hspace{-\parindent} Problem}[chapter]
+\newtheorem{project}{\hspace{-\parindent} Project}[chapter]
+
+% environments for long listings
+\definecolor{background}{rgb}{1,1,1}
+\definecolor{sepcolor}{rgb}{0.90,0.90,0.90}
+\lstset{language=Java,
+linewidth=30pc,
+showstringspaces=false,
+commentstyle=\upshape,
+stringstyle=\ttfamily,
+%basicstyle=\small,
+basicstyle=\scriptsize\ttfamily\baselineskip10pt, breaklines=true, keywordstyle=\upshape,
+breakatwhitespace=true, morecomment=[is]{/*}{*/}, moredelim=**[is][\hfill\bfseries]{/*+}{+*/},
+moredelim=[is][\emph]{+-}{-+}, moredelim=[is][\emph]{/*-}{-*/}} 

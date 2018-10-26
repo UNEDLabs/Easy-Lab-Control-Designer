@@ -1,0 +1,1570 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.11.22)  27 NOV 2016 08:45
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**Modeling-Science.tex
+(./Modeling-Science.tex
+LaTeX2e <2015/01/01>
+Babel <3.9l> and hyphenation patterns for 79 languages loaded.
+(./flwide10.cls
+Document Class: flwide10 2003/007/28 v1.0 Princeton University Press class
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks14
+\thm@bodyfont=\toks15
+\thm@headfont=\toks16
+\thm@notefont=\toks17
+\thm@headpunct=\toks18
+\thm@preskip=\skip41
+\thm@postskip=\skip42
+\thm@headsep=\skip43
+\dth@everypar=\toks19
+)
+\chapterdrop=\skip44
+\schapterdrop=\skip45
+\partdrop=\skip46
+\c@part=\count79
+\c@chapter=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen102
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/multicol.sty
+Package: multicol 2015/03/31 v1.8m multicolumn formatting (FMi)
+\c@tracingmulticols=\count88
+\mult@box=\box26
+\multicol@leftmargin=\dimen103
+\c@unbalance=\count89
+\c@collectmore=\count90
+\doublecol@number=\count91
+\multicoltolerance=\count92
+\multicolpretolerance=\count93
+\full@width=\dimen104
+\page@free=\dimen105
+\premulticols=\dimen106
+\postmulticols=\dimen107
+\multicolsep=\skip49
+\multicolbaselineskip=\skip50
+\partial@page=\box27
+\last@line=\box28
+\maxbalancingoverflow=\dimen108
+\mult@rightbox=\box29
+\mult@grightbox=\box30
+\mult@gfirstbox=\box31
+\mult@firstbox=\box32
+\@tempa=\box33
+\@tempa=\box34
+\@tempa=\box35
+\@tempa=\box36
+\@tempa=\box37
+\@tempa=\box38
+\@tempa=\box39
+\@tempa=\box40
+\@tempa=\box41
+\@tempa=\box42
+\@tempa=\box43
+\@tempa=\box44
+\@tempa=\box45
+\@tempa=\box46
+\@tempa=\box47
+\@tempa=\box48
+\@tempa=\box49
+\c@columnbadness=\count94
+\c@finalcolumnbadness=\count95
+\last@try=\dimen109
+\multicolovershoot=\dimen110
+\multicolundershoot=\dimen111
+\mult@nat@firstbox=\box50
+\colbreak@box=\box51
+\mc@col@check@num=\count96
+)
+\c@NumList=\count97
+\NumWidth=\skip51
+\c@theorem=\count98
+\c@example=\count99
+\c@theo=\count100
+)
+(./modeling_macros.tex
+(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.sty
+Package: subfigure 2002/03/15 v2.1.5 subfigure package
+\subfigtopskip=\skip52
+\subfigcapskip=\skip53
+\subfigcaptopadj=\dimen112
+\subfigbottomskip=\skip54
+\subfigcapmargin=\dimen113
+\subfiglabelskip=\skip55
+\c@subfigure=\count101
+\c@lofdepth=\count102
+\c@subtable=\count103
+\c@lotdepth=\count104
+
+****************************************
+* Local config file subfigure.cfg used *
+****************************************
+(/usr/local/texlive/2015/texmf-dist/tex/latex/subfigure/subfigure.cfg)
+\subfig@top=\skip56
+\subfig@bottom=\skip57
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks20
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/graphics.cfg
+File: graphics.cfg 2010/04/23 v1.9 graphics configuration of TeX Live
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/pdftex-def/pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count105
+))
+\Gin@req@height=\dimen114
+\Gin@req@width=\dimen115
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2014/10/28 v1.1a Standard LaTeX Color (DPC)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package color Info: Driver file: pdftex.def on input line 142.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2013/05/02 v3.3-89 Customizing captions (AR)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2013/05/02 v1.6-88 caption3 kernel (AR)
+Package caption3 Info: TeX engine: e-TeX on input line 57.
+\captionmargin=\dimen116
+\captionmargin@=\dimen117
+\captionwidth=\dimen118
+\caption@tempdima=\dimen119
+\caption@indent=\dimen120
+\caption@parindent=\dimen121
+\caption@hangindent=\dimen122
+Package caption Info: Unknown document class (or package),
+(caption)             standard defaults will be used.
+)
+
+Package caption Warning: Unsupported document class (or package) detected,
+(caption)                usage of the caption package is not recommended.
+See the caption package documentation for explanation.
+
+Package caption Info: \@makecaption = \long macro:#1#2->\ifx \@captype \xtable 
+\vskip \abovecaptionskip \fontsize {9}{11pt}\selectfont \sbox \@tempboxa {{#1}\
+enspace #2}\ifdim \wd \@tempboxa >\hsize \@hangfrom {#1\enspace }#2\par \else \
+global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil }\fi \vskip 
+8.3pt \else \vskip \abovecaptionskip \fontsize {9}{11pt}\selectfont \sbox \@tem
+pboxa {{#1}\enspace #2}\ifdim \wd \@tempboxa >\hsize \@hangfrom {#1\enspace }#2
+\par \else \global \@minipagefalse \hb@xt@ \hsize {\hfil \box \@tempboxa \hfil 
+}\fi \vskip \belowcaptionskip \fi .
+\c@ContinuedFloat=\count106
+Package caption Info: subfigure package is loaded.
+) (/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2013/01/14 v2.14 AMS math features
+\@mathmargin=\skip58
+
+For additional information on amsmath, use the `?' option.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0
+\@emptytoks=\toks21
+\ex@=\dimen123
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d
+\pmbraise@=\dimen124
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 1999/12/14 v2.01 operator names
+)
+\inf@bad=\count107
+LaTeX Info: Redefining \frac on input line 210.
+\uproot@=\count108
+\leftroot@=\count109
+LaTeX Info: Redefining \overline on input line 306.
+\classnum@=\count110
+\DOTSCASE@=\count111
+LaTeX Info: Redefining \ldots on input line 378.
+LaTeX Info: Redefining \dots on input line 381.
+LaTeX Info: Redefining \cdots on input line 466.
+\Mathstrutbox@=\box52
+\strutbox@=\box53
+\big@size=\dimen125
+LaTeX Font Info:    Redeclaring font encoding OML on input line 566.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
+\macc@depth=\count112
+\c@MaxMatrixCols=\count113
+\dotsspace@=\muskip10
+\c@parentequation=\count114
+\dspbrk@lvl=\count115
+\tag@help=\toks22
+\row@=\count116
+\column@=\count117
+\maxfields@=\count118
+\andhelp@=\toks23
+\eqnshift@=\dimen126
+\alignsep@=\dimen127
+\tagshift@=\dimen128
+\tagwidth@=\dimen129
+\totwidth@=\dimen130
+\lineht@=\dimen131
+\@envbody=\toks24
+\multlinegap=\skip59
+\multlinetaggap=\skip60
+\mathdisplay@stack=\toks25
+LaTeX Info: Redefining \[ on input line 2665.
+LaTeX Info: Redefining \] on input line 2666.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count119
+\lst@gtempboxa=\box54
+\lst@token=\toks26
+\lst@length=\count120
+\lst@currlwidth=\dimen132
+\lst@column=\count121
+\lst@pos=\count122
+\lst@lostspace=\dimen133
+\lst@width=\dimen134
+\lst@newlines=\count123
+\lst@lineno=\count124
+\lst@maxwidth=\dimen135
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2014/09/06 1.5e (Carsten Heinz)
+\c@lstnumber=\count125
+\lst@skipnumbers=\count126
+\lst@framebox=\box55
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2014/09/06 1.5e listings configuration
+))
+Package: listings 2014/09/06 1.5e (Carsten Heinz)
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2015/03/17 v1.2c Input encoding file
+\inpenc@prehook=\toks27
+\inpenc@posthook=\toks28
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ansinew.def
+File: ansinew.def 2015/03/17 v1.2c Input encoding file
+))
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2014/09/25 3.9l The Babel package
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel-spanish/spanish.ldf
+Language: spanish.ldf 2014/04/24 v5.0n Spanish support from the babel system
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2014/09/25 3.9l Babel common definitions
+\babel@savecnt=\count127
+\U@D=\dimen136
+)
+\es@quottoks=\toks29
+\es@quotdepth=\count128
+Package babel Info: Making " an active character on input line 516.
+Package babel Info: Making . an active character on input line 617.
+Package babel Info: Making < an active character on input line 662.
+Package babel Info: Making > an active character on input line 662.
+))
+\c@exerciseEnv=\count129
+\c@problem=\count130
+\c@project=\count131
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2014/09/06 1.5e listings language file
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2014/10/28 v1.1c Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup4
+\symboldletters=\mathgroup5
+\symboldsymbols=\mathgroup6
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 207.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/graphics/epsfig.sty
+Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
+\epsfxsize=\dimen137
+\epsfysize=\dimen138
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/latexsym.sty
+Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
+\symlasy=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
+(Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2014/09/29 v1.0m Standard LaTeX package
+)
+\@indexfile=\write3
+\openout3 = `Modeling-Science.idx'.
+
+
+Writing index file Modeling-Science.idx
+(./Modeling-Science.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+
+No file 01Modeling/mainModeling.aux.
+(./02EjsIntro/mainEjsIntro.aux)
+No file Basics/mainBasics.aux.
+No file Drawing/mainDrawing.aux.
+No file 04ODE/mainODE.aux.
+No file 03Explicit/mainExplicit.aux.
+No file 05Events/mainEvents.aux.
+No file 06Systems/mainSystems.aux.
+No file 06Oscillation/mainOscillation.aux.
+No file 07Chaos/mainChaos.aux.
+No file 08Orbits/mainOrbits.aux.
+No file 09Geometry/mainGeometry.aux.
+No file 10PDE/mainPDE.aux.
+No file 12Self/mainSelf.aux.
+No file 13Biology/mainBiology.aux.
+No file 14Social/mainSocial.aux.
+No file appendixA/mainDistribution.aux.
+No file appendixB/mainJava.aux.
+)
+\openout1 = `Modeling-Science.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+ (/usr/local/texlive/2015/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count132
+\scratchdimen=\dimen139
+\scratchbox=\box56
+\nofMPsegments=\count133
+\nofMParguments=\count134
+\everyMPshowfont=\toks30
+\MPscratchCnt=\count135
+\MPscratchDim=\dimen140
+\MPnumerator=\count136
+\makeMPintoPDFobject=\count137
+\everyMPtoPDFconversion=\toks31
+) (/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+))
+(/usr/local/texlive/2015/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/local/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+
+(/usr/local/texlive/2015/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
+e
+))
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: listings package is loaded.
+Package caption Info: End \AtBeginDocument code.
+\c@lstlisting=\count138
+LaTeX Info: Redefining \. on input line 27.
+LaTeX Info: Redefining \% on input line 27.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 38.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <14> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 38.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <20> not available
+(Font)              size <20.74> substituted on input line 38.
+
+[1{/usr/local/texlive/2015/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+
+
+]
+[2
+
+]
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <18> not available
+(Font)              size <17.28> substituted on input line 47.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <18> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 47.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/sl' in size <18> not available
+(Font)              size <17.28> substituted on input line 47.
+
+[1
+
+
+] [2]
+\openout2 = `02EjsIntro/mainEjsIntro.aux'.
+
+ (./02EjsIntro/mainEjsIntro.tex
+Cap\'{\i }tulo 1.
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/it' undefined
+(Font)              using `OT1/cmss/bx/n' instead on input line 1.
+
+[3
+
+
+
+]
+LaTeX Font Info:    Calculating math sizes for size <11> on input line 36.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 36.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 36.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 36.
+
+
+LaTeX Font Warning: Font shape `OT1/cmr/bx/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 36.
+
+
+LaTeX Font Warning: Font shape `OML/cmm/b/it' in size <5.5> not available
+(Font)              size <5> substituted on input line 36.
+
+
+LaTeX Font Warning: Font shape `OMS/cmsy/b/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 36.
+
+LaTeX Font Info:    Try loading font information for U+lasy on input line 36.
+(/usr/local/texlive/2015/texmf-dist/tex/latex/base/ulasy.fd
+File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
+)
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 36.
+
+LaTeX Info: Redefining \. on input line 40.
+LaTeX Info: Redefining \% on input line 40.
+[4]
+Overfull \hbox (8.23952pt too wide) in paragraph at lines 42--43
+[]\OT1/cmr/bx/n/10.95 Ejecutar la con-so-la \OT1/cmr/bx/it/10.95 EJS\OT1/cmr/bx
+/n/10.95 . \OT1/cmr/m/n/10.95 Den-tro de la re-ci^^Sen crea-da car-pe-ta \OT1/c
+mr/bx/n/10.95 EJS[]X.x\OT1/cmr/m/n/10.95 ,
+ []
+
+Package epstopdf Info: Source file: <02EjsIntro/images/EjsConsole1.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 790188 bytes
+(epstopdf)             Output file: <02EjsIntro/images/EjsConsole1-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:01
+(epstopdf)                    size: 24472 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/EjsConso
+le1-eps-converted-to.pdf 02EjsIntro/images/EjsConsole1.eps>
+(epstopdf)             \includegraphics on input line 51.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/EjsConsole1-eps-converted-to.pdf, id=33, 515.9275pt x 256.96
+pt>
+File: 02EjsIntro/images/EjsConsole1-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use 02EjsIntro/images/EjsConsole1-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/EjsConsole1-eps-converted-to.pdf use
+d on input line 51.
+(pdftex.def)             Requested size: 206.36734pt x 102.78217pt.
+Package epstopdf Info: Source file: <02EjsIntro/images/WorkspaceChooser.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 1306111 bytes
+(epstopdf)             Output file: <02EjsIntro/images/WorkspaceChooser-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:01
+(epstopdf)                    size: 20980 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/Workspac
+eChooser-eps-converted-to.pdf 02EjsIntro/images/WorkspaceChooser.eps>
+(epstopdf)             \includegraphics on input line 64.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/WorkspaceChooser-eps-converted-to.pdf, id=34, 608.2725pt x 3
+60.34625pt>
+File: 02EjsIntro/images/WorkspaceChooser-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use 02EjsIntro/images/WorkspaceChooser-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/WorkspaceChooser-eps-converted-to.pd
+f used on input line 64.
+(pdftex.def)             Requested size: 243.30469pt x 144.13594pt.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <8> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 70.
+
+[5 <./02EjsIntro/images/EjsConsole1-eps-converted-to.pdf>]
+
+LaTeX Warning: Reference `appendix:Distribution' on page 6 undefined on input l
+ine 81.
+
+
+Underfull \vbox (badness 1769) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 81.
+LaTeX Info: Redefining \% on input line 81.
+ [6 <./02EjsIntro/images/WorkspaceChooser-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/EjsInterface.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 2153826 bytes
+(epstopdf)             Output file: <02EjsIntro/images/EjsInterface-eps-convert
+ed-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:02
+(epstopdf)                    size: 32780 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/EjsInter
+face-eps-converted-to.pdf 02EjsIntro/images/EjsInterface.eps>
+(epstopdf)             \includegraphics on input line 89.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/EjsInterface-eps-converted-to.pdf, id=57, 602.25pt x 600.242
+5pt>
+File: 02EjsIntro/images/EjsInterface-eps-converted-to.pdf Graphic file (type pd
+f)
+ <use 02EjsIntro/images/EjsInterface-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/EjsInterface-eps-converted-to.pdf us
+ed on input line 89.
+(pdftex.def)             Requested size: 240.89572pt x 240.09274pt.
+ [7 <./02EjsIntro/images/EjsInterface-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/OpenDialog.eps>
+(epstopdf)                    date: 2016-02-16 18:30:46
+(epstopdf)                    size: 1170410 bytes
+(epstopdf)             Output file: <02EjsIntro/images/OpenDialog-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:02
+(epstopdf)                    size: 13915 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/OpenDial
+og-eps-converted-to.pdf 02EjsIntro/images/OpenDialog.eps>
+(epstopdf)             \includegraphics on input line 106.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/OpenDialog-eps-converted-to.pdf, id=65, 545.03625pt x 360.34
+625pt>
+File: 02EjsIntro/images/OpenDialog-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use 02EjsIntro/images/OpenDialog-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/OpenDialog-eps-converted-to.pdf used
+ on input line 106.
+(pdftex.def)             Requested size: 218.01064pt x 144.13594pt.
+Package epstopdf Info: Source file: <images/openSmall.eps>
+(epstopdf)                    date: 2016-02-16 18:30:46
+(epstopdf)                    size: 1684 bytes
+(epstopdf)             Output file: <images/openSmall-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:02
+(epstopdf)                    size: 2981 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/openSmall-eps-conve
+rted-to.pdf images/openSmall.eps>
+(epstopdf)             \includegraphics on input line 111.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/openSmall-eps-converted-to.pdf, id=66, 16.06pt x 13.04875pt>
+File: images/openSmall-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/openSmall-eps-converted-to.pdf>
+Package pdftex.def Info: images/openSmall-eps-converted-to.pdf used on input li
+ne 111.
+(pdftex.def)             Requested size: 9.63606pt x 7.8293pt.
+LaTeX Info: Redefining \. on input line 112.
+LaTeX Info: Redefining \% on input line 112.
+ [8 <./02EjsIntro/images/OpenDialog-eps-converted-to.pdf> <./images/openSmall-e
+ps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/SpringInterface1.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 759099 bytes
+(epstopdf)             Output file: <02EjsIntro/images/SpringInterface1-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:03
+(epstopdf)                    size: 9349 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/SpringIn
+terface1-eps-converted-to.pdf 02EjsIntro/images/SpringInterface1.eps>
+(epstopdf)             \includegraphics on input line 118.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/SpringInterface1-eps-converted-to.pdf, id=76, 384.43625pt x 
+331.2375pt>
+File: 02EjsIntro/images/SpringInterface1-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use 02EjsIntro/images/SpringInterface1-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/SpringInterface1-eps-converted-to.pd
+f used on input line 118.
+(pdftex.def)             Requested size: 153.77177pt x 132.49265pt.
+Package epstopdf Info: Source file: <02EjsIntro/images/SpringInterface2.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 763059 bytes
+(epstopdf)             Output file: <02EjsIntro/images/SpringInterface2-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:03
+(epstopdf)                    size: 8531 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/SpringIn
+terface2-eps-converted-to.pdf 02EjsIntro/images/SpringInterface2.eps>
+(epstopdf)             \includegraphics on input line 119.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/SpringInterface2-eps-converted-to.pdf, id=77, 386.44376pt x 
+331.2375pt>
+File: 02EjsIntro/images/SpringInterface2-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use 02EjsIntro/images/SpringInterface2-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/SpringInterface2-eps-converted-to.pd
+f used on input line 119.
+(pdftex.def)             Requested size: 154.57475pt x 132.49265pt.
+Package epstopdf Info: Source file: <images/launch.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 1298 bytes
+(epstopdf)             Output file: <images/launch-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:03
+(epstopdf)                    size: 2579 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/launch-eps-converte
+d-to.pdf images/launch.eps>
+(epstopdf)             \includegraphics on input line 124.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/launch-eps-converted-to.pdf, id=78, 12.045pt x 12.045pt>
+File: images/launch-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/launch-eps-converted-to.pdf>
+Package pdftex.def Info: images/launch-eps-converted-to.pdf used on input line 
+124.
+(pdftex.def)             Requested size: 7.22704pt x 7.22704pt.
+Package epstopdf Info: Source file: <images/launchRed.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 1371 bytes
+(epstopdf)             Output file: <images/launchRed-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:04
+(epstopdf)                    size: 2610 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/launchRed-eps-conve
+rted-to.pdf images/launchRed.eps>
+(epstopdf)             \includegraphics on input line 124.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/launchRed-eps-converted-to.pdf, id=79, 13.04875pt x 12.045pt>
+File: images/launchRed-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/launchRed-eps-converted-to.pdf>
+Package pdftex.def Info: images/launchRed-eps-converted-to.pdf used on input li
+ne 124.
+(pdftex.def)             Requested size: 7.8293pt x 7.22704pt.
+Package epstopdf Info: Source file: <02EjsIntro/images/SpringDesc.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 1606475 bytes
+(epstopdf)             Output file: <02EjsIntro/images/SpringDesc-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:04
+(epstopdf)                    size: 186372 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/SpringDe
+sc-eps-converted-to.pdf 02EjsIntro/images/SpringDesc.eps>
+(epstopdf)             \includegraphics on input line 132.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/SpringDesc-eps-converted-to.pdf, id=80, 602.25pt x 447.6725p
+t>
+File: 02EjsIntro/images/SpringDesc-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use 02EjsIntro/images/SpringDesc-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/SpringDesc-eps-converted-to.pdf used
+ on input line 132.
+(pdftex.def)             Requested size: 240.89572pt x 179.06583pt.
+
+
+LaTeX Warning: Reference `appendix:Distribution' on page 9 undefined on input l
+ine 137.
+
+[9 <./02EjsIntro/images/SpringInterface1-eps-converted-to.pdf> <./02EjsIntro/im
+ages/SpringInterface2-eps-converted-to.pdf> <./images/launch-eps-converted-to.p
+df> <./images/launchRed-eps-converted-to.pdf>]
+LaTeX Info: Redefining \. on input line 144.
+LaTeX Info: Redefining \% on input line 144.
+ [10 <./02EjsIntro/images/SpringDesc-eps-converted-to.pdf>]
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/it' in size <11> not available
+(Font)              Font shape `OT1/cmss/m/sl' tried instead on input line 152.
+
+
+Package epstopdf Info: Source file: <02EjsIntro/images/ModelVariables.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 1606475 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModelVariables-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:04
+(epstopdf)                    size: 21934 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModelVar
+iables-eps-converted-to.pdf 02EjsIntro/images/ModelVariables.eps>
+(epstopdf)             \includegraphics on input line 155.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModelVariables-eps-converted-to.pdf, id=101, 602.25pt x 447.
+6725pt>
+File: 02EjsIntro/images/ModelVariables-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use 02EjsIntro/images/ModelVariables-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModelVariables-eps-converted-to.pdf 
+used on input line 155.
+(pdftex.def)             Requested size: 240.89572pt x 179.06583pt.
+ [11 <./02EjsIntro/images/ModelVariables-eps-converted-to.pdf>]
+Overfull \vbox (1.16896pt too high) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 168.
+LaTeX Info: Redefining \% on input line 168.
+
+[12]
+Package epstopdf Info: Source file: <02EjsIntro/images/ModelEvolution.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 1606475 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModelEvolution-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:05
+(epstopdf)                    size: 25790 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModelEvo
+lution-eps-converted-to.pdf 02EjsIntro/images/ModelEvolution.eps>
+(epstopdf)             \includegraphics on input line 185.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModelEvolution-eps-converted-to.pdf, id=114, 602.25pt x 447.
+6725pt>
+File: 02EjsIntro/images/ModelEvolution-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use 02EjsIntro/images/ModelEvolution-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModelEvolution-eps-converted-to.pdf 
+used on input line 185.
+(pdftex.def)             Requested size: 240.89572pt x 179.06583pt.
+
+
+LaTeX Warning: Reference `chapter:Events' on page 13 undefined on input line 19
+1.
+
+[13]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+LaTeX Info: Redefining \. on input line 196.
+LaTeX Info: Redefining \% on input line 196.
+ [14 <./02EjsIntro/images/ModelEvolution-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/ModelConstraints.eps>
+(epstopdf)                    date: 2016-02-16 18:30:45
+(epstopdf)                    size: 1613677 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModelConstraints-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:05
+(epstopdf)                    size: 17765 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModelCon
+straints-eps-converted-to.pdf 02EjsIntro/images/ModelConstraints.eps>
+(epstopdf)             \includegraphics on input line 212.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModelConstraints-eps-converted-to.pdf, id=124, 602.25pt x 44
+9.68pt>
+File: 02EjsIntro/images/ModelConstraints-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use 02EjsIntro/images/ModelConstraints-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModelConstraints-eps-converted-to.pd
+f used on input line 212.
+(pdftex.def)             Requested size: 240.89572pt x 179.8688pt.
+ [15]
+LaTeX Info: Redefining \. on input line 231.
+LaTeX Info: Redefining \% on input line 231.
+
+[16 <./02EjsIntro/images/ModelConstraints-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/View.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 1613677 bytes
+(epstopdf)             Output file: <02EjsIntro/images/View-eps-converted-to.pd
+f>
+(epstopdf)                    date: 2016-11-09 22:36:05
+(epstopdf)                    size: 30111 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/View-eps
+-converted-to.pdf 02EjsIntro/images/View.eps>
+(epstopdf)             \includegraphics on input line 234.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/View-eps-converted-to.pdf, id=134, 602.25pt x 449.68pt>
+File: 02EjsIntro/images/View-eps-converted-to.pdf Graphic file (type pdf)
+
+<use 02EjsIntro/images/View-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/View-eps-converted-to.pdf used on in
+put line 234.
+(pdftex.def)             Requested size: 240.89572pt x 179.8688pt.
+ [17 <./02EjsIntro/images/View-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/SpringBallProperties.eps
+>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 1433656 bytes
+(epstopdf)             Output file: <02EjsIntro/images/SpringBallProperties-eps
+-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:06
+(epstopdf)                    size: 30663 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/SpringBa
+llProperties-eps-converted-to.pdf 02EjsIntro/images/SpringBallProperties.eps>
+(epstopdf)             \includegraphics on input line 246.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/SpringBallProperties-eps-converted-to.pdf, id=142, 765.86125
+pt x 314.17375pt>
+File: 02EjsIntro/images/SpringBallProperties-eps-converted-to.pdf Graphic file 
+(type pdf)
+
+<use 02EjsIntro/images/SpringBallProperties-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/SpringBallProperties-eps-converted-t
+o.pdf used on input line 246.
+(pdftex.def)             Requested size: 306.33907pt x 125.66727pt.
+LaTeX Info: Redefining \. on input line 256.
+LaTeX Info: Redefining \% on input line 256.
+ [18 <./02EjsIntro/images/SpringBallProperties-eps-converted-to.pdf>]
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <7.69997> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 268.
+LaTeX Font Info:    Font shape `U/lasy/b/n' in size <5.5> not available
+(Font)              Font shape `U/lasy/m/n' tried instead on input line 268.
+
+
+LaTeX Font Warning: Font shape `U/lasy/m/n' in size <5.5> not available
+(Font)              size <5> substituted on input line 268.
+
+[19]
+Package epstopdf Info: Source file: <images/launch.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 1298 bytes
+(epstopdf)             Output file: <images/launch-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:03
+(epstopdf)                    size: 2579 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/launch-eps-converte
+d-to.pdf images/launch.eps>
+(epstopdf)             \includegraphics on input line 281.
+Package epstopdf Info: Output file is already uptodate.
+File: images/launch-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/launch-eps-converted-to.pdf>
+Package pdftex.def Info: images/launch-eps-converted-to.pdf used on input line 
+281.
+(pdftex.def)             Requested size: 7.22704pt x 7.22704pt.
+Package epstopdf Info: Source file: <images/OSPicons/play.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 979 bytes
+(epstopdf)             Output file: <images/OSPicons/play-eps-converted-to.pdf>
+
+(epstopdf)                    date: 2016-11-09 22:36:06
+(epstopdf)                    size: 2583 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/OSPicons/play-eps-c
+onverted-to.pdf images/OSPicons/play.eps>
+(epstopdf)             \includegraphics on input line 283.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/OSPicons/play-eps-converted-to.pdf, id=153, 7.02625pt x 13.04875pt>
+File: images/OSPicons/play-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/OSPicons/play-eps-converted-to.pdf>
+Package pdftex.def Info: images/OSPicons/play-eps-converted-to.pdf used on inpu
+t line 283.
+(pdftex.def)             Requested size: 4.21576pt x 7.8293pt.
+Package epstopdf Info: Source file: <images/OSPicons/pause.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 1092 bytes
+(epstopdf)             Output file: <images/OSPicons/pause-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2016-11-09 22:36:06
+(epstopdf)                    size: 2569 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/OSPicons/pause-eps-
+converted-to.pdf images/OSPicons/pause.eps>
+(epstopdf)             \includegraphics on input line 283.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/OSPicons/pause-eps-converted-to.pdf, id=154, 10.0375pt x 11.04124pt>
+File: images/OSPicons/pause-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/OSPicons/pause-eps-converted-to.pdf>
+Package pdftex.def Info: images/OSPicons/pause-eps-converted-to.pdf used on inp
+ut line 283.
+(pdftex.def)             Requested size: 6.02254pt x 6.62479pt.
+
+Overfull \hbox (1.46822pt too wide) in paragraph at lines 287--288
+\OT1/cmr/m/n/10.95 lec-cio-ne \OT1/cmtt/m/n/10.95 Opciones de los elementos->pa
+nelConEjes->Herramientas de
+ []
+
+Package epstopdf Info: Source file: <02EjsIntro/images/SpringRunning1.eps>
+(epstopdf)                    date: 2016-02-16 18:30:45
+(epstopdf)                    size: 759106 bytes
+(epstopdf)             Output file: <02EjsIntro/images/SpringRunning1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:07
+(epstopdf)                    size: 10100 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/SpringRu
+nning1-eps-converted-to.pdf 02EjsIntro/images/SpringRunning1.eps>
+(epstopdf)             \includegraphics on input line 291.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/SpringRunning1-eps-converted-to.pdf, id=155, 384.43625pt x 3
+31.2375pt>
+File: 02EjsIntro/images/SpringRunning1-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use 02EjsIntro/images/SpringRunning1-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/SpringRunning1-eps-converted-to.pdf 
+used on input line 291.
+(pdftex.def)             Requested size: 153.77177pt x 132.49265pt.
+Package epstopdf Info: Source file: <02EjsIntro/images/SpringRunning2.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 605909 bytes
+(epstopdf)             Output file: <02EjsIntro/images/SpringRunning2-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:07
+(epstopdf)                    size: 9554 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/SpringRu
+nning2-eps-converted-to.pdf 02EjsIntro/images/SpringRunning2.eps>
+(epstopdf)             \includegraphics on input line 292.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/SpringRunning2-eps-converted-to.pdf, id=156, 386.44376pt x 2
+62.9825pt>
+File: 02EjsIntro/images/SpringRunning2-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use 02EjsIntro/images/SpringRunning2-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/SpringRunning2-eps-converted-to.pdf 
+used on input line 292.
+(pdftex.def)             Requested size: 154.57475pt x 105.19113pt.
+Package epstopdf Info: Source file: <images/package.eps>
+(epstopdf)                    date: 2016-02-16 18:30:46
+(epstopdf)                    size: 963 bytes
+(epstopdf)             Output file: <images/package-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:07
+(epstopdf)                    size: 2677 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/package-eps-convert
+ed-to.pdf images/package.eps>
+(epstopdf)             \includegraphics on input line 302.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/package-eps-converted-to.pdf, id=157, 18.0675pt x 18.0675pt>
+File: images/package-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/package-eps-converted-to.pdf>
+Package pdftex.def Info: images/package-eps-converted-to.pdf used on input line
+ 302.
+(pdftex.def)             Requested size: 10.84058pt x 10.84058pt.
+
+
+LaTeX Warning: Reference `appendix:Distribution' on page 20 undefined on input 
+line 302.
+
+LaTeX Info: Redefining \. on input line 303.
+LaTeX Info: Redefining \% on input line 303.
+[20 <./images/OSPicons/play-eps-converted-to.pdf> <./images/OSPicons/pause-eps-
+converted-to.pdf>] [21 <./02EjsIntro/images/SpringRunning1-eps-converted-to.pdf
+> <./02EjsIntro/images/SpringRunning2-eps-converted-to.pdf> <./images/package-e
+ps-converted-to.pdf>]
+LaTeX Info: Redefining \. on input line 337.
+LaTeX Info: Redefining \% on input line 337.
+ [22]
+Package epstopdf Info: Source file: <02EjsIntro/images/ModifyVariables1.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 1613677 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModifyVariables1-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:08
+(epstopdf)                    size: 25699 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModifyVa
+riables1-eps-converted-to.pdf 02EjsIntro/images/ModifyVariables1.eps>
+(epstopdf)             \includegraphics on input line 340.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModifyVariables1-eps-converted-to.pdf, id=179, 602.25pt x 44
+9.68pt>
+File: 02EjsIntro/images/ModifyVariables1-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use 02EjsIntro/images/ModifyVariables1-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModifyVariables1-eps-converted-to.pd
+f used on input line 340.
+(pdftex.def)             Requested size: 240.89572pt x 179.8688pt.
+ [23 <./02EjsIntro/images/ModifyVariables1-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/ModifyVariables2.eps>
+(epstopdf)                    date: 2016-02-16 18:30:46
+(epstopdf)                    size: 1613677 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModifyVariables2-eps-con
+verted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:08
+(epstopdf)                    size: 21942 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModifyVa
+riables2-eps-converted-to.pdf 02EjsIntro/images/ModifyVariables2.eps>
+(epstopdf)             \includegraphics on input line 351.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModifyVariables2-eps-converted-to.pdf, id=187, 602.25pt x 44
+9.68pt>
+File: 02EjsIntro/images/ModifyVariables2-eps-converted-to.pdf Graphic file (typ
+e pdf)
+ <use 02EjsIntro/images/ModifyVariables2-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModifyVariables2-eps-converted-to.pd
+f used on input line 351.
+(pdftex.def)             Requested size: 240.89572pt x 179.8688pt.
+LaTeX Info: Redefining \. on input line 370.
+LaTeX Info: Redefining \% on input line 370.
+ [24 <./02EjsIntro/images/ModifyVariables2-eps-converted-to.pdf>]
+Overfull \hbox (6.857pt too wide) in paragraph at lines 378--379
+\OT1/cmr/m/n/10.95 Teclee es-te c^^Sodi-go exac-ta-men-te co-mo se mues-tra aqu
+^^S^^P, in-clu-yen-do las may^^Suscu-
+ []
+
+
+LaTeX Warning: Reference `chapter:ODE' on page 25 undefined on input line 392.
+
+Package epstopdf Info: Source file: <images/Groups/Containers.eps>
+(epstopdf)                    date: 2016-02-16 18:30:46
+(epstopdf)                    size: 811 bytes
+(epstopdf)             Output file: <images/Groups/Containers-eps-converted-to.
+pdf>
+(epstopdf)                    date: 2016-11-09 22:36:09
+(epstopdf)                    size: 2642 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Groups/Containers-e
+ps-converted-to.pdf images/Groups/Containers.eps>
+(epstopdf)             \includegraphics on input line 398.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/Groups/Containers-eps-converted-to.pdf, id=194, 14.0525pt x 11.04124pt>
+File: images/Groups/Containers-eps-converted-to.pdf Graphic file (type pdf)
+<use images/Groups/Containers-eps-converted-to.pdf>
+Package pdftex.def Info: images/Groups/Containers-eps-converted-to.pdf used on 
+input line 398.
+(pdftex.def)             Requested size: 8.43155pt x 6.62479pt.
+Package epstopdf Info: Source file: <images/Elements/PlottingPanel.eps>
+(epstopdf)                    date: 2016-02-16 18:30:46
+(epstopdf)                    size: 2836 bytes
+(epstopdf)             Output file: <images/Elements/PlottingPanel-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:09
+(epstopdf)                    size: 2743 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Elements/PlottingPa
+nel-eps-converted-to.pdf images/Elements/PlottingPanel.eps>
+(epstopdf)             \includegraphics on input line 398.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/Elements/PlottingPanel-eps-converted-to.pdf, id=195, 21.07875pt x 19.07
+124pt>
+File: images/Elements/PlottingPanel-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use images/Elements/PlottingPanel-eps-converted-to.pdf>
+Package pdftex.def Info: images/Elements/PlottingPanel-eps-converted-to.pdf use
+d on input line 398.
+(pdftex.def)             Requested size: 12.64732pt x 11.44283pt.
+Package epstopdf Info: Source file: <images/create.eps>
+(epstopdf)                    date: 2016-02-16 18:30:46
+(epstopdf)                    size: 916 bytes
+(epstopdf)             Output file: <images/create-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:09
+(epstopdf)                    size: 2672 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/create-eps-converte
+d-to.pdf images/create.eps>
+(epstopdf)             \includegraphics on input line 398.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/create-eps-converted-to.pdf, id=196, 17.06375pt x 17.06375pt>
+File: images/create-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/create-eps-converted-to.pdf>
+Package pdftex.def Info: images/create-eps-converted-to.pdf used on input line 
+398.
+(pdftex.def)             Requested size: 10.23831pt x 10.23831pt.
+ [25]
+Package epstopdf Info: Source file: <02EjsIntro/images/ModifyViewAddPlottingPan
+el.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 1613677 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModifyViewAddPlottingPan
+el-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:10
+(epstopdf)                    size: 31026 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModifyVi
+ewAddPlottingPanel-eps-converted-to.pdf 02EjsIntro/images/ModifyViewAddPlotting
+Panel.eps>
+(epstopdf)             \includegraphics on input line 404.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModifyViewAddPlottingPanel-eps-converted-to.pdf, id=201, 602
+.25pt x 449.68pt>
+File: 02EjsIntro/images/ModifyViewAddPlottingPanel-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use 02EjsIntro/images/ModifyViewAddPlottingPanel-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModifyViewAddPlottingPanel-eps-conve
+rted-to.pdf used on input line 404.
+(pdftex.def)             Requested size: 240.89572pt x 179.8688pt.
+Package epstopdf Info: Source file: <images/Elements/Trail.eps>
+(epstopdf)                    date: 2016-02-16 18:30:47
+(epstopdf)                    size: 1608 bytes
+(epstopdf)             Output file: <images/Elements/Trail-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2016-11-09 22:36:10
+(epstopdf)                    size: 2627 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Elements/Trail-eps-
+converted-to.pdf images/Elements/Trail.eps>
+(epstopdf)             \includegraphics on input line 411.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/Elements/Trail-eps-converted-to.pdf, id=202, 13.04875pt x 15.05624pt>
+File: images/Elements/Trail-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/Elements/Trail-eps-converted-to.pdf>
+Package pdftex.def Info: images/Elements/Trail-eps-converted-to.pdf used on inp
+ut line 411.
+(pdftex.def)             Requested size: 7.8293pt x 9.0338pt.
+LaTeX Info: Redefining \. on input line 412.
+LaTeX Info: Redefining \% on input line 412.
+ [26 <./images/Groups/Containers-eps-converted-to.pdf> <./images/Elements/Plott
+ingPanel-eps-converted-to.pdf> <./images/create-eps-converted-to.pdf> <./02EjsI
+ntro/images/ModifyViewAddPlottingPanel-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/ModifyRunning1.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 1218899 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModifyRunning1-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:10
+(epstopdf)                    size: 9707 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModifyRu
+nning1-eps-converted-to.pdf 02EjsIntro/images/ModifyRunning1.eps>
+(epstopdf)             \includegraphics on input line 415.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModifyRunning1-eps-converted-to.pdf, id=216, 384.43625pt x 5
+31.9875pt>
+File: 02EjsIntro/images/ModifyRunning1-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use 02EjsIntro/images/ModifyRunning1-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModifyRunning1-eps-converted-to.pdf 
+used on input line 415.
+(pdftex.def)             Requested size: 153.77177pt x 212.79123pt.
+Package epstopdf Info: Source file: <02EjsIntro/images/ModifyRunning2.eps>
+(epstopdf)                    date: 2016-02-16 18:30:45
+(epstopdf)                    size: 1225259 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModifyRunning2-eps-conve
+rted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:11
+(epstopdf)                    size: 13123 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModifyRu
+nning2-eps-converted-to.pdf 02EjsIntro/images/ModifyRunning2.eps>
+(epstopdf)             \includegraphics on input line 416.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModifyRunning2-eps-converted-to.pdf, id=217, 386.44376pt x 5
+31.9875pt>
+File: 02EjsIntro/images/ModifyRunning2-eps-converted-to.pdf Graphic file (type 
+pdf)
+ <use 02EjsIntro/images/ModifyRunning2-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModifyRunning2-eps-converted-to.pdf 
+used on input line 416.
+(pdftex.def)             Requested size: 154.57475pt x 212.79123pt.
+Package epstopdf Info: Source file: <images/Elements/Panel.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 1490 bytes
+(epstopdf)             Output file: <images/Elements/Panel-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2016-11-09 22:36:11
+(epstopdf)                    size: 2538 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Elements/Panel-eps-
+converted-to.pdf images/Elements/Panel.eps>
+(epstopdf)             \includegraphics on input line 425.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/Elements/Panel-eps-converted-to.pdf, id=218, 16.06pt x 11.04124pt>
+File: images/Elements/Panel-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/Elements/Panel-eps-converted-to.pdf>
+Package pdftex.def Info: images/Elements/Panel-eps-converted-to.pdf used on inp
+ut line 425.
+(pdftex.def)             Requested size: 9.63606pt x 6.62479pt.
+Package epstopdf Info: Source file: <images/Elements/Label.eps>
+(epstopdf)                    date: 2016-02-16 18:30:45
+(epstopdf)                    size: 1587 bytes
+(epstopdf)             Output file: <images/Elements/Label-eps-converted-to.pdf
+>
+(epstopdf)                    date: 2016-11-09 22:36:11
+(epstopdf)                    size: 2624 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Elements/Label-eps-
+converted-to.pdf images/Elements/Label.eps>
+(epstopdf)             \includegraphics on input line 426.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/Elements/Label-eps-converted-to.pdf, id=219, 16.06pt x 12.045pt>
+File: images/Elements/Label-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/Elements/Label-eps-converted-to.pdf>
+Package pdftex.def Info: images/Elements/Label-eps-converted-to.pdf used on inp
+ut line 426.
+(pdftex.def)             Requested size: 9.63606pt x 7.22704pt.
+Package epstopdf Info: Source file: <images/Elements/ParsedField.eps>
+(epstopdf)                    date: 2016-02-16 18:30:46
+(epstopdf)                    size: 1865 bytes
+(epstopdf)             Output file: <images/Elements/ParsedField-eps-converted-
+to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:11
+(epstopdf)                    size: 2616 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/Elements/ParsedFiel
+d-eps-converted-to.pdf images/Elements/ParsedField.eps>
+(epstopdf)             \includegraphics on input line 427.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/Elements/ParsedField-eps-converted-to.pdf, id=220, 17.06375pt x 14.0525
+pt>
+File: images/Elements/ParsedField-eps-converted-to.pdf Graphic file (type pdf)
+ <use images/Elements/ParsedField-eps-converted-to.pdf>
+Package pdftex.def Info: images/Elements/ParsedField-eps-converted-to.pdf used 
+on input line 427.
+(pdftex.def)             Requested size: 10.23831pt x 8.43155pt.
+Package epstopdf Info: Source file: <images/link.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 877 bytes
+(epstopdf)             Output file: <images/link-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:12
+(epstopdf)                    size: 2642 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/link-eps-converted-
+to.pdf images/link.eps>
+(epstopdf)             \includegraphics on input line 427.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/link-eps-converted-to.pdf, id=221, 19.07124pt x 14.0525pt>
+File: images/link-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/link-eps-converted-to.pdf>
+Package pdftex.def Info: images/link-eps-converted-to.pdf used on input line 42
+7.
+(pdftex.def)             Requested size: 11.44283pt x 8.43155pt.
+ [27 <./images/Elements/Trail-eps-converted-to.pdf> <./02EjsIntro/images/Modify
+Running1-eps-converted-to.pdf> <./02EjsIntro/images/ModifyRunning2-eps-converte
+d-to.pdf> <./images/Elements/Panel-eps-converted-to.pdf> <./images/Elements/Lab
+el-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/ModifyField.eps>
+(epstopdf)                    date: 2016-02-16 18:30:46
+(epstopdf)                    size: 747252 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModifyField-eps-converte
+d-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:12
+(epstopdf)                    size: 15429 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModifyFi
+eld-eps-converted-to.pdf 02EjsIntro/images/ModifyField.eps>
+(epstopdf)             \includegraphics on input line 433.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModifyField-eps-converted-to.pdf, id=237, 682.55pt x 183.686
+25pt>
+File: 02EjsIntro/images/ModifyField-eps-converted-to.pdf Graphic file (type pdf
+)
+ <use 02EjsIntro/images/ModifyField-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModifyField-eps-converted-to.pdf use
+d on input line 433.
+(pdftex.def)             Requested size: 273.01517pt x 73.47318pt.
+Package epstopdf Info: Source file: <02EjsIntro/images/SourceHK.eps>
+(epstopdf)                    date: 2016-02-16 18:30:45
+(epstopdf)                    size: 1745 bytes
+(epstopdf)             Output file: <02EjsIntro/images/SourceHK-eps-converted-t
+o.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:12
+(epstopdf)                    size: 2838 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/SourceHK
+-eps-converted-to.pdf 02EjsIntro/images/SourceHK.eps>
+(epstopdf)             \includegraphics on input line 442.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/SourceHK-eps-converted-to.pdf, id=238, 17.06375pt x 12.045pt
+>
+File: 02EjsIntro/images/SourceHK-eps-converted-to.pdf Graphic file (type pdf)
+ <use 02EjsIntro/images/SourceHK-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/SourceHK-eps-converted-to.pdf used o
+n input line 442.
+(pdftex.def)             Requested size: 10.23831pt x 7.22704pt.
+Package epstopdf Info: Source file: <02EjsIntro/images/ModifyHTML.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 1613677 bytes
+(epstopdf)             Output file: <02EjsIntro/images/ModifyHTML-eps-converted
+-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:13
+(epstopdf)                    size: 194048 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/ModifyHT
+ML-eps-converted-to.pdf 02EjsIntro/images/ModifyHTML.eps>
+(epstopdf)             \includegraphics on input line 446.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/ModifyHTML-eps-converted-to.pdf, id=239, 602.25pt x 449.68pt
+>
+File: 02EjsIntro/images/ModifyHTML-eps-converted-to.pdf Graphic file (type pdf)
+
+ <use 02EjsIntro/images/ModifyHTML-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/ModifyHTML-eps-converted-to.pdf used
+ on input line 446.
+(pdftex.def)             Requested size: 240.89572pt x 179.8688pt.
+Package epstopdf Info: Source file: <images/saveAsSmall.eps>
+(epstopdf)                    date: 2016-02-16 18:30:44
+(epstopdf)                    size: 1878 bytes
+(epstopdf)             Output file: <images/saveAsSmall-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:13
+(epstopdf)                    size: 3169 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/saveAsSmall-eps-con
+verted-to.pdf images/saveAsSmall.eps>
+(epstopdf)             \includegraphics on input line 451.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/saveAsSmall-eps-converted-to.pdf, id=240, 16.06pt x 15.05624pt>
+File: images/saveAsSmall-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/saveAsSmall-eps-converted-to.pdf>
+Package pdftex.def Info: images/saveAsSmall-eps-converted-to.pdf used on input 
+line 451.
+(pdftex.def)             Requested size: 9.63606pt x 9.0338pt.
+LaTeX Info: Redefining \. on input line 455.
+LaTeX Info: Redefining \% on input line 455.
+ [28 <./images/Elements/ParsedField-eps-converted-to.pdf> <./images/link-eps-co
+nverted-to.pdf> <./02EjsIntro/images/ModifyField-eps-converted-to.pdf> <./02Ejs
+Intro/images/SourceHK-eps-converted-to.pdf> <./images/saveAsSmall-eps-converted
+-to.pdf>]
+Package epstopdf Info: Source file: <images/netOpen.eps>
+(epstopdf)                    date: 2016-02-16 18:30:43
+(epstopdf)                    size: 2963 bytes
+(epstopdf)             Output file: <images/netOpen-eps-converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:13
+(epstopdf)                    size: 3058 bytes
+(epstopdf)             Command: <repstopdf --outfile=images/netOpen-eps-convert
+ed-to.pdf images/netOpen.eps>
+(epstopdf)             \includegraphics on input line 463.
+Package epstopdf Info: Output file is already uptodate.
+
+<images/netOpen-eps-converted-to.pdf, id=255, 21.07875pt x 20.075pt>
+File: images/netOpen-eps-converted-to.pdf Graphic file (type pdf)
+
+<use images/netOpen-eps-converted-to.pdf>
+Package pdftex.def Info: images/netOpen-eps-converted-to.pdf used on input line
+ 463.
+(pdftex.def)             Requested size: 12.64732pt x 12.04507pt.
+ [29 <./02EjsIntro/images/ModifyHTML-eps-converted-to.pdf> <./images/netOpen-ep
+s-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/EJSDigitalLibraries.eps>
+
+(epstopdf)                    date: 2016-02-16 18:30:47
+(epstopdf)                    size: 2302019 bytes
+(epstopdf)             Output file: <02EjsIntro/images/EJSDigitalLibraries-eps-
+converted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:14
+(epstopdf)                    size: 168262 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/EJSDigit
+alLibraries-eps-converted-to.pdf 02EjsIntro/images/EJSDigitalLibraries.eps>
+(epstopdf)             \includegraphics on input line 467.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/EJSDigitalLibraries-eps-converted-to.pdf, id=265, 819.06pt x
+ 471.7625pt>
+File: 02EjsIntro/images/EJSDigitalLibraries-eps-converted-to.pdf Graphic file (
+type pdf)
+ <use 02EjsIntro/images/EJSDigitalLibraries-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/EJSDigitalLibraries-eps-converted-to
+.pdf used on input line 467.
+(pdftex.def)             Requested size: 327.6182pt x 188.70164pt.
+LaTeX Info: Redefining \. on input line 475.
+LaTeX Info: Redefining \% on input line 475.
+
+[30 <./02EjsIntro/images/EJSDigitalLibraries-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <02EjsIntro/images/OSPCollection.eps>
+(epstopdf)                    date: 2016-02-16 18:30:45
+(epstopdf)                    size: 3153585 bytes
+(epstopdf)             Output file: <02EjsIntro/images/OSPCollection-eps-conver
+ted-to.pdf>
+(epstopdf)                    date: 2016-11-09 22:36:14
+(epstopdf)                    size: 384140 bytes
+(epstopdf)             Command: <repstopdf --outfile=02EjsIntro/images/OSPColle
+ction-eps-converted-to.pdf 02EjsIntro/images/OSPCollection.eps>
+(epstopdf)             \includegraphics on input line 478.
+Package epstopdf Info: Output file is already uptodate.
+
+<02EjsIntro/images/OSPCollection-eps-converted-to.pdf, id=272, 837.1275pt x 632
+.3625pt>
+File: 02EjsIntro/images/OSPCollection-eps-converted-to.pdf Graphic file (type p
+df)
+ <use 02EjsIntro/images/OSPCollection-eps-converted-to.pdf>
+Package pdftex.def Info: 02EjsIntro/images/OSPCollection-eps-converted-to.pdf u
+sed on input line 478.
+(pdftex.def)             Requested size: 334.84506pt x 252.94052pt.
+ [31 <./02EjsIntro/images/OSPCollection-eps-converted-to.pdf>]
+LaTeX Info: Redefining \. on input line 514.
+LaTeX Info: Redefining \% on input line 514.
+ [32]) [33] [34
+
+
+
+
+
+
+
+
+] [35]
+[36] (./Modeling-Science.bbl
+
+LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 1.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 1.
+
+
+LaTeX Font Warning: Font shape `OT1/cmss/bx/n' in size <16> not available
+(Font)              size <17.28> substituted on input line 1.
+
+
+LaTeX Warning: Empty `thebibliography' environment on input line 3.
+
+) [37
+
+
+
+
+
+
+
+
+
+
+
+
+] (./Modeling-Science.aux
+LaTeX Info: Redefining \. on input line 6.
+LaTeX Info: Redefining \% on input line 6.
+
+No file 01Modeling/mainModeling.aux.
+(./02EjsIntro/mainEjsIntro.aux)
+No file Basics/mainBasics.aux.
+No file Drawing/mainDrawing.aux.
+No file 04ODE/mainODE.aux.
+No file 03Explicit/mainExplicit.aux.
+No file 05Events/mainEvents.aux.
+No file 06Systems/mainSystems.aux.
+No file 06Oscillation/mainOscillation.aux.
+No file 07Chaos/mainChaos.aux.
+No file 08Orbits/mainOrbits.aux.
+No file 09Geometry/mainGeometry.aux.
+No file 10PDE/mainPDE.aux.
+No file 12Self/mainSelf.aux.
+No file 13Biology/mainBiology.aux.
+No file 14Social/mainSocial.aux.
+No file appendixA/mainDistribution.aux.
+No file appendixB/mainJava.aux.
+)
+
+LaTeX Font Warning: Size substitutions with differences
+(Font)              up to 1.28pt have occurred.
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 6480 strings out of 493089
+ 99945 string characters out of 6134841
+ 185894 words of memory out of 5000000
+ 9755 multiletter control sequences out of 15000+600000
+ 21534 words of font info for 78 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 38i,11n,40p,1470b,470s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><
+/usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx9.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></
+usr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></u
+sr/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></us
+r/local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/lo
+cal/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/loca
+l/texlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/local/t
+exlive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texl
+ive/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive
+/2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl10.pfb></usr/local/texlive/
+2015/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl9.pfb></usr/local/texlive/20
+15/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/local/texlive/201
+5/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/local/texlive/2015
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmss17.pfb></usr/local/texlive/2015/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmssi12.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmssi17.pfb></usr/local/texlive/2015/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2015/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2015/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmti9.pfb></usr/local/texlive/2015/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmtt9.pfb></usr/local/texlive/2015/texmf-dist/
+fonts/type1/public/amsfonts/latxfont/lasyb10.pfb>
+Output written on Modeling-Science.pdf (39 pages, 1681435 bytes).
+PDF statistics:
+ 396 PDF objects out of 1000 (max. 8388607)
+ 259 compressed objects within 3 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 201 words of extra memory for PDF output out of 10000 (max. 10000000)
+

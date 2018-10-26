@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="hardware1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ejs/distribution/bin/javascript/model_elements/Hardware/hardware.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
