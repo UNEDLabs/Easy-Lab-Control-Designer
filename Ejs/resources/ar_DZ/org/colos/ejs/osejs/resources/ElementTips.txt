@@ -1,0 +1,729 @@
+# --- The first section lists the icons for each view element
+# --- Typically, you won't need to change them. 
+# --- Please, delete every line that you don't change.
+
+Alignment3D.Icon = Alignment3D.gif
+AnalyticCurve.Icon = AnalyticCurve.gif
+AnalyticCurve2D.Icon = AnalyticCurve2D.gif
+AnalyticCurve3D.Icon = AnalyticCurve2D.gif
+AnalyticSurface.Icon = AnalyticSurface.gif
+AnalyticSurface3D.Icon = AnalyticSurface.gif
+AnalyticScalarField2D.Icon = AnalyticScalarField.gif
+AnalyticVectorField2D.Icon = AnalyticVectorField.gif
+AnalyticVectorField3D.Icon = AnalyticVectorField.gif
+ArrayPanel.Icon = ArrayPanel.gif
+Arrow.Icon = Arrow.gif
+Arrow2D.Icon = ArrowNew.gif
+Arrow3D.Icon = ArrowNew.gif
+ArrowSet.Icon = ArrowSet.gif
+ArrowSet2D.Icon = ArrowSetNew.gif
+ArrowSet3D.Icon = ArrowSetNew.gif
+ARSystem3D.Icon = ARSystem.png
+ARLocalSystem3D.Icon = ARLocalSystem.png
+
+Bar.Icon = Bar.gif
+BasicWebCam = CamImage.gif
+Box3D.Icon = Box.gif
+BoxSet3D.Icon = BoxSet.gif
+Button.Icon = Button.gif
+ByteImage.Icon = ByteRaster.gif
+ByteRaster.Icon = ByteRaster.gif
+
+CamImage.Icon = CamImage.gif
+Canvas.Icon = Canvas.png
+CellLattice.Icon = CellLattice.gif
+CheckerField.Icon = GridPlot.gif
+CheckBox.Icon = CheckBox.gif
+CheckBoxMenuItem.Icon = CheckBoxMenuItem.gif
+Circle3D.Icon = Shape.gif
+CircleSet3D.Icon = ShapeSet.gif
+ComboBox.Icon = ComboBox.gif
+ComplexDataset.Icon = ComplexDataset.gif
+ComplexScalarField2D.Icon = ComplexScalarField.gif
+Compound.DrawingFrame.Icon = DrawingFrame.gif
+Compound.DrawingFrame3D.Icon = DrawingFrame3D.gif
+Compound.PlottingFrame.Icon = PlottingFrame.gif
+Cone.Icon = Cone.gif
+Cone3D.Icon = Cone.gif
+ConeSet3D.Icon = ConeSet.gif
+Contour.Icon = ContourPlot.gif
+Cube.Icon = Box.gif
+Cursor.Icon = Cursor.gif
+Cylinder.Icon = Cylinder.gif
+Cylinder3D.Icon = Cylinder.gif
+CylinderSet3D.Icon = CylinderSet.gif
+
+DataTable.Icon = DataTable.gif
+DataRaster.Icon = DataRaster.gif
+Dialog.Icon = Dialog.gif
+Disk3D.Icon = Disk3D.gif
+Display3DPanel.Icon = Display3DPanel.gif
+DrawingPanel.Icon = DrawingPanel.gif
+DrawingPanel3D.Icon = DrawingPanel3D.gif
+
+Ellipsoid3D.Icon = Ellipsoid.gif
+EllipsoidSet3D.Icon = EllipsoidSet.gif
+Equation.Icon = Equation.gif
+
+Field.Icon = NumberField.gif
+Frame.Icon = Frame.gif
+Function.Icon = Function.gif
+
+Group2D.Icon = Group3D.gif
+Group3D.Icon = Group3D.gif
+
+Histogram.Icon = Histogram.gif
+HtmlArea.Icon = HtmlArea.png
+
+Image.Icon = Image.gif
+Image2D.Icon = ImageNew.gif
+Image3D.Icon = ImageNew.gif
+ImageDP2D3D.Icon = DrawingPanel.gif
+ImageSet.Icon = ImageSet.gif
+ImageSet2D.Icon = ImageSetNew.gif
+ImageSet3D.Icon = ImageSetNew.gif
+InterpolatedPlot.Icon = InterpolatedPlot.gif
+
+Knob.Icon = Knob.gif
+
+Label.Icon = Label.gif
+Lattice.Icon = BinaryLattice.gif
+Light3D.Icon = Light3D.gif
+Line.Icon = Line.gif
+
+Matrix3D.Icon = Matrix3D.gif
+Menu.Icon = Menu.gif
+MenuBar.Icon = MenuBar.gif
+MenuItem.Icon = MenuItem.gif
+Mesh2D.Icon = Mesh2D.gif
+Mesh3D.Icon = Mesh3D.gif
+
+Object3D.Icon=Object3D.gif
+VRMLObject3D.Icon=VRMLObject3D.gif
+
+Panel.Icon = Panel.gif
+ParsedField.Icon = ParsedField.gif
+Particle.Icon = Particle.gif
+ParticleSet.Icon = ParticleSet.gif
+PasswordField.Icon = PasswordField.gif
+Pipe.Icon = Pipe.gif
+Plane.Icon = Plane.gif
+Plane3D.Icon = Plane.gif
+PlaneSet3D.Icon = PlaneSet.gif
+PlottingPanel.Icon = PlottingPanel.gif
+Points.Icon = Points.gif
+Points3D.Icon = Points.gif
+Poligon.Icon = Poligon.gif
+Polygon2D.Icon = PolygonNew.gif
+Polygon3D.Icon = PolygonNew.gif
+PolygonSet2D.Icon = PolygonSetNew.gif
+PolygonSet3D.Icon = PolygonSetNew.gif
+Pump.Icon = Pump.gif
+
+Quaternion3D.Icon = Quaternion3D.gif
+
+RadioButton.Icon = RadioButton.gif
+RadioButtonMenuItem.Icon = RadioButtonMenuItem.gif
+ResizablePanel.Icon = ResizablePanel.gif
+Rotation3D.Icon = Rotation3D.gif
+RotationX3D.Icon = RotationX3D.gif
+RotationY3D.Icon = RotationY3D.gif
+RotationZ3D.Icon = RotationZ3D.gif
+
+ScalarField2D.Icon = ScalarField.gif
+ScrollPanel.Icon = ScrollPanel.gif
+Segment2D.Icon = SegmentNew.gif
+Segment3D.Icon = SegmentNew.gif
+SegmentSet2D.Icon = SegmentSetNew.gif
+SegmentSet3D.Icon = SegmentSetNew.gif
+Separator.Icon = Separator.gif
+Shape2D.Icon = Shape.gif
+ShapeSet2D.Icon = ShapeSet.gif
+SimpleVectorField2D.Icon = VectorField.gif
+SimpleVectorField3D.Icon = VectorField.gif
+SiteLattice.Icon = SiteLattice.gif
+Slider.Icon = Slider.gif
+Sound.Icon = SoundOn.gif
+Sphere.Icon = Sphere.gif
+Sphere3D.Icon = Sphere.gif
+SphereSet3D.Icon = SphereSet.gif
+SplitPanel.Icon = SplitPanel.gif
+Spring.Icon = Spring.gif
+Spring2D.Icon = SpringNew.gif
+Spring3D.Icon = SpringNew.gif
+SpringSet.Icon = SpringSet.gif
+SpringSet2D.Icon = SpringSetNew.gif
+SpringSet3D.Icon = SpringSetNew.gif
+Surface.Icon = Surface.gif
+Surface3D.Icon = Surface.gif
+SurfacePlot.Icon = SurfacePlot.gif
+SurfaceSet3D.Icon = SurfaceSet.gif
+Symbol.Icon = Symbol.gif
+
+TabbedPanel.Icon = TabbedPanel.gif
+Tank.Icon = Tank.gif
+Tetrahedron3D.Icon = Tetrahedron.gif
+TetrahedronSet3D.Icon = TetrahedronSet.gif
+Text.Icon = Text.gif
+TextArea.Icon = TextArea.gif
+TextField.Icon = TextField.gif
+Text2D.Icon = TextNew.gif
+Text3D.Icon = TextNew.gif
+TextSet.Icon = TextSet.gif
+TextSet2D.Icon = TextSetNew.gif
+TextSet3D.Icon = TextSetNew.gif
+Tile3D.Icon = Tile3D.gif
+ToolBar.Icon = ToolBar.gif
+Trace.Icon = Trace.gif
+TraceSet.Icon = TraceSet.gif
+Trail2D.Icon = Trail.gif
+Trail3D.Icon = Trail.gif
+TrailSet2D.Icon = TrailSet.gif
+TrailSet3D.Icon = TrailSet.gif
+TriangularBinaryLattice.Icon = TriangularBinaryLattice.gif
+TriangularByteLattice.Icon = TriangularByteLattice.gif
+TwoStateButton.Icon = TwoStateButton.gif
+
+Valve.Icon = Valve.gif
+VectorField.Icon = VectorField_old.gif
+VectorField3D.Icon = VectorField_old.gif
+Video.Icon = Video.gif
+
+WebCam.Icon = WebCam.gif
+WebCam3D.Icon = WebCam.gif
+
+ZContourPlot.Icon = ZContourPlot.gif
+ZGridPlot.Icon = ZGridPlot.gif
+ZInterpolatedPlot.Icon = ZInterpolatedPlot.gif
+ZSurfacePlot.Icon = ZSurfacePlot.gif
+
+# --- Here starts the translation
+
+AnalyticCurve.Name = AnalyticCurve
+AnalyticCurve.ToolTip = åæÍæé åæÔÆ åæ åÙÇÏäÉ Ãè ÙÇÆäÉ åæ ÇäåæÍæêÇÊ äåÙÇÏäÇÊ èÓê×êÉ.
+
+AnalyticCurve3D.Name = AnalyticCurve3D
+AnalyticCurve3D.ToolTip = åæÍæé ËäÇËê ÇäÃÈÙÇÏ åæÔÆ åæ åÙÇÏäÉ Ãè ÙÇÆäÉ åæ ÇäåæÍæêÇÊ äåÙÇÏäÇÊ èÓê×êÉ.
+
+AnalyticSurface.Name = AnalyticSurface_old
+AnalyticSurface.ToolTip = åÓÇÍÉ ËäÇËêÉ ÇäÃÈÙÇÏ åæÔÆÉ åæ åÙÇÏäÉ åæÊâÏÉ.
+
+AnalyticSurface3D.Name = AnalyticSurface3D
+AnalyticSurface3D.ToolTip = åÓÇÍÉ ËäÇËêÉ ÇäÃÈÙÇÏ åæÔÆÉ åæ åÙÇÏäÉ Ãè ÙÇÆäÉ åæ ÇäåÓÇÍÇÊ äåÙÇÏäÇÊ èÓê×êÉ.
+
+Arrow.Name =Óçå
+Arrow.ToolTip =Óçå ÊáÇÙäê Ãè åâ×Ù
+
+Arrow3D.Name = Arrow3D
+Arrow3D.ToolTip = Óçå ËäÇËê ÇäÃÈÙÇÏ
+
+ArrowSet.Name = ArrowSet
+ArrowSet.ToolTip = åÌåèÙÉ ÃÔÙÉ
+
+ArrowSet3D.Name = ArrowSet3D
+ArrowSet3D.ToolTip = åÌåèÙÉ ÃÓçå ËäÇËêÉ ÇäÃÈÙÇÏ
+
+Bar.Name = Bar
+Bar.ToolTip = ÙåèÏ êÙÑÖ âêåÉ
+
+BasicWebCam.Name = BasicWebCam
+BasicWebCam.ToolTip = ÕèÑÉ ãÇåêÑÇ èêÈ ÊáÇÙäêÉ
+
+Box3D.Name = Box3D
+Box3D.ToolTip = ÙäÈÉ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+BoxSet3D.Name = BoxSet3D
+BoxSet3D.ToolTip = A set of 3D boxes
+
+Button.Name =ÒÑ
+Button.ToolTip = ÒÑ ÅÌÑÇÁ
+
+ByteRaster.Name = ByteRaster
+ByteRaster.ToolTip = ÙÑÖ ÈÈÙÏêæ äæâÇ× ÇäÈêÇæÇÊ åÙ åÄÔÑ äèæ ÈÇäÈÇêÊ
+
+CamImage.Name = CamImage_old
+CamImage.ToolTip = ÕèÑÉ ãÇåêÑÇ èêÈ ÊáÇÙäêÉ
+
+CellLattice.Name = CellLattice
+CellLattice.ToolTip = ÅØçÇÑ åÌåèÙÉ åæ èÍÏÇÊ ÇäÈÇêÊ
+
+CheckerField.Name = GridPlot_old
+CheckerField.ToolTip = åÏââ åÑÆêÇÊ äÙÏÏ Óäëåê åçåä
+
+CheckBox.Name = CheckBox
+CheckBox.ToolTip = ÎÇæÉ ÇÎÊêÇÑ äâêå åæ×âêÉ
+
+CheckBoxMenuItem.Name = CheckBoxMenuItem
+CheckBoxMenuItem.ToolTip = ÎÇæÉ ÇÎÊêÇÑ ääâèÇÆå
+
+Circle3D.Name = Particle3D
+Circle3D.ToolTip = ÌÓêåÇÊ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+CircleSet3D.Name = ParticleSet3D
+CircleSet3D.ToolTip = åÌåèÙÉ ÌÓêåÇÊ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+ComboBox.Name = ÊÍÑêÑ_ÓÑÏ
+ComboBox.ToolTip = âÇÆåÉ åæÓÏäÉ äÙÑÖ èÊÍÏêÏ ÓäÓäÉ
+
+Compound.DrawingFrame.Name = DrawingFrame
+Compound.DrawingFrame.ToolTip = Å×ÇÑ èäèÍÉ äÑÓèåÇÊ ÈÈÙÏêæ
+
+Compound.DrawingFrame3D.Name = DrawingFrame3D
+Compound.DrawingFrame3D.ToolTip = Å×ÇÑ èäèÍÉ äÑÓèåÇÊ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+Compound.PlottingFrame.Name = PlottingFrame
+Compound.PlottingFrame.ToolTip = Å×ÇÑ èäèÍÉ ääÊÎ×ê× ÈÈÙÏêæ
+
+Cone.Name = Cone_old
+Cone.ToolTip = åÎÑè× ËäÇËê ÇäÃÈÙÇÏ (åÙ âÇÙÏÉ ÈêÖÇèêÉ) åçåä
+
+Cone3D.Name = Cone3D
+Cone3D.ToolTip = åÎÑè× ËäÇËê ÇäÃÈÙÇÏ 
+
+ConeSet3D.Name = ConeSet3D
+ConeSet3D.ToolTip = åÌåèÙÉ åÎÇÑê× ËäÇËêÉ ÇäÃÈÙÇÏ 
+
+Contour.Name = ContourPlot_old
+Contour.ToolTip = ÙÑÖ ãáÇá (Î× åÍê×) äÙÏÏ Óäëåê åçåä
+
+Cube.Name = Cube_old
+Cube.ToolTip = ÙäÈÉ ËäÇËêÉ ÇäÃÈÙÇÏ åçåäÉ
+
+Cylinder.Name = Cylinder_old
+Cylinder.ToolTip = ÃÓ×èÇæÉ ËäÇËêÉ ÇäÃÈÙÇÏ (åÙ âÇÙÏÉ ÈêÖÇèêÉ) åçåä
+
+Cylinder3D.Name = Cylinder3D
+Cylinder3D.ToolTip = ÃÓ×èÇæÉ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+CylinderSet3D.Name = CylinderSet3D
+CylinderSet3D.ToolTip = åÌåèÙÉ ÃÓ×èÇæÇÊ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+DataTable.Name = DataTable
+DataTable.ToolTip = ÌÏèä ÈêÇæÇÊ
+
+DataRaster.Name = DataRaster
+DataRaster.ToolTip = ÙÑÖ æâÇ× ÇäÈêÇæÇÊ åäèæÉ ÈÈÙÏêæ
+
+Dialog.Name = Dialog
+Dialog.ToolTip = æÇáĞÉ ÍèÇÑ
+
+Display3DPanel.Name = DrawingPanel3D
+Display3DPanel.ToolTip = ÍÇèê äÙæÇÕÑ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+DrawingPanel.Name = DrawingPanel
+DrawingPanel.ToolTip = ÍÇèê äÑÓèåÇÊ ÈÈÙÏêæ
+
+DrawingPanel3D.Name = DrawingPanel3D_old
+DrawingPanel3D.ToolTip = ÍÇèê äÑÓèåÇÊ ËäÇËêÉ ÇäÃÈÙÇÏ åçåä
+
+Ellipsoid3D.Name = Ellipsoid3D
+Ellipsoid3D.ToolTip = åÌÓå ÇçäêäÌê ËäÇËê ÇäÃÈÙÇÏ
+
+EllipsoidSet3D.Name = EllipsoidSet3D
+EllipsoidSet3D.ToolTip = åÌåèÙÉ åÌÓåÇÊ ÇçäêäÌêÉ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+Equation.Name = Equation
+Equation.ToolTip = Íâä æÕ ÙÑÖ èÊÙÏêä åÙÇÏäÉ ÑêÇÖêÉ áê åÍÑÑ ÊãÓ
+
+Field.Name = Field_old
+Field.ToolTip = Íâä æÕ ÙÑÖ èÊÙÏêä åçåä
+
+Frame.Name = Frame
+Frame.ToolTip = åÓÊèé ÃÙäé äæÇáĞÉ
+
+Function.Name = Function
+Function.ToolTip = Íâä æÕ äÊâêêå ÏÇäÉ ĞÇÊ èÇÍÏ Ãè ÙÏÉ åÊÚêÑÇÊ
+
+Group3D.Name = Group3D
+Group3D.ToolTip = åÌåèÙÉ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+Histogram.Name = Histogram
+Histogram.ToolTip = åÎ×× ÃÙåÏÉ
+
+Image.Name = Image
+Image.ToolTip = ÕèÑÉ ÊáÇÙäêÉ
+
+Image3D.Name = Image3D
+Image3D.ToolTip = ÕèÑÉ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+ImageSet.Name = ImageSet
+ImageSet.ToolTip = åÌåèÙÉ ÕèÑ
+
+ImageSet3D.Name = ImageSet3D
+ImageSet3D.ToolTip = åÌåèÙÉ ÕèÑ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+InterpolatedPlot.Name = InterpolatedPlot_old
+InterpolatedPlot.ToolTip = åØçÑ äÃÙÏÇÏ åÓÊèáÇÊ åçåäÉ
+
+Label.Name = Label
+Label.ToolTip = È×ÇâÉ ÊÓåêÉ ÒÎÑáêÉ
+
+Lattice.Name = Lattice
+Lattice.ToolTip = ÅØçÇÑ åÌåèÙÉ åæ 0 è 1
+
+Line.Name = Line
+Line.ToolTip = Î× ÇäÓê×ÑÉ
+
+Menu.Name = Menu
+Menu.ToolTip = âÇÆåÉ
+
+MenuBar.Name = MenuBar
+MenuBar.ToolTip = ÔÑê× âèÇÆå
+
+MenuItem.Name = MenuItem
+MenuItem.ToolTip = ÒÑ äâèÇÆå
+
+Panel.Name = Panel
+Panel.ToolTip = äèÍÉ ÍÇèêÉ ÃÓÇÓêÉ
+
+ParsedField.Name = Field
+ParsedField.ToolTip = ÙÑÖ èÊÙÏêä âêåÉ Íâä æÕ ÈÙÏ ÊÍäêäç
+
+Particle.Name = Particle
+Particle.ToolTip = ÌÓêåÇÊ ÊáÇÙäêÉ
+
+ParticleSet.Name = ParticleSet
+ParticleSet.ToolTip = åÌåèÙÉ ÌÓêåÇÊ
+
+PasswordField.Name = PasswordField
+PasswordField.ToolTip = Íâä æÕê äÅÏÎÇä ÓäÓäÉ ÓÑêÉ
+
+Pipe.Name = Pipe
+Pipe.ToolTip = ÃæÈèÈ ËæÇÆê ÇäÃÈÙÇÏ
+
+Plane.Name = Plane_old
+Plane.ToolTip = åÓÊèê ËäÇËê ÇäÃÈÙÇÏ åçåä
+
+Plane3D.Name = Plane3D
+Plane3D.ToolTip = åÓÊèê ËäÇËê ÇäÃÈÙÇÏ 
+
+PlaneSet3D.Name = PlaneSet3D
+PlaneSet3D.ToolTip = åÌåèÙÉ åÓÊèêÇÊ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+PlottingPanel.Name = PlottingPanel
+PlottingPanel.ToolTip = äèÍ ÑÓå ËæÇÆê ÇäÃÈÙÇÏ åÙ æØÇå åÍÇèÑ
+
+Points.Name = Points
+Points.ToolTip = ÓÍÇÈÉ æâÇ×
+
+Points3D.Name = Points3D
+Points3D.ToolTip = ÓÍÇÈÉ æâÇ× ËäÇËêÉ ÇäÃÈÙÇÏ
+
+Poligon.Name = Polygon
+Poligon.ToolTip = åæÍæé Ãè åÖäÙ ÊáÇÙäê 
+
+Polygon3D.Name = Polygon3D
+Polygon3D.ToolTip = åÖäÙ ËäÇËê ÇäÃÈÙÇÏ
+
+PolygonSet3D.Name = PolygonSet3D
+PolygonSet3D.ToolTip = åÌåèÙÉ åÖäÙÇÊ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+Pump.Name = Pump
+Pump.ToolTip = åÖÎÉ ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+RadioButton.Name = RadioButton
+RadioButton.ToolTip = ÒÑ ÅÎÊêÇÑ äâêå åæ×âêÉ
+
+RadioButtonMenuItem.Name = RadioButtonMenuItem
+RadioButtonMenuItem.ToolTip = ÒÑ ÇÎÊêÇÑ ääâèÇÆå
+
+Segment3D.Name = Segment3D
+Segment3D.ToolTip = åâ×Ù ËäÇËê ÇäÃÈÙÇÏ
+
+SegmentSet3D.Name = SegmentSet3D
+SegmentSet3D.ToolTip = åÌåèÙÉ åâÇ×Ù ËäÇËêÉ ÇäÃÈÙÇÏ
+
+Separator.Name = Separator
+Separator.ToolTip = Î× áÇÕä
+
+SiteLattice.Name = SiteLattice
+SiteLattice.ToolTip = ÅØçÇÑ åÌåèÙÉ åæ èÍÏÇÊ ÇäÈÇêÊ áê æâÇ× ÇäÔÈãÉ
+
+Slider.Name = Slider
+Slider.ToolTip = ÔÑê× ÊåÑêÑ äÙÑÖ èÊÙÏêä ÇäâêåÉ
+
+Sound.Name = Sound
+Sound.ToolTip = ÎÇæÉ ÇÎÊêÇÑ åÏÙåÉ ÈÇäÕèÊ
+
+Sphere.Name = Sphere_old
+Sphere.ToolTip = ãÑÉ ËäÇËêÉ ÇäÃÈÙÇÏ (Ãè åÌÓå ÇçäêäÌê) åçåäÉ
+
+Sphere3D.Name = Sphere3D
+Sphere3D.ToolTip = ãÑÉ ËäÇËêÉ ÇäÃÈÙÇÏ 
+
+SphereSet3D.Name = SphereSet3D
+SphereSet3D.ToolTip = åÌåèÙÉ ãÑÇÊ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+SplitPanel.Name = SplitPanel
+SplitPanel.ToolTip = ÍÇèêÉ ÊÖå åæ×âÊêæ åæáÕäÊêæ
+
+Spring.Name = Spring
+Spring.ToolTip = æÇÈÖ ÊáÇÙäê
+
+Spring3D.Name = Spring3D
+Spring3D.ToolTip = æÇÈÖ ËäÇËê ÇäÃÈÙÇÏ
+
+SpringSet.Name = SpringSet
+SpringSet.ToolTip = åÌåèÙÉ æèÇÈÖ
+
+SpringSet3D.Name = SpringSet3D
+SpringSet3D.ToolTip = åÌåèÙÉ æèÇÈÖ ËäÇËêÉ ÇäÇÈÙÇÏ
+
+Surface.Name = Surface_old
+Surface.ToolTip = Ó×Í ËäÇËê ÇäÇÈÙÇÏ åçåä
+
+Surface3D.Name = Surface3D
+Surface3D.ToolTip = Ó×Í ËäÇËê ÇäÃÈÙÇÏ
+
+SurfacePlot.Name = SurfacePlot_old
+SurfacePlot.ToolTip = ÅØçÇÑ ËäÇËê ÇäÃÈÙÇÏ åçåä (áê äèÍ ËæÇÆê ÇäÃÈÙÇÏ!) äÍâä Óïäåê
+
+SurfaceSet3D.Name = SurfaceSet3D
+SurfaceSet3D.ToolTip = åÌåèÙÉ åÓÇÍÇÊ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+Symbol.Name = Symbol
+Symbol.ToolTip = ÑåÒ ÊÍãå ËæÇÆê ÇäÃÈÙÇÏ
+
+TabbedPanel.Name = TabbedPanel
+TabbedPanel.ToolTip = ÍÇèêÉ ĞÇÊ Å×ÇÑÇÊ
+
+Tank.Name = Tank
+Tank.ToolTip = ÎÒÇæ ËæÇÆê ÇäÃÈÙÇÏ
+
+Text.Name = Text
+Text.ToolTip = æÕ ÊáÇÙäê
+
+TextArea.Name = TextArea
+TextArea.ToolTip = ÍêÒ æÕ ää×ÈÇÙÉ
+
+TextField.Name = TextField
+TextField.ToolTip = Íâä æÕ äÙÑÖ èÊÙÏêä ÓäÓäÉ
+
+Text3D.Name = Text3D
+Text3D.ToolTip = æÕ ËäÇËê ÇäÃÈÙÇÏ
+
+TextSet.Name = TextSet
+TextSet.ToolTip = åÌåèÙÉ æÕèÕ
+
+TextSet3D.Name = TextSet3D
+TextSet3D.ToolTip = åÌåèÙÉ æÕèÕ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+ToolBar.Name = ToolBar
+ToolBar.ToolTip = ÍÇèêÉ ÔÑê× ÇäÃÏèÇÊ
+
+Trace.Name = Trace
+Trace.ToolTip = ÊÓäÓä æâÇ×
+
+TraceSet.Name = TraceSet
+TraceSet.ToolTip = åÌåèÙÉ åæ ÂËÇÑ
+
+Trail3D.Name = Trail3D
+Trail3D.ToolTip = ÂËÇÑ ËäÇËêÉ ÇäÇÈÙÇÏ
+
+TrailSet3D.Name = TrailSet3D
+TrailSet3D.ToolTip = åÌåèÙÉ åæ ÂËÇÑ ËäÇËêÉ ÇäÇÈÙÇÏ
+
+TwoStateButton.Name = TwoStateButton
+TwoStateButton.ToolTip = ÒÑ äÅÌÑÇÑÇÁÇÊ ÈèÖÙêæ åÍÊåäêæ
+
+Valve.Name = Valve
+Valve.ToolTip = ÕåÇå ËæÇÆê ÇäÃÈÙÇÏ
+
+VectorField.Name = VectorField_old
+VectorField.ToolTip = Íâä ÃÔÙÉ åçåä
+
+Video.Name = Video
+Video.ToolTip = åâ×Ù áêÏêè
+
+WebCam.Name = WebCam_old
+WebCam.ToolTip = ÙæÕÑ êÙÑÖ ÇäáêÏêè åæ "ãÇåêÑÇ èêÈ"
+
+ZContourPlot.Name = ContourPlot
+ZContourPlot.ToolTip = ÙÑÖ Ôãä ãáÇá äÍâä Óïäñåê áê ÇäåÍèÑ Z
+
+ZGridPlot.Name = GridPlot
+ZGridPlot.ToolTip = ÙÑÖ Ôãä Ô×ÑæÌ äÍâä Óïäñåê áê ÇäåÍèÑ Z
+
+ZInterpolatedPlot.Name = InterpolatedPlot
+ZInterpolatedPlot.ToolTip = ÙÑÖ äÍâä Óïäñåê åÓÊèáÇÊ áê ÇäåÍèÑ Z
+
+ZSurfacePlot.Name = SurfacePlot
+ZSurfacePlot.ToolTip = ÅØçÇÑ ËäÇËê ÇäÃÈÙÇÏ (áê äèÍ ËæÇÆê ÇäÃÈÙÇÏ!) äÍâä Óïäåê áê ÇäåÍèÑ Z
+
+# Added later than August 2007
+
+AnalyticScalarField2D.Name = AnalyticScalarField
+AnalyticScalarField2D.ToolTip = ÊÍäêä ËæÇÆê ÇäÃÈÙÇÏ äÍâä Óïäñåê
+
+AnalyticVectorField2D.Name = AnalyticVectorField2D
+AnalyticVectorField2D.ToolTip = Íâä ËæÇÆê ÇäÃÈÙÇÏ åæ ÃÔÙÉ åÙÑáÉ ÈÙÈÇÑÇÊ ÊÍäêäêÉ
+
+ComplexDataset.Name = ComplexDataset
+ComplexDataset.ToolTip = ÊÊÇÈÙ ÇäÃÑâÇå ÇäåÑãÈÉ
+
+Cursor.Name = Cursor
+Cursor.ToolTip = åÄÔÑ äèÍÉ ÑÓå ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+ScalarField2D.Name = ScalarField
+ScalarField2D.ToolTip = Íâä Óïäñåê ËæÇÆê ÇäÃÈÙÇÏ
+
+SimpleVectorField2D.Name = VectorField2D
+SimpleVectorField2D.ToolTip = Íâä ÔÙÇÙê ËæÇÆê ÇäÃÈÙÇÏ
+
+SimpleVectorField3D.Name = VectorField3D
+SimpleVectorField3D.ToolTip = Íâä ÔÙÇÙê ËäÇËê ÇäÃÈÙÇÏ
+
+Tile3D.Name = Tile3D
+Tile3D.ToolTip = Ó×Í ËäÇËê ÇäÃÈÙÇÏ åãèæ åæ ÈäÇ× åÊÙÏÏ ÇäÃÖäÇÙ åÙÑá Èâååç
+
+VectorField3D.Name = VectorField3D_old
+VectorField3D.ToolTip = Íâä ÔÙÇÙê ËäÇËê ÇäÃÈÙÇÏ
+
+# Added later than July 2008
+
+AnalyticCurve2D.Name = AnalyticCurve
+AnalyticCurve2D.ToolTip = åæÍæê ËæÇÆê ÇäÃÈÙÇÏ åÙÑá ÈÙÈÇÑÇÊ ÊÍäêäêÉ
+
+ArrayPanel.Name = ArrayPanel
+ArrayPanel.ToolTip = äèÍÉ äÊÍÑêÑ åÕáèá
+
+Arrow2D.Name = Arrow
+Arrow2D.ToolTip = Óçå ËæÇÆê ÇäÃÈÙÇÏ
+
+ArrowSet2D.Name = ArrowSet
+ArrowSet2D.ToolTip = åÌåèÙÉÃÓçå ËæÇÆêÉ ÇäÇÈÙÇÏ
+
+Group2D.Name = Group
+Group2D.ToolTip =åÌåèÙÉ ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+Image2D.Name = Image
+Image2D.ToolTip = ÕèÑÉ ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+ImageSet2D.Name = ImageSet
+ImageSet2D.ToolTip = åÌåèÙÉ ÕèÑ ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+Polygon2D.Name = Polygon
+Polygon2D.ToolTip = åÖäÙ ËæÇÆê ÇäÃÈÙÇÏ
+
+PolygonSet2D.Name = PolygonSet
+PolygonSet2D.ToolTip = åÌåèÙÉ åÖäÙÇÊ ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+Segment2D.Name = Segment
+Segment2D.ToolTip = åÓÊâêå ËæÇÆê ÇäÃÈÙÇÏ
+
+SegmentSet2D.Name = SegmentSet
+SegmentSet2D.ToolTip = åÌåèÙÉ åÓÊâêåÇÊ ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+Shape2D.Name = Shape
+Shape2D.ToolTip = Ôãä ËæÇÆê ÇäÃÈÙÇÏ (â×Ù æÇâÕ¬ åÓÊ×êä¬...)
+
+ShapeSet2D.Name = ShapeSet
+ShapeSet2D.ToolTip = åÌåèÙÉÃÔãÇä ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+Spring2D.Name = Spring
+Spring2D.ToolTip = æÇÈÖ ËæÇÆê ÇäÃÈÙÇÏ
+
+SpringSet2D.Name = SpringSet
+SpringSet2D.ToolTip = åÌåèÙÉ æèÇÈÖ ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+Text2D.Name = Text
+Text2D.ToolTip = æÕ ËæÇÆê ÇäÇÈÙÇÏ
+
+TextSet2D.Name = TextSet
+TextSet2D.ToolTip = åÌåèÙÉ æÕèÕ ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+Trail2D.Name = Trail
+Trail2D.ToolTip = ÏÑÈ ËæÇÆê ÇäÃÈÙÇÏ
+
+TrailSet2D.Name = TrailSet
+TrailSet2D.ToolTip = åÌåèÙÉ ÏÑèÈ ËæÇÆêÉ ÇäÃÈÙÇÏ
+
+# Added later than November 2008
+
+ComplexScalarField2D.Name = ComplexScalarField
+ComplexScalarField2D.ToolTip = Íâä Óäåê äÙÏÏ åÑãÈ ËæÇÆê ÇäÃÈÙÇÏ
+
+# Added later than June 2010
+
+Object3D.Name=Object 3D
+Object3D.ToolTip = Ôãä ËäÇËê ÇäÃÈÙÇÏ åèÕèá áê åäá
+
+VRMLObject3D.Name=ObjectVRML
+VRMLObject3D.ToolTip = Ôãä ËäÇËê ÇäÃÈÙÇÏ åèÕèá áê åäá VRML
+
+AnalyticVectorField3D.Name = AnalyticVectorField3D
+AnalyticVectorField3D.ToolTip = Íâä ÔÙÇÙê ËäÇËê ÇäÃÈÙÇÏ åÙÑá ÈÙÈÇÑÇÊ ÊÍäêäêÉ
+
+Tetrahedron3D.Name = Tetrahedron3D
+Tetrahedron3D.ToolTip = ÑÈÇÙê ÇäÓ×èÍ ËäÇËê ÇäÃÈÙÇÏ
+
+TetrahedronSet3D.Name = TetrahedronSet3D
+TetrahedronSet3D.ToolTip = åÌåèÙÉ ÑÈÇÙêÉ ÇäÓ×èÍ ËäÇËêÉ ÇäÃÈÙÇÏ
+
+Light3D.Name = Light3D
+Light3D.ToolTip = ÖèÁ áê åÔçÏ ËäÇËê ÇäÃÈÙÇÏ
+
+Rotation3D.Name = Rotation3D
+Rotation3D.ToolTip = ÏèÑÇæ äÙæÕÑ ËäÇËê ÇäÃÈÙÇÏ
+
+ImageDP2D3D.Name = dPanelUnder3D
+ImageDP2D3D.ToolTip = äèÍÉ ÑÓå ËæÇÆê ÇäÃÈÙÇÏ áê åÔçÏ ËäÇËê ÇäÃÈÙÇÏ
+
+Knob.Name = knob
+Knob.ToolTip = åâÈÖ äÊÚêêÑ âêåÉ åÒÏèÌÉ 
+
+Disk3D.Name = Disk3D
+Disk3D.ToolTip = âÑÕ ËäÇËê ÇäÃÈÙÇÏ
+
+# Added later than Jan 2011
+
+Quaternion3D.Name = Quaternion3D
+Quaternion3D.ToolTip = ÊÍèäÇë ÇäãèÇÊêÑæêèæ äÙæÕÑ ËäÇËê ÇäÃÈÙÇÏ
+
+RotationX3D.Name = RotationX3D
+RotationX3D.ToolTip = ÏèÑÇæ Íèä åÍèÑ X äÙæÕÑ ËäÇËê ÇäÃÈÙÇÏ
+RotationY3D.Name = RotationY3D
+RotationY3D.ToolTip = ÏèÑÇæ Íèä åÍèÑ Y äÙæÕÑ ËäÇËê ÇäÃÈÙÇÏ
+RotationZ3D.Name = RotationZ3D
+RotationZ3D.ToolTip = ÏèÑÇæ Íèä åÍèÑ Z äÙæÕÑ ËäÇËê ÇäÃÈÙÇÏ
+Alignment3D.Name = Alignment3D
+Alignment3D.ToolTip = ÏèÑÇæ äåÍÇĞÇÉ ÔÙÇÙêæ ÇËæêæ äÙæÕÑ ËäÇËê ÇäÃÈÙÇÏ
+Matrix3D.Name = Matrix3D
+Matrix3D.ToolTip = ÊÍèêä Ùäé ÃÓÇÓ åÕáèáÉ äÙæÕÑ ËäÇËê ÇäÃÈÙÇÏ
+
+TriangularBinaryLattice.Name = TrBinaryLattice
+TriangularBinaryLattice.ToolTip = ÙÑÖ ËäÇËê äåÌåèÙÉ åæ '0' è '1'
+
+TriangularByteLattice.Name = TrByteLattice
+TriangularByteLattice.ToolTip = ÙÑÖ ËäÇËê äåÌåèÙÉ ÇäÃÙÏÇÏ ÇäÕÍêÍÉ
+
+ByteImage.Name = ByteImage
+ByteImage.ToolTip = ÙÑÖ ÈÈÙÏêæ äæâÇ× ÇäÈêÇæÇÊ åÙ åÄÔÑ äèæ ÈÇäÈÇêÊ
+
+WebCam3D.Name = WebCam_old
+WebCam3D.ToolTip = ãÇåêÑÇ èêÈ äÙÑÖ ãÕèÑÉ ÎäáêÉ
+
+ScrollPanel.Name = ScrollPanel
+ScrollPanel.ToolTip = äèÍ ÍÇèê ÈÓê× åÙ ÔÑê× ÊåÑêÑ
+
+ARSystem3D.Name = RemoteARSystem
+ARSystem3D.ToolTip = ãÇåêÑÇ  ÈÊÍãå Ùæ ÈÙÏ (èêÈ) ÈÊÊÈÙ ËäÇËê ÇäÃÈÙÇÏ äèÇâÙ Íâêâê åÏÙå
+
+ARLocalSystem3D.Name = LocalARSystem
+ARLocalSystem3D.ToolTip = ãÇåêÑÇ åÍäêÉ (USB) ÈÊÊÈÙ ËäÇËê ÇäÃÈÙÇÏ äèÇâÙ Íâêâê åÏÙå
+
+Mesh2D.Name=Mesh2D
+Mesh2D.ToolTip=Íâä áê ÔÈãÉ åÙ ÍÏèÏ áê ÈÙÏêæ
+
+Mesh3D.Name=Mesh3D
+Mesh3D.ToolTip=Íâä áê ÔÈãÉ åÙ ÍÏèÏ áê ËäÇËÉ ÃÈÙÇÏ
+
+ResizablePanel.Name = ResizablePanel
+ResizablePanel.ToolTip = äèÍ ÍÇèê åÊÚêÑ ÇäÍÌå
+
+Canvas.Name = Canvas
+Canvas.ToolTip = äèÍ HTML5
+
+HtmlArea.Name = HtmlArea
+HtmlArea.ToolTip = åÓÇÍÉ äÙÑÖ ÇäÊÙäêåÇÊ ÇäÈÑåÌêÉ ä HTML
+

@@ -1,0 +1,70 @@
+<ViewFragment>
+  <ViewFragment.Parent>Simulation view</ViewFragment.Parent>
+  <ViewFragment.Code>
+<View.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Frame</Type>
+<Property name="name">drawingFrame</Property>
+<Property name="_ejs_mainWindow">true</Property>
+<Property name="title"><![CDATA["Frame"]]></Property>
+<Property name="layout"><![CDATA[border]]></Property>
+<Property name="visible"><![CDATA[true]]></Property>
+<Property name="size"><![CDATA["300,300"]]></Property>
+</View.Element>
+<View.Element>
+<Expanded>true</Expanded>
+<Type>Elements.DrawingPanel</Type>
+<Property name="name">drawingPanel</Property>
+<Property name="parent">drawingFrame</Property>
+<Property name="position">center</Property>
+<Property name="autoscaleX"><![CDATA[false]]></Property>
+<Property name="autoscaleY"><![CDATA[false]]></Property>
+<Property name="minimumX"><![CDATA[-1.0]]></Property>
+<Property name="maximumX"><![CDATA[1.0]]></Property>
+<Property name="minimumY"><![CDATA[-1.0]]></Property>
+<Property name="maximumY"><![CDATA[1.0]]></Property>
+</View.Element>
+<View.Element>
+<Type>Elements.Shape2D</Type>
+<Property name="name">shape2D</Property>
+<Property name="parent">drawingPanel</Property>
+</View.Element>
+<View.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Property name="name">buttonsPanel</Property>
+<Property name="parent">drawingFrame</Property>
+<Property name="position">south</Property>
+<Property name="layout"><![CDATA[FLOW:center,0,0]]></Property>
+<Property name="borderType"><![CDATA[LOWERED_ETCHED]]></Property>
+</View.Element>
+<View.Element>
+<Type>Elements.TwoStateButton</Type>
+<Property name="name">playPauseButton</Property>
+<Property name="parent">buttonsPanel</Property>
+<Property name="variable"><![CDATA[_isPaused]]></Property>
+<Property name="imageOn"><![CDATA[/org/opensourcephysics/resources/controls/images/play.gif]]></Property>
+<Property name="actionOn"><![CDATA[_play()]]></Property>
+<Property name="imageOff"><![CDATA[/org/opensourcephysics/resources/controls/images/pause.gif]]></Property>
+<Property name="actionOff"><![CDATA[_pause()]]></Property>
+</View.Element>
+<View.Element>
+<Type>Elements.Button</Type>
+<Property name="name">resetButton</Property>
+<Property name="parent">buttonsPanel</Property>
+<Property name="image"><![CDATA[/org/opensourcephysics/resources/controls/images/reset.gif]]></Property>
+<Property name="action"><![CDATA[_reset()]]></Property>
+</View.Element>
+<View.Element>
+<Type>Elements.Label</Type>
+<Property name="name">aFieldLabel</Property>
+<Property name="parent">buttonsPanel</Property>
+<Property name="text"><![CDATA[" var="]]></Property>
+</View.Element>
+<View.Element>
+<Type>Elements.ParsedField</Type>
+<Property name="name">aField</Property>
+<Property name="parent">buttonsPanel</Property>
+</View.Element>
+  </ViewFragment.Code>
+</ViewFragment>

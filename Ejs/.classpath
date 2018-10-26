@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="lib" path="libraries/unpackaged/classes"/>
+	<classpathentry kind="lib" path="libraries/HotEqn.jar"/>
+	<classpathentry kind="lib" path="libraries/jogl/jogl.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/bsh.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/osp.jar" sourcepath="/Users/Paco/Documents/Programming/GitProjects/EJS/OSP_core/src"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/QTJava.zip"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/slf4j-api.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/Loader3DS.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/LoaderAC3D.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/LoaderVRML.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/logback-classic.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/logback-core.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/model_elements/ParallelJava/parallel_ejs.jar" sourcepath="/ModelElements/src"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/ARElement.jar" sourcepath="/ModelElements/src"/>
+	<classpathentry kind="lib" path="distribution/bin/bcel.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/jackson-annotations-2.1.1.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/jackson-core-2.1.1.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/jackson-databind-2.1.1.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/model_elements/External/external.jar" sourcepath="/ModelElements/src"/>
+	<classpathentry kind="lib" path="distribution/bin/comSun7.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/model_elements/InputOutput/input_output.jar" sourcepath="/ModelElements/src"/>
+	<classpathentry kind="lib" path="distribution/bin/javascript/gson-2.2.2.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/javascript/model_elements/Hardware/hardware.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/ejs_lib.jar" sourcepath="/EjsLibrary/src"/>
+	<classpathentry kind="lib" path="distribution/bin/javascript/js.jar"/>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/java-8-oracle">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="distribution/bin/jfxrt1.7.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/commons-configuration-1.6.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/commons-lang-2.5.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.core.commands_3.6.100.v20140528-1422.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.core.contenttype_3.4.200.v20140207-1251.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.core.jobs_3.6.0.v20140424-0053.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.core.resources_3.9.1.v20140825-1431.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.core.runtime_3.10.0.v20140318-2214.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.equinox.preferences_3.5.200.v20140224-1527.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.jdt.core_3.10.0.v20140902-0626.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.osgi_3.10.1.v20140909-1633.jar"/>
+	<classpathentry kind="lib" path="libraries/jacobo/org.eclipse.text_3.5.300.v20130515-1451.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/jsoup-1.8.3.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/javax.json-1.0.4.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/_utils/javax.json-api-1.0.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/extensions/djep.jar"/>
+	<classpathentry kind="lib" path="distribution/bin/ejs_extras_java8.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

@@ -1,0 +1,93 @@
+Steps to install ionic correctly in your computer
+=================================================
+
+This needs to be done only once, no matter how many Book Apps you create
+
+- Before we start, make sure you have Node.js installed in your system: https://nodejs.org/en/
+
+- The next two commands install the generic cordova and ionic platforms 
+  - $ sudo npm install -g cordova
+  - $ sudo npm install -g ionic
+
+- The next two commands install specific packages that we will use in our particular projects 
+  - $ sudo npm install angular-ui-router
+  - $ sudo npm install angular-sanitize
+
+
+
+
+Steps to create an App called, say, MyBookApp
+=================================================
+
+This needs to be done once per Book Apps you create
+
+- Create a new blank Ionic project: replace MyBookApp with whatever name you want to give to your project.
+  This will correspond to a new directory in your hard disk. 
+  - $ ionic start MyBookApp blank
+
+   (This takes a few seconds... When asked: "Create an ionic.io account to send Push Notifications and use the Ionic View app?" you can answer no: n)
+ 
+- Change to the newly create directory (again, change replace MyBookApp with th ename you uses in the step before)
+  - $ cd MyBookApp
+
+- Add target platforms iOS and Android 
+  - $ ionic platform add ios
+  (Actually, not needed on MacOS)
+  
+  - $ ionic platform add android
+  (You may need to edit /android/project.properties, to set the correct Android target version for your device)
+
+- Add particular plug-ins that we use in our projects 
+  - $ cordova plugin add cordova-plugin-screen-orientation
+  - $ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git
+  - $ cordova plugin add cordova-plugin-wkwebview-engine  (This one is optional. Might improve speed on speed-savvy simulations)
+
+- Now, UNZIP the file you created with EjsS and work to modify the "www" folder of your project:
+  - copy all files and folders in your ZIP into your project's "www",
+    even if this means replacing existing files and folders.
+    (Actually, only the project's "lib" folder will remain unchanged)
+
+  You are now ready to test and build the app
+
+- to test the APP: $ ionic serve
+- exit the server by entering 'q'
+
+FINE TUNNING:
+=============
+
+- You may want to revise the following files in "www/other_pages"
+     - about.html
+     - copyright.html
+     - cover.html
+     - references.html
+     - title_page.html
+
+- You can always test the APP using $ ionic serve again
+
+DEPLOYING
+=========
+
+- You may want to edit the following entries in ionic files of your project:
+  - bower.json -> Change the "name" property
+  - config.xml -> Change the name, description and author entries
+  - package.json -> change the name and description entries
+
+- Change the icon and splash images in "resources" and type: $ ionic resources 
+    Make sure you use images of the same size of those you replace.
+  - ask Ionic to create platform specific images: $ ionic resources 
+
+- to create an XCode project for iOS: $ ionic build ios
+  - Open the platform/ios/MyBookApp.xcodeproj file with XCode
+  - You can run on your iPad (connect it with a cable to your Mac) and it should work.
+  
+  - Before exporting you may need to do a number of things:
+    - Add this line to your Build Settings -> Header Search Paths:
+      "$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include"
+    - Prepare a distributable archive (for registered iOS devices): Product -> Archive
+
+- to test for Android: $ ionic build android
+   When successfull, the last message will tell you where is the android-debug.apk file
+   that was generated. Send this file to your Android devide and install it. It should work.
+   
+  
+
