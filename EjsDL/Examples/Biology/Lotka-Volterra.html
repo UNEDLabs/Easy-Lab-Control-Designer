@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title> LotkaVolterra model</title>
+  </head>
+  <body > 
+
+    <table>
+      <tr>
+        <td>
+          <h1>
+            Lotka-Volterra predator-prey model
+          </h1>
+          <p>
+            ODEs are frequently used in biology to model population dynamics. 
+            The famous Lotka-Volterra model describes the evolution of two 
+            species, one of which preys (feeds) on the other, using the ODEs:
+          </p>
+          <p align="center">
+            <i>x<sub>1</sub>' = a x<sub>1</sub> - b x<sub>1</sub> x<sub>2</sub><br>x<sub>2</sub>' 
+            = c x<sub>1</sub> x<sub>2</sub> - d x<sub>2 </sub>.</i>
+          </p>
+        </td>
+        <td>
+          <p align="center">
+            <img src="_images/LotkaVolterra.gif">
+            
+          </p>
+        </td>
+      </tr>
+    </table>
+    <p>
+      Here, <i>x<sub>1</sub></i> represents the number of prey and <i>x<sub>2</sub></i> 
+      is the number of predators (in appropriate units so that they take 
+      continuous values in the interval [0,1]), and <i>a</i>, <i>b</i>, <i>c</i>, 
+      and <i>d</i> are parameters. The terms <i>a x<sub>1</sub></i> and <i>-d x<sub>2</sub></i> 
+      account for the reproduction rate of each species in the absence of 
+      interaction with the other and the nonlinear terms represent the effects 
+      of predation on the reduction of preys and the reproduction of the 
+      predators.
+    </p>
+    <p>
+      The simulation plots 10 sample trajectories in phase-space, which start 
+      from different initial conditions, for the same values of the parameters.
+    </p>
+  
+  </body>
+</html>

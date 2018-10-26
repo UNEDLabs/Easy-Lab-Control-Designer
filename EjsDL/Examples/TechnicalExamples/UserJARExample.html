@@ -1,0 +1,54 @@
+<html>
+  <head>
+    <title> Introduction</title>
+    <link rel="stylesheet" type="text/css" href="_ejs_library/css/ejsPage.css"></link>
+  </head>
+  <body > 
+
+    <h3>
+      Using your own JAR libraries
+    </h3>
+    <p>
+      This example shows how to use user defined JAR files in&#160; EJS. The JAR 
+      file used here is quite simple. It just contains a class with a single 
+      method to compute the thrid power of a double number.
+    </p>
+    <p>
+      The steps to follow are:
+    </p>
+    <ol>
+      <li>
+        Create your source code which must be in one or more packages. (See 
+        the sample code for constructing a function f(x) = x*x*x in the description
+		pages of this model.)
+      </li>
+      <li>
+        Compile this code properly.
+      </li>
+      <li>
+        Create a JAR file (using Java's jar utility) for the generated classes.
+      </li>
+      <li>
+        Copy this JAR file into your workspace source directory (preferably 
+        under the same directory of your source XML file).
+      </li>
+      <li>
+        Open the simulation information panel (top-right icon of EJS) and add 
+        this JAR file to the list of 'JAR Libraries' as indicated in the 
+        'Option and files' tab of the panel.
+      </li>
+    </ol>
+    <p>
+      You can now use this method (fully qualified) as any other Java method. 
+      In our example, the method is called as in: <tt>mypackage.MyMathClass.power3(x); 
+      </tt>
+    </p>
+    <p>
+      If you want to make it easy to use this method, you can add <tt>mypackage.MyMathClass 
+      </tt>to the list of import statements of the 'Option and files' tab of 
+      the simulation information panel, and then call the method simply as in 
+      : <tt>MyMathClass.power3(x);</tt>
+    </p>
+  
+  </body>
+</html>

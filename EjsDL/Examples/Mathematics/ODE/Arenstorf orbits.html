@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title> Arenstorf Orbits</title>
+  </head>
+  <body > 
+
+    <table>
+      <tr>
+        <td>
+          <h1>
+            Arenstorf orbits
+          </h1>
+          <p>
+            Arenstorf orbits are closed trajectories of the restricted 
+            three-body problem. That is, two bodies of masses &#181; and 1-&#181; moving 
+            in a circular rotation, and a third body of negligible mass moving 
+            in the same plane.
+          </p>
+          <p>
+            The computation of these orbits is very sensible to small errors 
+            and are a good test for the accuracy of numerical methods for 
+            solving Ordinary Differential Equations.
+          </p>
+        </td>
+        <td>
+          <p align="center">
+            <img src="./_images/Arenstorf.gif">
+            
+          </p>
+        </td>
+      </tr>
+    </table>
+    <p>
+      This simulation compares the solution of two of these orbits using both 
+      a 4th-order fixed step and a 5(4) variable step Runge-Kutta algorithm. 
+      The adaptive solver uses an event to find the period of the orbit and 
+      stop there. Both the computations of the adaptive solver and the event 
+      are done with the step size and the tolerance indicated.
+    </p>
+    <p>
+      The middle row of fields at the bottom of the window shows the computed 
+      values, while the lower one shows the expected values.
+    </p>
+  
+  </body>
+</html>
