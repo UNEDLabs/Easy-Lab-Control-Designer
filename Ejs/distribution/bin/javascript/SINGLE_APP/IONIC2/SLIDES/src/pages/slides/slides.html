@@ -1,0 +1,17 @@
+<ion-header *ngIf="!hideNavigation">
+  <ion-navbar>
+	<ion-title>{{title}}</ion-title>
+	<ion-buttons end>
+		<button ion-button (click)="skipDescription($event)">Skip</button>
+	</ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-slides centeredSlides pager #mySlides>
+  <ion-slide *ngFor="let entry of slides">
+	 <iframe data-tap-disabled="true" [src]=entry.url></iframe>
+  </ion-slide>
+  <ion-slide>
+    <ion-nav [root]="AboutRoot"></ion-nav>
+  </ion-slide>
+</ion-slides>

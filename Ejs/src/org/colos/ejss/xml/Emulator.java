@@ -1,0 +1,132 @@
+package org.colos.ejss.xml;
+
+
+import java.awt.Window;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.Reader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.util.List;
+
+
+import org.colos.ejs.osejs.Osejs;
+import org.colos.ejss.xml.SimulationXML;
+import org.mozilla.javascript.Scriptable;
+import org.w3c.dom.Element;
+
+public abstract class Emulator {
+  static protected final String MAIN_TITLE = "EjsS Emulator";
+  
+  static private final String sBLANK_LINE = "                                                                                                                    ";
+  static private final int sBLANK_LINE_LENGTH = sBLANK_LINE.length();
+
+  protected String mCssFilename=null;
+  protected String mLibPath=null;
+  protected String mHTMLPath=null;
+
+  public void setSimulationPaths(String cssFilename, String libPath, String htmlPath) {
+    mCssFilename = cssFilename;
+    mLibPath = libPath;
+    mHTMLPath = htmlPath;
+  }
+  
+  // -----------------------------
+  // Interface
+  //-----------------------------
+  
+  public void adjustBorder() {};
+
+  public Window getWindow() { return null; }
+
+  abstract public void setVisible (boolean visible);
+
+  abstract public boolean isVisible ();
+
+  public void clear() {};
+  
+  public void setSize(int width, int height) {}
+  
+  abstract public void setSimulation(Osejs ejs, SimulationXML sim, String viewDesired, String locale);
+  
+  // -----------------------------
+  // Utilities
+  //-----------------------------
+
+  protected XMLTransformerJava lintSimulation(Osejs ejs, SimulationXML sim, Element viewSelected, String locale) {
+    XMLTransformerJava transformer = new XMLTransformerJava(ejs, mLibPath,sim,JSObfuscator.Level.OPEN,ejs.getOptions().useFullLibrary());
+
+    if (!sim.isViewOnly()) {
+      String jsCode = transformer.getJavascriptForEmulator(viewSelected,locale,mLibPath, mHTMLPath);
+//      if (true) {
+//        try {  // save it for debugging purposes
+//          String outputFilepath = sim.getName()+"_debugLint.html";
+//          File outputFile = new File (outputFilepath);
+//          XMLTransformerJava.saveToFile(outputFile, jsCode);
+//          ejs.getOutputArea().println("Debug output file generated "+outputFile.getAbsolutePath());
+//        } 
+//        catch (Exception e) {
+//          e.printStackTrace();
+//        }
+//      }      
+      JSHint hint = null;
+      try {
+        Reader reader = new BufferedReader(new FileReader(new File(mLibPath,"jshint.js")));
+        hint = new JSHint(reader);
+        hint.hint("ejsS", jsCode);
+        // error report
+        //        System.err.println(lint.getErrorReport());
+        // report (functions, vars, globals)
+        //        System.err.println(lint.getReport());
+        // errors
+        List<Scriptable> errors = hint.getErrors();
+        for (int i=0; i<errors.size(); i++) {
+          Scriptable sc = errors.get(i);
+          //  format { line: NUMBER, character: NUMBER, reason: STRING, evidence: STRING }
+          // if (evidence.startsWith(prefix) ...
+          String evidence = sc.get("evidence", sc).toString();
+          ErrorOutput output = ejs.getOutputArea();
+          output.println("Lint error: " + sc.get("reason", sc)); // + " in line "+sc.get("line", sc));
+          output.println(evidence);
+          if (evidence.indexOf(XMLTransformerJava.sEJSS_PREFIX)>=0) {
+            Number position = (Number) sc.get("character",sc);
+            output.println(getMarker(position.intValue()));
+          }
+          // store output (only debug)
+          //        java.io.FileOutputStream mf = new java.io.FileOutputStream(new File("salida.js"));
+          //        mf.write(jsCode.getBytes());
+          //        mf.close();
+        }
+      } catch (Exception exc) {     
+        exc.printStackTrace();
+        try {  // save it for debugging purposes
+          String outputFilepath = sim.getName()+"_debug.js";
+          File outputFile = new File (outputFilepath);
+          XMLTransformerJava.saveToFile(outputFile, jsCode);
+          ejs.getOutputArea().println("Debug output file generated "+outputFilepath);
+        } 
+        catch (Exception exc2) {
+          exc2.printStackTrace();
+        }
+      } 
+    }
+    return transformer;
+  }
+  
+  
+  static private String getMarker(int position) {
+    if (position<=0) return "^";
+    if (position<sBLANK_LINE_LENGTH) return sBLANK_LINE.substring(0,position-1) + "^";
+    return sBLANK_LINE + getMarker(position-sBLANK_LINE_LENGTH);
+  }
+  
+  static protected String toURL(String str) {
+    try {
+      return new URL(str).toExternalForm();
+    } catch (MalformedURLException exception) {
+      return null;
+    }
+  }
+  
+}

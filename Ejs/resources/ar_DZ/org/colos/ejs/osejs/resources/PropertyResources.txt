@@ -1,0 +1,1102 @@
+% --- Labels
+
+LABELAdvancedColor=ז״ַו ֳהטַז וÊגֿוֹ
+LABELAspect=ַהַּזָ ַהׁ׃טוך
+LABELBorder=ַהַֽבֹ
+LABELCamera=ַהדַוךַׁ (ַזגׁ הֵÙַֹֿ ÊÙךךז)
+LABELConfiguration=ÊׁÊךָ
+LABELDecoration=Êׂךךז
+LABELInput=ַהֵֿ־ַה
+LABELInteraction=ַהִׁךֹ טַהÊבַÙה
+LABELJustInteraction=ÊבַÙה
+LABELMain=ַהֶׁך׃ך
+LABELMemory=ַה׀ַדֹׁ
+LABELElements=Ùֿֿ ַהÙזַױׁ
+LABELMessages=ׁ׃ֶַה
+LABELOn=־ױֶַױ ÊװÚךה
+LABELOff=־ױֶַױ ֵךגַב
+LABELParameters=וּוטÙֹ Ùטַוה
+LABELPosition=וטײÙ טּֽו
+LABELScales=׃הַהו
+LABELTicks=ÙהַוַÊ Êֶֹּׂ
+LABELFont=־׳
+
+% --- Names of properties
+
+accelerator=ו׃ׁÙ
+accelerator.ToolTip=Êׁדךָֹ ַהובַÊךֽ ַהÊך Êִֿך ֵהי Êזװך׳ Ùזױׁ ַהגֶַוֹ
+action=Ùוה
+action.ToolTip=ַהÙוה ַהו׳הטָ Ùזֿוַ ךÊבַÙה ַהו׃Ê־ֿו וÙ ַהÙזױׁ	
+  CheckBox.action.ToolTip=ַהÙוה ַהו׳הטָ Ùזֿ ÊÚךׁ ַהַֽה	
+actionoff=ֱֵַּׁ וÙ׳ה
+actionoff.ToolTip=ַהֱֵַּׁ Ùזֿוַ ךÊו ÊÙךךז ַֽהֹ ֵהי false
+actionOff=ֱֵַּׁ וÙ׳ה
+actionOff.ToolTip=ֳַֻׁ ַהֱֵַּׁ Ùזֿוַ ךÊו ַהזגׁ Ùהי ׁׂ (ֵךגַב)
+actionon=ֱֵַּׁ ובÙסה
+actionon.ToolTip=ַהֱֵַּׁ Ùזֿוַ ךÊו ÊÙךךז ַֽהֹ ֵהי true
+actionOn=ֱֵַּׁ ובÙסה
+actionOn.ToolTip=ַהÙוה ַהובÙסה Ùזֿ ַהזגׁ בטג ַהׁׂ (ÊװÚךה)
+active=זװ׳
+active.ToolTip=וַ ֵ׀ַ דַז ַהÙזױׁ ךגָה בÙהַ ֵֿ־ַה ַהָךַזַÊ
+  Trace.angle.ToolTip=Ê׳ָךג ַׂטךֹ ַהֿטַׁז (Ùד׃ Ùגַָׁ ַה׃ַÙֹ)  Ùהי ַהÙהַוַÊ
+  TraceSet.angle.ToolTip=Ê׳ָךג ַׂטךֹ ַהֿטַׁז (Ùד׃ Ùגַָׁ ַה׃ַÙֹ)  Ùהי ַהÙהַוַÊ
+alignment=ַהוַֽ׀ַֹ
+alignment.ToolTip=ַהוַֽ׀ַֹ ַהֳבגך ההזױ
+allowQuickRedraw=ֵÙַֹֿ ׁ׃ו ׃ׁךÙ
+allowQuickRedraw.ToolTip=וַ ֵ׀ַ דַז ׃ךÊו ַה׃וַֽ ַָהׁ׃ו ַה׃הדך Ùזֿ ַהÊֿטךׁ
+alpha=Alpha
+alpha.ToolTip=ַהֿטַׁז בך ַהו׃Êטי XY
+audiofile=והב ױטÊך
+audiofile.ToolTip=ַהוהב ַהױטÊך ההÊװÚךה
+autoscale=וגךַ׃ ֲזך
+autoscale.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ײָ׳ ַהֳהטַז ההָךַזַÊ Êהגֶַךַכ
+autoscaleX=וגךַ׃ ֲזךX 
+autoscaleX.ToolTip=׃טֱַ ײָ׳ ַהוגךַ׃ ַהֲזך ה X 
+autoscaleY==וגךַ׃ ֲזךY
+autoscaleY.ToolTip=׃טֱַ ײָ׳ ַהוגךַ׃ ַהֲזך ה Y 
+autoscaleZ=וגךַ׃ ֲזךZ
+autoscaleZ.ToolTip=׃טֱַ ײָ׳ ַהוגךַ׃ ַהֲזך ה Z 
+axes=ַהוַֽטׁ
+axes.ToolTip=ַהװÙַÙ double[9] וÙ ֻהַֹֻ וַֽטׁ ו־ױױֹ
+axesLabels=Ùזַטךז ַהוַֽטׁ
+axesLabels.ToolTip=Ùזַטךז ההוַֽטׁ (ַהַבÊַׁײך חט "X¬ Y¬ Z")
+axesType=זטÙ ַהוַֽטׁ
+axesType.ToolTip=זטÙ ַהוַֽטׁ ההÙׁײ
+
+background=ַה־הבךֹ
+background.ToolTip=הטז ַה־הבךֹ ההÙזױׁ
+  TwoStateButton.background=־הבךֹ וֽבֹׂ
+  TwoStateButton.background.ToolTip=הטז ַה־הבךֹ Ùזֿוַ ךדטז ַהÙזױׁ וֽבׂ
+backgroundOff=־הבךֹ וÙ׳הֹ
+backgroundOff.ToolTip=הטז ַה־הבךֹ Ùזֿוַ ךדטז ַהÙזױׁ וÙ׳ה
+barOffset=ַהֵַֹֽׂ ההװׁך׳
+barOffset.ToolTip=ַהֵַֹֽׂ ההװׁך׳
+belowWhenEqual=ַהÙÊָֹ ֳֿזַח
+belowWhenEqual.ToolTip=וַ ֵ׀ַ דַזÊ ַהÙÊָֹ Ê׃Ê־ֿו ַההטז ֳֿזַח
+beta=Beta
+beta.ToolTip=Êֿטךׁ בך ַהו׃Êטך XZ
+binOffset=ֵַֹֽׂ ַהÙוטֿ
+binOffset.ToolTip=ַהֵַֹֽׂ ההֳÙוֹֿ
+binStyle=זו׳ ַהÙוטֿ
+binStyle.ToolTip=זו׳ ַהֳÙוֹֿ : זג׳ֹ ֳט Ùוטֿ
+binWidth=Ùׁײ ַהÙוטֿ
+binWidth.ToolTip=Ùׁײ ַהֳÙוֹֿ
+BLmessage=ׁ׃ַהֹ בך ַהַׂטךֹ ַהך׃ׁי ַה׃בהי
+BLmessage.ToolTip=ַהׁ׃ַהֹ ַהוַֿׁ Ùׁײחַ בך ַהַׂטךֹ ַהך׃ׁי ַה׃בהי
+border=׃וד ַהַֽבֹ
+border.ToolTip=׃וד ַהַֽבֹ ֽטה ַהֵ׳ַׁ
+borderColor=הטז ַהַֽבֹ
+borderColor.ToolTip=הטז ַהַֽבֹ ֽטה ַהֵ׳ַׁ
+borderJustification=Êוֿךֿ ַהÙזטַז
+borderJustification.ToolTip=Êוֿךֿ ַהÙזטַז (ֵ׀ַ דַז גַָהַכ ההÊ׳ָךג)
+borderPainted=ׁ׃ו ַהֽֿטֿ
+borderPainted.ToolTip=וַ ֵ׀ַ דַז ךזָÚך ֳז ׁ׃ו ַהֽֿטֿ
+borderPosition=וטײÙ ַהÙזטַז
+borderPosition.ToolTip=וטײÙ ַהÙזטַז (ֵ׀ַ דַז גַָהַכ ההÊ׳ָךג)
+borderTitle=ֽֿטֿ ַהÙזטַז
+borderTitle.ToolTip=Ùזטַז ַהֽֿטֿ (בך ַֽהֹ טּטֿ Ùזטַז ָֽֿטֿ )
+borderType=זטÙ ַהֽֿטֿ
+borderType.ToolTip=זטÙ ַהֽֿטֿ ֽטה ַהַ׳ַׁ
+BRmessage=ַהׁ׃ַהֹ ֳ׃בה ַהַׂטךֹ ַהךוזי
+BRmessage.ToolTip=ַהׁ׃ַהֹ הÙׁײחַ בך ֳ׃בה ַהַׂטךֹ ַהךוזי
+
+cameraAltitude=ַהַׁÊבַÙ
+cameraAltitude.ToolTip=ַׂטךֹ ַׁÊבַÙ וטײÙ ַהדַוךַׁ
+cameraAzimuth=ַה׃סועÊ
+cameraAzimuth.ToolTip=ַהַׂטךֹ ַה׃וÊךֹ הוטײÙ ַהדַוךַׁ
+cameraDistanceToScreen=ַהװַװֹ בך
+cameraDistanceToScreen.ToolTip=ַהו׃ַבֹ וז ַהדַוךַׁ ֵהי װַװֹ ַהÙׁײ
+cameraFocusX=ַהÊׁדךׂ X
+cameraFocusX.ToolTip=וטײÙ Êׁדךׂ ַהדַוךַׁ  X
+cameraFocusY=ַהÊׁדךׂ Y
+cameraFocusY.ToolTip=וטײÙ Êׁדךׂ ַהדַוךַׁ  Y
+cameraFocusZ=ַהÊׁדךׂ Z
+cameraFocusZ.ToolTip=וטײÙ Êׁדךׂ ַהדַוךַׁ  Z
+cameraRotation=ֿטַׁז
+cameraRotation.ToolTip=ֿטַׁז ַהדַוךַׁ
+cameraX=ַהוטגÙ X
+cameraX.ToolTip=וטגÙ ַהדַוךַׁ X	
+cameraY=ַהוטגÙ Y
+cameraY.ToolTip=וטגÙ ַהדַוךַׁ Y	
+cameraZ=ַהוטגÙ Z
+cameraZ.ToolTip=וטגÙ ַהדַוךַׁ Z
+ceilingcolor=׃גב ַההטז
+ceilingcolor.ToolTip=גךו ַהֳהטַז Ùַהךֹ ַּֿכ
+clearAtInput=טַײֹֽ בך ַהֵֿ־ַה
+clearAtInput.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ו׃ֽ ַהָךַזַÊ ַהגֿךוֹ דהוַ Êו Êֽױךה ָךַזַÊ ּֿךֹֿ
+closable=וודז ַהÚהג
+closable.ToolTip=וַ ֵ׀ַ דַז ךודז ֵÚהַג וָׁÙ ַהֽטַׁ
+closed=וÚהג
+closed.ToolTip=וַ ֵ׀ַ דַז ַהוײהÙ וÚהג
+closedBottom=גַÙֹֿ וÚהגֹ
+closedBottom.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ֵÚהַג ַהÙזױׁ וז ַהֳ׃בה
+closedLeft=ך׃ַׁ וÚהג
+closedLeft.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ֵÚהַג ַהÙזױׁ וז ַהך׃ַׁ
+closedRight=ךוךז וÚהג
+closedRight.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ֵÚהַג ַהÙזױׁ וז ַהךוךז
+closedTop=ַהֳÙהי וÚהג
+closedTop.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ֵÚהַג ַהÙזױׁ וז ַהֳÙהי
+  Lattice.color=הטז ֽך
+  Lattice.color.ToolTip=ַההטז ַהו׃Ê־ֿו הÙׁײ 1
+  Points.color=הטז
+  Points.color.ToolTip=הטז ַהזגַ׳
+closest=ַהֳגָׁ
+closest.ToolTip=וַ ֵ׀ַ דַז ךֽה ַהוגָײ ההÙהַוֹ ַהֳגָׁ
+colorDirection=ַÊַּח ַההטז
+colorDirection.ToolTip=ַÊַּח ÊÚךׁ ַההטז
+colorFills=ÊÙֶָֹ ָהטז
+colorFills.ToolTip=ַהֳהטַז הדה ו׃Êטי
+colorLevels=ו׃ÊטךַÊ ַההטז
+colorLevels.ToolTip=ַהÙÊַָÊ ההÊÚךךַׁÊ בך ַההטז
+colormode=טײÙ ַהֳהטַז
+colormode.ToolTip=ז״ַו ַהֳהטַז ַהו׃Ê־ֿוֹ הׁ׃ו
+colorOrigin=ֳױה ַהֳהטַז
+colorOrigin.ToolTip=ַהוזװֳ הÊÚךךַׁÊ ַהֳהטַז
+colorpalette=הטֽ
+colorpalette.ToolTip=ַהװÙַÙ Color[] וז ֳהטַז הטֽ ַהֳהטַז
+columnFormat=Êז׃ךג ַהÙוטֿ
+columnFormat.ToolTip=Êז׃ךג ַהÙוטֿ
+columnNames=ֵ׃ו ַהÙוטֿ
+columnNames.ToolTip=ֵ׃ו ַהÙוטֿ
+connected=וÊױה
+connected.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ַךױַה דה זג׳ֹ וÙ ַהÊַהךֹ
+cursorType=ַהוִװׁ
+cursorType.ToolTip=װדה ַהוִװׁ הה״חַׁ
+
+data=ַהָךַזַÊ
+data.ToolTip=ָךַזַÊ ַהÙזױׁ
+  BinaryLattice.data.ToolTip=ַהוױבטבֹ [][]Int הגךו ַהֵÙַֿֿ ַהױֽךֹֽ 0 ֳט 1
+  ByteRaster.data.ToolTip=ַהוױבטבֹ [][]Int הגךו ַהֵÙַֿֿ ַהוַֿׁ Ùׁײחַ
+  CellLattice.data.ToolTip=ַהוױבטבֹ [][]Int הגךו ַהֵÙַֿֿ ַַָָךÊ (-128 < 127)
+  Points.data.ToolTip=ַהוױבטבֹ [][]double הגךו ַהֵÙַֿֿ
+  Points3D.data.ToolTip=ַהוױבטבֹ double[n][3] ההזגַ׳
+  Polygon3D.data.ToolTip=ַהוױבטבֹ double[n][3] הזגַ׳ וײהÙ
+  PolygonSet3D.data.ToolTip=ַהוױבטבֹ double[elements][n][3] הזגַ׳ וײהÙַÊ
+  SiteLattice.data.ToolTip=ַהוױבטבֹ [][]Int הגךו ַהֵÙַֿֿ ַַָָךÊ (-128 < 127)
+  Surface3D.data.ToolTip=ַהוױבטבֹ double[nu][nv][3] הָךַזַÊ זגַ׳ ו׃׳ֽ
+  SurfaceSet3D.data.ToolTip=ַהוױבטבֹ double[nu][nv][3] הָךַזַÊ זגַ׳ ו׃׳ַֽÊ
+  VectorField.data.ToolTip=ַהוױבטבֹ double[][][5] הֳÙַֿֿ
+  Tiles3D.data.ToolTip=ַהוױבטבֹ double[nTiles][nVertex][3] הגוו הָזַÊ
+deadcolor=הטז ַֿדז
+deadcolor.ToolTip=ַההטז ַהו׃ÊÙוה הֵ״חַׁ 0
+decorationType=ׂ־ׁבֹ
+decorationType.ToolTip=ַהÙזַױׁ ַהׂ־ׁבךֹ וז ַהוװחֿ (וַֽטׁ¬ Ùהָ) ההÙׁײ
+delay=Êֳ־ךׁ
+delay.ToolTip=ַהÊֳ־ךׁ ַָהוהסך ַֻזךֹ ָךז ַהױטׁ ַהוÊÙַגָֹ ַהוױֹֿׁ וז "דַוךַׁ טךָ"
+deltaR=Delta R
+deltaR.ToolTip=ַהבױה ָגךוֹ R ההוַֽטׁ ַהג׳ָךֹ
+deltaTheta=Delta Theta
+deltaTheta.ToolTip=ַהבױה ָגךוֹ Theta ההוַֽטׁ ַהג׳ָךֹ
+direction=ַהַÊַּח
+direction.ToolTip=ַÊַּח ַהÙזױׁ ('x' ֳט 'y' ֳט 'z' ֳט 'ו־ױױ')
+discrete=וןזעבמױנה
+discrete.ToolTip=ֵ׀ַ דַזÊ ַהֳÙוֹֿ וÊױהֹ ֳט וזבױהֹ
+displacementFactor=ֵַֹֽׂ
+displacementFactor.ToolTip=וÙַוה ּÙה ַהÙזױׁ ךָֿט ֳָÙֿ ֳט ֳגָׁ וז ׀הד
+dragAction=Ùזֿ ַה׃ָֽ
+dragAction.ToolTip=ַהÙוה ַההַׂו Ùזֿ ׃ָֽ ַהÙזױׁ
+drawingFill=ÊÙֶָֹ ַהׁ׃ו
+drawingFill.ToolTip=ÊÙֶָֹ ַהׁ׃ו ָהטז
+drawingLines=ׁ׃ו ־׳ט׳
+drawingLines.ToolTip=ׁ׃ו ־׳ט׳
+drivenby=וַ בך ַה׀ַדֹׁ
+drivenby.ToolTip=דךב ךÊו Ùׁײ ׃ה׃הֹ בך ַה׀ַדֹׁ
+
+echoCharacter=ֵַּׁÙ ַה־׳
+echoCharacter.ToolTip=ֵַּׁÙ ַה־׳ ַהוֿ־ה
+editable=ההÊֽׁךׁ
+editable.ToolTip=בךוַ ַ׀ַ דַזÊ ַהגךוֹ גַָהֹ ההÊֽׁךׁ
+editBackground=הטז ַהוֽׁׁ
+editBackground.ToolTip=הטז ַה־הבךֹ ה׃׳ֽ ַהוֽׁׁ
+elementposition=ַהֵַֹֽׂ
+elementposition.ToolTip=וטײÙ ַהׁ׃ו ַהוֽֿֿ ַָהז׃ָֹ ֵהי ֵַֻֽֿךַÊ ַהÙזױׁ
+  Trace.elementposition.ToolTip=וטײÙ ַהׁ׃ו ַָהז׃ָֹ ההÙהַוַÊ
+  TraceSet.elementposition.ToolTip=וטײÙ ַהׁ׃ו ַָהז׃ָֹ ההÙהַוַÊ
+elementSelected=וִװׁ ַהÊבַÙה
+elementSelected.ToolTip=וִװׁ ַהÙזױׁ ַהוÊֳֻׁ ַָהÊבַÙה
+emptyColor=הטז בַׁÚ
+emptyColor.ToolTip=ַההטז ַהַֿ־הך ההֳזָטָ ַהבַׁÚ
+enabled=ובÙסה
+enabled.ToolTip=ֵ׀ַ דַז ַהÙזױׁ ך׃Êּךָ הֱֵַַּׁÊ ַהו׃Ê־ֿו
+  Histogram.enabled.ToolTip=ֵ׀ַ דַז ַהׁ׃ו ַהָךַזך ךגָה בÙהַ ֵֿ־ַה ַהגךו
+enabledPosition=גַָה הה׃ָֽ
+enabledPosition.ToolTip=ַ׀ַ דַז ַהÙזױׁ ךגָה ַה׃ָֽ
+enabledSize=Êּֽךו
+enabledSize.ToolTip=ֵ׀ַ דַז ַהÙזױׁ ךגָה ÊÚךךׁ ַהּֽו
+endClosed=זחַךֹ וÚהגֹ
+endClosed.ToolTip=ַ׀ַ דַזÊ זחַךֹ ַהÙזױׁ וÚהגֹ
+endSize=ּֽו ַהזחַךֹ
+endSize.ToolTip=ּֽו ַהׂ־ׁבֹ בך זחַךֹ ַה׃׳ׁ ַהֳ־ךׁ
+endType.ToolTip=ַהׂ־ׁבֹ בך זחַךֹ ַה׃׳ׁ ַהֳ־ךׁ
+endType=זחַךֹ ַהזטÙ
+enteredAction=Ùזֿ ַהַֿ־ַה
+enteredAction.ToolTip=ַהÙוה ַההַׂו Ùזֿוַ ךדטז וִװׁ ַהבֳֹׁ בטג ַהÙזױׁ
+exitedAction=Ùזֿ ַה־ׁטּ
+exitedAction.ToolTip=TַהÙוה ַההַׂו Ùזֿוַ ך־ּׁ וִװׁ ַהבֳֹׁ וז בטג ַהÙזױׁ
+expandable= הו׃ֹ טַֹֽֿ
+expandable.ToolTip=וַ ֵ׀ַ דַז ׃ךÊו ֵ״חַׁ Ùזַױׁ Êֽדו גַָהֹ ההÊט׃ךÙ ָהו׃ֹ טַֹֽֿ
+
+
+fillColor=הטז ַהÊÙֶָֹ
+fillColor.ToolTip=ַההטז ַהו׃ÊÙוה הÊÙֶָֹ ַהÙזױׁ
+  Tank.fillColor.ToolTip=הטז ַה׃ֶַה ַֿ־ה ַה־ַׂז
+  Symbol.fillColor=ַההטז ַה־ַּׁך
+  Symbol.fillColor.ToolTip=ַההטז ַה־ַּׁך ההׁוׂ (ֵ׀ַ דַז גַָהַכ ההÊ׳ָךג)
+  Valve.fillColor.ToolTip=ַההטז ַהַֿ־הך ההױוַו
+Valve.fillColor2=הטז ַהוגָײ
+  Valve.fillColor2.ToolTip=ַההטז ַהַֿ־הך ההוגָײ
+  Pump.fillColor2=הטז ַהוׁטֽךֹ
+  Pump.fillColor2.ToolTip=ַההטז ַהַֿ־הך ההוׁטֽךֹ
+  Symbol.fillColor2=ַההטז ַהַֿ־הך
+  Symbol.fillColor2.ToolTip=ַההטז ַהַֿ־הך ההׁוׂ
+firstDirection=ַהּחֹ A
+firstDirection.ToolTip=ױבךב double[3] וÙ ַהַÊַּח ַהֳטה הה׃׳ֽ
+fixed=ׂטַךַ ַָֻÊֹ
+fixed.ToolTip=ַהַׂטךֹ (ֳט ַהׂטַךַ) ַהÊך הז ÊÚךךׁ ּֽו ַהוײהÙ
+floatable=Ùֶַו
+floatable.ToolTip=וַ ֵ׀ַ דַז ךודז זגה װׁך׳ ַהֳֿטַÊ ֵהי וטײÙ ֲ־ׁ
+floorcolor=ַההטז ַהֳֿזי
+floorcolor.ToolTip=ַההטז הגךו וז־בײֹ ַּֿ
+font=ַה־׳
+font.ToolTip=ַה־׳ ַהו׃Ê־ֿו הÙׁײ ַהזױ בך ַהÙזױׁ
+foreground=ַהֳוַוךֹ
+foreground.ToolTip=ַההטז ַהוַֿׁ ַ׃Ê־ַֿוח Ùזֿ ַהׁ׃ו ֳט ַהדÊַָֹ בך ַהÙזױׁ
+  TwoStateButton.foreground=ַהֳוַוךֹ ובÙסהֹ
+  TwoStateButton.foreground.ToolTip=ַההטז הַ׃Ê־ַֿוחַ ההזױ Ùזֿוַ ךדטז ַהÙזױׁ ובÙסה
+foregroundOff=ַהֳוַוךֹ וÙ׳הֹ
+foregroundOff.ToolTip=ַההטז הַ׃Ê־ַֿוחַ ההזױ Ùזֿוַ הַ ךדטז ַהÙזױׁ ובÙסה
+format=Êז׃ךג
+format.ToolTip=ַהÊז׃ךג ַהו׃Ê־ֿו הÙׁײ גךוֹ
+frame=הג׳ֹ
+frame.ToolTip=ַההג׳ֹ ַהַֽהךֹ ההֵ״חַׁ
+functionx=X()
+functionx.ToolTip=ַֻֽֿךַÊ X דַֿהֹ ההוÊÚךׁ
+functiony=Y()
+functiony.ToolTip=ֵַֻֽֿךַÊ Y דַֿהֹ ההוÊÚךׁ
+functionz=Z()
+functionz.ToolTip=ֵַֻֽֿךַÊ Z דַֿהֹ ההוÊÚךׁ
+
+gridcolor=הטז ַהװָדֹ
+gridcolor.ToolTip=הטז ־׳ט׳ ַהװָדֹ
+gutters=וַׁׂךָ
+gutters.ToolTip=וַׁׂךָ ֽטה וז׳גֹ ַהׁ׃ו
+
+height=ַהַׁÊבַÙ
+height.ToolTip=ַׁÊבַÙ ַה־ַׂז
+
+image=ױטֹׁ
+image.ToolTip=והב ַהױטֹׁ ההÙׁײ
+  Frame.image.ToolTip=ׁוׂ וױÚֹׁ ַהֵ׳ַׁ
+imageOff=ױטֹׁ וÙ׳הֹ
+imageOff.ToolTip=והב GIF ההÙׁײ Ùזֿוַ ךדטז ַהÙזױׁ וÙ׳ה
+imageOn=ױטֹׁ ובÙסהֹ
+imageOn.ToolTip=והב GIF ההÙׁײ Ùזֿוַ ךדטז ַהÙזױׁ ובÙסה
+imageFile=והב ױטֹׁ
+imageFile.ToolTip=והב ַהױטֹׁ ההÙׁײ
+implementation=Ê׳ָךג
+implementation.ToolTip=ַהÊזבך׀ ַהו׃Ê־ֿו הÙׁײ ַהוװחֿ
+independent=וÊÚךַׁÊ
+independent.ToolTip=וÊÚךַׁÊ ַהַֿהֹ
+index=וִװׁ
+index.ToolTip=Int (ֳט int[]) הוִװׁ ַהֳהטַז הזג׳ֹ (זגַ׳) ּֿךֹֿ
+indexSelected=ַהזג׳ֹ ַהוֹֽֿֿ
+indexSelected.ToolTip=וִװׁ ַהזג׳ֹ ַהוֹֽֿֿ
+input=ַהֵֿ־ַה
+  DataTable.input.ToolTip=ַהָךַזַÊ ההַ״חַׁ
+  Histogram.input.ToolTip=ַהגךו double ֳט double[] ַהֵֿ־ַה ההֵהַֽג
+inputX=Input X
+inputX.ToolTip=ַהֵַֻֽֿךֹ X ההזג׳ֹ ההֵײַבֹ
+inputY=Input Y
+inputY.ToolTip=ַהֵַֻֽֿךֹ Y ההזג׳ֹ ההֵײַבֹ
+inputZ=Input Z
+inputZ.ToolTip=ַהֵַֻֽֿךֹ Z ההזג׳ֹ ההֵײַבֹ
+interiorBackground=ַהַֿ־הך
+interiorBackground.ToolTip=הטז ַה־הבךֹ הוז׳גֹ ַהׁ׃ו
+interiorTransparency=װבַבךֹ ׃ׁךÙֹ
+interiorTransparency.ToolTip=ו׃Êטי ַהװבַבךֹ (0-255) ההַ׃Ê־ַֿו Ùזֿוַ Êגטו ַהטֹֽ ֵָÙַֹֿ ׁ׃ו ׃ׁךÙֹ
+invisibleLevel=ו׃Êטי Ùֿו ַהִׁךֹ
+invisibleLevel.ToolTip=ו׃Êטי ַה׀ך ÊֽÊח (ײוזךַ) הַ Ê״חַׁהֳ׃חו
+
+javaSyntax=ָזךֹ ּוה ַּבַ
+javaSyntax.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ַ׃Ê־ַֿו Java ֳט ָזֱַ ּוה ֹֽׁ	
+justification=Êט׃Ùֹ
+justification.ToolTip=Êט׃Ùֹ ַהזױ ַָהז׃ָֹ הט׃׳ח
+
+keyAction=ובÙטה ַהובַÊךֽ
+keyAction.ToolTip=ַֻׁ ַהײÚ׳ Ùהי ובÊַֽ
+keyPressed=ַהובÊַֽ ַהוײÚט׳
+keyPressed.ToolTip=ַהÊÙהךוַÊ ַהָׁוּךֹ Ùזֿ ַהײÚ׳ Ùהי ובÊַֽ
+
+layout=ַהÊׁÊךָ
+layout.ToolTip=זחּ ַהÊׁÊךָ הח׀ח ַהַֽטךֹ
+level=ַהו׃Êטי
+level.ToolTip=ו׃Êטי ַה׃ֶַה בך ַה־ַׂז
+levels=ַהו׃ÊטךַÊ
+levels.ToolTip=Ùֿֿ ו׃ÊטךַÊ ַהÊוךךׂ
+lineColor=הטז ַה־׳
+lineColor.ToolTip=הטז ַה־׳ ַהו׃ÊÙוה ההÙזױׁ
+lineWidth=׃וד ַה־׳
+lineWidth.ToolTip=׃וד ־׳ ַהÙזױׁ
+location=ַהוטגÙ
+location.ToolTip=וטגÙ ַהזַב׀ֹ
+
+majorTicksX=X ַהװָדֹ
+majorTicksX.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ Ùׁײ ַהװָדֹ ההוֽטׁ X
+majorTicksY=Y ַהװָדֹ
+majorTicksY.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ Ùׁײ ַהװָדֹ ההוֽטׁ Y
+markersize=ּֽו ַהÙהַוֹ
+markersize.ToolTip=ּֽו ַהÙהַוֹ (ַָהָד׃ה)
+max=ֽֿ ַגױ
+max.ToolTip=ַהֽֿ ַהֳגױי ההוÊÚךׁ
+max1=ֽֿ ֳגױי 1
+max1.ToolTip=ַהֽֿ ַהֳגױי ההוÊÚךׁ ַהֳטה
+max2=ֽֿ ֳגױי 2
+max2.ToolTip=ַהֽֿ ַהֳגױי ההוÊÚךׁ ַהַֻזך
+maxcolor=ַההטז ַהֳגױי
+maxcolor.ToolTip=ַההטז ַהֳגױי הה׃חו
+maximum= ֽֿ ֳגױי
+maximum.ToolTip=ַהגךוֹ ַהגױטי ההֵ״חַׁ
+maximumAngle=ַהַׂטךֹ ַהגױטי
+maximumAngle.ToolTip=ַׂטךֹ זחַךֹ (ַָהַּֿׁÊ) ההגַÙֹֿ
+maximumAngleU=ַהַׂטךֹ ַהגױטי U
+maximumAngleU.ToolTip=ַׂטךֹ ַהזחַךֹ (ַָהַּֿׁÊ) ההוÊטַׂךַÊ
+maximumAngleV=ַהַׂטךֹ ַהגױטי V
+maximumAngleV.ToolTip=ַׂטךֹ זחַךֹ (ַָהַּֿׁÊ) ה־׳ט׳ ַה׳טה
+maximumPoints=ֳגױי ַהזגַ׳
+maximumPoints.ToolTip=ַהÙֿֿ ַהֳגױי הזגַ׳ ַהÙזױׁ
+maximumX=גךוֹ X ַהגױטי
+maximumX.ToolTip=גךוֹ X ַהגױטי ַהÊך ךודז Ùׁײחַ
+maximumY=גךוֹ Y ַהגױטי
+maximumY.ToolTip=גךוֹ Y ַהגױטי ַהÊך ךודז Ùׁײחַ
+maximumZ= גךוֹ Z ַהגױטי 
+maximumZ.ToolTip=גךוֹ Z ַהגױטי ַהÊך ךודז Ùׁײחַ
+maxPoints=ֳגױי Ùֿֿ ַהזגַ׳
+  DataTable.maxPoints.ToolTip=ַהֽֿ ַהֳגױי Ùֿֿ ֵֿ־ַה ַהָךַזַÊ ההÙׁײ (-1 ההדה) 
+memory=ַה׀ַדֹׁ
+memory.ToolTip=Ùֿֿ ַה׃הַ׃ה ההÊ׀דׁ (װוהÊ ַהַֽהךֹ)
+memorycolor=הטז ַה׃ה׃הֹ
+memorycolor.ToolTip=ַההטז ַה׀ך ךÊו ַ׃Ê־ַֿוח הÙׁײ ַה׃ה׃הֹ וז ַהזגַ׳ ַה׃ַָגֹ
+min=ַהֽֿ ַהֿזי
+min.ToolTip=ַהֽֿ ַהֿזי הגךוֹ ַהוÊÚךׁ
+min1=ֽֿ ַֿזי 1
+min1.ToolTip=ַהֽֿ ַהֳֿזי הגךוַֹהוÊÚךׁ ַהֳטה
+min2=ַהֽֿ ַהֳֿזי 2
+min2.ToolTip=ַהֽֿ ַהֳֿזי הגךוַֹהוÊÚךׁ ַהַֻזך
+mincolor=ֽֿ ַההטז ַהֳזי
+mincolor.ToolTip=ַהֽֿ ַהֳֿזי ההטז ַה׃חו
+minimum= ַהֽֿ ַהֳֿזי
+minimum.ToolTip=ַהגךוַֹהֿזךַ ההֵ״חַׁ
+minimumAngle=ַהַׂטךֹ ַהֿזךַ
+minimumAngle.ToolTip=ַׂטךֹ ַהֱָֿ (ַָהַּֿׁÊ) ההגַÙֹֿ
+minimumAngleU=ַהַׂטךֹ ַהֿזךַ U
+minimumAngleU.ToolTip=ַׂטךֹ ַהֱָֿ (ַָהַּֿׁÊ) ההוÊטַׂךַÊ
+minimumAngleV=ַהַׂטךֹ ַהֿזךַ V
+minimumAngleV.ToolTip=ַׂטךֹ ַהֱָֿ (ַָהַּֿׁÊ) ה־׳ט׳ ַה׳טה
+minimumX= גךוֹ X ַהֿזךַ  
+minimumX.ToolTip=ַהֽֿ ַהֳֿזי הגךוֹ ? ַהÊך ךודז Ùׁײחַ
+minimumY= גךוֹ Y ַהֿזךַ 
+minimumY.ToolTip=ַהֽֿ ַהֳֿזי הגךוֹ Y ַהÊך ךודז Ùׁײחַ
+minimumZ= גךוֹ Z ַהֿזךַ 
+minimumZ.ToolTip=ַהֽֿ ַהֳֿזי הגךוֹ Z ַהÊך ךודז Ùׁײחַ
+mjpeg=חך MJPEG
+mjpeg.ToolTip=וַ ֵ׀ַ דַז Êהגך ַהױטֹׁ בך Êז׃ךג MJPEG
+mnemonic=ÊÙהךוֹ ו־Êׂהֹ
+mnemonic.ToolTip=ַהובÊַֽ ַה׀ך (וÙ ALT) ךבÙסה ח׀ַ ַהÙזױׁ
+mnemonicOff=ÊÙהךוֹ ו־Êׂהֹ וÙ׳סהֹ
+mnemonicOff.ToolTip=ַהובÊַֽ ַה׀ך ךגטו ָÊבÙךה ח׀ַ ַהÙזױׁ (וÙ ALT) ֵ׀ַ דַז וÙ׳סה
+mnemonicOn=ÊÙהךוֹ ו־Êׂהֹ ובÙסהֹ
+mnemonicOn.ToolTip=ַהובÊַֽ ַה׀ך ךגטו ָÊזװך׳ ח׀ַ ַהÙזױׁ (וÙ ALT) Ùזֿ ַהÊװÚךה 
+modal=וגךסֿ
+modal.ToolTip=וָׁÙַÊ ֽטַׁ וגךסֹֿ הָגךֹ ַהטַּחֹ
+movedAction=ֽׁדֹ ַהבֳֹׁ
+movedAction.ToolTip=ַהÙוה ההַ׃ÊֿÙֱַ Ùזֿ Êֽׁךד ַהבֳֹׁ ײוז ֽֿטֿ ַהÙזױׁ
+movesGroup=׃ָֽ וּוטÙֹ
+movesGroup.ToolTip=ֵ׀ַ דַז ׃ָֽ ַהÙזױׁ ךִֻׁ Ùהי ודטזַÊח (ֵז טּֿÊ)	
+
+neumatic=־׳ זךטוַÊךד
+neumatic.ToolTip=׳טה ־׳ ֳגױׁ Êגַ׳Ù דה ַּזָ וז ַהוײהÙ
+norepeat=הַ ךטּֿ Êדַׁׁ
+norepeat.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ Êַּחה ַהזגַ׳ ַהוÊÙַגָֹ ַהוÊ׃ַטךֹ
+normalized=גךַ׃ך
+normalized.ToolTip=וַ ֵ׀ַ דַזÊ ַהָךַזַÊ גךַ׃ךֹ ֵהי טַֽֿ
+numberOfElements=# Ùזַױׁ
+numberOfElements.ToolTip=Ùֿֿ ַהÙזַױׁ בך ַהוּוטÙֹ
+numcolors=Ùֿֿ ַהַהטַז
+numcolors.ToolTip=Ùֿֿ ַהַהטַז ַהוÊַֹֽ
+
+occurences=ַהַֽהַÊ
+occurences.ToolTip=Ùֿֿ ַֽהַÊ ַהֵֿ־ַה
+onClosing=ֳֻזֱַ ַהÚהג
+onClosing.ToolTip=ַהֱֵַּׁ ההַ׃ÊֿÙֱַ ֳֻזֱַ Úהג ַהזַב׀ֹ
+options=־ךַַׁÊ
+options.ToolTip=ַה־ךַַׁÊ הÊֽֿךֿ וז ָךזחַ
+orientation=ַהֵÊַּח
+orientation.ToolTip=ֳבגך ַט Ùוטֿך
+
+panx=זׂטֽ ֳבגך
+panx.ToolTip=ַהזׂטֽ ַהֳבגך ההÙׁײ (ַָהָד׃ה)
+pany=זׂטֽ Ùוטֿך
+pany.ToolTip=ַהזׂטֽ ַהÙוטֿך ההÙׁײ (ַָהָד׃ה)
+parameterName=ֵ׃ו ַהט׃ך׳
+parameterName.ToolTip=ַ׃ו ַהט׃ך׳ Ùזֿוַ ךÙׁײ ַהÙזױׁ Ùֶַהֹ ט׃ֶַ׳ דהחַ
+parameterValues=גךוֹ ַהט׃ך׳
+parameterValues.ToolTip=ױבךב גךו ַהט׃ֶַ׳ double[] וז וּוטÙ ַהט׃ֶַ׳
+pixelSize=׃וד ַהָד׃ה
+pixelSize.ToolTip=ֵ׀ַ דַז ַהגךַ׃ ַָהָד׃ה
+placement=וטײÙ ַהֵ׳ַׁ
+placement.ToolTip=וטײÙ ַהֵ׳ַׁ
+points=זגַ׳
+points.ToolTip=Ùֿֿ זגַ׳ ַהÙזױׁ
+points1=זגַ׳ 1
+points1.ToolTip=ַהÙֿֿ ַהזגַ׳ וז ַהÙזױׁ בך ַהוÊÚךׁ ַהֳטה
+points2=זגַ׳ 2
+points2.ToolTip=ַהÙֿֿ ַהזגַ׳ וז ַהÙזױׁ בך ַהוÊÚךׁ ַהַֻזך
+positionx=וטײÙ X
+positionx.ToolTip=ַהוׁדָֹ X הֵַֻֽֿךַÊ ַהÙזױׁ
+positiony=וטײÙ Y
+positiony.ToolTip=ַהוׁדָֹ Y הֵַֻֽֿךַÊ ַהÙזױׁ
+positionz=וטײÙ Z
+positionz.ToolTip=ַהוׁדָֹ Z הֵַֻֽֿךַÊ ַהÙזױׁ
+pressAction=Ùזֿ ַהײÚ׳
+pressAction.ToolTip=ַהֱֵַּׁ ההַ׃ÊֿÙֱַ Ùזֿ ַהײÚ׳ Ùהי ַהÙזױׁ
+printTarget=׳ַָÙֹ ַהחֿב
+printTarget.ToolTip=Ùזױׁ ַהÙׁײ הה׳ַָÙֹ Ùזֿ ֳ־׀ הג׳ֹ
+profilable=וװדסה
+profilable.ToolTip=ֵ׀ַ ֳודז ÊÚךךׁ ַהװדה ַהַּזָך הה־ׂסַז ָ׳ׁךגֹ ÊבַÙהךֹ 	
+profile=ַהװדה ַהַּזָך
+profile.ToolTip=גךו double[4] ַהÊך Êֽֿֿ ַהװדה
+profileColor=הטז ַהװדה
+profileColor.ToolTip=הטז ַהװדה ַהַּזָך
+projectionMode=ַהֵ׃גַ׳
+projectionMode.ToolTip=דךבךֹ ֵ׃גַ׳ ַהוװחֿ ַהֻהַֻך ַהֳָÙַֿ Ùהי װַװֹ ֻזֶַךֹ ַהֳָÙַֿ
+
+radius=זױב ַהג׳ׁ
+radius.ToolTip=זױב ַהג׳ׁ ַהÙזױׁ
+releaseAction=Ùזֿ ֵ־הֱַ
+releaseAction.ToolTip=ַהֱֵַּׁ ההַ׃ÊֿÙֱַ Ùזֿוַ ךÊו Êֽׁךׁ ַהÙזױׁ
+removeHiddenLines=ֵ־בֱַ ַה־׳ט׳
+removeHiddenLines.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ֵַׂהֹ ַה־׳ט׳ ַהו־בךֹ
+resizable=Êּֽךו
+resizable.ToolTip=ֵ׀ַ דַז ַהÙזױׁ גַָה ההÊּֽךו
+resizesGroup=Êּֽךו וּוטÙֹ
+resizesGroup.ToolTip=וַ ֵ׀ַ דַז ÊÚךךַׁהּֽו ךִֻׁ Ùהי וּוטÙÊחַ (ֵז טּֿÊ)
+resolution=גֹֿׁ ַהÊֽהךה
+resolution.ToolTip=ֿגֹ Ùׁײ ַהÙזױׁ
+  Spring.resolution.ToolTip=ַהֿגֹ n1¬ n2 (n1 = ַהֽהגַÊ¬ n2 = זגַ׳ הדה ֽהגֹ) הÙׁײ ַהÙזױׁ
+  SpringSet.resolution.ToolTip=ַהֿגֹ n1¬ n2 (n1 = ַהֽהגַÊ¬ n2 = זגַ׳ הדה ֽהגֹ) הÙׁײ ַהÙזױׁ
+rollOver=Êּֽֿׁ
+rollOver.ToolTip=ֵ׀ַ דַזÊ ַהגךוֹ true¬ ךÊו ׁ׃ו ַהֽֿטֿ Ùזֿ וׁטׁ וִװׁ ַהבֳֹׁ בטגחַ
+rotationAngle=ֿטַׁז
+rotationAngle.ToolTip=ַׂטךֹ ַהֿטַׁז (Ùד׃ Ùגַָׁ ַה׃ַÙֹ) הÊ׳ָךגחַ Ùהי ַהÙזױׁ
+rotorAngle=ַׂטךֹ ַהֿטַׁ
+rotorAngle.ToolTip=ַהוטײÙ ַהַׂטך ההֿטַׁ
+
+scalex=ַהוגךַ׃ X
+scalex.ToolTip=Ùַוה וגךַ׃ ההÙזױׁ בך ַÊַּח X
+scaley=ַהוגךַ׃ Y
+scaley.ToolTip=Ùַוה וגךַ׃ ההÙזױׁ בך ַÊַּח Y
+scalez=ַהוגךַ׃ Z
+scalez.ToolTip=Ùַוה וגךַ׃ ההÙזױׁ בך ַהַÊַּח Z
+  Trace.secondaryColor=הטז ַהÙהַוֹ
+  Trace.secondaryColor.ToolTip=ַההטז ַהו׃ÊÙוה ההÙהַוֹ
+  TraceSet.secondaryColor=הטז ַהÙהַוֹ
+  TraceSet.secondaryColor.ToolTip=ַההטז ַהו׃ÊÙוה ההÙהַוַÊ
+selected=וֽֿֿ
+selected.ToolTip=ַהַֽהֹ ַהֳטהךֹ ההוÊÚךׁ
+
+selectedimage=ַהױטֹׁ ַהוֹֽֿֿ
+selectedimage.ToolTip=והב gif ההÙׁײ Ùזֿ ַהÊֽֿךֿ
+secondDirection=ַהַÊַּח B
+secondDirection.ToolTip=ױבךב double [3] וÙ ַÊַּח ַה׃׳ֽ ַהַֻזך
+sensitivity=ַהֽ׃ַ׃ךֹ
+sensitivity.ToolTip=ּֽו ַהזג׳ֹ ַהבÙסַהֹ ַָהָד׃ה (0 ההÙזױׁ ַהדַוה)
+showCoordinates=ַהֵַֻֽֿךַÊ
+showCoordinates.ToolTip=ֵ׀ַ דזÊ Êׁךֿ Ùׁײ ַהֵַֻֽֿךַÊ Ùזֿ ַהײÚ׳ Ùהי ַהבֳֹׁ
+showgrid=ֵ״חַׁ ַהװָדֹ
+showgrid.ToolTip=וַ ֵ׀ַ דַז ׃ךÊו ֵ״חַׁ ַהװָדֹ
+  ZContourPlot.showgrid=ֵ״חַׁ ַה־׳ט׳
+  ZContourPlot.showgrid.ToolTip=וַ ֵ׀ַ דַז ׃ךÊו ֵ״חַׁ ַה־׳ט׳
+showProfiles=ֵ״חַׁ ַהÊװדךהַÊ ַהַּזָךֹ
+showProfiles.ToolTip=ֵ׀ַ דַז ַהÙזױׁ הֿךח ÊװדךהַÊ ַהַּזָךֹ
+showRowNumber=ֳׁגַו ַהױבטב
+showRowNumber.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ Ùׁײ ֳׁגַו ַהױבטב
+showText=ֵ״חַׁ ַהגךו
+showText.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ Ùׁײ ֳׁגַו ַהגךו
+size=ּֽו
+  Light3D.size=ַהַÊַּח
+size.ToolTip=ּֽו ַהÙזױׁ
+  Light3D.size.ToolTip=ַÊַּח ַהÙזױׁ
+sizeX=ּֽו X
+  Light3D.sizeX=ַÊַּח X
+sizeX.ToolTip=ּֽו ַהÙזױׁ בך ַÊַּח X
+  Plane.sizeX=ּֽו A
+  Plane.sizeX.ToolTip=ּֽו ַהÙזױׁ בך ַהַÊַּח ַהֳטה
+  Light3D.sizeX.ToolTip=ַÊַּח ַהÙזױׁ X
+sizeY=ּֽו Y
+  Light3D.sizeY=ַÊַּח Y
+sizeY.ToolTip=ּֽו ַהÙזױׁ בך ַÊַּח Y
+  Plane.sizeY=ּֽו B
+  Plane.sizeY.ToolTip=ּֽו ַהÙזױׁ בך ַהַÊַּח ַהַֻזך
+  Light3D.sizeX.ToolTip=ַÊַּח ַהÙזױׁ Y
+sizeZ=ּֽו Z
+  Light3D.sizeZ=ַÊַּח Z
+sizeZ.ToolTip=ּֽו ַהÙזױׁ בך ַהַÊַּח Z
+  Light3D.sizeX.ToolTip=ַÊַּח ַהÙזױׁ Z
+skippoints=Ê־׳ך
+skippoints.ToolTip=Ùֿֿ זגַ׳ ַהֵֿ־ַה ההÊ־׳ך גָה Ê־׳ך׳ טַֽֿ
+solenoid=והב הטהָך
+solenoid.ToolTip=ַהַַֹֽׂ ַהÊך ךּÙהחַ Êָֿט ָוַָֹֻ והב הטהָך
+square=וָׁÙ
+square.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ַהַֽÊבַ״ ָװדה וָׁÙ
+squareAspect=וָׁÙ
+squareAspect.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ ַהַֽÊבַ״ ָװדה וָׁÙ
+startSize=ּֽו ַהֱָֿ
+startSize.ToolTip=ּֽו ַהׂ־ׁבֹ בך ַָֿךֹ ַה׃׳ׁ ַהֳטה
+startType=זטÙ ַהֱָֿ
+startType.ToolTip=ַהׂ־ׁבֹ בך ַָֿךֹ ַה׃׳ׁ ַהֳטה
+stride=׃ׁÙֹ ַה־׳טֹ
+stride.ToolTip=ַה־׳י ֳֻזֱַ Ùׁײ ַהָךַזַÊ
+stroke=ַה׃וד
+stroke.ToolTip=׃וד ־׳ט׳ ַהÙזױׁ
+  Points.stroke.ToolTip=׃וד טזו׳ ַה־׳ ַהו׃Ê־ֿו בך ׁ׃ו ַהזגַ׳
+style=ַהזו׳
+style.ToolTip=זו׳ ׁ׃ו ַהÙזױׁ
+  Trace.style=װדה ַהÙהַוֹ
+  Trace.style.ToolTip=זטÙ ַהÙהַוֹ ההׁ׃ו
+  TraceSet.style=װדה ַהÙהַוֹ
+  TraceSet.style.ToolTip=זטÙ ַהÙהַוֹ ההׁ׃ו
+
+text=ַהזױ
+text.ToolTip=ַהזױ ההÙׁײ
+text2=ַהזױ
+  Symbol.text2.ToolTip=ַהזױ ַהוÙׁטײ ָטַ׃׳ֹ ַהׁוׂ
+textOff=זױ וÙ׳ה
+textOff.ToolTip=ַהזױ ַהו׳הטָ Ùׁײח Ùזֿ ֵךגַב ÊװÚךה ַהÙזױׁ
+textOn=זױ ובÙסה
+textOn.ToolTip=ַהזױ ַה׀ך ׃ךÊו Ùׁײח Ùזֿוַ ךדטז ַהÙזױׁ ובÙסה
+textColor=הטז ַהזױ
+textColor.ToolTip=ַההטז ַה׀ך ךÊו ַ׃Ê־ַֿוח הÙׁײ ַהגךוֹ
+thinExtremes=ַהזחַךַÊ ַהׁגךגֹ
+thinExtremes.ToolTip=וַ ֵ׀ַ דַז ׃ךÊו ׁ׃ו ַהזַָײ ָזחַךַÊ ׁגךגֹ
+ticks=ÙהַוַÊ
+ticks.ToolTip=Ùֿֿ ÙהַוַÊ ַהÊֶֹּׂ ַהÊך ךÊו Ùׁײחַ בך ַהוַּה
+ticksFormat=װדה ַהÙהַוַÊ
+ticksFormat.ToolTip=װדה ַהÙהַוַÊ ַהו׃ÊÙוה
+title=Ùזטַז
+title.ToolTip=ַהÙזטַז ההÙׁײ בך ַהֱּׂ ַהÙהטך
+titleFont=־׳ ַהÙזטַז
+titleFont.ToolTip=זטÙ ־׳ ַהÙזטַז
+titleX=Ùזטַז X
+titleX.ToolTip=ַהÙזטַז ההÙׁײ בך ַהוֽטׁ X
+titleY=Ùזטַז Y
+titleY.ToolTip=ַהÙזטַז ההÙׁײ בך ַהוֽטׁ Y
+TLmessage=ׁ׃ַהֹ ך׃ַׁ
+TLmessage.ToolTip=ׁ׃ַהֹ בך ֳÙהי ַהַׂטךֹ ַהך׃ׁי
+TRmessage=ׁ׃ַהֹ ךוזי
+TRmessage.ToolTip=ׁ׃ַהֹ בך ֳÙהי ַהַׂטךֹ ַהךוזי
+tooltip=ֳַֹֿ Êהוךֽ
+tooltip.ToolTip=ַהזױ ַהוÙׁטײ Ùזֿוַ ךדטז ַהבֳֹׁ בטג ַהÙזױׁ
+transformation=Êֽטךה
+transformation.ToolTip=ַהÊֽטה ַהו׳ָג Ùהי ח׀ַ ַהÙזױׁ
+trueSize=ּֽו ֽגךגך
+trueSize.ToolTip=ַ׀ַ דַז ׃ךÊו ׁ׃ו ַהױטֹׁ ָּֽוחַ ַָהָד׃ה ַהֽגךגך
+  ImageSet.trueSize.ToolTip=ַ׀ַ דַז ׃ךÊו ׁ׃ו ַהױטׁ ָּֽוחַ ַָהָד׃ה ַהֽגךגך
+truncationHeight=ַגÊ׳ַÙ בך
+truncationHeight.ToolTip=ַהַׁÊבַÙ ַה׀ך ךÊו Ùזֿח ַגÊ׳ַÙ ַהו־ׁט׳
+
+url=URL
+url.ToolTip=Ùזטַז URL הַÊױַה דַוךַׁ טךָ 
+useColorDepth=Ùוג ַההטז
+useColorDepth.ToolTip=וַ ֵ׀ַ דַזÊ ךָּ ֵÙÊַו ַהּ׃ךוַÊ ַהָÙךֹֿ ַּֿכ
+
+value=ַהגךוֹ
+  ComboBox.value=ַהגךוֹ ַהֵָÊֶַֿךֹ
+  Equation.value=ַהגךוֹ ַהֵָÊֶַֿךֹ
+  Field.value=ַהגךוֹ ַהֵָÊֶַֿךֹ
+  Function.value=ַהגךוֹ ַהֵָÊֶַֿךֹ
+  ParsedField.value=ַהגךוֹ ַהֵָÊֶַֿךֹ
+  Slider.value=ַהגךוֹ ַהֵָÊֶַֿךֹ
+  TextField.value=ַהגךוֹ ַהֵָÊֶַֿךֹ
+value.ToolTip=ַהגךוֹ ַהוÙׁטײֹ וז ׳ׁב ַהÙזױׁ
+  ComboBox.value.ToolTip=Êֽֿךֿ ַה־ךַׁ ַהֳטהי
+  Equation.value.ToolTip=׃ה׃הֹ Êד׃ ַהֳטהךֹ
+  Field.value.ToolTip=ַהגךוֹ ַהֵָÊֶַֿךֹ
+  Function.value.ToolTip=ַהַֿהֹ ַהֵָÊֶַֿךֹ
+  ParsedField.value.ToolTip=ַהגךוֹ ַהֵָÊֶַֿךֹ
+  Slider.value.ToolTip=ַהגךוֹ ַהֵָÊֶַֿךֹ
+  TextField.value.ToolTip=ַהגךוֹ ַהֵָÊֶַֿךֹ
+
+valueIncrement=ַהׂךַֹֿ
+valueIncrement.ToolTip=ַהׂךַֹֿ ַהֳ׃ַ׃ךֹ ַהו׃Ê־ֿוֹ הÊÚךךׁ ַהגךוֹ
+variable=ַהוÊÚךׁ
+variable.ToolTip=ַהגךוֹ ַהוÙׁטײֹ וז ׳ׁב ַהÙזױׁ
+  AnalyticCurve.variable.ToolTip=ַהוÊÚךׁ ההֿטַה
+  AnalyticCurve3D.variable.ToolTip=ַהוÊÚךׁ ההֿטַה
+  Function.variable=ַהַֿהֹ
+  Function.variable.ToolTip=ַהַֿהֹ ההÊגךךו
+variable1=ַהוÊÚךׁ 1
+variable1.ToolTip=ַהוÊÚךׁ ַהֳטה ההֿטַה
+variable2=ַהוÊÚךׁ 2
+variable2.ToolTip=ַהוÊÚךׁ ַהַֻזך ההֿטַה
+videofile=בךֿךט
+videofile.ToolTip=והב ַהבךֿךט ההÊװÚךה
+visible=וֶׁך
+visible.ToolTip=טײטֽ ַהÙזױׁ
+
+width=ַהÙׁײ
+width.ToolTip=Ùׁײ ַהÙזױׁ
+
+x=ַהוטײÙ X
+x.ToolTip=ֵַֻֽֿך X ההÙזױׁ
+  ControlLine.x.ToolTip=ֵַֻֽֿךַÊ X ההזגַ׳
+  DataRaster.x.ToolTip=גךוֹ double  ֳט double[][] ההֵַֻֽֿךֹ X ֳט זגַ׳ ּֿךֹֿ
+  Display3DPanel.x.ToolTip=ֵַֻֽֿך X ההוִװׁ
+  DrawingPanel.x.ToolTip=ֵַֻֽֿך X ההוִװׁ
+  DrawingPanel3D.x.ToolTip=ֵַֻֽֿך X ההוִװׁ
+  PlottingPanel.x.ToolTip=ֵַֻֽֿך X ההוִװׁ
+  Pipe.x.ToolTip=ֵַֻֽֿךַÊ X הזגַ׳ ַהוׁדׂ ההֳזָטָ
+  Poligon.x.ToolTip=ֵַֻֽֿךַÊ X ההזגַ׳
+  Video.x.ToolTip=Tֵַֻֽֿך X ַהך׃ַׁ-ֳÙהי ַהבךֿךט
+xaxisPos=וטײÙ ַהוֽטׁ X
+xaxisPos.ToolTip=וטײÙ ַהוֽטׁ X
+xaxisType=זטÙ ַהוֽטׁ X
+xaxisType.ToolTip=ַהזטÙ (־׳ך ֳט הט10) הוֽטׁ X ֿךדַׁÊך
+xFormat=Êז׃ךג X
+xFormat.ToolTip=ַהÊז׃ךג ההֵַֻֽֿךֹ X
+xMarginPercentage=חַוװX(%)
+xMarginPercentage.ToolTip=ַהז׃ָֹ ַהוֶטךֹ ההחַוװ ההוגךַ׃ ַהֲהך בך ַהַÊַּח ַהֳבגך
+xyExpression=Ùַָֹׁ
+xyExpression.ToolTip=Ùַָֹׁ ֵײַבךֹ (x, y) ההÙׁײ
+xyFormat=װדה ַהÙַָֹׁ
+xyFormat.ToolTip=װדה ַהÙַָֹׁ
+
+
+y=וטײÙ Y
+y.ToolTip=ֵַֻֽֿךַÊ Y ההÙזױׁ
+  ControlLine.y.ToolTip=ֵַֻֽֿךַÊ Y ההזגַ׳
+  DataRaster.y.ToolTip=גךוֹ double ֳט double[] ההֵַֻֽֿךַÊ Y הזגַ׳ ּֿֿ
+  Display3DPanel.y.ToolTip=ֵַֻֽֿךַÊ Y ההוִװׁ
+  DrawingPanel.y.ToolTip=ֵַֻֽֿךַÊ Y ההוִװׁ
+  DrawingPanel3D.y.ToolTip=ֵַֻֽֿךַÊ Y ההוִװׁ
+  PlottingPanel.y.ToolTip=ֵַֻֽֿךַÊ Y ההוִװׁ
+  Pipe.y.ToolTip=ֵַֻֽֿךַÊ Y ההזגַ׳ וׁדׂ ַהֳזָטָ
+  Poligon.y.ToolTip=ַ?ַֻֽֿךֹ Y ההזגַ׳
+  Video.y.ToolTip=ַ?ַֻֽֿך Y ההֱּׂ ַהÙהטך ַהֳך׃ׁ וז װׁך׳ ַהבךֿךט
+yaxisPos=וטײÙ ַהוֽטׁ Y
+yaxisPos.ToolTip=וטײÙ ַהוֽטׁ Y
+yaxisType=זטÙ ַהוֽטׁ Y
+yaxisType.ToolTip=ַהזטÙ (־׳ך ֳט הט10) הוֽטׁ Y ֿךדַׁÊך
+yFormat=Êז׃ךג Y
+yFormat.ToolTip=ַהÊז׃ךג ההֵַֻֽֿך Y
+yMarginPercentage=חַוװY(%)
+yMarginPercentage.ToolTip=ַהז׃ָֹ ַהוֶטךֹ ההחַוװ ההוגךַ׃ ַהֲהך בך ַהַÊַּח ַהÙוטֿך 
+
+z=וטײÙ Z
+z.ToolTip=ַהֵַֻֽֿךַÊ Z ההÙזױׁ
+  ControlLine.z.ToolTip=ַהֵַֻֽֿךַÊ Z ההזגַ׳
+  Display3DPanel.z.ToolTip=ַהֵַֻֽֿךַÊ Z ההוִװׁ
+  DrawingPanel3D.z.ToolTip=ַהֵַֻֽֿךַÊ Z ההוִװׁ
+  Pipe.z.ToolTip=ַהֵַֻֽֿךַÊ Z הזג׳ֹ ט׃׳ ַהַזָטָ
+  Poligon.z.ToolTip=ַהֵַֻֽֿךַÊ Z ההזגַ׳
+zArray=ָךַזַÊ Z
+  AnalyticScalarField.zArray=ַהַֿהֹ Z
+zArray.ToolTip=ױבךב גךו double[][]  ה Z
+  AnalyticScalarField.zArray.ToolTip=ַהÙַָֹׁ הֽ׃ַָ גךו Z ההֽגה
+zFormat=Êז׃ךג Z
+zFormat.ToolTip=ַהÊז׃ךג ההֵַֻֽֿך Z
+zoom=Êדָךׁ
+zoom.ToolTip=Ùַוה Êדָךׁ ההÙזױׁ
+
+% --- Added after August 2007
+
+LABELAppearance=ַהו״חׁ
+
+angles=ַהׂטַךַ
+angles.ToolTip=גךוֹ double ֳט double[][] ׂטַךַ ַהַÊַּח (ַָהַֿׁךַז) ההÙזַױׁ
+AnalyticVectorField3D.angles=ׂטַךַ ַה׃וÊ
+AnalyticVectorField2D.angles.ToolTip=ַהÙַָֹׁ F(x,y) ַהÊך Êגטו ָֽ׃ַָ ַהׂטַךַ הװÙַÙ ַהֽגה
+AnalyticVectorField3D.angles.ToolTip= ַהÙַָֹׁ F(x,y,z) ַהÊך Êגטו ָֽ׃ַָ ַהׂטַךַ ַה׃וÊךֹ (ַָהַֿׁךַז) הװÙַÙ ַהֽגה
+
+SimpleVectorField3D.angles=ַהׂטַךַ ַה׃וÊךֹ
+SimpleVectorField3D.angles.ToolTip=גךוֹ double ֳט double[][][] ׂטַךַ ַה׃וÊךֹ (ַָהַֿׁךַז) ההÙזַױׁ
+
+betas=ׂטַךַ ַהַׁÊבַÙ
+betas.ToolTip=גךוֹ double ֳט double[][][] ׂטַךַ ַהַׁÊבַÙ (ַָהַֿׁךַז) ההÙזַױׁ
+AnalyticVectorField3D.angles.ToolTip=ַהÙַָֹׁ F(x,y,z) ַהÊך Êגטו ָֽ׃ַָ ׂטַךַ ַהַׁÊבַÙ (ַָהַֿׁךַז) הװÙַÙ ַהֽגה
+
+centered=Êט׃ך׳
+centered.ToolTip=וַ ֵ׀ַ דַז ׃ךÊו Êט׃ך׳ ַהÙזַױׁ.
+coordinateSystem=ז״ַו ַהֵַֻֽֿךַÊ
+coordinateSystem.ToolTip=זטÙ ז״ַו ַהֵַֻֽֿךַÊ ההוÊÚךַׁÊ בך ַהÙַַָׁÊ
+
+expandedZ=Z ַהוט׃Ù
+expandedZ.ToolTip=ַהוÙַוה ַהו׃Ê־ֿו הÊט׃ךÙ וגךַ׃ Z ÊÙׂךַׂ הגךו גׁךָֹ וז ַהױבׁ
+
+fixedGutters=וַׁׂךָ ַָֻÊֹ
+fixedGutters.ToolTip=ֵ׀ַ דזÊ Êׁךֿ ַ׃Ê־ַֿו וַׁׂךָ ַָֻÊֹ
+
+imag=־ךַהך
+imag.ToolTip=הטז ַהוׁדָֹ ַה־ךַהךֹ ההַַֻֽֿךֹ ַהוֿ־הֹ Y
+imagColor=הטז ַה־ךַהך
+imagColor.ToolTip=הטז ַהוׁדָֹ ַה־ךַהךֹ ההַַֻֽֿךֹ
+
+length=ַה׳טה
+length.ToolTip=ַהגךוֹ double  ה׳טה ּוךÙ ַהֳ׃חו ֳט ַהַײהַÙ בך ַהֽגה
+
+magnitude=וׁדַָֹההטז
+magnitude.ToolTip=גךוֹ double  ֳט ַהוױבטב double[][] הוׁדָ ַההטז ההֽגה	
+  AnalyticVectorField2D.magnitude.ToolTip=ַהÙַָֹׁ  f(x,y) ַהÊך Êגטו ָֽ׃ַָ וׁדָ ַההטז ההֽגה
+  AnalyticVectorField3D.magnitude.ToolTip=ַהÙַָֹׁ  f(x,y,z) ַהÊך Êגטו ָֽ׃ַָ וׁדָ ַההטז ההֽגה
+  SimpleVectorField3D.magnitude.ToolTip=גךוֹ double  ֳט ַהוױבטב double[][][] הוׁדָ ַההטז ההֽגה
+
+markershape=װדה ַהÙהַוֹ
+markershape.ToolTip=זטÙ ַהÙהַוֹ ההׁ׃ו
+markerColor=הטז ַהÙהַוֹ
+
+markerColor.ToolTip=הטז ֽטַב ַהÙהַוַÊ
+markerFill=ÊÙֶָֹ ַהÙהַוֹ
+markerFill.ToolTip=הטז ַהÙהַוֹ ַהַֿ־הך
+menuName=Ùזױׁ ַהגֶַוֹ
+menuName.ToolTip=ַהַ׃ו ההÙׁײ בך ַהוַֽדַֹ ַהוטַבג  ההÙזױׁ בך ַהגֶַוֹ
+
+nx=Nx
+nx.ToolTip=Ùֿֿ ַהÊֿׁךַּÊ ההודטז X
+ny=Ny
+ny.ToolTip=Ùֿֿ ַהÊֿׁךַּÊ ההודטז Y
+
+onErrorAction=Ùזֿ Êֽהךה ׃ַהָ
+onErrorAction.ToolTip=ַהÙוה ַהוÊÙךז Ùזֿוַ ךÙֻׁ ַהוֽהה Ùהי ־׳ֳ בך ַהֿטַה
+onSuccessAction=Ùזֿ Êֽהךה וטָּ
+onSuccessAction.ToolTip=ַהÙוה ַהוÊÙךז Ùזֿוַ הַךÙֻׁ ַהוֽהה Ùהי ֳך ־׳ֳ בך ַהֿטַה
+
+plotType=זטÙ ַהÊ־׳ך׳
+plotType.ToolTip=ַהזטÙ ַהֵ״חַׁ: װָדֹ¬ֵ׃Êךבֱַ¬ ׃׳ֽ וֽׁב¬ ֳט דבַב
+
+real=ֽגךגך
+real.ToolTip=ַהוׁדָ ַהֽגךגך הֵַֻֽֿךַÊ ַהֵֿ־ַה y
+realColor=הטז ַהֽגךגך
+realColor.ToolTip=הטז ַהוׁדָ ַהֽגךגך ההָךַזַÊ
+
+showAxes=ֵ״חַׁ ַהוַֽטׁ
+showAxes.ToolTip=ֵ״חַׁ ַהוַֽטׁ
+showLegend=ֵ״חַׁ ַהובÊַֽ
+showLegend.ToolTip=וַ ֵ׀ַ דַז ׃ךÊו ֵ״חַׁ ט׃ךהֹ ַהֵךײַֽ ַההטז
+sorted=בׁׂ
+sorted.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ בׁׂ ַהָךַזַÊ ֽ׃ָ ׂךַֹֿ x
+
+xcomponent=ַהוׁדָֹ X
+xcomponent.ToolTip=גךוֹ double  ֳט ַהוױבטב double[][] ההוׁדָ X הֽגה ַהװÙַÙ
+AnalyticVectorField2D.xcomponent.ToolTip=ַהÙַָֹׁ  f(x,y) ַהÊך Êגטו ָֽ׃ַָ ַהוׁדָ X הֽגה ַהװÙַÙ
+SimpleVectorField3D.xcomponent.ToolTip=גךוֹ double  ֳט ַהוױבטב double[][][] ההוׁדָ X הֽגה ַהװÙַÙ
+AnalyticVectorField3D.xcomponent.ToolTip=ַהÙַָֹׁ  f(x,y,z) ַהÊך Êגטו ָֽ׃ַָ ַהוׁדָ X הֽגה ַהװÙַÙ
+
+ycomponent=ַהוׁדָֹ Y
+ycomponent.ToolTip=גךוֹ double  ֳט ַהוױבטב double[][] ההוׁדָ Y הֽגה ַהװÙַÙ
+AnalyticVectorField2D.xcomponent.ToolTip=ַהÙַָֹׁ  f(x,y) ַהÊך Êגטו ָֽ׃ַָ ַהוׁדָ Y הֽגה ַהװÙַÙ
+SimpleVectorField3D.xcomponent.ToolTip=גךוֹ double  ֳט ַהוױבטב double[][][] ההוׁדָ Y הֽגה ַהװÙַÙ
+AnalyticVectorField3D.xcomponent.ToolTip=ַהÙַָֹׁ  f(x,y,z) ַהÊך Êגטו ָֽ׃ַָ ַהוׁדָ Y הֽגה ַהװÙַÙ
+
+zcomponent=ַהוׁדָֹ Z
+zcomponent.ToolTip=גךוֹ double  ֳט ַהוױבטב double[][] ההוׁדָ Z הֽגה ַהװÙַÙ
+AnalyticVectorField2D.xcomponent.ToolTip=ַהÙַָֹׁ  f(x,y) ַהÊך Êגטו ָֽ׃ַָ ַהוׁדָ Z הֽגה ַהװÙַÙ
+SimpleVectorField3D.xcomponent.ToolTip=גךוֹ double  ֳט ַהוױבטב double[][][] ההוׁדָ Z הֽגה ַהװÙַÙ
+AnalyticVectorField3D.xcomponent.ToolTip=ַהÙַָֹׁ  f(x,y,z) ַהÊך Êגטו ָֽ׃ַָ ַהוׁדָ Z הֽגה ַהװÙַÙ
+
+% --- Added after January 2008
+
+resizeAction= Ùזֿ ַהÊּֽךו
+resizeAction.ToolTip=ַהÙוה ַההַׂו Ùזֿוַ ךÊו ÊÚךךׁ ּֽו ַהÙזױׁ
+
+LABELCamera.ToolTip=ֵÙַֹֿ ÊÙךךז ַהדַוךַׁ
+
+position=ױבךב ַהוטײÙ
+position.ToolTip=ױבךב ךֽÊטך ֵַֻֽֿךַÊ ַהÙזױׁ
+sizeArray=׳טה ַהױבךב
+sizeArray.ToolTip=ַהױבךב ׀ט ׳טה ךÙַֿה ׳טה ַהÙזױׁ בך דה ֵַֻֽֿךֹ
+
+depthFactor=DepthFactor
+depthFactor.ToolTip=Êױֽךֽ וֿׂטּ ךּÙה Ùזױׁ ךָֿט ֳגָׁ (< 1) ֳט ָÙךֹֿ (> 1)
+
+
+% --- Added after July 2008
+
+aliasing=ֵַׂהֹ ַהÊ׃זז
+aliasing.ToolTip=וַ ֵ׀ַ דַז ױגה ַה־׳ט׳ טַהזױטױ בך ַההטֹֽ
+
+columnsLocked=Ùוטֿ וִמוז
+columnsLocked.ToolTip=וַ ֵ׀ַ דַז ַהÙוטֿ וִוז טהַ ךודז Êֽׁךׁח
+
+firstColIndex=ַהÙוטֿ ַהֳטה
+firstColIndex.ToolTip=ׁגו ַהÙוטֿ ַהֳטה ההÙׁײ
+firstRowIndex=ַהױב ַהֳטה
+firstRowIndex.ToolTip=ׁגו ַהױב ַהֳטה ההÙׁײ
+
+loops=ֽהגַÊ
+loops.ToolTip=Ùֿֿ ֽהגַÊ ַהזַָײ
+
+menu=גֶַוֹ
+menu.ToolTip=Ùׁײ גטֶַו וזָֻגֹ בך ח׀ַ ַהַ׳ַׁ
+
+pointsPerLoop=ַהזגַ׳/ֽהגֹ
+pointsPerLoop.ToolTip=Ùֿֿ ַהזגַ׳ בך דה ֽהגֹ וז ַהזַָײ
+
+showRowNumber=ֵ״חַׁ ׁגו ַהױב
+showRowNumber.ToolTip=וַ ֵ׀ַ דזÊ Êׁךֿ Ùׁײ ֳׁגַו ַהױבטב
+
+static=ַָֻÊ
+static.ToolTip=Ùזַױׁ ַָֻÊֹ הַ Êּֿֿ Êהגֶַךַ  
+
+transposed=וזגטהֹ
+transposed.ToolTip=ֽ׃ַָ וזגטהֹ וױבטבֹ
+
+% --- Added after November 2008
+
+measured=וגַ׃
+measured.ToolTip=וַ ֵ׀ַ דַז ַהÙזױׁ ךִֻׁ ÊÚךךׁ ַהּֽו ַהÊהגֶַך ההÙזױׁ ַהֳױה
+
+columns=ֳÙוֹֿ
+columns.ToolTip=Ùֿֿ ַהֳÙוֹֿ
+
+noUnselect=הַ ֵהÚֱַ ַהÊֽֿךֿ
+noUnselect.ToolTip=ֵ׀ַ דַזÊ ַהגךוֹ true¬ ךודז ֵהÚֱַ Êֽֿךֿ ַהׁׂ בג׳ Ùז ׳ׁךג ַהזגׁ Ùהי ׁׂ ֲ־ׁ
+
+3Dfile=והב ֻהַֻך ַהֳָÙַֿ
+3Dfile.ToolTip=והב וÙ וÙהטוַÊ ֻהַֻךֹ ַהֳָÙַֿ ההּ׃ךו
+
+VRMLfile= והב VRML
+VRMLfile.ToolTip=והב VRML וÙ וÙהטוַÊ ֻהַֻךֹ ַהֳָÙַֿ ההּ׃ךו
+
+LABELTexture=ַהז׃ךּ
+
+texture=ז׃ךּ 1
+texture.ToolTip=ַהז׃ךּ ַהַטה ההÙזױׁ
+textureSecond=ז׃ךּ 2
+textureSecond.ToolTip=ַהז׃ךּ ַהַֻזך ההÙזױׁ
+textureTransparency=ַהװבַבךֹ
+textureTransparency.ToolTip=װבַבךֹ ַהז׃ךּ
+textureCombine=וּׂ
+textureCombine.ToolTip=וַ ֵ׀ַ דַז ַהּוÙ ָךז ַהז׃ךּ וÙ הטז ַהÊÙֶָֹ ההÙזױׁ	
+
+columnWidth=Ùׁײ ַהÙוטֿ
+columnWidth.ToolTip=Ùׁײ ַהÙוטֿ
+
+# Added after March 2009
+
+points3=ַהזגַ׳ 3
+points3.ToolTip=Ùֿֿ זגַ׳ ַהÙזױׁ בך ַהוÊÚךׁ ַהַֻהֻ
+
+variable3=ַהוÊÚךׁ 3
+variable3.ToolTip=ַהוÊÚךׁ ַהַֻהֻ ההֿטַה
+
+tabTitles=ֵ׃ו ַהֵ׳ַׁ
+tabTitles.ToolTip=ֵ׃ו ַהֵ׳ַׁ
+
+# Added after April 2009
+
+xData=ָךַזַÊ X
+xData.ToolTip=ֵַֻֽֿךַÊ X ההÙזױׁ
+
+yData=ָךַזַÊ Y
+yData.ToolTip=ֵַֻֽֿךַÊ Y ההÙזױׁ
+
+zData=ָךַזַÊ Z
+zData.ToolTip=ֵַֻֽֿךַÊ Z ההÙזױׁ
+
+extraColor=ֳהטַז ֵײַבךֹ
+extraColor.ToolTip=ֳהטַז ֵײַבךֹ הÙזױׁ
+
+LABELTableLabels=Table Labels
+
+xLabel=ַהÙוטֿ X
+xLabel.ToolTip=Ê׃וךֹ ַהÙוטֿ X Ùזֿ Ùׁײחַ בך ֳַֹֿ ַהָךַזַÊ
+
+yLabel=ַהÙוטֿ Y
+yLabel.ToolTip=Ê׃וךֹ ַהÙוטֿ Y Ùזֿ Ùׁײחַ בך ֳַֹֿ ַהָךַזַÊ
+
+zLabel=ַהÙוטֿ Z
+zLabel.ToolTip=Ê׃וךֹ ַהÙוטֿ Z Ùזֿ Ùׁײחַ בך ֳַֹֿ ַהָךַזַÊ
+
+axesMapping=ÊÙךךז ַהוַֽטׁ
+axesMapping.ToolTip=ַהÊÙךךז ָךז ַהֵַֻֽֿךַÊ טַהוַֽטׁ בך ט׃ֶַ׳ ֻהַֻךֹ ַהַָÙַֿ
+
+sizeZreduction=Ê־בךײ Z ָגךוֹ
+sizeZreduction.ToolTip=Ùַוה Ê־בךײ Z בך ַּזָ טַֽֿ וז ַהÙזױׁ
+
+#Added after October 2009
+
+dataForeground=הטז ַהזױ
+dataForeground.ToolTip=הטז זױ ַהָךַזַÊ
+
+dataBackground=־הבךַֹהָךַזַÊ
+dataBackground.ToolTip=הטז ַה־הבךֹ ההָךַזַÊ
+
+autoResizeMode=זו׳ ÊÚךׁ ַהּֽו
+autoResizeMode.ToolTip=זו׳ ַהÊÚךךׁ ַהÊהגֶַך הּֽו ַהּֿטה Ùזֿ ÊÚךךׁ ּֽוח
+
+illumination=ֳײטֱַ ַבÊַׁײךֹ
+illumination.ToolTip=וַ ֵ׀ַ דַזÊ ֳײטֱַ ַבÊַׁײךֹ Ùהי
+
+moveable=וÊזגה
+moveable.ToolTip=וַ ֵ׀ַ דַז ־הבךֹ ַהױטֹׁ וÊזגהֹ
+
+ambientFactor=Ùַוה ַהוֽך׳
+ambientFactor.ToolTip=ַהÙַוה ַהוֽך׳ ההײטֱ
+
+attenuation=ַהÊטחךז
+attenuation.ToolTip=וÙַוה ַהÊטחךז וז ַהײטֱ
+
+concentration=ַהװֹֿ
+concentration.ToolTip=Ùַוה װֹֿ ַהײטֱ
+
+angle=ַהַׂטךֹ
+angle.ToolTip=ַׂטךֹ ַהֿטַׁז
+  Light3D.angle.ToolTip=Ùַוה ַׂטךֹ ַהײטֱ
+
+on=וװÚסה
+on.ToolTip=וַ ֵ׀ַ דַז ַהÙזױׁוװÚה ֳט הַ
+  
+type=ַהזטÙ
+Light3D.type.ToolTip=זטÙ ַהײטֱ
+
+axis=ַהוֽטׁ
+axis.ToolTip=וֽטׁ ַהֿטַׁז
+
+origin=ַהֳױה
+origin.ToolTip=ֳױה ַהÊֽטךה
+
+Knob.minimumAngle.ToolTip=ַהַׂטךֹ ַהֿזךַ הÊֿטךׁ ַהוגָײ (int ההַּֿׁÊ¬ double ההַֿׁךַז)
+Knob.maximumAngle.ToolTip=ַהַׂטךֹ ַהֳגױי הÊֿטךׁ ַהוגָײ (int ההַּֿׁÊ¬ double ההַֿׁךַז)
+
+Circle3D.minimumAngle.ToolTip=ַהַׂטךֹ ַהֿזךַ ההֶַֹֿׁ 
+Circle3D.maximumAngle.ToolTip=ֳגױי ַׂטךֹ ַהֶַֹֿׁ
+ 
+autoAdjust=ײָ׳ ֲהך
+autoAdjust.ToolTip=וַ ֵ׀ַ דַז ךָּ ײָ׳ ַהדַוךַׁ ֲהך Ùהי ַהÊÚךַׁÊ
+
+loop=ֽהגֹ
+loop.ToolTip=וַ ֵ׀ַ דַז ךÊו ÊװÚךה ַהױטÊ בך ֽהגֹ
+
+# Added later than Jan 2011
+
+q=q[]
+q.ToolTip=ַהודטזַÊ וז Êֽטה ַהדטַÊךׁזךטז
+
+q0=q0
+q0.ToolTip=ַהודטז ַהֳטה וז Êֽטה ַהדטַÊךׁזךטז
+
+q1=q1
+q1.ToolTip=ַהודטז ַהַֻזך וז Êֽטה ַהדטַÊךׁזךטז
+
+q2=q2
+q2.ToolTip=ַהודטז ַהַֻהֻ וז Êֽטה ַהדטַÊךׁזךטז
+
+q3=q3
+q3.ToolTip=ַהודטז ַהַָׁÙ וז Êֽטה ַהדטַÊךׁזךטז
+
+
+v1=v1[]
+v1.ToolTip=וןׁדַָÊ ַהװÙַÙ ַהֳטה ההוַֽ׀ַֹ
+
+v2=v2[]
+v2.ToolTip=וןׁדַָÊ ַהװÙַÙ ַהַֻזך ההוַֽ׀ַֹ
+
+inverse=ַהÊֽטה ַהÙד׃ך
+inverse.ToolTip=ֵ׀ַ דזÊ Êׁךֿ ֵזװֱַ ַהÊֽטה ַהÙד׃ך
+
+firstSize=ּֽו A
+firstSize.ToolTip=The size of the element in the first direction
+
+secondSize=ּֽו B
+secondSize.ToolTip=ּֽו ַהÙזױׁ בך ַהַÊַּח ַהַֻזך
+
+matrix=וױבטבֹ
+matrix.ToolTip=double [3][3] ֳט ױבךב double [9] ({m[0][0],m[0][1],m[0][2],m[1][0],...}) וז Ùזַױׁ ַהוױבטבֹ
+
+  TriangularBinaryLattice.data.ToolTip=ַהױבךב[][]Int ַהֳÙַֿֿ וז 0 ט 1 ַה׳ָךÙךֹ
+  TriangularByteLattice.data.ToolTip=ַהױבךב[][]Int בך ַהוַּה (-128<127) ַהגךו ַָהַָךÊ
+  TriangularBinaryLattice.color=הטז ֽך
+  TriangularBinaryLattice.color.ToolTip=ַההטז ַהו׃Ê־ֿו הÙׁײ 1
+  
+immediateAction=בטׁך
+immediateAction.ToolTip=וַ ֵ׀ַ דַז ךÊו Êזבך׀ ַהֱֵַּׁ בטַׁ (וגַָה ַהַזÊ״ַׁ ֽÊי ךדטז ו׃ךךׁ ַהזוט׀ּ ־ַוה)
+
+symmetricZ=Z וÊזַ״ׁ
+symmetricZ.ToolTip=וַ ֵ׀ַ דַז ךזָÚך ֳז Êדטז גךוֹ Z = 0 בך וזÊױב ַהז׳ַג
+
+fontFactor=וÙַוה ּֽו ַה־׳
+fontFactor.ToolTip=Ùַוה ÊÚךךׁ ּֽו ַה־׳ הÊ׃וךֹ ַהֵַֻֽֿךַÊ Ùהי ַהוַֽטׁ
+
+allowRescale=ַה׃וַֽ ֵָÙַֹֿ ֽ׃ַָ ַהוגךַ׃
+allowRescale.ToolTip=וַ ֵ׀ַ דַז דה Ùזױׁ וז ַהױבךב גֿ ךÚ׳ך ֳדֻׁ וז ָד׃ה טַֽֿ ָÚךֹ והֱ ַהז׳ַג
+
+axesEnabled=וַֽטׁ ובÙסהֹ
+axesEnabled.ToolTip=וַ ֵ׀ַ דַזÊ  ַהוַֽטׁ (ַהÊבַÙהךֹ) חך ÊבַÙהךֹ ֽגַ
+
+axisDragAction=Ùזֿ ׃ָֽ ַהוַֽטׁ
+axisDragAction.ToolTip=ַהֱֵַּׁ ההַ׃ÊֿÙֱַ Ùזֿ ׃ָֽ ֳך וז ַהוַֽטׁ(ַהÊבַÙהךֹ)
+
+  TabbedPanel.selected.ToolTip=ַהֵ׳ַׁ ַהוֽֿֿ ַֽהךַ
+
+# Added after August 2012
+
+username=דהוֹ ַהוׁטׁ
+username.ToolTip=ַ׃ו ַהו׃Ê־ֿו (ֵ׀ַ הׂו ַהֳוׁ)
+
+password=Password
+password.ToolTip=דהוֹ ַהוׁטׁ (ֵ׀ַ הׂו ַהֳוׁ)
+
+configuration=ֵÙַַֿֿÊ
+configuration.ToolTip=והב ֵÙַַֿֿÊ ַ־Êךַׁך
+
+markers=ÙהַוַÊ
+markers.ToolTip=גֶַוֹ ובױטהֹ ָבטַױה וז ÙהַוַÊ טֳַּֽו (Ùהי ׃ָךה ַהוַֻה¬ "EJS:76,UHU:50,myMarker.patt:50")
+
+fps=FPS
+fps.ToolTip=Ùֿֿ ַהֵ׳ַַׁÊ בך ַהַֻזךֹ ַהטַֹֽֿ ההגֱַֹׁ טַהוÙַהֹּ
+
+  Tile2D.data.ToolTip=ֵַֻֽֿךַÊ ַהזגַ׳ double[nPoints][2] array of [x,y]
+  Tile3D.data.ToolTip=ֵַֻֽֿךַÊ ַהזגַ׳  double[nPoints][3] array of [x,y]
+
+field=ֽגה
+field.ToolTip=double[nPointsInMesh][nValues] ה double[nCells][nPointsInCell][nValues] בך ױבךב וז גךו ַהֽגה
+  
+cells=־הַךַ
+cells.ToolTip = ַהױבךב  int[nCells][nPoints]  ַהוÙׁב הה־הַךַ
+
+boundary=ַהֽֿטֿ
+boundary.ToolTip=ַהױבךב  int[nSegments][nPoints]  ַהוÙׁב ההֽֿטֿ
+
+boundaryColors=ֳהטַז ַהֽֿטֿ
+boundaryColors.ToolTip=וּוטÙֹ ַהֳהטַז הדה ַהֽֿטֿ (ֵ׃ו ַהֽֿ ך׃Ê־ֿו דוִװׁ בך ח׀ַ ַהױבךב)
+
+boundaryWidth=׃וד ַהֽֿטֿ
+boundaryWidth.ToolTip=׃וד ַהֽֿטֿ
+
+drawingBoundary=ׁ׃ו ַהֽֿטֿ
+drawingBoundary.ToolTip=וַ ֵ׀ַ Êו ׁ׃ו ַהֽֿטֿ
+
+boundaryZ=ַהֽֿטֿ Z
+boundaryZ.ToolTip=ֵַֻֽֿך Z ההֽֿטֿ
+
+port=ַהוזב׀
+port.ToolTip=ַהוזב׀ ַה׀ך ךÊו ֵׁבַגח ַָהּחַׂ
+
+onDisplay=Ùזֿ ַהÙׁײ
+onDisplay.ToolTip=ֱֵַּׁ ַ׃ÊֿÙֱַ Ùזֿוַ ךÊו Ùׁײ זַב׀ֹ
+
+# Added for HTML elements after March 2013
+
+display=Ùׁײ
+display.ToolTip=זטÙ ַהÙׁײ ההÙזױׁ
+
+float=׳ַבך
+float.ToolTip=ַהוַֽ׀ַֹ ַהֳבגךֹ הוּ׃ו
+
+padding=ַהֽװט
+padding.ToolTip=ַהבַׁÚ ֽטה ַהÙזױׁ
+DOMposition=ַהוטײÙ
+DOMposition=ַהֳ׃הטָ ַהו׃Ê־ֿו הטײÙ Ùזױׁ
+
+verticalAlign=ַהוַֽ׀ַֹ ַהÙוטֿךֹ
+verticalAlign.ToolTip=ַהוַֽ׀ַֹ ַהÙוטֿךֹ ההזױ
+

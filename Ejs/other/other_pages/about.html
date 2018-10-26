@@ -1,0 +1,55 @@
+      <ion-modal-view>
+        <ion-header-bar class="bar bar-header bar-positive">
+          <h1 class="title">About this App</h1>
+          <button class="button button-icon" ng-click="modal.hide()">
+            <i class="icon ion-ios-checkmark-outline"></i>
+          </button>
+        </ion-header-bar>
+
+          <ion-tabs class="tabs-positive tabs-icon-top">
+
+            <ion-tab title="Information" icon-on="ion-ios-information" icon-off="ion-ios-information-outline">
+              <ion-view title="Information">
+              <ion-content class="padding">
+              <div id="cover-image" align="middle" >
+                <img src="img/cover-image.png" align="middle"  alt="cover image" />
+              </div>
+              <h2>Waves: An Interactive Tutorial</h2>
+              <p> is a set of 33 exercises designed to teach the fundamentals of wave dynamics.
+              It starts with very simple wave properties and ends with an examination of nonlinear wave behavior. The emphasis
+              here is on the properties of waves which are difficult to illustrate in a static textbook figure. Simulations are not
+              a substitute for laboratory work. However they allow for visualization of processes that cannot normally be seen
+              (for example electric and magnetic fields). They allow for visualization of process that are too fast (for example waves)
+              to follow in real time or too small to see (for example thermodynamics at the molecular scale). They allow
+              manipulation of processes which might be dangerous (collisions) or hard to experiment with (waves).
+              They also allow for easy repetition. For all of these reasons, simulations are an excellent way to introduce
+              students to the complex phenomena of waves.</p>
+              </ion-content>
+            </ion-view>
+            </ion-tab>
+
+            <ion-tab title={{app_copyright_title}} icon-on="ion-ios-at" icon-off="ion-ios-at-outline">
+              <ion-view title={{app_copyright_title}}>
+              <ion-content class="padding">
+                <h1 class="title">Copyright and Conditions of Use</h1>
+                <p> This app was created by its authors using the Easy Java/Javascript Simulations modeling and
+                  authoring tool and is copyrighted 2016 by Kyle Forinash and Wolfgang Christian.  All rights
+                  reserved. No part of this ePub may be reproduced or transmitted in any form or by any means
+                  without the permission in writing from Kyle Forinash  and Wolfgang Christian.</p>
+                <p>Wolfgang Christian <br />Brown Professor of Physics<br />PO Box 6926<br />Davidson College<br />Davidson NC 28035-6926<br />wochristian@davidson.edu</p>
+                <p>Kyle Forinash<br />School of Natural Sciences<br />Indiana University Southeast<br />New
+                  Albany IN 47150<br />kforinas@ius.edu</p>
+                <p> For more information about the Easy Java/Javascript Simulations modeling and authoring tool,
+                  please visit the <a href="http://www.um.es/fem/EjsWiki"><span style="color:red">EjsS
+                      website</span></a>. </p>
+                <div id="cover-image">
+                  <img src="img/Gyroscope.png" alt="EjsS logo" />
+                </div>
+                </ion-content>
+              </ion-view>
+
+            </ion-tab>
+
+          </ion-tabs>
+
+      </ion-modal-view>

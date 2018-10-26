@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Code Controller Evaluator</title>
+</head>
+
+<body>
+<h2>CodeControllerEvaluator Element</h2>
+<p>The codeControllerEvaluator Element allows reading Java code from a Text Area in Ejs and evaluating it as the code for a controller. The codeControllerEvaluatorElement uses the Beanshell library, which is is a free, embeddable Java source interpreter with object scripting language features, written in Java. </p>
+<p>The Interpreter class from BeanShell is used for the evaluation of the code. It is required to define an Interpreter before using calling some methods of the Element:</p>
+<blockquote>
+  <p>	Object i  = (Interpreter) new Interpreter(); </p>
+</blockquote>
+<p><br />
+The codeControllerEvaluator Element receives as parameters the inputs and the output vectors, which have been selected through the Element interface, as well as the corresponding dimensions. The class has the following variables: </p>
+<blockquote>
+  <p>private Model model;<br />
+    private int dim_input;<br />
+    private int dim_output;<br />
+    private String[] inputs = new String[dim_input];<br />
+    private String output;</p>
+</blockquote>
+<p>Also, the following methods are defined in the codeControllerEvaluator Element:</p>
+<ul>
+  <li>int getInputsDim()
+  <br /><br />
+  Returns the number of input variables</li><br /><br />
+  <li>int getOutputsDim() <br /><br />
+  Returns the dimension of the output vector</li><br /><br />
+  
+  <li>double [] updateState()
+  <br /><br />
+  Gets the current values of the Ejs variables defined as inputs and outputs.
+  <br /><br />E.g.: double[] state = updateState ();</li>  <br /><br />
+  
+  <li>public boolean exportState(Object ip)
+  <br /><br />Export the current value of inputs and outputs to the Shell. The interpreter is received as the only parameter. It resturns true if success and false otherwise.
+  <br /><br />E.g.: exportState (i);</li><br /><br />
+  
+  <li>public double[] evaluateCode(String cad, Object ip)
+  <br /><br />Receives as input the code we want to evaluate as a String and the Interpreter. It returns the output vector after evaluating the code.
+  <br /><br />E.g.: String cadena = "x=0.5; u=x/2;";<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; double[] up = new double[1];<br />
+					&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; up = evaluateCode (cadena,i);</li></ul>
+  <h3><br />
+    <br />
+    How to use the element
+  </h3>
+  <p>Add the element to the model and
+  </p>
+  <ul><li>Select the input variables from the list. New variables are added by the "+" button. To erase any variable, click on "-".</li>
+  <li> Select the output vector from the list with the "Select" button.
+  </ul>
+  <p>In the initialization code:
+  </p>
+  <ul><li>Define an interpreter Object.</li>
+  </ul>
+  <p>In the evolution page:</p>
+  <ul>
+    <li>    Define the code to be evaluated with evaluateCode().</li>
+  </ul>
+  <p>&nbsp;</p>
+  <blockquote>
+                      <blockquote>
+                        <blockquote>
+                          <blockquote>
+                            <blockquote>
+                              <blockquote>
+                                <blockquote>
+                                  <blockquote>
+                                        <br />
+                                        María Guinaldo -mguinaldo@dia.uned.es- 
+                                  </blockquote>
+                                </blockquote>
+                              </blockquote>
+                            </blockquote>
+                          </blockquote>
+                        </blockquote>
+    </blockquote>
+  </blockquote>
+</ul>
+</body>
+</html>

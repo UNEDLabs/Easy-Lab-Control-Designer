@@ -1,0 +1,114 @@
+<HtmlViewFragment>
+  <HtmlViewFragment.Parent>Simulation view</HtmlViewFragment.Parent>
+  <HtmlViewFragment.Code>
+<HtmlView.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Name><![CDATA[singleDrawingPanel]]></Name>
+</HtmlView.Element>
+<HtmlView.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Name><![CDATA[labelPanel]]></Name>
+<Parent><![CDATA[singleDrawingPanel]]></Parent>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.Label</Type>
+<Name><![CDATA[topLabel]]></Name>
+<Parent><![CDATA[labelPanel]]></Parent>
+<Property name="Text"><![CDATA["<h1>TopLabel</h1>"]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Expanded>true</Expanded>
+<Type>Elements.WrappedPanel</Type>
+<Name><![CDATA[wrappedPanel]]></Name>
+<Parent><![CDATA[singleDrawingPanel]]></Parent>
+<Property name="CSS"><![CDATA[{ "display":"block"}]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.DrawingPanel</Type>
+<Name><![CDATA[drawingPanel]]></Name>
+<Parent><![CDATA[wrappedPanel]]></Parent>
+<Property name="Height"><![CDATA[400]]></Property>
+<Property name="Width"><![CDATA[400]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Name><![CDATA[controlPanel]]></Name>
+<Parent><![CDATA[wrappedPanel]]></Parent>
+<Property name="CSS"><![CDATA[{"display":"block"}]]></Property>
+<Property name="BorderStyle"><![CDATA["solid"]]></Property>
+<Property name="BorderColor"><![CDATA["Gray"]]></Property>
+<Property name="BorderWidth"><![CDATA[1]]></Property>
+<Property name="Width"><![CDATA[398]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Expanded>false</Expanded>
+<Type>Elements.Panel</Type>
+<Name><![CDATA[firstRowPanel]]></Name>
+<Parent><![CDATA[controlPanel]]></Parent>
+</HtmlView.Element>
+<HtmlView.Element>
+<Expanded>false</Expanded>
+<Type>Elements.Panel</Type>
+<Name><![CDATA[executionPanel]]></Name>
+<Parent><![CDATA[firstRowPanel]]></Parent>
+<Property name="Display"><![CDATA["inline-block"]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.TwoStateButton</Type>
+<Name><![CDATA[runPauseButton]]></Name>
+<Parent><![CDATA[executionPanel]]></Parent>
+<Property name="OffClick"><![CDATA[%_pause%]]></Property>
+<Property name="State"><![CDATA[_isPaused]]></Property>
+<Property name="Tooltip"><![CDATA["Play/Pause"]]></Property>
+<Property name="ImageOnUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/play.gif"]]></Property>
+<Property name="OnClick"><![CDATA[%_play%]]></Property>
+<Property name="ImageOffUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/pause.gif"]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.Button</Type>
+<Name><![CDATA[stepButton]]></Name>
+<Parent><![CDATA[executionPanel]]></Parent>
+<Property name="Tooltip"><![CDATA["Step"]]></Property>
+<Property name="ImageUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/stepforward.gif"]]></Property>
+<Property name="OnClick"><![CDATA[%_step%]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.Button</Type>
+<Name><![CDATA[initButton]]></Name>
+<Parent><![CDATA[executionPanel]]></Parent>
+<Property name="Tooltip"><![CDATA["Initialize"]]></Property>
+<Property name="ImageUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/reset1.gif"]]></Property>
+<Property name="OnClick"><![CDATA[%_initialize%]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.Button</Type>
+<Name><![CDATA[resetButton]]></Name>
+<Parent><![CDATA[executionPanel]]></Parent>
+<Property name="Tooltip"><![CDATA["Reset"]]></Property>
+<Property name="ImageUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/reset.gif"]]></Property>
+<Property name="OnClick"><![CDATA[%_reset%]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.Panel</Type>
+<Name><![CDATA[narrativePanel]]></Name>
+<Parent><![CDATA[singleDrawingPanel]]></Parent>
+<Property name="Html"><![CDATA[<h2>XHTML Sample Narrative</h2>
+<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non est enim vitium in oratione solum, sed etiam in moribus.
+Restinguet citius, si ardentem acceperit. Erit enim instructus ad mortem contemnendam, ad exilium, ad ipsum etiam dolorem. 
+Atqui iste locus est, Piso, tibi etiam atque etiam confirmandus, inquam; Ne in odium veniam, si amicum destitero tueri. 
+Duo Reges: constructio interrete. Itaque hic ipse iam pridem est reiectus; Scrupulum, inquam, abeunti; </p>
+
+<p>Rhetorice igitur, inquam, nos mavis quam dialectice disputare? Quid me istud rogas? Non potes, nisi retexueris illa. </p>
+
+<p>Honesta oratio, Socratica, Platonis etiam. Sed quid attinet de rebus tam apertis plura requirere? Nec tamen ullo 
+modo summum pecudis bonum et hominis idem mihi videri potest. At quicum ioca seria, ut dicitur, quicum arcana, quicum 
+occulta omnia? Nihil acciderat ei, quod nollet, nisi quod anulum, quo delectabatur, in mari abiecerat. Disserendi artem 
+nullam habuit. Sed emolumenta communia esse dicuntur, recte autem facta et peccata non habentur communia. Nondum autem 
+explanatum satis, erat, quid maxime natura vellet. Quae duo sunt, unum facit. Primum in nostrane potestate est, quid meminerimus? </p>
+]]></Property>
+</HtmlView.Element>
+  </HtmlViewFragment.Code>
+</HtmlViewFragment>

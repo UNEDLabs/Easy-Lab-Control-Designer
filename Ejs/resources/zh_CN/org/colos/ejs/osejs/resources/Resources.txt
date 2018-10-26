@@ -1,0 +1,505 @@
+Osejs.StartDialogTitle=Easy Java Simulations ��������...
+Osejs.StartDialogSize=350 150
+Osejs.TitleFont=Dialog,BOLD,20
+Osejs.DefaultFont=Dialog,PLAIN,14
+Osejs.Title=Easy Java Simulations(�������ĺ���:����)
+Osejs.Init.Toolbars=���ڴ���������...
+Osejs.Init.Editors=���ڴ����༭��...
+Osejs.Main.Description=���/˵��
+Osejs.Main.Description.ToolTip=��������ؽ�����Ϣ
+Osejs.Main.Model=ģ��
+Osejs.Main.Model.ToolTip=����ģ��
+Osejs.Main.View=��ʾ����
+Osejs.Main.View.ToolTip=�������û�ͼ�νӿ�
+Osejs.Icon.New=����һ���¶���
+Osejs.Icon.Open=��һ���ļ�
+Osejs.Icon.Merge=�ϲ�һ���ļ�
+Osejs.Icon.Save=�����ļ�
+Osejs.Icon.SaveAs=���Ϊ
+Osejs.Icon.Generate=���ɶ���
+Osejs.Icon.GenerateAs=������������
+Osejs.Icon.Run=���ж���
+Osejs.Icon.Font=�ı�����
+Osejs.Icon.Info=����Ejs
+Osejs.Icon.Options=�༭ѡ��
+Osejs.Init.FinalStartUp=��������
+
+Osejs.File.Description=�����ļ�
+Osejs.File.JavaDescription=Java�ļ�
+Osejs.File.Open=��
+Osejs.File.Merge=�ϲ�
+Osejs.File.Save=����
+Osejs.File.SaveChanges= ��, ȷ������
+Osejs.File.IgnoreChanges= ��, ������
+Osejs.File.CancelSave= ȡ������
+Osejs.File.SimulationChanged=�����Ѹı�
+Osejs.File.WantToSave=��ϣ�������ļ���?
+Osejs.File.FileExists=���ļ��Ѵ���!
+Osejs.File.Overwrite=�����ִ��ļ���?
+Osejs.File.DoSave=�ǵ�!
+Osejs.File.InvalidFile=�Բ���!����һ���Ƿ��ļ�!
+Osejs.File.ReadOK=�ɹ���ȡ�ļ�:
+Osejs.File.NotReadOK=�ļ���ȡʧ��:
+Osejs.File.MergedOK=�ļ��ϲ��ɹ� :
+Osejs.File.NotMergedOK=�ļ��ϲ�ʧ�� :
+Osejs.File.SavedOK=�ɹ������ļ� :
+Osejs.File.ReadError=�����ļ����ִ���
+Osejs.File.ReadingError=�������
+Osejs.File.ErrorReadingFile=��ȡ�ļ�����
+Osejs.File.InputURL=��ȡURL
+Osejs.File.ReadURL=�����붯����URL
+Osejs.File.CantCreateFile=�Բ���,���ܴ������ļ�!
+Osejs.File.SaveAsAppletSize=300 500
+Osejs.File.Generate=����
+
+Osejs.ReadOnly.Suffix=(ֻ��)
+Osejs.ReadOnly.Title=�Բ���,...
+Osejs.ReadOnly.Message=ֻ��״̬ʱ��ѡ�����.
+Osejs.ReadOnly.RunMessage=ֻ��״̬ʱ�������д��ļ�!
+Osejs.CodeDialog.Title=�������
+Osejs.CodeDialog.Size=400 500
+
+Output.Title=���´�����ʾִ�н��
+Output.TitleFont=Dialog,Bold,14
+
+Generate.NoWhiteSpacesAllowed=�Բ���,�������ܰ����ո�.����.
+Generate.GenerationOk=ף��!�����ѳɹ�����.
+Generate.GenerationError=�Բ���!���ɶ���ʱ���ִ���!
+Generate.Compiling=���Ե�,���ڱ���...
+Generate.CompilationSuccessful= Ok!
+Generate.CompilationError=����ʱ���ִ���!
+Generate.CreatingJarFile=\n ��������jar�ļ�
+Generate.JarFileCreated= Ok!
+Generate.JarFileNotCreated=\n Jar�ļ���������!
+Generate.Compiling=�������ɶ����ļ�
+Generate.HtmlFor=��ҳ-
+Generate.HtmlUserCode=<!--- ������html���� --->
+Generate.HtmlHereComesTheApplet=<!--- ������applet --->
+Generate.HtmlHereComesTheJavaScript=<!--- ������ JavaScript ��ť --->
+Generate.HtmlHereItIs=��������ʾ������.
+Generate.HtmlHereItIsNot=��������ʾ��һ�������Ĵ�����.
+Generate.HtmlJSControl=�����ʹ��JavaScript�ű����ƶ���. ����ʹ�ð�ť:
+Generate.HtmlPlay=����
+Generate.HtmlPause=��ͣ
+Generate.HtmlStep=����
+Generate.HtmlReset=����
+Generate.HtmlSlow=��
+Generate.HtmlFast=��
+Generate.HtmlFaster=����
+Generate.HtmlThankYou=��лʹ��
+Generate.RunningSimulation=���ڳ������ж���
+Generate.SimulationRunsOK=ף����!������������.
+Generate.SimulationDoesNotRun=�Բ���!������������ʱ����.
+Generate.HTMLIsReady=����ԴӲ�������ҳ�ļ����иö���.
+Generate.HtmlContents=<b>����</b>
+Generate.HtmlSource=Դ�ļ�
+Generate.HtmlSimulation=����
+Generate.HtmlEjsGenerated=������
+
+Description.Color=100,100,100
+Description.Page=���ҳ��
+
+Model.Color=180,0,0
+Model.TitleFont=Dialog,BOLD,16
+Model.Variables=����/����
+Model.Initialization=��ʼ��
+Model.Evolution=�����ݻ���ϵ
+Model.Constraints=������ϵ
+Model.Library=�Զ��庯��
+Model.Variables.Page=��������ҳ��
+Model.Initialization.Page=��ʼ��ҳ��
+Model.Evolution.Page=�ݻ���ϵҳ��
+Model.Constraints.Page=������ϵҳ��
+Model.Library.Page=�Զ��庯��ҳ��
+Model.Evolution.FpsLabel1=֡
+Model.Evolution.FpsLabel2=
+Model.Evolution.FpsLabel3=ÿ��
+Model.Evolution.FpsLabel=FPS
+Model.Evolution.MaximumFPS=���
+Model.Evolution.MinimumFPS=��С
+Model.Evolution.Autostart=�Զ�����
+
+VariablesEditor.TitleFont=Dialog,BOLD,12
+VariablesEditor.Insert=�ڴ˱���֮ǰ����
+VariablesEditor.Add=�ڴ˱���֮�����
+VariablesEditor.Remove=ɾ���˱���
+VariableEditor.Name=����
+VariableEditor.Dimension=ά��
+VariableEditor.Type=����
+VariableEditor.Value=��ֵ
+VariableEditor.Domain=Domain
+VariableEditor.Private=˽��
+VariableEditor.Dynamic=��̬
+VariableEditor.Active=Active
+VariableEditor.Permanent=δ��ʼ��
+
+EquationEditor.Size=320 30
+EquationEditor.ColumnSize=150
+EquationEditor.FieldWidth=10
+EquationEditor.Create=���һ������ʽ
+EquationEditor.Select=ѡ��һ��״̬����
+EquationEditor.Insert=�ڴ˷���ʽ֮ǰ����
+EquationEditor.Add=�ڴ˷���ʽ֮�����
+EquationEditor.Remove=ɾ���˷���ʽ
+EquationEditor.State=State
+EquationEditor.Rate=Rate
+EquationEditor.IndependentVariable=��������.
+EquationEditor.Increment=����
+EquationEditor.ModelVariables=ƥ�����
+EquationEditor.Method=Solver
+
+View.Color=0,125,0
+View.TitleFont=Dialog,BOLD,16
+View.Creation=����
+View.Reset=����
+View.Update=����
+View.ViewLibrary=�Զ���
+View.EjsWindow=(Ejs �༭����)
+
+View.Positions.north=��
+View.Positions.south=��
+View.Positions.east=��
+View.Positions.west=��
+View.Positions.center=����
+
+Reset.Page=����ҳ
+Update.Page=����ҳ
+ViewLibrary.Page=��ʾ����ҳ
+
+Tree.TreeOfElements=Ԫ����״�ṹ
+Tree.Main=������ʾ����
+Tree.Selected.Icon=������ʾ����
+Tree.ErrorMessage=�Բ���!
+Tree.Warning=����!
+Tree.MainDoesNotAcceptThis=������Ԫ����״�ṹ����ִ�д˲���
+Tree.CantAddWindow=��Ԫ����״�ṹ������Ӵ���
+Tree.CantAddNotWindow=ֻ�д���/���ڲ�����ӵ�Ԫ����״�ṹ����
+Tree.NotAContainer=��Ԫ������Ϊһ������
+Tree.CantCreateElement=Ԫ�����ܱ�����
+Tree.NameModified=�������޸�
+Tree.MenuFor=�˵�-
+Tree.Edit=����
+Tree.Rename=������
+Tree.Reparent=���ĸ�Ԫ��
+Tree.MainWindow=������
+Tree.IsWindow=Ԫ����һ������
+Tree.HasPosition=λ����
+Tree.PositionImposed=λ�ñ��ı�
+Tree.ChangePosition=�ı�λ��
+Tree.NoPosition=δָ��λ��
+Tree.MoveUp=����һ��
+Tree.MoveDown=����һ��
+Tree.Utils=Utils
+Tree.Clone=����
+Tree.Remove=ɾ��
+Tree.ProvideAName=����
+Tree.NameTitle=����һ����Ԫ��
+Tree.RenameTo=������
+Tree.RenameTitle=Ԫ��������
+Tree.ReparentTo=�¸�Ԫ��
+Tree.ReparentTitle=�ı�Ԫ���ĸ�Ԫ��
+Tree.PositionTo=λ��
+Tree.PositionTitle=ѡ��λ��
+Tree.CloneTo=���Ƹ�Ԫ��
+Tree.CloneTitle=����Ԫ��
+Tree.ProvideAParent=��ָ����Ԫ��
+Tree.ParentDoesNotExist=ָ���ĸ�Ԫ��������
+Tree.ParentDoesNotAcceptThis=��Ԫ��������ӵ�ָ���ĸ�Ԫ��
+
+View.Elements=��ʾ����Ԫ��
+View.Elements.Drawables=Drawables
+View.Elements.Basic=����Ԫ��
+View.Elements.Containers=����Ԫ��
+
+View.Properties.Title=Ԫ������
+View.Properties.PreferredSize=480 300
+View.Properties.FieldWidth=10
+View.Properties.LabelColor=0,0,210
+
+Utils.cut-to-clipboard=����
+Utils.copy-to-clipboard=����
+Utils.paste-from-clipboard=ճ��
+Utils.select-all=ȫѡ
+Utils.undo=����
+Utils.redo=����
+
+Editor.TitleFont=Dialog,BOLD,12
+Editor.DefaultFont=Dialog,PLAIN,12
+Editor.Comment= ע��
+
+TabbedEditor.PreferredSize=350 300
+TabbedEditor.ShowTitles=��
+TabbedEditor.MenuTooltip=�һ����ﵯ���˵�
+TabbedEditor.NewName=����
+TabbedEditor.Rename=����������
+TabbedEditor.ClickHere=�����괴����ҳ��
+TabbedEditor.ClickHereODE=�����괴����ODEsҳ��
+TabbedEditor.ClickHereLatex=�����괴����Latexҳ��
+TabbedEditor.editPage=�༭/�鿴��ҳ��
+TabbedEditor.addPage=�����µ�ҳ��
+TabbedEditor.addPageODE=�����µ�ODEsҳ��
+TabbedEditor.addPageLatex=�����µ�Latexҳ��
+TabbedEditor.copyPage=�������ҳ��
+TabbedEditor.renamePage=���������ҳ��
+TabbedEditor.upPage=����ҳ���Ƶ����
+TabbedEditor.dnPage=����ҳ���Ƶ��ұ�
+TabbedEditor.togglePage=����/ͣ�ø�ҳ��
+TabbedEditor.visiblePage=��ʾ/���ظ�ҳ��
+TabbedEditor.removePage=ɾ����ҳ��
+
+CodeEditor.CodeFor=����-
+
+HtmlEditor.HtmlFor=��ҳ -
+HtmlEditor.SourceFor=��ҳ���� -
+HtmlEditor.Dialog.Title=��ҳ�༭������
+HtmlEditor.Dialog.Size=500 400
+
+LatexEditor.LatexFor=Latex for
+LatexEditor.SourceFor=Latex����for
+LatexEditor.Dialog.Title=Latex �༭������
+LatexEditor.Dialog.Size=500 400
+
+EditorFor.ChooseOne=��ѡ��
+EditorFor.Ok=  Ok
+EditorFor.Apply=Ӧ��
+EditorFor.Cancel=ȡ��
+EditorFor.Default=Ĭ��
+
+EditorForVariables.Size=370 350
+EditorForVariables.TitleVariables=ƥ��ģ�ͱ����б�
+EditorForVariables.TitleActions=������Ϊ�б�
+EditorForVariables.ActionList=������Ϊ�б�
+EditorForVariables.Color=0,0,255
+EditorForVariables.ConstantEntry= : ���� :
+EditorForVariables.ConstantValue=һ������
+EditorForVariables.isPlaying=���ܶ����Ƿ�����
+EditorForVariables.isPaused=���ܶ����Ƿ���ͣ
+EditorForVariables.booleanConstant=һ���߼�����
+EditorForVariables.intConstant=�κ����ͳ���
+EditorForVariables.doubleConstant=�κ�˫���ȳ���
+EditorForVariables.double[2]Constant=����˫���ȳ���
+EditorForVariables.double[3]Constant=����˫���ȳ���
+EditorForVariables.applyAll=Read all view variables into model
+EditorForVariables.apply=Read a given view variable into model
+EditorForVariables.initialize=Read view values and initialize
+EditorForVariables.pause=��ͣ����
+EditorForVariables.play=���Ŷ���
+EditorForVariables.reset=�������ö������в���
+EditorForVariables.clearView=��ʼ����ʾ����
+EditorForVariables.readState=��ȡ��ǰ��ģ��״̬
+EditorForVariables.saveState=����Ŀǰ��ģ��״̬
+EditorForVariables.setDelay=���ö������ӳ�ʱ��(��λ:����)
+EditorForVariables.setFPS=����ÿ��֡��
+EditorForVariables.step=Run one step of the evolution
+
+EditorForFont.Size=250 250
+EditorForFont.Plain=��ͨ
+EditorForFont.Bold=����
+EditorForFont.Italic=б��
+EditorForFont.BoldItalic=����+б��
+EditorForFont.FontName= ����
+EditorForFont.FontStyle= ���
+EditorForFont.FontSize= ��С
+EditorForFont.ChooseAFont=��ѡ��һ������
+
+EditorForColor.Size=200 360
+EditorForColor.BasicColors=������ɫ
+EditorForColor.Recent=���ʹ�õ���ɫ
+EditorForColor.Selection=ѡ��
+EditorForColor.Red=��
+EditorForColor.Green=��
+EditorForColor.Blue=��
+EditorForColor.Alpha=͸��
+EditorForColor.More=��ʾ������ɫ...
+EditorForColor.MoreColors=������ɫ
+
+EditorForLayout.Size=200 385
+EditorForLayout.Border=�߽粼��
+EditorForLayout.HBox=ˮƽ�񲼾�
+EditorForLayout.VBox=��ֱ�񲼾�
+EditorForLayout.Grid=���񲼾�
+EditorForLayout.Flow=��ʽ����
+EditorForLayout.HGap=ˮƽ��϶
+EditorForLayout.VGap=��ֱ��϶
+EditorForLayout.Rows=��
+EditorForLayout.Columns=��
+EditorForLayout.Left=��
+EditorForLayout.Center=�м�
+EditorForLayout.Right=��
+
+EditorForPoint.Size=250 110
+EditorForPoint.Width=  ���
+EditorForPoint.Height= �߶�
+EditorForPoint.X=  X
+EditorForPoint.Y=  Y
+
+EditorForRectangle.Size=250 125
+EditorForRectangle.Width=  ��
+EditorForRectangle.Height= ��
+EditorForRectangle.X=    X
+EditorForRectangle.Y=    Y
+EditorForRectangle.Top=   ��
+EditorForRectangle.Left=  ��
+EditorForRectangle.Bottom= ��
+EditorForRectangle.Right= ��
+
+EditorForAlignment.LEFT=��
+EditorForAlignment.CENTER=�м�
+EditorForAlignment.RIGHT=��
+
+EditorForArrowStyle.SEGMENT=Segment
+EditorForArrowStyle.ARROW=��ͷ
+EditorForArrowStyle.BOX=Box
+
+EditorForBoolean.true=True
+EditorForBoolean.false=False
+
+EditorForOrientation.HORIZONTAL=ˮƽ
+EditorForOrientation.VERTICAL=��ֱ
+
+EditorForPlacement.TOP=��
+EditorForPlacement.BOTTOM=��
+EditorForPlacement.LEFT=��
+EditorForPlacement.RIGHT=��
+
+View.FileDescription.image=Gif images
+View.FileDescription.audiofile=Audio files
+View.FileDescription.selectedimage=Gif images
+
+Tree.Main.Icon=data/icons/root.gif
+Tree.Capture.Icon=data/icons/capture.gif
+Tree.Create.Icon=data/icons/create.gif
+
+View.Action.Icon=data/icons/action.gif
+View.Link.Icon=data/icons/link.gif
+View.Edit.Icon=data/icons/edit.gif
+View.Write.Icon=data/icons/write.gif
+
+#EjsOptions.Size=400 370
+EjsOptions.Title=Ejs����ѡ��
+EjsOptions.generateHtml=�������ж�������ҳ�ļ�:
+EjsOptions.generateLeftFrameHtml=����
+EjsOptions.generateTopFrameHtml=�����
+EjsOptions.generateOneHtml=����ҳ��
+EjsOptions.generateNoHtml=��������ҳ
+EjsOptions.removeJavaFile=����֮��ɾ��java�ļ�
+EjsOptions.showHiddenPages=��ʾ���ص�ҳ��
+EjsOptions.ChooseFont=Ĭ��ҳ��
+EjsOptions.Position=Ejs��ʾ��:
+EjsOptions.center=�м�
+EjsOptions.topLeft=���Ͻ�
+EjsOptions.custom=��ǰλ��
+EjsOptions.htmlBody=��ҳ <body
+
+#------------ Added later than October 2002
+
+EditorForCartesianAxisType.LINEAR=Linear
+EditorForCartesianAxisType.LOG10=Log 10
+
+#---------- added by Fu-Kwun Hwang 021031
+Model.Variables.ToolTip=�����ģ�Ͷ������
+Model.Initialization.ToolTip=���������ó�ʼֵ
+Model.Evolution.ToolTip=������������ʱ��/�ռ��ݱ�(��������)
+Model.Constraints.ToolTip=�����ģ�Ͷ���Լ����ϵ��������Լ����ϵ
+Model.Library.ToolTip=�������Լ��ĺ���
+View.Creation.ToolTip=����
+
+# --------- Added later than Nov 2002
+
+VariableEditor.Connected=Connected to
+VariablesEditor.Connect=Connect to external
+VariablesEditor.ExternalFile=External File
+View.FileDescription.externalfile=External files
+TabbedEditor.addPageExternal=Add a new external page
+TabbedEditor.ClickHereExternal=Click to create a new external page
+EditorForVariables.TitleExternal=List of external variables
+VariablesEditor.ErrorReadingExternalFile=Error reading external file
+
+Utils.wizard=Open Code Wizard
+CodeWizard.Size=450 300
+CodeWizard.Title=Code Wizard
+
+External.Input=Input
+External.Output=Output
+
+Osejs.File.Error=����
+Osejs.File.SavingError=�����ļ�����
+Warning=����
+
+View.FileDescription.xmlfile=Simulation files
+EjsOptions.loadFile=Default File
+
+# Added later than June 2003
+
+EquationEditor.Tolerance=Tolerance
+EquationEditor.Euler=Euler
+EquationEditor.MidPoint=Midpoint (a.k.a. Euler-Richardson)
+EquationEditor.RungeKutta=Runge-Kutta (4th order)
+EquationEditor.RungeKuttaFehlberg=Runge-Kutta-Fehlberg (4-5)
+EquationEditor.Verlet=Verlet
+EquationEditor.VelocityVerlet=Velocity Verlet
+
+# Added later than Oct 2003
+
+CodeWizard.ConstructionLabel=Select a construction
+CodeWizard.DescriptionLabel=Description
+CodeWizard.WriteConditionHere=Write the condition here
+CodeWizard.WriteCodeHere=Write the code here
+CodeWizard.WriteAltCodeHere=Write the alternative code here
+CodeWizard.SetIterationsHere=Iterations
+CodeWizard.ReturnTypeHere=Change the return type (if not void)
+CodeWizard.ArgumentsHere=Write arguments (if any) here
+CodeWizard.MethodName=methodName
+
+CodeWizard.If='if' conditional
+CodeWizardDescription.If=Code that will only be executed if a condition holds
+CodeWizard.IfElse='if else' conditional
+CodeWizardDescription.IfElse=Alternative code to be executed depending on a condition
+CodeWizard.For='for' loop
+CodeWizardDescription.For=Code that repeats a number of times
+CodeWizard.While='while' loop
+CodeWizardDescription.While=Code that repeats while a condition holds
+CodeWizard.DoWhile='do while' loop
+CodeWizardDescription.DoWhile=A while that is executed at least once
+CodeWizard.Method=A method
+CodeWizardDescription.Method=A routine or function
+
+EditorForVariables.resetView=Reset the view
+
+# Added later than Jan 2004
+
+  # This is for the groups in data/elementsOrdered.txt
+View.Elements.Groups.Windows=Windows
+View.Elements.Groups.Panels=Panels
+View.Elements.Groups.Drawing=Drawing
+View.Elements.Groups.Display=Display
+View.Elements.Groups.Buttons=Buttons
+View.Elements.Groups.Input=Input
+View.Elements.Groups.Basic=Basic
+View.Elements.Groups.Graphs&Bodies=Graphs & Bodies
+View.Elements.Groups.Fields=Fields
+
+# Added Later than March 2004
+
+  # Events
+EquationEditor.Events.Defined=Events
+EquationEditor.Events.EditEvents=Edit events
+
+EquationEditor.Events.DialogSize=500 500
+EquationEditor.Events.EventsFor=Events for ODE
+EquationEditor.Events.Page=Event
+EquationEditor.Events.LocalVariables=Local Variables
+EquationEditor.Events.ZeroCondition=Zero Condition
+EquationEditor.Events.Action=Action
+EquationEditor.Events.StopAtEvent=Stop at event
+
+EquationEditor.Events.Solver=Find using
+EquationEditor.Events.Bisection=Bisection
+
+  # New entry in popupmenu for CodeEditor
+Utils.PredefinedMethods=Predefined Methods
+
+
+# Added Later than October 2004
+
+View.FileDescription.videofile=Video files

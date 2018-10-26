@@ -1,0 +1,1365 @@
+# --- Sizes, colors, and fonts that you normally do not change
+# --- Please, delete these from your translated file UNLESS you do change them
+
+# --- Here starts the translation
+
+Osejs.StartDialogTitle=������� �������� ������ ���� ���� 
+Osejs.Title=EJS
+Osejs.Init.Toolbars=����� ����� ������� ...
+Osejs.Init.Editors=����� ����� �������...
+Osejs.Main.Description=���
+Osejs.Main.Description.ToolTip=������� ������� �� ��������
+Osejs.Main.Model=�����
+Osejs.Main.Model.ToolTip=����� ��������
+Osejs.Main.View=����
+Osejs.Main.View.ToolTip=������� �������� ��������
+Osejs.Icon.New=����� ������ �����
+Osejs.Icon.Save=��� �� ���
+Osejs.Icon.SaveAs=��� �� ��� ����
+Osejs.Icon.Run=����� �������� (��� ������ ������ ������� ����)
+Osejs.Icon.Font=����� ����
+Osejs.Icon.Info=������ ��������
+Osejs.Icon.Options=������ EJS
+Osejs.Init.FinalStartUp=����� �������
+
+Osejs.File.Description=����� ��������
+Osejs.File.JavaDescription=����� ����
+Osejs.File.Open=���
+Osejs.File.Merge=���
+Osejs.File.Save=���
+Osejs.File.SaveChanges=��� �� ����
+Osejs.File.IgnoreChanges= �Ǭ ����
+Osejs.File.CancelSave= ���� ���� �����
+Osejs.File.SimulationChanged=�������� �����
+Osejs.File.WantToSave=�� ���� ����ǿ
+Osejs.File.FileExists=��� ����� ����� �����!
+Osejs.File.Overwrite=�� ���� ������� ����
+Osejs.File.DoSave=��� ������
+Osejs.File.InvalidFile=����� ��� ��� ��� ����
+Osejs.File.ReadOK=��� ����� ����� �����
+Osejs.File.NotReadOK=���� ����� ����� �����
+Osejs.File.MergedOK=����� ����� �����
+Osejs.File.NotMergedOK=���� ��� ����� �����
+Osejs.File.SavedOK=��� ����� �����
+Osejs.File.ReadError=��� ������� ���� ���
+Osejs.File.ReadingError=��� �� �������
+Osejs.File.ErrorReadingFile=��� ��� ����� ����� �����
+Osejs.File.InputURL=������� �� ����� URL
+Osejs.File.ReadURL=������ ����� ����� URL ��������
+Osejs.File.CantCreateFile=��� �� ���� ����� ��� �����
+Osejs.File.Generate=�����
+
+Osejs.ReadOnly.Suffix=(������� ���)
+Osejs.ReadOnly.Title=��� ��� ����...
+Osejs.ReadOnly.Message=��� ������ ��� ���� �� ���� ������� ���.
+Osejs.ReadOnly.RunMessage=�� ���� ����� ��� ����� �� ���� ������� ���
+Osejs.CodeDialog.Title=������ �����
+
+Output.Title=������
+
+Generate.NoWhiteSpacesAllowed=��� ��� ����� �� ���� �� ����� ��� ������ �����. �����.
+Generate.GenerationOk=�������! �� ����� �������� �����.
+Generate.GenerationError=�����! ����� �������� ���� ���.
+Generate.Compiling=������ ��������. ��� ���� ������
+Generate.CompilationSuccessful= ����� ����
+Generate.CompilationError=������� ������� ���� ���!
+Generate.CreatingJarFile=����� ��� �������
+Generate.JarFileCreated= ����� ��� ������� �� �����
+Generate.JarFileNotCreated=�� ��� ����� ��� �������!
+Generate.Compiling=����� ��� ��������
+Generate.HtmlFor=������ �������� �
+Generate.HtmlUserCode=<! --- ���� HTML �������� --->
+Generate.HtmlHereComesTheApplet=<!---���� ���� �������--->
+Generate.HtmlHereComesTheJavaScript=<! --- ������ ����� ���� ������ --->
+Generate.HtmlHereItIs=<b>��� �� ���� �������� ��� ��� ����:</b>
+Generate.HtmlHereItIsNot=��� �� ���� �������� �� ����� ������.
+Generate.HtmlJSControl=<b>����� ������ �� ��� �������� ���� ������:</b>
+Generate.HtmlPlay=�����
+Generate.HtmlPause=����
+Generate.HtmlStep=����
+Generate.HtmlReset=����� �����
+Generate.HtmlSlow=����
+Generate.HtmlFast=�����
+Generate.HtmlFaster=����
+Generate.HtmlThankYou=���� ��������
+Generate.RunningSimulation=������ ����� ��������
+Generate.SimulationRunsOK=�������! ���� �� �������� ����� ��� �� ����.
+Generate.SimulationDoesNotRun=�����! �������� ����� ��� ��� �������.
+Generate.HTMLIsReady=����� ���� ����� �������� �� ���� HTML ���� �� �������
+Generate.HtmlContents=<b>�������</b>
+Generate.HtmlSource=����� ������
+Generate.HtmlSimulation=��������
+Generate.HtmlEjsGenerated=�� ������� ������
+
+Description.Page=���� �������
+
+Model.Variables=�������
+Model.Initialization=�����
+Model.Evolution=�����
+Model.Constraints=������ �����
+Model.Library=����
+Model.Variables.Page=���� ���������
+Model.Initialization.Page=���� �������
+Model.Evolution.Page=���� ������
+Model.Constraints.Page=���� �������� �������
+Model.Library.Page=���� �������
+Model.Evolution.FpsLabel1=�����
+Model.Evolution.FpsLabel2=
+Model.Evolution.FpsLabel3=�� �������
+Model.Evolution.FpsLabel=FPS
+Model.Evolution.Autostart=����� ����
+
+VariablesEditor.Insert=����� ���
+VariablesEditor.Add=����� ���
+VariablesEditor.Remove=���
+VariableEditor.Name=���
+VariableEditor.Dimension=�������
+VariableEditor.Type=���
+VariableEditor.Value=������ ����������
+VariableEditor.Domain=���
+
+EquationEditor.Create=����� ������
+EquationEditor.Select=����� ����� ������
+EquationEditor.Insert=����� ��� ��� ��������
+EquationEditor.Add=����� ��� ��� ��������
+EquationEditor.Remove=��� ��� ��������
+EquationEditor.State=������
+EquationEditor.Rate=������
+EquationEditor.IndependentVariable=������� �������
+EquationEditor.Increment=�����
+EquationEditor.ModelVariables=��������� ��������
+
+View.Creation=�����
+View.Reset=����� �����
+View.Update=�����
+View.ViewLibrary=����
+View.EjsWindow=(����� EJS )
+
+View.Positions.north=����
+View.Positions.south=����
+View.Positions.east=����
+View.Positions.west=����
+View.Positions.center=���
+
+Tree.TreeOfElements=���� �������
+Tree.Main=���� ��������
+Tree.Selected.Icon=���� ��������
+Tree.ErrorMessage=�����!
+Tree.Warning=�����!
+Tree.MainDoesNotAcceptThis=����� ��� ������� ��� �����
+Tree.CantAddWindow=���� ����� ����� �����
+Tree.CantAddNotWindow=�� ���� ����� ����� ��� ���� ���� �����
+Tree.NotAContainer=��� �� ���� ����� ����
+Tree.CantCreateElement=���� ����� ����
+Tree.NameModified=�� �� ����� ����� �������
+Tree.MenuFor=������� �� ���
+Tree.Edit=�����
+Tree.Rename=����� �����
+Tree.Reparent=����� ����� �����
+Tree.MainWindow=������ �������
+Tree.IsWindow=������ �� �����
+Tree.HasPosition=������ ��
+Tree.PositionImposed=������ �����
+Tree.ChangePosition=����� ������
+Tree.NoPosition=��� ����
+Tree.MoveUp=����� �����
+Tree.MoveDown=����� �����
+Tree.Utils=�����
+Tree.Clone=�������
+Tree.Remove=���
+Tree.ProvideAName=���
+Tree.NameTitle=����� ���� ����
+Tree.RenameTo=��� ����
+Tree.RenameTitle=����� ����� ������
+Tree.ReparentTo=��� ����
+Tree.ReparentTitle=����� ����� ��� ������
+Tree.PositionTitle=��� ����
+Tree.CloneTo=����� ���������
+Tree.CloneTitle=������� ����
+Tree.ProvideAParent=���� ����������
+Tree.ParentDoesNotExist=����� ������� ��� �����
+Tree.ParentDoesNotAcceptThis=�� ���� ����� ��� ������ ���� �����
+
+View.Elements=����� ������
+
+View.Properties.Title=�����
+
+Utils.cut-to-clipboard=��
+Utils.copy-to-clipboard=���
+Utils.paste-from-clipboard=���
+Utils.select-all=����� ����
+Utils.undo=�����
+Utils.redo=�����
+
+Editor.Comment=�����
+
+TabbedEditor.MenuTooltip=���� ����� ������ ��� ����������� ������
+TabbedEditor.NewName=���
+TabbedEditor.Rename=���� ����� ������
+TabbedEditor.ClickHere=���� ������ ����
+TabbedEditor.ClickHereODE=���� ������ ���� �������� ������� ����� ODE
+TabbedEditor.ClickHereLatex=���� ������ ���� �����
+TabbedEditor.editPage=���/����� ��� ������
+TabbedEditor.addPage=����� ���� �����
+TabbedEditor.addPageODE=����� ���� ����� �������� ������� ����� ODE
+TabbedEditor.addPageLatex=����� ���� ����� �����
+TabbedEditor.copyPage=���� ��� ������
+TabbedEditor.renamePage=����� ����� ��� ������
+TabbedEditor.upPage=��� ��� ������ ��� ������
+TabbedEditor.dnPage=��� ��� ������ ��� ������
+TabbedEditor.togglePage=����� / ����� ��� ������
+TabbedEditor.visiblePage=����� / ����� ��� ������
+TabbedEditor.removePage=����� ��� ������
+
+CodeEditor.CodeFor=��������� �������� �
+
+HtmlEditor.HtmlFor=HTML �
+HtmlEditor.SourceFor=��������� �������� HTML �� ���
+HtmlEditor.Dialog.Title=���� ���� HTML
+
+LatexEditor.LatexFor=����� �� ���
+LatexEditor.SourceFor=������� ������ ����� �� ���
+LatexEditor.Dialog.Title=���� �����
+
+EditorFor.ChooseOne=��� �������
+EditorFor.Ok=�����
+EditorFor.Apply=�����
+EditorFor.Cancel=�����
+EditorFor.Default=�������
+
+EditorForVariables.TitleVariables=����� ������� ������� ��������
+EditorForVariables.TitleActions=����� ���������
+EditorForVariables.ActionList=����� ���������
+EditorForVariables.ConstantEntry=: ���� :
+EditorForVariables.ConstantValue=���� �����
+EditorForVariables.booleanConstant=���� ����� ������
+EditorForVariables.intConstant=�� ���� ���� ���� ����
+EditorForVariables.doubleConstant=�� ���� ������ �����
+EditorForVariables.double[2]Constant=��� �� ����� �������� �������
+EditorForVariables.double[3]Constant=����� �� ����� �������� �������
+
+EditorForVariables.play=����� ��������
+EditorForVariables.pause=����� ���� ��������
+EditorForVariables.step=����� ���� ����� �� ������
+EditorForVariables.setFPS=����� ��� ������� ��� ����� (������)
+EditorForVariables.setSPD=����� ��� ����� ������� ��� ���� ����
+EditorForVariables.setDelay=����� ������� (������� �����) ������
+EditorForVariables.reset=����� ����� ��� ��������
+EditorForVariables.initialize=����� ��� ����� ������ �����
+EditorForVariables.isPlaying=�� ��� ���� �������� �� ��� ������
+EditorForVariables.isPaused=�� ��� ���� �������� �� ��� ����� ����
+EditorForVariables.readState=�������� ������� ������� �����
+EditorForVariables.saveState=��� ��� �������
+
+EditorForFont.Plain=����
+EditorForFont.Bold=����
+EditorForFont.Italic=����
+EditorForFont.BoldItalic=����+����
+EditorForFont.FontName= ���
+EditorForFont.FontStyle= ���
+EditorForFont.FontSize= ���
+EditorForFont.ChooseAFont=������ ��
+
+EditorForColor.BasicColors=������� ��������
+EditorForColor.Recent=��� ������� ���������
+EditorForColor.Selection=�����
+EditorForColor.Red=����
+EditorForColor.Green=����
+EditorForColor.Blue=����
+EditorForColor.Alpha=����
+EditorForColor.More=����� ���� �� �������...
+EditorForColor.MoreColors=���� �� �������
+
+EditorForLayout.Border=��� ������
+EditorForLayout.HBox=���� ����
+EditorForLayout.VBox=���� �����
+EditorForLayout.Grid=��� ������
+EditorForLayout.Flow=����� �������
+EditorForLayout.HGap=���� �����
+EditorForLayout.VGap=���� ������
+EditorForLayout.Rows=����
+EditorForLayout.Columns=�����
+EditorForLayout.Left=����
+EditorForLayout.Center=���
+EditorForLayout.Right=����
+
+EditorForPoint.Width=  ���
+EditorForPoint.Height= ������
+EditorForPoint.X=  X
+EditorForPoint.Y=  Y
+
+EditorForRectangle.Width=  ���
+EditorForRectangle.Height= ������
+EditorForRectangle.X=    X
+EditorForRectangle.Y=    Y
+EditorForRectangle.Top=   ����
+EditorForRectangle.Left=  ����
+EditorForRectangle.Bottom= ����
+EditorForRectangle.Right= ����
+
+EditorForAlignment.LEFT=����
+EditorForAlignment.CENTER=���
+EditorForAlignment.RIGHT=����
+
+EditorForArrowStyle.SEGMENT=����
+EditorForArrowStyle.ARROW=����
+EditorForArrowStyle.BOX=����
+
+EditorForBoolean.true=��
+EditorForBoolean.false=���
+
+EditorForOrientation.HORIZONTAL=����
+EditorForOrientation.VERTICAL=�����
+
+EditorForPlacement.TOP=����
+EditorForPlacement.BOTTOM=����
+EditorForPlacement.LEFT=����
+EditorForPlacement.RIGHT=����
+
+View.FileDescription.image=��� ������
+View.FileDescription.audiofile=����� ���
+View.FileDescription.selectedimage=��� ������
+
+EjsOptions.Title=������ EJS
+EjsOptions.generateHtml=����� ����� HTML ������ ������� ������:
+EjsOptions.generateLeftFrameHtml=�� ���� ����
+EjsOptions.generateTopFrameHtml=�� ���� ����
+EjsOptions.generateOneHtml=�� ���� �����
+EjsOptions.generateNoHtml=�Ǭ �����
+EjsOptions.removeJavaFile=����� ������� ������� ��� �������
+EjsOptions.showHiddenPages=����� ������� �������
+EjsOptions.ChooseFont=���� ���������
+EjsOptions.Position=���� EJS ��:
+EjsOptions.center=����
+EjsOptions.topLeft=������� ������ ������
+EjsOptions.custom=������ ������
+EjsOptions.htmlBody=���� HTML <BODY
+
+#------------ Added later than October 2002
+
+EditorForCartesianAxisType.LINEAR=���
+EditorForCartesianAxisType.LOG10=�� 10
+
+#---------- added by Fu-Kwun Hwang 021031
+Model.Variables.ToolTip=����� ������� ������
+Model.Initialization.ToolTip=��� ����� ���������� ���������
+Model.Evolution.ToolTip=����� ����� ����� ��������� �� ����� �� ������ (������� �������)
+Model.Constraints.ToolTip=����� �������� ������� ��� ������� �������
+Model.Library.ToolTip=����� ������ (������ ��)
+View.Creation.ToolTip=�����
+
+# --------- Added later than Nov 2002
+
+VariableEditor.Connected=����� �
+VariablesEditor.Connect=������� �������
+VariablesEditor.ExternalFile=��� �����
+View.FileDescription.externalfile=����� ������
+TabbedEditor.addPageExternal=����� ���� ������ �����
+TabbedEditor.ClickHereExternal=���� ������ ���� ������
+EditorForVariables.TitleExternal=����� ���������� ��������
+VariablesEditor.ErrorReadingExternalFile=��� �� ����� ��� �����
+
+
+Utils.wizard=��� ����� ��������� ��������
+CodeWizard.Title=����� ��������� ��������
+
+External.Input=�������
+External.Output=�������
+
+Osejs.File.Error=���
+Osejs.File.SavingError=��� ����� ��� �����
+Warning=�����
+
+View.FileDescription.xmlfile=����� ������
+EjsOptions.loadFile=��� �������
+
+
+# Added later than Oct 2003
+
+CodeWizard.ConstructionLabel=��� ������
+CodeWizard.DescriptionLabel=���
+CodeWizard.WriteConditionHere=����� ����� ���
+CodeWizard.WriteCodeHere=����� ��������� �������� ���
+CodeWizard.WriteAltCodeHere=����� ��������� �������� ������� ���
+CodeWizard.SetIterationsHere=���������
+CodeWizard.ReturnTypeHere=����� ��� ������� (�� �� ��� �����)
+CodeWizard.ArgumentsHere=����� ��������� (�� ����) ���
+CodeWizard.MethodName=methodName
+
+CodeWizard.If='if' �������
+CodeWizardDescription.If=��������� �������� ���� ��� ������� ��� ��� ����� ����
+CodeWizard.IfElse='if else' �������
+CodeWizardDescription.IfElse=��������� �������� ������� ������� �������� ��� �����
+CodeWizard.For=������ 'for'
+CodeWizardDescription.For=��������� �������� ���� ����� ���� �� ������
+CodeWizard.While=������ 'while'
+CodeWizardDescription.While=��������� �������� ���� ����� ����� ����� ����
+CodeWizard.DoWhile=������ 'do while'
+CodeWizardDescription.DoWhile=������ ���� ��� ������� ��� ����� ��� �����
+CodeWizard.Method=�����
+CodeWizardDescription.Method=����
+
+# Added later than Jan 2004
+
+# Added Later than March 2004
+
+  # Events
+EquationEditor.Events.Defined=�����
+EquationEditor.Events.EditEvents=����� �����
+
+EquationEditor.Events.EventsFor=����� ��������� ��������� �������
+EquationEditor.Events.Page=���
+EquationEditor.Events.LocalVariables=������� �����
+EquationEditor.Events.ZeroCondition=���� �����
+EquationEditor.Events.Action=���
+EquationEditor.Events.StopAtEvent=����� ������ �� �����
+
+# Added Later than October 2004
+
+View.FileDescription.videofile=����� �����
+
+EjsOptions.generateBatchFile=����� ��� ������� (BAT)
+EjsOptions.generateJNLPFile=����� ��� JNLP "���� ���� ���"
+EjsOptions.jnlpURL=URL =
+
+EditorForDrivenBy.SHOW_ALL=����� ����
+EditorForDrivenBy.AS_ADDED=��� ����
+EditorForDrivenBy.X_ORDER=����� X
+EditorForDrivenBy.Y_ORDER=����� Y
+EditorForDrivenBy.Z_ORDER=����� Z
+
+EjsOptions.BatchRequired=��� ����� ������� ����� ��� ��� \n ����� ����� ������ ��������. ������ ������ �� �� Ejs ����� \n ����� �������� �����  ���� ��� BAT.
+
+SimulinkBrowser.BlockLabel=���� =
+SimulinkBrowser.VariableLabel=���� ������ ������� =
+SimulinkBrowser.BlockDelete=���
+SimulinkBrowser.BlockUndelete=�������
+SimulinkBrowser.Input=�������
+SimulinkBrowser.Output=�������
+SimulinkBrowser.Parameters=���������
+SimulinkBrowser.LoadingMatlab=����� Matlab. ������ ��������
+SimulinkBrowser.MainBlock=_Global_Parameters_
+SimulinkBrowser.ChangeNameNotAllowed=�� ����� ��� ������ �� �������  \n  ��� ���� ��� EJS ��� ���� ��� ����� �� ���. \n ������ ������� �� ������� �� \n �� ���� ����� Simulink (��� ���) ����� ��� ����.
+
+VariablesEditor.ValueIsExpression=��� ������� ����� ��� ����� \n ���� ����� �������
+
+# Added Later than June 2005
+
+EjsOptions.enableNetConnect=����� ������� ����� EJS
+EjsOptions.netConnectURL=URL=
+EjsOptions.generateInDirectory=����� �� ��� �� ������
+Model.Library.JarsLabel=�������� JAR:
+Model.Library.JarsAdd=����� ����� JAR
+Model.Library.JarsRemove=����� ��� JAR
+Model.Library.ImportsLabel=��������:
+Model.Library.ImportsAdd=����� ����� ��������� (import)
+Model.Library.ImportsRemove=����� ����� ��������� (import)
+Model.Library.NewImport=����� ��������� (import)�����
+View.FileDescription.library=����� �������
+
+EditorForVariables.isApplet=��� ���� �������� ���� ������
+#EditorForVariables.isMoodleConnected=Whether the simulation is connected to Moodle
+
+
+#EjsConsole
+EjsConsole.Title=���� ���� EJS 
+EjsConsole.BasicOptions=�������� ��������
+EjsConsole.AdvancedOptions=������ ������
+EjsConsole.OperatingSystem=���� ������ ��:
+EjsConsole.JavaRoot=����� EJS �� ��� Java VM �������:
+Osejs.Run=����� EJS
+Osejs.Minimized=����� ����������
+EjsConsole.Language=���:
+EjsConsole.DefaultLanguage=�����
+EjsConsole.ExternalApplications=����� ������� �������� ������ (��� Matlab)
+EjsConsole.MatlabDirectory=���� ������ (������ ���):
+EjsConsole.WorkingDirectory=����� ����� ������ ��:
+EjsConsole.TaskbarPosition=���� ���� ������:
+EjsConsole.ElementsFile=��� �������
+EjsConsole.DoIt=����� �������� ������ ���� ����
+EjsConsole.LaunchBuilder=���� ��������
+EjsConsole.OutputArea=����� �������
+
+EjsConsole.Error.NoJavaRoot=������ ����� ���� JDK
+EjsConsole.Error.Not_A_Directory=������ ������ � VM \n ��� ����� (�� ��� ������)
+EjsConsole.Error.Not_A_JDK=������ ������ �� ���� \n ������� ��� ��� ���� ���������� �����
+EjsConsole.Error.EjsRunning=����� �������� ������
+EjsConsole.Error.EjsRunOK=�������� ����� ���� ����
+EjsConsole.Error.EjsNotRunning=�������� ������ �� �����
+EjsConsole.Error.EjsErrorCode=�������� ������ �� �����. ��� ����� =
+
+LaunchBuilder.FileExists=����� �����:
+LaunchBuilder.OpenExisting=��� ��� �����
+LaunchBuilder.Recreate=����� ����� �����
+
+EjsOptions.targetVM=����� ������� ������ ������ ����
+Generate.DirectoryExists=����� �� ����� ����
+Generate.DirectoryReplace=��� ���� ��� �������� ��� ���� ����� \ n �� ���� ����� ��� ������.�:
+Generate.JarFileResourceNotFound=---> �� ��� ������ ��� ��� �������
+Generate.JarFileCreatedButMissingResources=---> �����! ���� ����� ������:
+
+EjsConsole.VMparameters=������� ����� ����������:
+
+# Added later than January 2006
+
+Osejs.Main.Experiment=�����
+Osejs.Main.Experiment.ToolTip=����� �������
+
+Experiment.Page=�����
+Experiment=�����
+Generate.TheExperiments=<b>������� ������� ���� ��������:</b>
+
+EjsConsole.VirtualMachine=��� ���� ����������:
+EjsOptions.enableExperiments=��� ���� �������
+
+Osejs.Icon.SimInfo.Tooltip=������� ��� ��� ��������
+SimInfoEditor.InfoFor=������� ���
+SimInfoEditor.Title=�����:
+SimInfoEditor.Author=������:
+SimInfoEditor.Keywords=������� ��������:
+SimInfoEditor.Level=�������:
+SimInfoEditor.Language=������
+SimInfoEditor.Abstract=�������:
+SimInfoEditor.AuxiliaryFiles=������� ��������:
+
+# Added later than March 2006
+
+EjsOptions.runAsApplet=����� �������� �������� ����� HTML
+
+EditorFor.Yes=���
+EditorFor.No=��
+EditorFor.DontAskAnymore=�� ����
+
+SimInfoEditor.AddAuxiliaryFile=����� ����� ��������
+SimInfoEditor.RemoveAuxiliaryFile=����� ��� ��������
+
+BrowserForSimulink.ConnectionError=���� ������� Matlab
+
+# Added later than July 2006
+
+View.FileDescription.imageFile=����� ��������
+
+EditorForVariables.getArguments=������� ������� ���� �� ������� ������� ���
+EditorForVariables.getParameter=������� ������� �������
+EditorForVariables.readText=����� �� �� ��� ����
+EditorForVariables.readVariables=����� ����� ������� �� ���
+EditorForVariables.saveImage=��� ������ �� ���� ��� ����
+EditorForVariables.saveText=��� �� �� ���
+EditorForVariables.saveVariables=��� ����� ������� �� ���
+
+EditorForVariables.view.alert=��� ������� �� ���� ������
+EditorForVariables.view.clearMessages=��� "����� ����" ������ ���� �� ������
+EditorForVariables.view.format=������� ����� ��������
+EditorForVariables.view.print=����� �����
+EditorForVariables.view.println=����� ����� ������� ���� ����
+
+EditorForVariables.view.resetElements=����� ����� ���� ����� ���� ��� 
+EditorForVariables.view.clearElements=����� ���� ����� ���� ��� 	
+EditorForVariables.view.resetTraces=����� ����� �� ������ �� ���� ��� 
+EditorForVariables.view.setParentComponent=����� ������ ������ ������� ���� �����
+EditorForVariables.view.setUpdateView=�����/����� ����� ���� �����
+EditorForVariables.view.getElement=����� "���� ������" ����� �� ���� �����
+#EditorForVariables.view.flush=Flushes the view (specially traces)
+#EditorForVariables.view.getComponent=Return the AWT Component wrapped by a view element
+#EditorForVariables.view.getContainer=Return the AWT Container wrapped by a view element
+#EditorForVariables.view.getObject=Return the object with that name inside this view element
+#EditorForVariables.view.getFunction=Return the function with that name inside this view element
+#EditorForVariables.view.getVisual=Return the visible AWT Component wrapped by a view element
+
+# Please revise previous value of Model.Library.JarsAdd above
+# Please revise previous value of Model.Library.JarsRemove above
+# Please revise previous value of Model.Library.ImportsAdd above
+# Please revise previous value of Model.Library.ImportsRemove above
+Model.Library.JarsEdit=����� ��� JAR
+Model.Library.ImportsEdit=����� ����� ��������� (import)
+
+EjsOptions.VMOptions=������� ����� ����������
+
+ProcessListDialog.Title=�������� ��� ������� �����
+ProcessListDialog.Kill=�����
+
+Osejs.Icon.Package=��� �������� ������� (���� ����� ������ ������� ����)
+Package.PackageCurrentSimulation=��� �������� ������� ���
+Package.ZIPCurrentSimulation=��� ����� ������ ��������
+Package.CleanSimulations=����� ��������� �������� ��������
+
+Package.PreparingFiles=����� ������ �����...
+Package.WaitingLaunchBuilder=������ LaunchBuilder �������� ...
+Package.PackagingJarFile=��� ��� ...
+Package.JarFileCreated=�� ����� ����� ��� �����
+Package.JarFileNotCreated=��� �� ��� �����. �� ��� ����� ��� �����.
+Package.NoSimulations=�� ���� ����� ��������
+Package.CleanSimulationsMessage=��� ����� ������ �������:
+Package.CouldNotDeleteDir=���� �����
+Package.PackageAllSimulationsMessage=��� ������ �������� ���� ���� ������� �������� ���������:
+Package.SimulationsDeleted=�������� ���� ���� ����.
+Package.SimulationsNotDeleted=���� ��� ��� ��������.
+
+Package.Error=��� �� ���� �����
+Package.CantCreateError=��� ��� ��� �����
+Package.CantCompileError=�������� �� ������ ���� ����.	
+Package.AppDirNotExistingError=�� ���� ����� ��������.
+Package.NotTempDirError=���� ����� ������ ������
+Package.FileNotExistingError=����� ��� ����Ϭ ��� ���� ������� \ n  �� �� ������ �� ������� ������ ��� �� ���.
+Package.CompressError=���� ��� �����
+Package.UncompressError=���� ����� ��� �����
+Package.CopyError=���� ��� �����
+
+SimInfoEditor.Level=�������:
+
+# Added after Nov 2006
+RunMenu.KillCurrentSimulation=��� �������� �������
+RunMenu.RunAgain=����� ��� ��������
+RunMenu.KillSimulations=����� �������� �������� 
+
+# this modifies a previous one. Please remove the older one.
+Generate.IsRunningAlready=�������� �� ��� �������. \n ���� ����� ������ ��� ����� "�����"  \n �� EJS ���� ��������  ������� �� ����� ������ �����.
+
+Osejs.WantToExit=�� ���� ���� ������ �� EJS �	
+Osejs.WantToSaveBeforeExit=�� ���� ��� ����� ��� �� ����� EJS�
+
+EjsOptions.defaultSize=����� ���� �������
+EjsOptions.currentSize=����� ��� �� ����� �� ������ �������
+EjsOptions.includeModelCB=����� ��� XML ������� ��������
+EjsOptions.fullPathCompilation=����� �� ������ "_apps" �������� ������ ������
+
+TabbedEditor.importHTMLPage=������� ��� HTML
+
+EjsConsole.ShowProcesses=��������
+EjsConsole.RebuildPackage=����� ���� ������
+EjsConsole.UncompressingJAR=����� ��� ��� JAR
+EjsConsole.CompileDirectory=����� ������
+EjsConsole.AbortBatchCompilation=�� ���� ����� ����� ����� ������ ������ɿ
+EjsConsole.WillProcess=��� ��������
+EjsConsole.ProcessList=��� ����� �������� �������:
+EjsConsole.ProcessTitle=����� ������
+EjsConsole.BatchCompilationFinished=�������� �� ����� ������!
+# this modifies a previous one. Please remove the older one.
+EjsConsole.ClearArea=��� �������
+# this modifies a previous one. Please remove the older one.
+Osejs.Icon.Open=��� ��� �� ����� ����� (���� ��� ������ ������ �������� �������)
+
+OpenMenu.PreviousFiles=������� ���� �� ����� �����
+Package.CantCreateDir=�� ���� ����� ������
+
+Editor.PageComment=������� ������
+
+# Added (some taken from above) after March 2007
+  # This is for the groups in data/elementsOrdered.txt
+
+View.Elements.Swing=�������
+View.Elements.Drawables=������ ������
+View.Elements.Drawables3D=������ ����� �����
+
+View.Elements.Groups.Containers.ToolTip=������Ь ��������ʬ ������ �����
+View.Elements.Groups.Buttons.ToolTip=����� � �����
+View.Elements.Groups.IO.ToolTip=�������� ���������
+View.Elements.Groups.Menu.ToolTip=����� �������
+View.Elements.Groups.Compound.ToolTip=������� �������. ����� ��� ���� �� ���� ������� �� ��� ������.
+View.Elements.Groups.SwingDeprecated.ToolTip=����� ����� ����� (��� ���������!)
+
+View.Elements.Groups.Basic2D.ToolTip=������ ������ ������
+View.Elements.Groups.Sets2D.ToolTip=������� �� ������ ������
+View.Elements.Groups.Fields2D.ToolTip=������ ���������
+View.Elements.Groups.Control2D.ToolTip=������ �����
+View.Elements.Groups.DrawablesDeprecated.ToolTip=����� ������ �����  (��� ���������!)
+
+View.Elements.Groups.Basic3D.ToolTip=������ ������ ������ �������
+View.Elements.Groups.Sets3D.ToolTip=������� �������� ������ �������
+
+Model.Evolution.FpsTooltip=���� �� �������: ��� ������� �� ������� �������
+Model.Evolution.SpdLabel=SPD
+Model.Evolution.SpdTooltip=����� ����� ������: ����� �� ����� ������� ������� ��� ����� �����
+Model.Evolution.AutostartTooltip=�� ��� ��� ��� �� ���� �������� ������ ��� ��� �������
+
+Help.Title=������� �������� ������ ���� ���� 
+Help.Help=�������
+Help.F1ForHelp=���� ��� �� ���� ��� ������� F1 ������ ��� ������
+Help.HelpOnElement=������ �
+
+# Added after May 2007
+Experiment.ScheduledCondition=������ �������
+Experiment.ScheduledCondition.Tooltip=����� ������ ������� �������
+Experiment.ScheduledCondition.Title=������ ������� �������
+Experiment.ScheduledCondition.Page=�����
+Experiment.ScheduledCondition.BooleanCondition=��� �����
+
+Experiment.ScheduledEvent=������� ��������
+Experiment.ScheduledEvent.Tooltip=����� ������� �������� �������
+Experiment.ScheduledEvent.Title=������ �������� �������
+Experiment.ScheduledEvent.Page=���
+Experiment.ScheduledEvent.ODEPage=���� ��������� ��������� ������� ODE
+
+Experiment.jFrameInputVars.Title= ����� ��� ���������
+Experiment.jFrameInput.HeaderTitleVariable= �����
+Experiment.jFrameInput.HeaderTitleValue=����
+
+EjsConsole.LoadLastFile=����� ����� ������
+
+View.FileDescription.imageOn=����� ��������
+View.FileDescription.imageOff=����� ��������
+
+# Added after June 2007
+TabbedEditor.importExternalHTMLPage=��� ���� HTML �����
+HTMLEditor.FileLabel=���� HTML
+HTMLEditor.Refresh=����� ���������
+HTMLEditor.SetHtmlFile=����� ��� HTML �����
+
+Osejs.File.SimulationRunning=�� ���� ���� ������ ��� �������. \ n  ���� ����� ����   \ n �������� ��������  ��� ��� ����� �����.
+
+# Obsolete. Remove previous entry if still there
+#Utils.PredefinedMethods=Custom and Predefined Methods
+
+# Added after July 2007
+
+InfoMenu.TakeSnapshot=��� ���� �� ������ ������� ������� EJS
+InfoMenu.TakeSnapshotWindow=��� ���� �� �� ���� ��� ������� EJS
+
+EjsOptions.AspectOptions=����
+EjsOptions.RunningOptions=��� �������
+
+EjsOptions.SaveWhenRunning=��� ��� XML ��� �������
+Package.PackageExtraSimulationsMessage=����� �������� ������� ������
+Package.ProcessingSimulation=������ ��������
+Package.ProcessingLibrary=������ ��� �������
+ProcessCanceled=�� ����� ��������
+
+Tree.NoFreePositions=�� ���� ����� ����� ����� �����!
+# Edited from an old one. Remove previous entry if still there
+Tree.PositionTo=����� �����
+
+Package.CreateGroupHTML=����� ������ �� ��������
+Package.CreateGroupHTMLMessage=��� ������ �������� ���� ������� ��� HTML:
+Package.GroupHTMLOk=����� ��� HTML (�������) �����
+Package.CopyingDirectory=��� ������
+
+EjsConsole.Arguments=����� ������ � EJS :
+InfoMenu.ShowWiki=��� ���� EJS 
+
+EjsConsole.Added=����� �������
+Package.EditPackage=����� ������ ��������
+
+Utils.format=����� ��������� ��������
+Utils.formatError=��� ��� ����� ��������� ��������. ������ �� ������ �������
+EjsConsole.AvailableSimulations=�������� ��������
+
+View.Elements.Groups.Drawables3DDeprecated.ToolTip=����� ������ ������ ����� �����  (��� ���������!)
+
+EditorFor3DTransformation.AddTransformations=����� �������� ��������
+EditorFor3DTransformation.Degrees=�����
+EditorFor3DTransformation.Radians=������
+EditorFor3DTransformation.By:�
+EditorFor3DTransformation.AddRotationAroundXby=������� ��� X �����
+EditorFor3DTransformation.AddRotationAroundYby=������� ��� Y �����
+EditorFor3DTransformation.AddRotationAroundZby=������� ��� Z �����
+EditorFor3DTransformation.AddQuaternionRotation=����� ���� ������(����������)
+EditorFor3DTransformation.AddVectorRotation=����� ��� �������
+EditorFor3DTransformation.AddAlignmentRotation=������ ������
+EditorFor3DTransformation.With=�� ������
+
+EjsOptions.ShowPropertyErrors=����� ���� ������� ��� ���� ���
+Osejs.Icon.Search=���
+InfoMenu.LocalWikiError=�����: �� ����� ���� "���  EJS .\n ������ ������� �� ������ �� ����� ����� �� �� ���� ���� �����.
+
+EditorForVariables.getDelay=����� ������� ������ (������� �����) ������
+
+% Added after January 2008
+
+SearchMenu.SearchString=����� �����
+SearchMenu.SearchIn=����� ��:
+SearchMenu.StringToSearch=����� �����
+SearchMenu.ShowInspectorsWithErrors=����� �� �������� �� �������
+SearchDialog.Close=���
+SearchDialog.Search=���
+SearchDialog.Title=����� �����
+SearchMenu.CaseSensitive=������ ��� ������
+Event=Event
+
+View.Elements.DefaultValue=������ ���������� �
+View.Elements.<none>=��� ����
+View.Elements.<no_action>=�� �����
+
+EjsConsole.ChooseWorkingDirectory=������ ����� ���� �� EJS 
+EjsConsole.NeedUserDir=���� ������  EJS  �� ������ ����� ���� ��� ���� ������. \n ���� ����� �������� ����.
+EjsConsole.UnreachableOptionsFile=���� ������ ���� ������   EJS . \n .���� ����� �������� ����.
+
+Osejs.Read.ChooseImportDirectory=������ ���� �������� ��� XML ������� ���
+Osejs.Read.MustBeUnderSource=��� �� ���� ����� ������ ��� ������ ������
+
+Print.PrintCode=����� ��������� ��������
+Osejs.Init.ReadingFile=����� �����
+OpenMenu.CleanList=����� �������
+
+Package.IncorrectMetadata=������ ������� ��� ����� �� ��� ������ ��������
+
+EjsConsole.RmiIsStarted=���  ������� ������� �� ���  RMI ��� �� ������:
+EjsConsole.EjsIslistening=���� ���� ������ Ejs ������ ������� ��� ������:
+EjsConsole.AlreadyRunning=���� ����� ������  Ejs  ��� �������. \n �� ���� ����� ���� ��� �� ���� ������ Ejs �
+EjsConsole.CantCloseIt=�� ���� ����� ���� ������ ����� ���  Ejs . \n ������ ����� ���� ����� ��  Ejs ������ ���� ������.
+EjsConsole.ExportAfterCompilation=����� �� ������ ��� �������.
+
+EditorForString.Title=���� ������
+
+SimInfoEditor.UserAdded=����� ��������:
+SimInfoEditor.FindAuxiliaryFiles=�� ������ ������� �������� �� ��� ��������
+
+SimInfoEditor.UserFileNotFound= ����� ������� �� ��� �������� �������� ��� �����:
+SimInfoEditor.RequiredFileNotFound=������� �������� ��� ������:
+
+Generate.AbsolutePathsFound= ����� ������� ���� �� ������ ����� ����� �� \n ������ ����. ������ ������� ���������� ���� ����� ��� ����� ��� ��� ����� ������ \n �� ������ �������. \n ����� ��� ����Ϭ ������ ��� ����� ������ ���� �����  .\n\n XML �������� ���� ����:
+
+InfoMenu.SelectWindow=���� ��� ������� ���� ���� ��������
+
+# Added after May 15 2008
+EjsConsole.PrefixForExport=����� �������:
+
+View.ThisIsNotTheSimulation=������� ���� ��� ������� \n. �� ������ (�����) �����  Ejs    �������� ��� ���� ����� �� ���� ��� ��� ������ \n �� "���� �������" ������ �������.
+EjsConsole.NeedWritableDir=������ ������ ��� ����� �� �� ������� ���. \n ����� ����� ��� �� ���� �� ���� ���� ������� . \n ������� ���� ���� �����.
+EjsConsole.ExplainWorkspaceConcept=����� ����� �� ���� ��� ���� Ejs ����� �������� ������ ����.
+
+TabbedEditor.RightClickForOptions=���� ����� ������ ������� ����
+
+TabbedEditor.ClickHere.Description=���� ������ ���� �����
+TabbedEditor.ClickHere.Model.Variables=���� ������ ���� ���������
+TabbedEditor.ClickHere.Model.Initialization=���� ������ ���� �������
+TabbedEditor.ClickHere.Model.Evolution=���� ������ ���� ��������� ��������
+TabbedEditor.ClickHere.Model.Constraints=���� ������ ���� �������� �������
+TabbedEditor.ClickHere.Model.Library=���� ������ ����  ����� �����
+
+View.Elements.Groups.Drawables2Deprecated.ToolTip=����� ������ ����� (��� ���������!)
+
+EditorFor2DAffineTransform.AddRotation=�����
+EditorFor2DAffineTransform.AddTranslation=���
+EditorFor2DAffineTransform.AddScale=����
+EditorFor2DAffineTransform.AddShear=��
+EditorFor2DAffineTransform.AddMatrix=������ �������
+
+ProcessListDialog.KillAll=����� ����
+RunMenu.KillAllSimulations=����� �� ��������
+
+#Added after July 2008
+
+EjsConsole.WorkspaceChanged=��� ��� ������ ���� ����� �����. \n ��� ������� �� ����� ��� ���� �� ������ �������� ������ ���� ���� ������ ������� . \n �� ������ ���� ���� �� �������� ���� ����� �������.
+EjsConsole.CopyStandardWorkspace=��� ����� ����� ������� 
+
+EjsConsole.LookAndFeel=����� �������:
+EjsConsole.LookAndFeel.DEFAULT=�������
+EjsConsole.LookAndFeel.SYSTEM=������
+EjsConsole.LookAndFeel.CROSS_PLATFORM=����� �������
+
+View.RightClickToAddCustomElement=���� ����� ������ ������ ���� ����
+View.FirstCopyTree=������ ���� ���լ �� ����� ���� ��� �� ���� \n  �������. �� ���� ����� ������ �� ��� ������ panel.
+View.AddCustomElement=��� ������ ���� ����
+View.SelectIcon=��� ����� 24 ? 24 ���� ������ ������
+
+Package.HTMLJARCreate=����� ����� JAR:
+Package.IndependentJAR=������ �����
+Package.CommonJAR=�� ����� ������
+
+EjsOptions.Author=����
+EjsOptions.Affiliation=��������
+EjsOptions.Contact=��� �������
+EjsOptions.FillAuthorInfo=�� ���� ���� ���� �������� �������. \ N ��� ���� ��� �������� ������� ������ ��������� ������.
+EjsOptions.UseDefaultAuthor=��������� �� ������ �� �����. \n �� ���� ������� ������� ������ ���������ɿ
+
+Generate.SimulationCanNotRun=�����! �� ������ ����� ��� ��������.
+
+EjsConsole.PrefixForZIPExport=����� ����� ZIP:
+EjsConsole.ZIPExportAfterCompilation=����� ���� �������� ZIP.
+
+Package.IgnoringSimulation=�� ���� EJS  ����� HTML ���� ��������. �����
+
+EquationEditor.PreliminaryCode=��������� �������� �������
+EquationEditor.PreliminaryCodeFor=��������� �������� ������� �
+EquationEditor.PreliminaryCode.Tooltip=��������� �������� ���� ��� ���� ��������
+
+Osejs.Icon.ReadFromServer=������� �� ������� ������� � EJS  
+DigitalLibrary.ServerNotAvailable=������ ��� �����. \n ������ ������ �� ����� ������ ������ ��.
+DigitalLibrary.RootNode=�����
+DigitalLibrary.Title=����� �� ������� ������� � EJS 
+DigitalLibrary.Refresh=������ ��� ������
+DigitalLibrary.Download=�����
+DigitalLibrary.NoXMLFound=�� ��� ������ ��� ��� XML ���� �������.
+DigitalLibrary.Connecting=Connecting to the EJS digital library:
+DigitalLibrary.ConnectTo=������� �������� ������� � EJS:
+DigitalLibrary.Disconnect=��� �������
+DigitalLibrary.DownloadSize=��� �������:
+DigitalLibrary.InfoField=������ ��� ������� ������ ��� ��� ������� ���:
+DigitalLibrary.NoChildren=��� ����� �� ���� ����� ���.
+DigitalLibrary.DoubleClick=���� ����� ������� ��� ��� ������ ������ ��� ����� ������� ��
+DigitalLibrary.ListOfModels=����� ��
+DigitalLibrary.ListOfSubcategories=������ ������� �
+DigitalLibrary.Category=����
+
+Information=�������
+
+#Added after October 2008
+
+VariablesEditor.ErrorOnCustomPage=�����. ��� �� ���� ������ �� ������ �������
+DigitalLibrary.DuplicateClassification=����� ����� ��� ��� ��� ����� ��������
+EditorForVariables.TitleVariablesAndCustomMethods=����� ������� ������� ������� �������� �������
+
+
+EjsOptions.ExportOptions=�����
+EjsOptions.AddCaptureTools=����� ����� ������ ������ (VideoTool ���� EPS/GIF)
+EjsOptions.AddDataTools=����� ����� ������ �������� (DataTool �FourierTool)
+EjsOptions.AddTranslatorTool=����� ���� ������
+
+SimInfoEditor.Metadata=������ �������
+
+Package.RemoveCurrentSimulation=����� �������� �������
+Package.RemoveSimulationsMessage=��� ����� �������� �������:
+Package.FileDeleted=����
+
+EjsOptions.UseJava3D=������� Java3D (��� ��� �����)
+View.FileDescription.3Dfile=����� ��� ������ ������ �������
+View.FileDescription.VRMLfile=����� ��� VRML ��������
+View.FileDescription.texture=����� ��������
+View.FileDescription.textureSecond=����� ��������
+
+Osejs.ShowBeforeFiles=��� ������� �������� �� ������ ����� ���� ��� ��� XML ������ \n� ��� ���� ��� ��� �������� ��� \n ����� ��� �����. \n\n ������ ��� ��� �������� ����.
+
+EditorForVariables.view.clearData=��� �������� �� ������� ���� ���� �������� (��� �������� �� ������ �� �������)
+EditorForVariables.view.update=����� ���� ������� ������� ����� ����� ��������
+
+EjsOptions.DigitalLibraries=DL
+EjsOptions.UseCompadreDL=������ ��� ����� ��������
+EjsOptions.OtherDL=������ ����
+
+Confirm=�� ��� ����� ��� ���� �� ���� ��ǿ
+Add=����� 
+Remove=���
+Default=�������
+
+EquationEditor.PrelimComment=������� ������  ������� ��� ����� ������� ������
+
+Ejs.WorkspaceDirectory=���� ����� �����
+
+EditorForVariables.tools.showTable=����� ���� �� �������� ������ �������
+EditorForVariables.tools.showDataTool=��� �������� ����� ��� ������
+EditorForVariables.tools.showDataTool,=��� �������� ����� ��� ������
+EditorForVariables.tools.showFourierTool=��� �������� �������� ����� ������ ����� ��� ������
+EditorForVariables.tools.showFourierTool,=��� �������� �������� ����� ������ ���� ��� ������
+EditorForVariables.tools.clearDataTool=��� �� ��������
+EditorForVariables.tools.clearFourierTool=��� ���� �������� �� ���� ����� ������
+
+# This group lists entries modified recently (remove from above if still there)
+EquationEditor.Tolerance=Tol
+EquationEditor.Method=������
+EquationEditor.Euler=����� (������ ������) �� ������� ���
+EquationEditor.MidPoint=�����-���������� �� ������� �� ������ �������
+EquationEditor.RungeKutta=����-���� �� ������� �� ������ �������
+EquationEditor.RungeKuttaFehlberg=���-���� 5(4) ����� �� ������� �� ������ �������
+EquationEditor.Fehlberg8=����� ������� ������ �� ������� �� ������ �������
+EquationEditor.Dopri853=������ ����� 8(53) ����� �� ������� �� ������ �������
+EquationEditor.Dopri5=������ ����� 5(4) ����� �� ������� �� ������ �������
+EquationEditor.Radau5=���� 5(4) ����� ������� ���� �� ������� �� ������ �������
+EquationEditor.BogackiShampine23=������� ������ 3(2) �� ������� �� ������ �������
+EquationEditor.Fehlberg78=������� 8(7) ����� �� ������� �� ������ �������
+EquationEditor.QSS3=QSS3 ������� �� ������ �������
+
+EquationEditor.Euler.short=�����
+EquationEditor.MidPoint.short=�����-����������
+EquationEditor.RungeKutta.short=����-���� 4
+EquationEditor.RungeKuttaFehlberg.short=���-���� 5(4)
+EquationEditor.Fehlberg8.short=������� 8
+EquationEditor.Dopri853.short=�������-����� 8(53)
+EquationEditor.Dopri5.short= �������-����� 5(4)
+EquationEditor.Radau5.short=���� 5 (4)
+EquationEditor.BogackiShampine23.short=������-������� (2)
+EquationEditor.Fehlberg78.short=������� 8(7)
+EquationEditor.QSS3.short=QSS 3
+
+EquationEditor.Parameters=�����
+EquationEditor.ParametersTooltip=��� ������� ������
+EquationEditor.ParametersFor=�������
+EquationEditor.Help=������� ��� ��������� � ��������
+EquationEditor.InternalStep=��� ��������������
+EquationEditor.MaximumStep=����� ������ ������
+EquationEditor.OperationParameters=�������
+EquationEditor.RelativeTolerance=������� ������
+EquationEditor.AbsoluteTolerance=������� ������
+EquationEditor.EstimateFirstStep=����� ������ ������
+EquationEditor.ForceSynchronization=��� ��������
+EquationEditor.EventMaximumStep=���� �� ������� �� ������� ���� ���� ������
+EquationEditor.QSSInformation=QSS ���
+EquationEditor.QSSDirectIncidenceMatrix=������ ������
+EquationEditor.Guess=���� ����� ���
+
+EquationEditor.Events.Method=�����
+EquationEditor.Events.Iterations=���������
+EquationEditor.Events.Method.SECANT=����
+EquationEditor.Events.Method.BISECTION=�����
+EquationEditor.Events.STATE_EVENT=��� ������
+EquationEditor.Events.CROSSING_EVENT=���� ����� �����
+EquationEditor.Events.POSITIVE_EVENT=����� ����
+EquationEditor.Events.Help=������� ��� �������
+
+EquationEditor.Events.ZenoEffect=��� ����� ����
+EquationEditor.Events.ZenoEffectFor=��� ����� ���� ����� �
+EquationEditor.Events.ZenoAction=���
+EquationEditor.Events.ZenoStopAtEffect=����� ������ ��� �������
+
+Osejs.Help.HelpNotFound=���� ��������� �������� �� ���� ������ ����� ��� ���� �������ʬ ����� �� ���� �����. \n ��� �� ��� ������ ��� ��������� �� ���� EJS ����� ��� ������ EJS� ������ �� ���� ��� \n ���� �� http://fem.um.es/Ejs� ��� ��� ��� ��� ��������� �� ���� �������. \n  �� ��� ������ ��� �����:
+Utils.CustomMethods=����� �����
+Utils.ModelMethods=����� �������
+Utils.ViewMethods=����� ���� �����
+Utils.ToolsMethods=����� �������
+Utils.Methods=�������
+
+EditorForArrowStyle.TRIANGLE=����
+EditorForArrowStyle.RHOMBUS=����
+
+EditorForVariables.view.getDescriptionPageURL=����� java.net.URL ����� ����� ������ �� ��� �������� (JAR)
+EditorForVariables.view.createDescriptionDialog=����� javax.swing.JDialog �� ���� ����� ������ �� ������� ������� ��
+EditorForVariables.view.createHTMLDialog=����� javax.swing.JDialog �� ���� ����� ������ �� ��� HTML ������ ��
+EditorForVariables.view.createHTMLPage=����� javax.swing.JScrollPane �� ���� HTML 
+EditorForVariables.view.createDialog=����� ������ javax.swing.JDialog �� ����� �� ��������
+EditorForVariables.view.showDescription=�����/����� ���� ����� �� ��� �������� (JAR) 
+EditorForVariables.view.showDescriptionAtStartUp=�� ��� ��� ��� �� ���� ���� ���� ����� �� ������� �� ��� �������� (JAR)
+EditorForVariables.view.showDocument=��� ����� �������� ������� ������
+EditorForVariables.view.getTopLevelAncestor=����� ������� ������ �� ���� ������
+
+EjsOptions.ShowDeprecatedElements=����� ����� ������� �������
+
+# Added after July 2009
+Package.ZIPSeveralSimulations=����� ZIP ��� ����� ���� ��������
+Package.CompressList=��� ����� �������� ������ ZIP: 
+Package.CompressTitle=����� ��� ����� ZIP
+Package.GatheringInfo=��� ���������...
+
+Package.ChooseOneModel=������ EJS  ��� ������ ������ �� ��� �����. \n ��� ����� �� ������ �������� EJS  ����� ���� (�� ���� "����� �����").
+
+Osejs.Evolution.RepeatedIndependentVariable=���� ������ �������� ������� ����� ODE �� ������� ������� \n ����. ��� ������� ���� \n ���� ����� �����. \n ��� ���� ����� ���� ��� ���� ����� �� ��� �������.
+
+EditorForVariables.setPageEnabled=�����/����� ���� �� ��� �������
+
+Osejs.File.FileVersion=�� ����� ��� �������� ������ ����� EJS
+Osejs.File.CurrentVersion=� ���� ������ ����� EJS
+Osejs.File.InvalidVersion=����� ��� ����� �� ���� ����� ��� ����� ��� ��� ������ ������� \n ������� ���� �� ������� ����Ǭ ���� ��� �������� �� ���� ������� ������� ��� ���� ����. \n ������ ������� ��� ���� ����� �� EJS ��� ��� ����� ����� ��� ������� \n ������ �� ����� EJS ����.
+Osejs.File.WantToOpenIt=��� "���" ���� ��� �������� ��� �������.
+
+EquationEditor.UseBestInterpolation=������� ���� �������
+EquationEditor.MaximumNumberOfSteps=���� ��� �� �������
+EquationEditor.ErrorCode=����� ������ �
+
+EditorForVariables.tools.getDataTool=���� org.opensourcephysics.tools.DataTool ����� (����� �����)� ��� ��� �������
+EditorForVariables.tools.openData=��� ��� �������� �� ���� �������� ������ �� ���� ������
+EditorForVariables.tools.openData,=��� ��� �������� �� ���� �������� ������ �� ����� ������
+EditorForVariables.tools.getFourierTool=���� org.opensourcephysics.tools.FourierTool ����� (����� �����)� ��� ��� �������
+EditorForVariables.tools.openFourierData=��� ��� �������� �� ���� ����� �������� ������ �� ��� ������
+EditorForVariables.tools.openFourierData,=��� ��� �������� �� ���� ����� �������� ������ �� ����� ������
+
+Package.ExtractModelsFromPackage=������� ����� �� ������ ��� ����� �����
+
+EjsOptions.Preview=������
+EjsOptions.BorderWidth=��� ������ ��� ����� ��������
+EjsOptions.BorderColor=��� ������ ��� ����� ��������
+EjsOptions.BorderTitleColor=��� ������� �� ����� ��������
+EjsOptions.RunningLookAndFeel=����� ����� �������
+EjsOptions.UseInterpreter=����� ����� ����� ��������
+EjsOptions.UseMasterDLs=������ ������� ������� �� ������� �������� ��� ����� JAR
+
+SimInfoEditor.Password=��� ���� ������
+SimInfoEditor.RunOptions=������ �������
+SimInfoEditor.EditionOptions=������ �������
+
+# Added after December 2009
+# The next one was up before, but has been changed. Make sure you remove it from the previous entry.
+Package.PackageAllSimulations=���� �������� �� �������
+Package.PackageSeveralSimulations=��� ��� ������
+
+SimInfoEditor.ExecutionPassword=���� ���� �������
+
+CodeWizard.TryCatch=����� ��������� ' try catch '
+CodeWizardDescription.TryCatch=�� ������� ������ ���� �� ��������� �������� ���� ���� �� ���� �������
+
+#EditorForVariables.initializeSolvers=Makes sure the solvers are intialized before calling _step() in the Initialization
+EditorForVariables.resetSolvers=������ ��������� �������� �� ������� ������� ��� ����� ����� ������� �� �������
+
+EjsOptions.CheckOnExit=��� ����� ��� ������ �� EJS 
+
+Osejs.Icon.Translate=����� ����� ��������
+
+EjsConsole.ParentSeemsWorkspace=������ ����� ���� ��� ����� ����� ������. \n �� ���� ��� ������
+EjsConsole.CheckUpdateNow=������ �� ���� �������
+EjsConsole.CheckUpdateStartUp=���� �� �� ����� �����
+EjsConsole.CheckUpdateEveryWeek=���� �� �����
+EjsConsole.CheckUpdateEveryMonth=���� �� ���
+EjsConsole.CheckUpdateNever=�� ����� ���� �� ���� �������
+EjsConsole.UpdateUnavailable=���� EJS ��� ����� ������ ��� ���������
+EjsConsole.GotoEJSWeb=�� ������ ���� ����� EJS
+EjsConsole.UseCurrentVersion=������ ������� ������
+EjsConsole.InstalledRelease=����� EJS ������� ���� ��
+EjsConsole.CurrentRelease=������� ������ ����� � EJS  ��
+EjsConsole.NewerRelease=����� ������� ����� �� ���� �� ������� ������ � EJS
+EjsConsole.Uptodate=����� ������� �� ����
+EjsConsole.NeedsUpdate=����� ���� � EJS �����! 
+
+View.Elements.Groups.Bodies3D.ToolTip=����� ������ �������
+
+
+UndoableOkToProceed=�� ���� ������� �� ��� �������. \n �� ��� ����� �� ��� ���� �������ɿ
+
+TranslationEditor.EnableTranslation=������ ��� �������ɬ ��� ������ ����� �� ���� '����� ����� ����' \n �� ���� '�����' �� ���� ���� ������� �� ��������.
+TranslationEditor.Title=�����
+TranslationEditor.ViewElement=��� ������
+TranslationEditor.Property=�������
+TranslationEditor.PropertyName=����� ������
+TranslationEditor.Value=������
+TranslationEditor.Defaults=�������
+TranslationEditor.RemoveTranslation=���  �������
+TranslationEditor.AddProperty=����� �����
+TranslationEditor.RemoveProperty=��� �����
+TranslationEditor.EmptyPropertyExists=����� ����� ������ ������. \n �� ���� ������ ���� �����.
+
+EditorForVariables.getStringProperty=������� ����� ����� ����� (��� ����� ������ �� ���� ���� �������) �� ��������� ������� �������. ��� �� ��� ������ ����Ǭ ��� ����� �������
+EditorForVariables.view.setLocale=����� ��������� ������� ��������
+EditorForVariables.view.getLocale=����� ��������� ������� ��������
+EditorForVariables.view.getLocaleLanguage=����� ��������� ������� ���� �������� ("es"� "en"� "ar"�...)
+EditorForVariables.view.openDescriptionPageInBrowser=���� ���� ����� �������� �� ����� ������. ��� ����� true ��� �� ��� ������� ����ͬ false���� ���
+EditorForVariables.view.openDescriptionPagesInBrowser=���� �� ����� ����� �������� �� ����� ������. ��� ����� true ��� �� ��� ������� ����ͬ false���� ���
+
+HtmlEditor.Header=�������:
+HtmlEditor.EditButton=���� ������ ������
+HtmlEditor.LinkButton=���� ��� ����/����� ��� ������ ���� �����
+
+Osejs.ChangeToEJSExtension=��� ����� ����� ��� ����� ��� ��� ����. ������ ��� ���� ���ɬ \n ����� ����� �� ����� ���� � ejs� � �� ������ . \n '.ejs' �� ���� �� ����� ������ ��� ����� ��� '.ejs'�
+#This was above before. Make sure you translate it properly
+Description.NoMenuHere=���� ����� ������ ��� ������ �� \n ���� ��� ����� ������ �������ʬ \n �� ������� ����� ������ �������� �����.
+
+Tree.KeepPreviewHidden=����� �������� �����
+Tree.HasJMenuBar=��� ������ ����� ����� ��� ���� �����
+
+Model.Elements=�����
+Model.Elements.ToolTip=����� �������
+Model.ElementsAdded=������������
+
+ElementsEditor.ClickToGoToDir=���� �������� ��� ����
+ElementsEditor.DragOrDoubleClick=���� ������� ���� ����� ������� ��� ������ ��� ������
+ElementsEditor.DoubleClickOrRightClick=���� ����� ������� ��� ������Ѭ ���� ����� ������ �������
+
+EjsOptions.UseShortLabels=������� ������ �����
+
+Model.Variables.Short=Vars
+Model.Initialization.Short=Init
+Model.Constraints.Short=�������� �������
+
+ElementsEditor.JarRequired=��� �������� ����� ��� JAR:
+ElementsEditor.AddUserElements=����� ��� ����� JAR ��� ����� ����� ����� �� ��� �������� . \n "�����" ��� ������� ���� ������� ����� �� �� ���� ������� \n ��� ���� �������� ���� ���ͬ ���� �� ���� ���� ��� ����� ���� �����. \n  ����� ��� ���� ����� �������� � ����� JARS ��� �� ���������� �� ������� ��������. \n\n �� ���� ����� ��� ������ѿ
+ElementsEditor.UserDefined=���� �� ��� ��������
+ElementsEditor.JarNotLoaded=��� ��� �� ��� ��� ��� ����� ���� JAR ���� �������� �� ��� �� ���� �� \ n  ����� ����� �����. ������ ���� �� ���� ����� ���� ������� ������:
+
+ModelEditor.RequiredJarFiles=���� ���� ������ ��� ���� ����� ��� ejs  ��� ����� \n ����� ����� JAR ������� ����� ���� ���� \ n ������� �������� ��� ����� ������� ��������.:	
+
+EquationEditor.MemoryLength=��� �������
+EquationEditor.DDEparameters=������ ������� ��� ����� �����
+EquationEditor.Delays=�������
+EquationEditor.DelaysInitialConditionCode=���� ����� ���
+EquationEditor.DelaysInitialConditionDiscontinuities=���� ����� �� ��� �������
+EquationEditor.DelaysInitialConditionValue=���� ����� ���
+
+EquationEditor.VerletOrderingNotRespected=�������� ������ ����� �� �� ���� ���� \n ����� �����. \n ��������� ������� �� ��� ������ �� ���� ���� ����� \n ��� �����: \n
+EquationEditor.VelocityVerlet.short=���� ������
+EquationEditor.VelocityVerlet=���� ������ (������������) �� ������� �� ������ �������(����� ����� ����!)
+EquationEditor.AccelerationIndependentOfVelocity=����� ����� �� ������
+
+
+#TabbedEditor.ClickHere.EquationEditor.ErrorCode=Click to create a page of error-handling code
+EquationEditor.ErrorType=��� �����
+EquationEditor.ErrorEditor=��� ������ ��������� ��������
+EquationEditor.ErrorCode.Page=�� ���� �������
+EquationEditor.Error.ANY_ERROR=�� ���
+EquationEditor.Error.INTERNAL_SOLVER_ERROR=�� ����� �� ������
+EquationEditor.Error.TOO_MANY_STEPS_ERROR=����� �����
+EquationEditor.Error.EVENT_NOT_FOUND=��� ��� �����
+EquationEditor.Error.ILLEGAL_EVENT_STATE=���� ��� ��� ��� �����
+
+EditorForVariables.view.hasJava3D=����� true ��� ���� 3D ���� ���� �� ��� ���������
+
+# Next was previously up there. Make sure you move it when translating it
+View.Elements.Groups.Other3D.ToolTip=����� � �����
+
+EjsOptions.appletColEnabled=����� ��� ������� ��������� Moodle
+Generate.HtmlStartCollaboration=�����
+
+ModelElementHelpFor=������ ����� ����� �� ���
+ModelElementEditorFor=���� ����� �����
+
+ParallelJava.Sections=�����
+ParallelJava.Sections.ToolTip=����� ����� ����� ���
+ParallelJava.Loop=����
+ParallelJava.Loop.ToolTip=����� ���� ������ ���
+ParallelJava.Variables=�������
+ParallelJava.Variables.ToolTip=����� �� ������� ����� ��� (����� ������� ��� ������)
+ParallelJava.Start=����
+ParallelJava.Start.ToolTip=����� �� ���� ����� �������� �������� ������� ���
+ParallelJava.Run=�����
+ParallelJava.Run.ToolTip=����� �� ���� ����� �������� �������� �������� ���	
+ParallelJava.Finish=�����
+ParallelJava.Finish.ToolTip=����� �� ���� ����� �������� �������� ���
+ParallelJava.Barrier=����
+ParallelJava.Barrier.ToolTip=����� ��� ������ ����� �� (�� ���)
+ParallelJava.RegionRun=�����
+ParallelJava.RegionRun.ToolTip=����� ����� ����� ����� �������� �������� (��� ��� �����)
+ParallelJava.MaximumIndexMessage=����� ���� ���� ������ ���!
+ParallelJava.DontTouchThis=���� �� ������ ��� ����� ������!	
+ParallelJava.Indexes=������ �� �� ��� int ������  IntegerForLoop � �� ���  long ������ 
+ParallelJava.MinimumIndex=���� ������ ������:
+ParallelJava.MaximumIndex=���� ������ ������:
+ParallelJava.IndexType=��� ������:
+ParallelJava.ScheduleType=��� �������:
+ParallelJava.ChunkSize=��� �����:
+ParallelJava.BarrierAction=��� ������:
+
+TabbedEditor.ClickHere.Sections=���� ������ ���� ������
+
+ModelElement.Function.SolverAlgorithm=�������� ������:
+ModelElement.Function.IntegrationAlgorithm=�������� �������:
+
+Editor.ParallelThreads=����� ����� �������
+
+EditorForVariables.breakAfterThisPage=���� �������� ������ (��� ����� ���) ������� ������� �� ��� ����� �� �������
+
+Apache.Function=������
+Apache.Derivative=����
+
+EditorForVariables.saveDefaultStateToJar=��� ������ ���������� ������ �������� �� ��� JAR
+EditorForVariables.saveDefaultStateToJar,=��� ������ ���������� �������  �������� ������� �� ��� �������� JAR
+EditorForVariables.view.setDescriptionPageVisible=�����/����� ���� ����� �������
+
+EquationEditor.Events.DISCONTINUITY_EVENT=��� �����������
+
+# LDLTorre for Moodle support
+# Etiquetas para los menus de guardar/cargar ficheros a/desde Moodle.
+Osejs.FileMoodle.Save=����� - ��� ���� ������� EJSApp �
+Osejs.FileMoodle.Load=����� - ��� ��� ������� EJSApp �
+Osejs.FileMoodle.Files=����� ������� ���� �� ����� ������ EJSApp�
+
+EjsOptions.webglEnabled=����� ��� ���� webgl
+Generate.HtmlStartCollaboration=�����
+Generate.HtmlStartWebgl=WebGL
+
+EjsConsole.IgnoreThisUpdate=����� ��� �������
+
+Model.Evolution.RealTimeLabel=RTV
+Model.Evolution.RealTimeTooltip=����� ����� �������: ���� �� ���� ��� ������ ����� ����� �������� ����� ������� (����� ��� �������� �� ������� FPS)
+Model.Evolution.Realtime=����� �������
+Model.Evolution.RealtimeTooltip=������� ����� ������� ������ ������� (����� ��� �������� �� ������� FPS)
+Model.Evolution.TopLabel=������
+
+EditorForVariables.view.captureVideo=��� ���� ������ ������� ����� ����	
+
+FreeFem.ServerURL=���� ���� ������� ������ URL:
+FreeFem.Username=��� ��������:
+FreeFem.Password=���� ������:
+FreeFem.NumOfProc=�������ʻ
+FreeFem.Script.ToolTip=����� �� ++FreeFem ����� ���:
+
+Phidget.ServerIP=IP ������:
+Phidget.PortNumber=��� ������:
+Phidget.Password=���� ������:
+Phidget.SerialNumber=����� ��������:
+
+EditorForVariables.hasDefaultState=��� ����� JAR �� ���� ����� �������� ����� �� ��� ��������  �����
+EditorForVariables.readDefaultState=����� ������ ���������� ������� �� ��� �������� ������� ���� JAR ��� ���� ������. ����� false ��� �� ��� ������ �����.
+
+EjsOptions.ColorBlindHints=����� ������� �������� �����
+
+Compadre.SearchToolTip=����� ����� (����� ��� ���� 30 ���)
+
+# Added after August 2012
+
+View.FileDescription.configuration=����� �������
+EjsOptions.MacScreenMenuBar=������� ���� ������� ������ ��� ���� ������� Mac OS X
+
+External.Input.ToolTip=����� ��������� �������� ���� ����� ��������
+External.Output.ToolTip=����� ��������� �������� ������ ������ �������
+
+ParallelCode.Variables=�������
+ParallelCode.Variables.ToolTip=��������� ������� ���� ������
+
+ParallelCode.Preliminary=�����
+ParallelCode.Preliminary.ToolTip=�������� �������� ������� (������� �� ����� ejs)
+
+ParallelCode.Parallel=�����
+ParallelCode.Parallel.ToolTip=�������� �������� ��������� (��� ������� �� ����� ejs)
+
+ParallelCode.Final=�����
+ParallelCode.Final.ToolTip=�������� �������� �������� (������� �� ����� ejs)
+
+ParallelCode.Repeat=����� �����
+ParallelCode.Repeat.ToolTip=����� ���� ������ �� ������� ���� ���� ��� �� ��� ��� ���� ����� ����� ��������� �������� ���������
+
+ViewElement.ErrorReadingLine=��� ��� ����� ����� ����� (���� ����� �����):
+
+Package.PackageServerSimulation=���� �������� ������
+
+# Robots
+
+ServerIP=IP ������:
+PortNumber=��� ������:
+Username=��� ��������:
+Password=���� ������:
+Robots.Group3D=������ ��� ����� �������:
+
+TabbedEditor.ClickHere.Restriction=���� ������ "����� ������"
+
+EditorForVariables.TitleViewElements=����� ������ ��� ������ 
+
+Package.PackageXMLSimulation=��������� EJsS
+
+EjsConsole.ProgrammingLanguage=��� �������:
+EjsConsole.ProgrammingLanguageAny=��
+Osejs.Main.HtmlView=HtmlView
+Osejs.Main.HtmlView.ToolTip=����� ������ HTML �������� ��������
+HtmlView.Page=���� HtmlView
+HtmlView.Error=��� HtmlView
+HtmlView.InvalidSize=��� ��� ����
+HtmlView.SizeOption.Custom=����
+HtmlView.SizeOption.iPadHorizontal=iPad \u2588\u258C
+HtmlView.SizeOption.iPadVertical=iPad \u258A
+
+View.FileDescription.ImageUrl=����� ��������
+View.FileDescription.ImageOnUrl=����� ��������
+View.FileDescription.ImageOffUrl=����� ��������
+
+SimInfoEditor.MenuPosition=���� ����� HTML ��:
+SimInfoEditor.MenuPosition.TOP: ����
+SimInfoEditor.MenuPosition.BOTTOM: ����
+SimInfoEditor.MenuPosition.LEFT: ������ ������
+SimInfoEditor.MenuPosition.RIGHT: ������ ������
+
+SimInfoEditor.ModelTab: ���� ��������:
+SimInfoEditor.SimulationLogo: ���� ��������:
+SimInfoEditor.AuthorLogo: ���� ������:
+SimInfoEditor.ClickToChange: ���� ��� ������. ����� ������� =
+SimInfoEditor.RequiredPNGimage: ��� ������ ��� �� ���� ��� ���� PNG:
+View.FileDescription.Logo=��� PNG ���
+RunMenu.RunModes=��� �������
+RunMenu.RunWithEmulator=����� �� �������
+RunMenu.Browser=��������
+
+
+# Modified from previous values
+TabbedEditor.importExternalLibraryPage=������ ��� ��� ����� �� ��������� ��������
+LibraryExternalEditor.FileLabel=��� ��������� ��������
+LibraryExternalEditor.SetJavaFile=��� ����� ��������� �������� ��������
+
+EditorForVariables.update=������� ��������
+EditorForVariables.setStepsPerDisplay=����� ��� ������� ����� ������
+EditorForVariables.setUpdateView=�� ��� ��� ��� ����� ����� ����� ��� �� ���� ���
+EditorForVariables.setAutoplay=�� ��� ��� ����� �� ���� �������� ��� ��� �������
+EditorForVariables.println=����� ����� ����� ��� ���� ������
+
+EditorForVariables.view._initialize=����� �����
+EditorForVariables.view._collectData=����� ������ ������� ��� ����� ����� ����� ���� ���� ���� ��������
+EditorForVariables.view._update=����� ������ ������� ��� ���� ����� ����� �����
+
+EjsOptions.UseBrowserFirst=������� �������� ������ ����� ������
+
+Package.PackageForReader=����� ����� ������ �������
+Package.PackageForEPUB=���� � ePub 3
+Folders=��������
+
+EditorForVariables.isMobile=�� ��� ��� ����� �������� �� ���� �����

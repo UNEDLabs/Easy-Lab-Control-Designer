@@ -1,0 +1,134 @@
+<!--?xml version="1.0" encoding="utf-8"?--><!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+ <head>
+  <meta charset="utf-8" />
+  <title>Steps to create an App from an EjsS prepackaged model</title>
+  <link rel="stylesheet" type="text/css" href="../../config/_ejs_library/css/ejss.css" />
+ </head>
+ <body>
+
+<h1>Steps to create an App from an EjsS prepackaged model</h1>
+
+<p>This short guide explains how to create an iOS or Android App from your <i>prepackaged</i> model
+  (i.e. from the ZIP file you obtained with the <tt>Prepackage for App</tt> option of EjsS menu.)</p>
+
+  <p>You need to install a software platform called IONIC in your computer that allows you to do so.
+    IONIC provides tools to create JavaScript+HTML programs that run on mobile devices as if they were native apps.
+    EjsS just helps you prepare the contents of such a program to boost your IONIC process.
+  </p>
+
+  <h2>Step 1: Install IONIC in your computer (if you haven't done so before)</h2>
+  <p>The tasks in this step need to be done only once, no matter how many IONIC Apps you create.<br />
+  (Note: You need Internet connection for this.)</p>
+  
+  <ol>
+    <li>Before we start, make sure you have <a href="https://nodejs.org/en/">Node.js</a> installed in your system.
+      This you have to do by following the indications provided in the <a href="https://nodejs.org/en/">Node.js</a> site (follow the link).</li>
+    <li>The next two commands install the generic cordova and ionic platforms:</li>
+      (Notes: The $ character indicates the operating system prompt. We exemplify the procedure for Mac OSX - which requires a <i>sudo</i> prefix.)
+    <ul>
+      <li><pre>$ sudo npm install -g cordova</pre></li>
+      <li><pre>$ sudo npm install -g ionic</pre></li>
+    </ul>
+    <li>The next two commands install specific packages that we will use in our particular projects:</li>
+    <ul>
+      <li><pre>$ sudo npm install angular-ui-router</pre></li>
+      <li><pre>$ sudo npm install angular-sanitize</pre></li>
+    </ul>
+  </ol>
+
+  <h2>Step 2: Create a new IONIC project for your app</h2>
+  <p>We now exemplify the creation of an IONIC project called, say <tt>MyModelApp</tt>.
+    In what follows, replace the word <tt>MyModelApp</tt> by the name you chose for your new app.</p>
+  <p>The tasks below need to be done once per model App you create.<br />
+  (Note: You need Internet connection for this.)</p>
+
+  <ol>
+    <li>Go to a directory of your choice where you will create the new APP (called here <tt>MyAppsFolder</tt>).</li>
+    <ul>
+      <li><pre>$ cd MyAppsFolder</pre></li>
+    </ul>
+    <li>Create a new blank IONIC project:</li>
+    <ul>
+      <li><tt>$ ionic start MyModelApp blank</tt></li>
+      This takes a few seconds... and creates a new directory (called <tt>MyModelApp</tt>) in your hard disk.<br />
+      <p>(When asked: <tt>"Create an ionic.io account to send Push Notifications and use the Ionic View app?"</tt>, you can answer no: <tt>n</tt>)</p>
+    </ul>
+    <li>Change to the newly create directory (again, replace <tt>MyModelApp</tt> with the name you used in the step before):</li>
+    <ul>
+      <li><pre>$ cd MyModelApp</pre></li>
+    </ul>
+    <li>Add target platforms iOS and Android:</li>
+    <ul>
+      <li><pre>$ ionic platform add ios</pre></li>
+      (Actually, this 'add' is not needed on Mac OSX.)
+      <li><pre>$ ionic platform add android</pre></li>
+      (You may need to edit the <tt>/android/project.properties</tt> file, to set the correct Android target version for your device.)
+    </ul>
+    <li>Add particular plug-ins that we use in our projects:</li>
+    <ul>
+      <li><pre>$ cordova plugin add cordova-plugin-screen-orientation</pre></li>
+      <li><pre>$ cordova plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-inappbrowser.git</pre></li>
+      <li><pre>$ cordova plugin add cordova-plugin-wkwebview-engine</pre></li>
+      (This last one is optional. Might improve speed on speed-savvy simulations.)
+    </ul>
+  </ol>
+
+  <h2>Step 3: Copy files from your prepackage to the IONIC project</h2>
+  <p>Now, we will extract the prepackaged files created with EjsS and work to modify the <tt>www</tt> folder of your project:</p>
+  <ul>
+    <li>UNZIP the file you created with EjsS (typically called <tt>ejss_app_XXX.zip</tt>)</li>
+    <li>From the extracted folder copy all files and subfoldersinto your project's <tt>www</tt> folder,
+    even if this means replacing existing files and folders. (Actually, only the project's "lib" folder will remain unchanged.)</li>
+  </ul>
+
+    <h2>Step 4: Test and build the app</h2>
+  <p>You are now ready to test and build the app</p>
+  <ul>
+    <li>To test the APP: </li>
+    <ul>
+      <li><pre>$ ionic serve</pre></li>
+    </ul>
+    <li>Exit the test server by entering <tt>q</tt>.</li>
+    <li>Fine tunning the APP: You may want to manually revise the following files in your IONIC project:</li>
+    <ul>
+      <li><pre>www/other_pages/about.html</pre></li>
+      <li><pre>www/other_pages/references.html</pre></li>
+      (This one may not be present if your description pages had no external links.)
+    </ul>
+    <li>You can always re-test the APP using: </li>
+    <ul>
+      <li><pre>$ ionic serve</pre></li>
+    </ul>
+  </ul>
+
+  <h2>Step 5: Deploying the app</h2>
+    <p>There are a few final steps required to deploy your App to your mobile device.</p>
+    <ul>
+      <li>You may want to edit the following entries in IONIC files of your project: </li>
+      <ul>
+        <li><pre>bower.json</pre>: Change the name property.</li>
+        <li><pre>config.xml</pre>: Change the name, description and author entries.</li>
+        <li><pre>package.json</pre>: Change the name and description entries.</li>
+      </ul>
+      <li>Change the icon and splash images in "resources" and type: <tt>$ ionic resources</tt> (for IONIC to create platform specific images.)</li>
+      Make sure you use images of the same size of those you replace.
+      <li>To create an XCode project for iOS, type: <tt>$ ionic build ios</tt> </li>
+      <ul>
+        <li>Open the <tt>platform/ios/MyBookApp.xcodeproj</tt> file with XCode.</li>
+        <li>You can run on your iPad (connect it with a cable to your Mac) and it should work.</li>
+        <li>Before exporting you may need to do a number of things:</li>
+        <ul>
+          <li>Add this line to your Build Settings -> Header Search Paths:</li>
+          <pre>"$(OBJROOT)/UninstalledProducts/$(PLATFORM_NAME)/include"</pre>
+          <li>Prepare a distributable archive (for registered iOS devices): <tt>Product : Archive</tt></li>
+        </ul>
+      </ul>
+      <li>To test for Android, type: <tt>$ ionic build android</tt> </li>
+      When successfull, the last message will tell you where is the <tt>android-debug.apk</tt> file
+      that was generated. Send this file to your Android devide and install it. It should work.
+  </ul>
+
+  <h2>And that's it!!!</h2>
+   </body>
+  </html>

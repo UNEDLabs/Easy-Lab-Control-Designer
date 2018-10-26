@@ -1,0 +1,22 @@
+build.menu.1[0]=com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;make
+build.menu.2[0]=com.borland.jbuilder.build.ProjectBuilder$ProjectBuildAction;rebuild
+content.layout.xml.[0]=<project-layout><tab_container selected_index="1"><tab node_name="src/org/colos/ejs/unpackaged/EjsJMatLink.java"/><tab node_name="src/JMatLink.java"/></tab_container></project-layout>
+debug.Breakpoints.1[0]=1  08  JMatLink17 src/JMatLink.java3  1661  10  1  10  1  10  1  0 -1
+debug.NoTracingClasses.1[0]=16 java.lang.Object1  1 -1
+debug.NoTracingClasses.2[0]=21 java.lang.ClassLoader1  1 -1
+debug.NoTracingClasses.3[0]=16 java.lang.String1  1 -1
+debug.SplitThreadsAndDataView[0]=0
+editor.search.file_filter_history.1[0]=*.java
+editor.search.path_history.1[0]=D:/Mis documentos/Java/osejs/data/unpackaged/src
+history.files.active[0]=src/JMatLink.java,F;88,8925
+history.files.open.1[0]=src/org/colos/ejs/unpackaged/EjsJMatLink.java,F;1,0
+history.files.open.2[0]=src/JMatLink.java,F;88,8925
+import.optimize.legacyPropertiesRead[0]=1
+saveAsDialog.directoryHistory.1[0]=D:/Mis documentos/Java/osejs/data/unpackaged/src/org/colos/ejs/unpackaged
+saveAsDialog.directoryHistory.2[0]=D:/Mis documentos/Java/osejs/data/unpackaged/src
+sys.Author[0]=Francisco Esquembre (http://fem.um.es)
+sys.DefaultPackage[0]=osejsunpackaged
+sys.ReopenHistory.1[0]=D%|/Mis documentos/Java/osejs/src/com/calerga/sysquake/SysquakeLink.java
+sys.ReopenHistory.2[0]=src/org/colos/ejs/unpackaged/EjsSysquakeLink.java
+sys.ReopenHistory.3[0]=D%|/Mis documentos/Java/osejs/Christophe/JMatLink.java
+team.lastScanned[0]=1186873698420

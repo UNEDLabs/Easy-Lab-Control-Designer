@@ -1,0 +1,1799 @@
+# Entries consists of lines with a keyword and info
+#keyword: explanation
+#====================
+#class:unique identifier. Also, the constructor for the element
+#parent: a possible super class
+#import: import info (not used, by now)
+#text: a text property if any. The text property is used to assign to it the name of the element at creation time. This property is inherited from parents.
+#accepts: class accepted by this element as child. There can be more than one "accepts" entry per class. This list in inherited from parents. 
+#name: one or more lines with information about properties. Properties are inherited.
+#edition:one or more lines with information about how to display the properties in a property editor
+#defaults:values to set as default for new elements, if any
+#=====================
+# Any other lines are ignored.
+
+class:SIMULATION_ROOT
+name:'RunAlways',  	info: 'boolean CONSTANT',       		def: 'false'
+name:'InnerHTML',   info: 'String MULTILINE CONSTANT',  	def: '<none>'
+name:'OnResize',    info: 'Action',           			def: '<no_action>'
+name:'OnOrientationChange',    info: 'Action',           	def: '<no_action>'
+name:'OnBlur',      info: 'Action',           			def: '<no_action>'
+name:'OnFocus',     info: 'Action',           			def: '<no_action>'
+edition:<LABELAspect>; RunAlways; InnerHTML; 
+edition:<COLUMN>; <LABELInteraction>; OnResize; OnOrientationChange; OnBlur; OnFocus;
+
+# --------------------------------------------
+# Interface
+# --------------------------------------------
+
+class:EJSS_INTERFACE.audio
+parent:EJSS_INTERFACE.media
+name:'AudioUrl',        info: 'String|File TRANSLATABLE',  def: '<none>'
+edition:<COLUMN>; <LABELMain>; AudioUrl; Controls; Volume; Loop; CurrentTime; Autoplay; 
+edition:<LABELInteraction>; OnPlay; OnPause; OnEnded; OnLoadedData;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS;
+
+class:EJSS_INTERFACE.button
+parent:EJSS_INTERFACE.element
+text:Text
+name:'Text',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'ImageUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'OnClick',        		info: 'Action',           			def: '<no_action>'
+name:'OnPress',        		info: 'Action',           			def: '<no_action>'
+name:'OnRelease',           info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Text; ImageUrl; Disabled; TextAlign; OnPress; OnRelease; OnClick;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS;  WhiteSpace; Transform;
+
+class:EJSS_INTERFACE.canvas
+parent:EJSS_INTERFACE.element
+name:'ImageData',			info: 'int[]|Object',   def: '<none>'
+name:'Enabled',             info: 'boolean',        def: 'true'
+name:'OnPress',        		info: 'Action',         def: '<no_action>'
+name:'OnDrag',        		info: 'Action',         def: '<no_action>'
+name:'OnRelease',        	info: 'Action',         def: '<no_action>'
+name:'OnEnter',   	        info: 'Action',         def: '<no_action>'
+name:'OnExit',        	    info: 'Action',         def: '<no_action>'
+name:'OnMove',        	    info: 'Action',         def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; ImageData; <SEP>; <LABELInteraction>; Enabled; OnPress; OnDrag; OnRelease; OnEnter; OnMove; OnExit; 
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+
+class: EJSS_INTERFACE.checkBox
+parent:EJSS_INTERFACE.element
+text:Text
+name:'Text',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'ImageUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'TextOn',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'ImageOnUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'TextOff',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'ImageOffUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'Checked',        		info: 'boolean',       				def: 'false'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+name:'OnCheckOn',        	info: 'Action',           			def: '<no_action>'
+name:'OnCheckOff',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Checked; Text; TextOn; TextOff; ImageUrl; ImageOnUrl; ImageOffUrl; Disabled; TextAlign; OnChange; OnCheckOn; OnCheckOff;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; WhiteSpace; Transform;
+
+
+class: EJSS_INTERFACE.comboBox
+parent:EJSS_INTERFACE.element
+name:'Options',				info: 'String[] TRANSLATABLE',      def: '<none>'
+name:'SelectedOptions',     info: 'String[] TRANSLATABLE',      def: '<none>'
+name:'Multiple',        	info: 'boolean',       				def: 'false'
+#name:'Size',        	    info: 'int|String TRANSLATABLE',    def: '<none>'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+name:'OnFocus',         	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Options; SelectedOptions; Multiple; Disabled; OnChange; OnFocus;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; WhiteSpace; Transform;
+
+class:EJSS_INTERFACE.container
+parent:EJSS_INTERFACE.element
+accepts:EJSS_INTERFACE.element
+accepts:EJSS_DRAWING2D.drawingPanel
+accepts:EJSS_DRAWING3D.drawingPanel
+
+
+class: EJSS_INTERFACE.arrayPanel
+parent:EJSS_INTERFACE.element
+name:'Transpose',        	info: 'boolean',           def: 'false'
+name:'Editable',        	info: 'boolean|boolean[]',         def: 'true'
+name:'DataArray',			info: 'double[][]',        def: '<none>'
+name:'ColumnsWidth',        info: 'int[]|String[] TRANSLATABLE',      def: '<none>'
+name:'HeadersText',         info: 'String[] TRANSLATABLE',      def: '<none>'
+name:'HeadersCSS',          info: 'Object[] MULTILINE',         def: '<none>'
+name:'CellsFormat',         info: 'String|String[] TRANSLATABLE',      def: '<none>'
+name:'CellsCSS',            info: 'Object[] MULTILINE',         def: '<none>'
+name:'BodyHeight',        	info: 'int|String PREVIOUS',       	def: 'auto'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+name:'EditableBkgd',        info: 'int|Color|String',       	def: 'White'
+name:'NonEditableBkgd',     info: 'int|Color|String',       	def: 'LightGrey'
+edition:<COLUMN>; <LABELMain>; DataArray; Transpose; Editable; OnChange; <SEP>; ColumnsWidth; HeadersText; CellsFormat; HeadersCSS; CellsCSS; 
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; BodyHeight; EditableBkgd; NonEditableBkgd; Background; Foreground; Font; Tooltip; ClassName; CSS;
+
+
+class: EJSS_INTERFACE.dataTable
+parent:EJSS_INTERFACE.element
+name:'Active',        		info: 'boolean',       	 def: 'true'
+name:'AddToTop',        	info: 'boolean',       	 def: 'false'
+name:'NoRepeat',        	info: 'boolean',       	 def: 'false'
+name:'ClearAtInput',        info: 'boolean',       	 def: 'false'
+name:'Skip',        	    info: 'int',             def: '0'
+name:'Maximum',        		info: 'int',             def: '<none>'
+name:'Input',				info: 'double[]',        def: '<none>'
+name:'ColumnsWidth',        info: 'int[]|String[] TRANSLATABLE',      def: '<none>'
+name:'HeadersText',         info: 'String[] TRANSLATABLE',      def: '<none>'
+name:'HeadersCSS',          info: 'Object[] MULTILINE',         def: '<none>'
+name:'CellsFormat',         info: 'String[] TRANSLATABLE',      def: '<none>'
+name:'CellsCSS',            info: 'Object[] MULTILINE',         def: '<none>'
+name:'BodyHeight',        		info: 'int|String PREVIOUS',       	def: 'auto'
+defaults:NoRepeat=true
+edition:<COLUMN>; <LABELMain>; Input; Skip; NoRepeat; Maximum; AddToTop; ClearAtInput; Active; <SEP>; ColumnsWidth; HeadersText; CellsFormat; HeadersCSS; CellsCSS; 
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; BodyHeight; Background; Foreground; Font; Tooltip; ClassName; CSS; WhiteSpace; Transform;
+
+
+class:EJSS_INTERFACE.element
+name:'TextAlign',        	info: 'TextAlign|String',      		def: 'inherit'
+name:'VerticalAlign',     	info: 'VerticalAlign|String',		def: 'baseline'
+name:'Disabled',        	info: 'boolean',       				def: 'false'
+name:'Visibility',        	info: 'boolean',       				def: 'true'
+name:'Width',        		info: 'int|String PREVIOUS',       	def: 'auto'
+name:'Height',        		info: 'int|String PREVIOUS',       	def: 'auto'
+name:'Background',        	info: 'int|Color|String',       	def: 'inherit'
+name:'Foreground',        	info: 'int|Color|String',       	def: 'inherit'
+name:'Tooltip',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'Font',       			info: 'String|Font',       		    def: 'inherit'
+name:'CSS',       			info: 'Object MULTILINE',       	def: '<none>'
+name:'ClassName',        	info: 'String',       	            def: '<none>'
+
+name:'BorderWidth',        	info: 'int|String',       			def: '<none>'
+name:'BorderColor',        	info: 'int|Color|String',       	def: '<none>'
+name:'BorderStyle',        	info: 'BorderStyle|String',       	def: 'No border'
+name:'Padding',        		info: 'int|String',       			def: '<none>'
+name:'Display',        		info: 'Display|String',       		def: 'inline'
+name:'Float',        		info: 'Float|String',       		def: '<none>'
+name:'Position',        	info: 'Position|String',       		def: '<none>'
+name:'Left',        		info: 'int|String',       			def: '<none>'
+name:'Top',        			info: 'int|String',       			def: '<none>'
+name:'Bottom',        		info: 'int|String',       			def: '<none>'
+name:'Overflow',        	info: 'int|String',       			def: '<none>'
+name:'BoxShadow',        	info: 'String',       	    		def: 'No shadow'
+name:'Margin',        		info: 'int|String',       			def: '<none>'
+name:'LetterSpacing',       info: 'int|String',       			def: '<none>'
+
+name:'WhiteSpace',        	info: 'String',       	    		def: '<none>'
+name:'Transform',           info: 'String',       	    		def: '<none>'
+
+type:TextAlign = LEFT=left, CENTER=center, RIGHT=right 
+type:Color =  BLACK=Black, DARKGRAY=DarkGray, GRAY=Gray,        LIGHTGRAY=LightGray, WHITE=White, BLUE=Blue 
+type:Color =  CYAN=Cyan,   GREEN=Green,       MAGENTA=Magenta,  RED=Red,             PINK=Pink,   ORANGE=Orange, YELLOW=Yellow
+type:Color3D =  BLACK=Black, DARKGRAY=DarkGray, GRAY=Gray,        LIGHTGRAY=LightGray, WHITE=White, BLUE=Blue 
+type:Color3D =  CYAN=Cyan,   GREEN=Green,       MAGENTA=Magenta,  RED=Red,             PINK=Pink,   ORANGE=Orange, YELLOW=Yellow
+
+class:EJSS_INTERFACE.fileUpload
+parent:EJSS_INTERFACE.button
+name:'Multiple',       		info: 'boolean',       				def: 'false'
+name:'Accept',        		info: 'String',				       	def: '<none>'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Text; ImageUrl; Disabled; TextAlign; Multiple; Accept; OnChange; 
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; WhiteSpace; Transform;
+
+class: EJSS_INTERFACE.functionField
+parent:EJSS_INTERFACE.textField
+name: 'OnError',        	info: 'Action',           def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Value; Editable; OnChange; OnError;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+
+class:EJSS_INTERFACE.html
+parent:EJSS_INTERFACE.element
+name:'Html',        	info: 'String TRANSLATABLE MULTILINE',      def: '<none>'
+name:'Url',        		info: 'String|File TRANSLATABLE',           def: '<none>'
+edition:<COLUMN>; <LABELMain>; Html; Url; TextAlign;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+    
+class:EJSS_INTERFACE.imageAndTextButton
+parent:EJSS_INTERFACE.element
+text:Text
+name:'Text',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'ImageUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'OnClick',        		info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Text; ImageUrl; TextAlign; Disabled; OnClick; 
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; WhiteSpace; Transform;
+
+class:EJSS_INTERFACE.label
+parent:EJSS_INTERFACE.element
+text:Text
+name:'Text',        		info: 'String TRANSLATABLE',       	def: '<none>'
+edition:<COLUMN>; <LABELMain>; Text; TextAlign; WhiteSpace;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; WhiteSpace; Transform;
+
+class:EJSS_INTERFACE.mathML
+parent:EJSS_INTERFACE.element
+name:'Content',        	info: 'String TRANSLATABLE MULTILINE',      def: '<none>'
+edition:<COLUMN>; <LABELMain>; Content; TextAlign;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+
+class:EJSS_INTERFACE.media
+parent:EJSS_INTERFACE.element
+name:'Controls',        info: 'boolean',                   	def: 'false'
+name:'Loop',            info: 'boolean',                   	def: 'false'
+name:'Volume',          info: 'double',                    	def: '1.0'
+name:'CurrentTime',     info: 'int|double',               	def: '0.0'
+name:'Autoplay',        info: 'boolean',                   	def: 'false'
+name:'OnEnded',        	info: 'Action',           			def: '<no_action>'
+name:'OnPlay',    		info: 'Action',           			def: '<no_action>'
+name:'OnPause',   		info: 'Action',           			def: '<no_action>'
+#name:'OnTimeUpdate',    info: 'Action',           			def: '<no_action>'
+name:'OnLoadedData',    info: 'Action',           			def: '<no_action>'
+
+class:EJSS_INTERFACE.menu
+parent:EJSS_INTERFACE.element
+name:'Menu',        		info: 'String[] TRANSLATABLE',      def: '<none>'
+name:'OnClick',        		info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Menu; OnClick; 
+edition:<SEP>; <LABELPosition>; TextAlign; VerticalAlign; Padding; LetterSpacing; Left; Top; Bottom; Overflow; Margin;  
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Foreground; Background; Shadow; Tooltip; BorderWidth; BorderColor; BorderStyle;
+edition:<SEP>; <LABELFont>; FontFamily; FontSize; FontWeight; FontFill; FontColor;
+
+class:EJSS_INTERFACE.motionJPEG
+parent:EJSS_INTERFACE.canvas
+name:'UseWebCam',           info: 'boolean',  def: 'false'
+name:'Url',			        info: 'String',   def: '<none>'
+name:'AsBackground',        info: 'boolean',  def: 'false'
+name:'Flip',				info: 'boolean',  def: 'false'
+name:'On',                  info: 'boolean | PREVIOUS',  def: 'true'
+
+name:'Width',               info: 'int',              def: '500'
+name:'Height',              info: 'int',              def: '500'
+name:'Background',        	info: 'int|Color|String', def: 'rgb(239,239,255)'
+name:'Enabled',             info: 'boolean',          def: 'false'
+edition:<COLUMN>; <LABELMain>; UseWebCam; Url; AsBackground; Flip; On; <SEP>; <LABELInteraction>; Enabled; OnPress; OnDrag; OnRelease; OnEnter; OnMove; OnExit; 
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+
+class: EJSS_INTERFACE.numberField
+parent:EJSS_INTERFACE.element
+name:'Value',				info: 'int|double',       			def: '0'
+name:'Editable',        	info: 'boolean',       				def: 'true'
+name:'Format',        		info: 'Format|String',       		def: '<none>'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Value; Format; Editable; OnChange;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+class: EJSS_INTERFACE.panel
+parent:EJSS_INTERFACE.container
+name:'Html',        		info: 'String TRANSLATABLE MULTILINE',       	def: '<none>'
+name:'OnMove',        		info: 'Action',           			def: '<no_action>'
+name:'OnClick',        		info: 'Action',           			def: '<no_action>'
+name:'OnPress',        		info: 'Action',           			def: '<no_action>'
+name:'OnRelease',           info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Html; <LABELBorder>; BorderStyle; BorderWidth; BorderColor; BoxShadow; OnMove; OnClick; OnPress; OnRelease;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+class: EJSS_INTERFACE.passwordField
+parent:EJSS_INTERFACE.element
+name:'Value',				info: 'String',       			    def: '<none>'
+name:'Editable',        	info: 'boolean',       				def: 'true'
+#name:'Size',        		info: 'int|String',       			def: '<none>'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Value; Editable; OnChange;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+class: EJSS_INTERFACE.wrappedPanel
+parent:EJSS_INTERFACE.container
+name:'OnMove',        		info: 'Action',           			def: '<no_action>'
+name:'OnClick',        		info: 'Action',           			def: '<no_action>'
+name:'OnPress',        		info: 'Action',           			def: '<no_action>'
+name:'OnRelease',           info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELBorder>; BorderStyle; BorderWidth; BorderColor; BoxShadow; OnMove; OnClick; OnPress; OnRelease;
+edition:<COLUMN>; <LABELAspect>; Display; Background; Tooltip; ClassName; CSS; Transform;
+
+class: EJSS_INTERFACE.radioButton
+parent:EJSS_INTERFACE.element
+text:Text
+name:'Checked',        		info: 'boolean',       				def: 'false'
+name:'Text',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'TextOn',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'TextOff',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'ImageUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'ImageOnUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'ImageOffUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+name:'OnCheckOn',        	info: 'Action',           			def: '<no_action>'
+name:'OnCheckOff',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Checked; Text; TextOn; TextOff; ImageUrl; ImageOnUrl; ImageOffUrl; Disabled; TextAlign; OnChange; OnCheckOn; OnCheckOff;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; WhiteSpace; Transform;
+
+class: EJSS_INTERFACE.separator
+parent:EJSS_INTERFACE.element
+name:'Orientation',		    info: 'String|Orientation',       				def: '<none>'
+edition:<COLUMN>; <LABELMain>; Orientation; TextAlign;  
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Tooltip; ClassName; CSS; Transform;
+
+
+class: EJSS_INTERFACE.slider
+parent:EJSS_INTERFACE.element
+name:'Value',				info: 'int|double',       			def: '0'
+name:'Minimum',        		info: 'int|double',       			def: '0'
+name:'Maximum',        		info: 'int|double',       			def: '100'
+name:'Step',        		info: 'int|double',       			def: '1'
+
+name:'LabelCSS',       			info: 'Object MULTILINE',       	def: '<none>'
+name:'RangeCSS',       			info: 'Object MULTILINE',       	def: '<none>'
+
+name:'TextWidth',           info: 'int|String',       			def: '<none>'
+name:'ShowText',        	info: 'boolean',       				def: 'false'
+name:'Format',        		info: 'Format|String',       		def: '<none>'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+name:'OnRelease',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Value; Minimum; Maximum; Step; ShowText; TextWidth; Format; Disabled; OnChange; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; LabelCSS; RangeCSS; WhiteSpace; Transform;
+
+class: EJSS_INTERFACE.tabbedPanel
+parent:EJSS_INTERFACE.container
+name:'Titles',        		info: 'String[] TRANSLATABLE',       	def: '<none>'
+name:'Selected',            info: 'int',       						def: '<0>'
+name: 'FillColor',       	info: 'int|Color|String', def: '#ccc'
+edition:<COLUMN>; <LABELMain>; Titles; Selected; <LABELBorder>; BorderStyle; BorderWidth; BorderColor; BoxShadow;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; FillColor; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+class: EJSS_INTERFACE.textArea
+parent:EJSS_INTERFACE.element
+name:'Value',				info: 'String',       			    def: '<none>'
+name:'Editable',        	info: 'boolean',       				def: 'true'
+name:'ChangeColorOnEdit',   info: 'boolean',       				def: 'true'
+name:'Rows',        		info: 'int', 		      			def: '<none>'
+name:'Columns',        		info: 'int',       					def: '<none>'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+
+edition:<COLUMN>; <LABELMain>; Value; Editable; Rows; Columns; ChangeColorOnEdit; OnChange;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+
+class: EJSS_INTERFACE.textField
+parent:EJSS_INTERFACE.element
+name:'Value',				info: 'String',       			    def: '<none>'
+name:'Editable',        	info: 'boolean',       				def: 'true'
+#name:'Size',        		info: 'int|String',       			def: '<none>'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; Value; Editable; OnChange;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+
+class: EJSS_INTERFACE.twoStateButton
+parent:EJSS_INTERFACE.element
+text:TextOn
+name:'TextOn',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'TextOff',        		info: 'String TRANSLATABLE',       	def: '<none>'
+name:'ImageOnUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'ImageOffUrl',        	info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name:'State',       		info: 'boolean',       				def: 'true'
+name:'OnClick',        		info: 'Action',           			def: '<no_action>'
+name:'OffClick',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELMain>; State; Disabled; 
+edition:<COLUMN>; <LABELOn>; TextOn; ImageOnUrl; OnClick; <LABELOff>; TextOff; ImageOffUrl; OffClick;
+edition:<COLUMN>;<LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; WhiteSpace; Transform;
+
+class:EJSS_INTERFACE.video
+parent:EJSS_INTERFACE.media
+name:'VideoUrl',        info: 'String|File TRANSLATABLE',  	def: '<none>'
+edition:<COLUMN>; <LABELMain>; VideoUrl; Controls; Volume; Loop; CurrentTime; Autoplay; 
+edition:<LABELInteraction>; OnPlay; OnPause; OnEnded; OnLoadedData;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; Font; Tooltip; ClassName; CSS; Transform;
+
+
+# --------------------------------------------
+# Drawing2D
+# --------------------------------------------
+
+
+class:EJSS_DRAWING2D.drawingPanel
+#parent:EJSS_INTERFACE.container
+accepts:EJSS_DRAWING2D.element
+accepts:EJSS_DRAWING2D.elementSet
+
+name:'AutoScaleX',  	info: 'boolean',          	def: 'false'
+name:'AutoScaleY',  	info: 'boolean',          	def: 'false'
+name:'MinimumX', 		info: 'int|double', 	  	def: '-1'
+name:'MaximumX', 		info: 'int|double', 	  	def: '+1'
+name:'MinimumY', 		info: 'int|double', 	  	def: '-1'
+name:'MaximumY', 		info: 'int|double', 		def: '+1'
+name:'MarginX', 		info: 'int|double', 	  	def: '0'
+name:'MarginY', 		info: 'int|double', 	  	def: '0'
+name:'SquareAspect',  	info: 'boolean',         	def: 'false'
+name:'ScaleXType', 		info: 'ScaleType|int|String', 	  def: 'SCALE_NUM'
+name:'ScaleYType', 		info: 'ScaleType|int|String', 	  def: 'SCALE_NUM'
+
+name:'Enabled',  		    info: 'boolean',  def: 'false'
+name:'CursorTypeForMove',   info: 'String',   def: 'move'
+name:'StopEventPropagation',  	    info: 'boolean',  def: 'true'
+name:'ShowAreaRectangle',  	info: 'boolean',  def: 'true'
+name:'EnabledZooming',		info: 'boolean',  def: 'false'
+name:'EnabledDragging',		info: 'int|Interaction2D|String', def: '0=ENABLED_NONE'
+name:'OnMove',        		info: 'Action',   def: '<no_action>'
+name:'OnPress',        		info: 'Action',   def: '<no_action>'
+name:'OnDrag',        		info: 'Action',   def: '<no_action>'
+name:'OnRelease',        	info: 'Action',   def: '<no_action>'
+name:'OnDoubleClick',   	info: 'Action',   def: '<no_action>'
+name:'OnResize',        	info: 'Action',   def: '<no_action>'
+name:'OnOrientationChange',	info: 'Action',   def: '<no_action>'
+name:'OnZoom',				info: 'Action',   def: '<no_action>'
+
+#name:'Bounds',        	info: 'int[]|double[]',		def: '<none>'
+name:'Gutters',        	info: 'int[]|Rectangle',	def: '<none>'
+name: 'GuttersLineColor',   info: 'int|Color|String', def: 'BLACK'
+name: 'GuttersLineWidth',   info: 'int|double',       def: '1'
+name: 'GuttersDrawLines',   info: 'boolean',          def: 'true'
+name: 'GuttersColor',       info: 'int|Color|String', def: 'BLUE'
+name: 'GuttersFill',        info: 'boolean',          def: 'true'
+name: 'GuttersRendering',   info: 'String',           def: 'auto'
+		
+name:'ShowCoordinates',  	info: 'boolean',  def: 'true'
+name:'CoordinatesFormat',  	info: 'String',   def: '<none>'
+name:'TRMessage',       info: 'String TRANSLATABLE', def: '<none>'
+name:'TLMessage',       info: 'String TRANSLATABLE', def: '<none>'
+name:'BRMessage',       info: 'String TRANSLATABLE', def: '<none>'
+name:'BLMessage',       info: 'String TRANSLATABLE', def: '<none>'
+
+name:'GraphicsMode',        info: 'GraphicsMode|String',       	def: 'SVG'
+name:'Visibility',        	info: 'boolean',       				def: 'true'
+name:'Display',        		info: 'Display|String',       		def: 'inline'
+name:'Width',        		info: 'int|String PREVIOUS',       	def: 'auto'
+name:'Height',        		info: 'int|String PREVIOUS',       	def: 'auto'
+name:'Background',        	info: 'int|Color|String',       	def: 'rgb(239,239,255)'
+name:'Foreground',        	info: 'int|Color|String',       	def: 'inherit'
+name:'ShapeRendering',      info: 'String',           def: 'auto'
+name:'CSS',       			info: 'Object MULTILINE',       	def: '<none>'
+name:'Transform',           info: 'String',       	    		def: '<none>'
+name:'Tooltip',        		info: 'String TRANSLATABLE',       	def: '<none>'
+
+
+name:'WhiteSpace',        	info: 'String',       	    		def: '<none>'
+name: 'LineColor',        	info: 'int|Color|String', def: 'BLACK'
+name: 'LineWidth',        	info: 'int|double',       def: '1'
+name: 'DrawLines',       	info: 'boolean',          def: 'true'
+name: 'FillColor',       	info: 'int|Color|String', def: 'BLUE'
+name: 'DrawFill',        	info: 'boolean',          def: 'true'
+
+name:'Font',       			info: 'String|Font',       		    def: 'inherit'
+name:'BorderWidth',        	info: 'int|String',       			def: '<none>'
+name:'BorderColor',        	info: 'int|Color|String',       	def: '<none>'
+name:'BorderStyle',        	info: 'BorderStyle|String',       	def: 'No border'
+name:'Padding',        		info: 'int|String',       			def: '<none>'
+name:'Float',        		info: 'Float|String',       		def: '<none>'
+name:'Position',        	info: 'Position|String',       		def: '<none>'
+name:'Left',        		info: 'int|String',       			def: '<none>'
+name:'Top',        			info: 'int|String',       			def: '<none>'
+name:'Bottom',        		info: 'int|String',       			def: '<none>'
+name:'Overflow',        	info: 'int|String',       			def: '<none>'
+name:'BoxShadow',        	info: 'String',       	    		def: 'No shadow'
+name:'Margin',        		info: 'int|String',       			def: '<none>'
+name:'LetterSpacing',       info: 'int|String',       			def: '<none>'
+
+type:ScaleType = SCALE_NUM, SCALE_LOG 
+type:GraphicsMode = SVG, Canvas
+
+edition:<LABELScales>; AutoScaleX; AutoScaleY; MinimumX; MaximumX; MinimumY; MaximumY; MarginX; MarginY; SquareAspect; ScaleXType; ScaleYType;
+edition:<COLUMN>; <LABELJustInteraction>; Enabled; CursorTypeForMove; StopEventPropagation; ShowAreaRectangle; EnabledZooming; EnabledDragging; OnMove; OnPress; OnDrag; OnRelease; OnDoubleClick; OnResize; OnOrientationChange; OnZoom;
+edition:<COLUMN>; <LABELAspect>; GraphicsMode; Visibility; Display; Width; Height; Background; Foreground; LineWidth; ShapeRendering; ClassName; CSS; Transform; Tooltip;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELDecoration>; Gutters; GuttersLineColor; GuttersLineWidth; GuttersColor; GuttersRendering; ShowCoordinates; CoordinatesFormat; TRMessage; TLMessage; BRMessage; BLMessage;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+class:EJSS_DRAWING2D.plottingPanel
+parent:EJSS_DRAWING2D.drawingPanel
+defaults:AutoScaleX=true;AutoScaleY=true
+name:'Title',  		    info: 'String TRANSLATABLE', 	def: '<none>'
+name:'TitleFont',       info: 'String|Font',        	def: 'inherit'
+name:'TitleColor',      info: 'int|String|Color',       def: 'inherit'
+name:'TitleMargin',     info: 'int',       				def: '-20'
+name:'TitleX',  		info: 'String TRANSLATABLE', 	def: '<none>'
+name:'TitleXFont',      info: 'String|Font',        	def: 'inherit'
+name:'TitleXColor',  	info: 'int|String|Color',       def: 'inherit'
+name:'TitleXMargin',    info: 'int',       				def: '30'
+name:'TitleY',  		info: 'String TRANSLATABLE', 	def: '<none>'
+name:'TitleYFont',      info: 'String|Font',        	def: 'inherit'
+name:'TitleYColor',  	info: 'int|String|Color',       def: 'inherit'
+name:'TitleYMargin',    info: 'int',       				def: '-40'
+
+name:'XFixedTick',      info: 'int|double',   	  def: '<none>'
+name:'XTicks',        	info: 'int',              def: '0'
+name:'XStep',        	info: 'int',              def: '20'
+name:'XTickStep',       info: 'int|double',       def: '0'
+name:'XAutoStepMin',    info: 'int',              def: '40'
+name:'XAutoTicksRange', info: 'int[]',            def: '[5,10,20]'
+name:'XScale',        	info: 'int[]|double[]',   def: '[-1,1]'
+name:'XScalePrecision', info: 'int',              def: '1'
+name:'XAutoTicks',      info: 'boolean',          def: 'true'
+
+name:'YFixedTick',      info: 'int|double',       def: '<none>'
+name:'YTicks',        	info: 'int',              def: '0'
+name:'YStep',        	info: 'int',              def: '20'
+name:'YTickStep',       info: 'int|double',       def: '0'
+name:'YAutoStepMin',    info: 'int',              def: '40'
+name:'YAutoTicksRange', info: 'int[]',            def: '[5,10,20]'
+name:'YScale',        	info: 'int[]|double[]',   def: '[-1,1]'
+name:'YScalePrecision', info: 'int',              def: '1'
+name:'YAutoTicks',      info: 'boolean',          def: 'true'
+
+name:'GridXShow',  	        info: 'boolean',          def: 'true'
+name:'GridXLineColor',      info: 'int|String|Color', def: 'lightgray'
+name:'GridXLineWidth',      info: 'int|double',       def: '1'
+name:'GridXShapeRendering', info: 'String',           def: 'auto'
+
+name:'GridYShow',  	        info: 'boolean',          def: 'true'
+name:'GridYLineColor',      info: 'int|String|Color', def: 'lightgray'
+name:'GridYLineWidth',      info: 'int|double',       def: '1'
+name:'GridYShapeRendering', info: 'String',           def: 'auto'
+
+name:'AxisXShow',  	        info: 'boolean',          def: 'true'
+name:'AxisXLineColor',      info: 'int|String|Color', def: 'black'
+name:'AxisXLineWidth',      info: 'int|double',       def: '1'
+name:'AxisXShapeRendering', info: 'String',           def: 'auto'
+name:'AxisXFont',           info: 'String|Font',      def: 'inherit'
+name:'AxisXFontColor',      info: 'int|String|Color', def: 'inherit'
+
+name:'AxisYShow',  	        info: 'boolean',          def: 'true'
+name:'AxisYLineColor',      info: 'int|String|Color', def: 'black'
+name:'AxisYLineWidth',      info: 'int|double',       def: '1'
+name:'AxisYShapeRendering', info: 'String',           def: 'auto'
+name:'AxisYFont',           info: 'String|Font',      def: 'inherit'
+name:'AxisYFontColor',      info: 'int|String|Color', def: 'inherit'
+
+name:'Background',         info: 'int|Color|String',	def: 'white'
+#name:'GuttersFill',         info: 'boolean',	def: 'true'
+
+edition:<LABELScales>; AutoScaleX; AutoScaleY; MinimumX; MaximumX; MinimumY; MaximumY; MarginX; MarginY; SquareAspect; ScaleXType; ScaleYType;
+edition:<COLUMN>; <LABELJustInteraction>; Enabled; CursorTypeForMove; StopEventPropagation; ShowAreaRectangle; EnabledZooming; EnabledDragging; OnMove; OnPress; OnDrag; OnRelease; OnDoubleClick; OnResize; OnOrientationChange; OnZoom;
+edition:<COLUMN>; <LABELAspect>; GraphicsMode; Visibility; Display; Width; Height; Background; Foreground; LineWidth; ShapeRendering; ClassName; CSS; Transform; Tooltip;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELDecoration>; Gutters; GuttersLineColor; GuttersLineWidth; GuttersColor; GuttersRendering; ShowCoordinates; CoordinatesFormat; TRMessage; TLMessage; BRMessage; BLMessage;
+edition:<COLUMN>; <LABELDecoration>; Title; TitleMargin; TitleFont; TitleColor; TitleX; TitleXMargin; TitleXFont; TitleXColor; TitleY; TitleYMargin; TitleYFont; TitleYColor;
+edition:<COLUMN>; 
+edition:<TAB>; LABELAxes;
+edition: <COLUMN>; <LABELScales>; XFixedTick; XTicks; XTickStep; XStep; XAutoStepMin; XAutoTicksRange; XScale; XScalePrecision; XAutoTicks;
+edition: <SEP>; GridXShow; GridXLineColor; GridXLineWidth; GridXShapeRendering;
+edition: <COLUMN>; <LABELScales>; YFixedTick; YTicks; YTickStep; YStep; YAutoStepMin; YAutoTicksRange; YScale; YScalePrecision; YAutoTicks;
+edition: <SEP>; GridYShow; GridYLineColor; GridYLineWidth; GridYShapeRendering;
+edition: <COLUMN>; <LABELAxes>; AxisXShow;  AxisXLineColor; AxisXLineWidth; AxisXShapeRendering; AxisXFont; AxisXFillColor;
+edition: <SEP>; AxisYShow;  AxisYLineColor; AxisYLineWidth; AxisYShapeRendering; AxisYFont; AxisYFillColor;
+
+class: EJSS_DRAWING2D.element
+name: 'X', 					info: 'int|double', 	  def: '0'
+name: 'Y', 					info: 'int|double', 	  def: '0'
+name: 'Position',        	info: 'int[]|double[]',   def: '<none>'
+name: 'PixelPosition',   	info: 'boolean',          def: 'false'
+name: 'RelativePosition',	info: 'Position|String',  def: 'CENTER'
+name: 'SizeX',           	info: 'int|double',       def: '0.1'
+name: 'SizeY',           	info: 'int|double',       def: '0.1'
+name: 'Size',            	info: 'int[]|double[]',   def: '<none>'
+name: 'PixelSize',       	info: 'boolean',          def: 'false'
+name: 'Bounds',          	info: 'int[]|double[]',   def: '<none>'
+name: 'Transformation',  	info: 'int|double|double[]',       def: '<none>'
+name: 'Rotate',			  	info: 'int|double',       def: '0'
+name: 'ScaleX',			  	info: 'int|double',       def: '1'
+name: 'ScaleY',			  	info: 'int|double',       def: '1'
+name: 'SkewX',			  	info: 'int|double',       def: '0'
+name: 'SkewY',			  	info: 'int|double',       def: '0'
+name: 'Visibility',      	info: 'boolean',          def: 'true'
+name: 'Measured',        	info: 'boolean',          def: 'true'
+name: 'LineColor',        	info: 'int|Color|String', def: 'BLACK'
+name: 'OutlineColor',      	info: 'int|Color|String', def: 'BLACK'
+name: 'LineWidth',        	info: 'int|double',       def: '1'
+name: 'DrawLines',       	info: 'boolean',          def: 'true'
+name: 'FillColor',       	info: 'int|Color|String', def: 'BLUE'
+name: 'DrawFill',        	info: 'boolean',          def: 'true'
+name: 'Attributes',         info: 'Object MULTILINE', def: '<none>'
+name: 'EnabledPosition',  	info: 'int|Interaction2D|String', def: '0=ENABLED_NONE'
+name: 'MovesGroup',     	info: 'boolean',          def: 'false'
+name: 'EnabledSize',		info: 'int|Interaction2D|String', def: '0=ENABLED_NONE'
+name: 'ResizesGroup',     	info: 'boolean',          def: 'false'
+name: 'Sensitivity',		info: 'int',              def: '20'
+name: 'OnEnter',			info: 'Action',           def: '<no_action>'
+name: 'OnExit',				info: 'Action',           def: '<no_action>'
+name: 'OnPress', 			info: 'Action',           def: '<no_action>'
+name: 'OnDrag',          	info: 'Action',           def: '<no_action>'
+name: 'OnRelease',        	info: 'Action',           def: '<no_action>'
+name: 'OnDoubleClick',      info: 'Action',           def: '<no_action>'
+
+class: EJSS_DRAWING2D.elementSet
+name: 'NumberOfElements',   info: 'int PREVIOUS', 			  		    def: '1'
+name: 'X', 					info: 'int|double|int[]|double[]', 	  		def: '0'
+name: 'Y', 					info: 'int|double|int[]|double[]', 	  		def: '0'
+name: 'Position',        	info: 'int[]|double[]|int[][]|double[][]',  def: '<none>'
+name: 'PixelPosition',   	info: 'boolean|boolean[]',            	    def: 'false'
+name: 'RelativePosition',	info: 'Position|String|String[]',  			def: 'CENTER'
+name: 'SizeX',           	info: 'int|double|int[]|double[]',       	def: '0.1'
+name: 'SizeY',           	info: 'int|double|int[]|double[]',       	def: '0.1'
+name: 'Size',            	info: 'int[]|double[]|int[][]|double[][]',  def: '<none>'
+name: 'PixelSize',       	info: 'boolean|boolean[]',            		def: 'false'
+name: 'Bounds',          	info: 'int[]|double[]|int[][]|double[][]',  def: '<none>'
+name: 'Transformation',  	info: 'int|double|int[]|double[]|double[][]',       	def: '<none>'
+name: 'Rotate',			  	info: 'int|double|int[]|double[]',       def: '0'
+name: 'ScaleX',			  	info: 'int|double|int[]|double[]',       def: '1'
+name: 'ScaleY',			  	info: 'int|double|int[]|double[]',       def: '1'
+name: 'SkewX',			  	info: 'int|double|int[]|double[]',       def: '0'
+name: 'SkewY',			  	info: 'int|double|int[]|double[]',       def: '0'
+name: 'Visibility',      	info: 'boolean|boolean[]',          		def: 'true'
+name: 'Measured',        	info: 'boolean|boolean[]',          		def: 'true'
+name: 'LineColor',        	info: 'int|Color|String|int[]|String[]', 	def: 'BLACK'
+name: 'LineWidth',        	info: 'int|double|int[]|double[]',          def: '1'
+name: 'DrawLines',       	info: 'boolean|boolean[]',          		def: 'true'
+name: 'FillColor',       	info: 'int|Color|String|int[]|String[]', 	def: 'BLUE'
+name: 'DrawFill',        	info: 'boolean|boolean[]',          		def: 'true'
+name: 'Attributes',         info: 'Object MULTILINE', 					def: '<none>'
+name: 'ElementInteracted',  info: 'int', 								def: '-1'
+name: 'EnabledPosition',  	info: 'int|int[]|Interaction2D|String|String[]', def: '0=ENABLED_NONE'
+name: 'MovesGroup',     	info: 'boolean|boolean[]',          		def: 'false'
+name: 'EnabledSize',		info: 'int|int[]|Interaction2D|String|String[]', def: '0=ENABLED_NONE'
+name: 'ResizesGroup',     	info: 'boolean|boolean[]',          		def: 'false'
+name: 'Sensitivity',		info: 'int|int[]',              			def: '20'
+name: 'OnEnter',			info: 'Action',           def: '<no_action>'
+name: 'OnExit',				info: 'Action',           def: '<no_action>'
+name: 'OnPress', 			info: 'Action',           def: '<no_action>'
+name: 'OnDrag',          	info: 'Action',           def: '<no_action>'
+name: 'OnRelease',        	info: 'Action',           def: '<no_action>'
+name: 'OnDoubleClick',      info: 'Action',           def: '<no_action>'
+
+
+class: EJSS_DRAWING2D.analyticCurve
+parent:EJSS_DRAWING2D.element
+name:'NumPoints', 			info: 'int', 				def: '<none>'
+name:'Minimum',        		info: 'int|double',       	def: '<none>'
+name:'Maximum',        		info: 'int|double',       	def: '<none>'
+name:'Variable', 			info: 'String', 	  		def: 'x'
+name:'FunctionX', 			info: 'String', 	  		def: 'x'
+name:'FunctionY', 			info: 'String', 	  		def: '0'
+name: 'OnError',        	info: 'Action',           def: '<no_action>'
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick;  
+edition:<COLUMN>; <LABELInput>; NumPoints; Minimum; Maximum; Variable; FunctionX; FunctionY; OnError;
+edition:<SEP>; <LABELAspect>; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; Attributes;
+
+
+class: EJSS_DRAWING2D.arrow
+parent:EJSS_DRAWING2D.element
+name:'InteractionPosition', info: 'Position|int|String',      def: 'CENTER'
+name:'Offset',	            info: 'Offset|int|String',      def: 'SOUTH_WEST'
+name:'MarkProportion', 		info: 'double', 				def: '0.5'
+name:'MarkStart', 			info: 'ArrowMark|int|String', 	def: 'NONE'
+name:'MarkStartWidth', 		info: 'int', 					def: '12'
+name:'MarkStartHeight', 	info: 'int', 					def: '10'
+name:'MarkStartRotate',     info: 'boolean', 				def: 'true'
+name:'MarkStartColor', 		info: 'int|Color|String', 		def: '<none>'
+name:'MarkStartStroke', 	info: 'int', 					def: '-1'
+name:'MarkStartOrient', 	info: 'int|String', 		    def: 'auto'
+name:'MarkEnd', 			info: 'ArrowMark|int|String', 	def: 'ANGLE'
+name:'MarkEndWidth', 		info: 'int', 					def: '12'
+name:'MarkEndHeight', 		info: 'int', 					def: '12'
+name:'MarkEndRotate', 	    info: 'boolean', 				def: 'false'
+name:'MarkEndColor', 		info: 'int|Color|String', 		def: '<none>'
+name:'MarkEndStroke', 		info: 'int', 					def: '-1'
+name:'MarkEndOrient', 	    info: 'int|String', 		    def: 'auto'
+name:'MarkMiddle', 			info: 'ArrowMark|int|String', 	def: 'NONE'
+name:'MarkMiddleWidth', 	info: 'int', 					def: '12'
+name:'MarkMiddleHeight', 	info: 'int', 					def: '10'
+name:'MarkMiddleRotate',    info: 'boolean', 				def: 'false'
+name:'MarkMiddleColor', 	info: 'int|Color|String', 		def: '<none>'
+name:'MarkMiddleColorSnd', 	info: 'int|Color|String', 		def: '<none>'
+name:'MarkMiddleStroke', 	info: 'int', 					def: '-1'
+name:'MarkMiddleOrient', 	info: 'int|String', 		    def: 'auto'
+type:ArrowMark = NONE, ANGLE, CIRCLE, RECTANGLE, LINE, CURVE, TRIANGLE, DIAMOND, WEDGE, POINTED, INVANGLE, INVTRIANGLE
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; InteractionPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Offset; MarkProportion; <SEP>; LineColor; LineWidth; Attributes;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; MarkStart;  MarkStartWidth;  MarkStartHeight;  MarkStartRotate; MarkStartStroke;  MarkStartColor; MarkStartOrient;
+edition:<COLUMN>; MarkMiddle; MarkMiddleWidth; MarkMiddleHeight; MarkMiddleRotate; MarkMiddleStroke; MarkMiddleColor; MarkMiddleColorSnd; MarkMiddleOrient;
+edition:<COLUMN>; MarkEnd;    MarkEndWidth;    MarkEndHeight;    MarkEndRotate; MarkEndStroke;  MarkEndColor; MarkEndOrient;
+
+class: EJSS_DRAWING2D.arrowSet
+parent:EJSS_DRAWING2D.elementSet
+name:'Offset',	            info: 'Offset|int|String|int[]|String[]',     	def: 'SOUTH_WEST'
+name:'MarkProportion', 		info: 'double|double[]', 				      	def: '0.5'
+name:'MarkStart', 			info: 'ArrowMark|int|String|int[]|String[]',  	def: 'NONE'
+name:'MarkStartWidth', 		info: 'int|int[]', 								def: '12'
+name:'MarkStartHeight', 	info: 'int|int[]', 								def: '10'
+name:'MarkStartRotate',     info: 'boolean|boolean[]', 						def: 'true'
+name:'MarkStartColor', 		info: 'int|Color|String|int[]|String[]', 		def: '<none>'
+name:'MarkStartStroke', 	info: 'int|int[]', 								def: '-1'
+name:'MarkEnd', 			info: 'ArrowMark|int|String|int[]|String[]', 	def: 'ANGLE'
+name:'MarkEndWidth', 		info: 'int|int[]', 								def: '12'
+name:'MarkEndHeight', 		info: 'int|int[]', 								def: '12'
+name:'MarkEndRotate', 	    info: 'boolean|boolean[]', 						def: 'false'
+name:'MarkEndColor', 		info: 'int|Color|String|int[]|String[]', 		def: '<none>'
+name:'MarkEndStroke', 		info: 'int|int[]', 								def: '-1'
+name:'MarkMiddle', 			info: 'ArrowMark|int|String|int[]|String[]', 	def: 'NONE'
+name:'MarkMiddleWidth', 	info: 'int|int[]', 								def: '12'
+name:'MarkMiddleHeight', 	info: 'int|int[]', 								def: '10'
+name:'MarkMiddleRotate',    info: 'boolean|boolean[]', 						def: 'false'
+name:'MarkMiddleColor', 	info: 'int|Color|String|int[]|String[]', 		def: '<none>'
+name:'MarkMiddleColorSnd', 	info: 'int|Color|String|int[]|String[]', 		def: '<none>'
+name:'MarkMiddleStroke', 	info: 'int|int[]', 								def: '-1'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; ElementInteracted; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Offset; MarkProportion; <SEP>; LineColor; LineWidth; Attributes;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; MarkStart;  MarkStartWidth;  MarkStartHeight;  MarkStartRotate; MarkStartStroke;  MarkStartColor; 
+edition:<COLUMN>; MarkMiddle; MarkMiddleWidth; MarkMiddleHeight; MarkMiddleRotate; MarkMiddleStroke; MarkMiddleColor; MarkMiddleColorSnd;
+edition:<COLUMN>; MarkEnd;    MarkEndWidth;    MarkEndHeight;    MarkEndRotate; MarkEndStroke;  MarkEndColor;   
+
+class: EJSS_DRAWING2D.byteRaster
+parent:EJSS_DRAWING2D.element
+name:'Data', 				info: 'int[][]', 			def: '<none>'
+name:'NumColors',        	info: 'int',       			def: '<none>'
+name:'Colors',        		info: 'int[]|Color[]',      def: '<none>'
+name:'Palette', 			info: 'Palette', 	  		def: '<none>'
+name:'AutoUpdate', 			info: 'boolean', 	  		def: 'true'
+name:'RGBData', 			info: 'boolean', 	  		def: 'false'
+edition:<COLUMN>; <LABELMain>; Data; RGBData; NumColors; Colors; Palette; AutoUpdate; Attributes;
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; PixelPosition; RelativePosition; SizeX; SizeY; Size; PixelSize; Bounds; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+
+
+class: EJSS_DRAWING2D.cellLattice
+parent:EJSS_DRAWING2D.element
+name:'Data', 				info: 'int[][]', 			def: '<none>'
+name:'NumColors',        	info: 'int',       			def: '<none>'
+name:'Colors',        		info: 'int[]|Color[]',      def: '<none>'
+name:'Palette', 			info: 'Palette', 	  		def: '<none>'
+name:'ShowGrid', 			info: 'boolean', 	  		def: 'true'
+name:'AutoUpdate', 			info: 'boolean', 	  		def: 'true'
+edition:<COLUMN>; <LABELMain>; Data; AutoUpdate; NumColors; Colors; Palette; ShowGrid; Attributes;
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; PixelPosition; RelativePosition; SizeX; SizeY; Size; PixelSize; Bounds; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+
+
+class: EJSS_DRAWING2D.cursor
+parent:EJSS_DRAWING2D.element
+name:'CursorType', 				info: 'int|String|CursorShape', 			def: 'CROSSHAIR'
+edition:<COLUMN>;<LABELPosition>; X; Y; Position; PixelPosition;
+edition:<SEP>; <LABELInteraction>; Visibility; EnabledPosition; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; CursorType; <SEP>; LineColor; LineWidth; Attributes;
+
+class: EJSS_DRAWING2D.custom
+parent:EJSS_DRAWING2D.element
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; 
+edition:<COLUMN>; <LABELAspect>; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+
+
+class: EJSS_DRAWING2D.group
+parent:EJSS_DRAWING2D.element
+accepts:EJSS_DRAWING2D.element
+accepts:EJSS_DRAWING2D.elementSet
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility;
+
+class: EJSS_DRAWING2D.histogram
+parent:EJSS_DRAWING2D.element
+name:'Input',         		info: 'int|double|int[]|double[]',     def: '<none>'
+name:'Active',        		info: 'boolean',       		def: 'true'
+name:'Occurrences',         info: 'int',       		    def: '1'
+name:'ClearAtInput',        info: 'boolean',       		def: 'false'
+name:'Discrete',            info: 'boolean',       		def: 'false'
+name:'Normalized',          info: 'boolean',       		def: 'false'
+name:'BinWidth',         	info: 'int|double',         def: '1'
+name:'FixBin',           	info: 'int|double',         def: '0'
+edition:<LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELConfiguration>; Input; BinWidth; FixBin; Discrete; Normalized; Active; Occurrences; ClearAtInput; 
+edition:<LABELAspect>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+
+
+class: EJSS_DRAWING2D.image
+parent:EJSS_DRAWING2D.element
+name: 'ImageUrl', 		info: 'File|String TRANSLATABLE BASE64_IMAGE', 	  def: '<none>'
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; ImageUrl; RelativePosition; Attributes;
+
+class: EJSS_DRAWING2D.imageSet
+parent:EJSS_DRAWING2D.elementSet
+name: 'ImageUrl', 		info: 'File|String|String[] TRANSLATABLE BASE64_IMAGE', 	  def: '<none>'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; ElementInteracted; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; ImageUrl; RelativePosition; Attributes;
+
+class: EJSS_DRAWING2D.knob
+parent: EJSS_DRAWING2D.meter
+name:'OnPress',        	    info: 'Action',           			def: '<no_action>'
+name:'OnChange',        	info: 'Action',           			def: '<no_action>'
+name:'OnRelease',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; Radius; Rotate; Transformation; <LABELInteraction>; Visibility; OnPress; OnChange; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELMain>; Value; Minimum; Maximum; AngleForMinimum; AngleForMaximum; NumberOfMarks; BigMark; MediumMark; Digits; Brand; Units;
+edition:<COLUMN>; <LABELAspect>; Foreground; LineWidth; MarksFont; BrandFont; UnitsFont; DrawLines; DrawText; FillColor; Attributes;
+
+
+class: EJSS_DRAWING2D.meter
+parent: EJSS_DRAWING2D.group
+name:'Value',				info: 'int|double',       			def: '0'
+name:'Minimum',        		info: 'int|double',       			def: '0'
+name:'Maximum',        		info: 'int|double',       			def: 'Math.PI+Math.PI/4'
+name:'AngleForMinimum',     info: 'int|double',       	  		def: '-Math.PI/4'
+name:'AngleForMaximum',     info: 'int|double',       			def: '100'
+name:'NumberOfMarks',		info: 'int',       			        def: '21'
+name:'BigMark',		        info: 'int',       			        def: '4'
+name:'MediumMark',		    info: 'int',       			        def: '2'
+name:'Digits',		        info: 'int',       			        def: '0'
+name: 'Radius',             info: 'int|double',       			def: '0.5'
+name: 'CircleColor',       	info: 'int|Color|String',           def: 'GREY'
+name: 'CircleWidth',       	info: 'int|double',                 def: '3'
+name: 'FillColor',       	info: 'int|Color|String',           def: 'WHITE'
+name: 'Foreground',        	info: 'int|Color|String',           def: 'BLACK'
+name: 'ArrowColor',        	info: 'int|Color|String',           def: 'BLACK'
+name: 'ArrowWidth',        	info: 'int|double',                 def: '2'
+name:'MarksFont',        		info: 'Font|String',       			def: '<none>'
+name:'BrandFont',        		info: 'Font|String',       			def: '<none>'
+name:'UnitsFont',        		info: 'Font|String',       			def: '<none>'
+name:'DrawText',        	info: 'boolean',       			    def: 'true'
+name:'Brand',        		info: 'String',       			    def: '<none>'
+name:'Units',        		info: 'String',       			    def: '<none>'
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; Radius; Rotate; Transformation;  <LABELInteraction>; Visibility; 
+edition:<COLUMN>; <LABELMain>; Value; Minimum; Maximum; AngleForMinimum; AngleForMaximum; NumberOfMarks; BigMark; MediumMark; Digits; Brand; Units;
+edition:<COLUMN>; <LABELAspect>; CircleColor; CircleWidth; ArrowColor; ArrowWidth; Foreground; LineWidth; MarksFont; BrandFont; UnitsFont; DrawText; FillColor; Attributes;
+
+class: EJSS_DRAWING2D.pipe
+parent:EJSS_DRAWING2D.element
+name: 'Points',        info: 'int[][]|double[][]', def: '<none>'
+name: 'PipeWidth',     info: 'int',                def: '5'
+name: 'RelativePosition',	info: 'Position|String',  def: 'SOUTH_WEST'
+name: 'SizeX',           	info: 'int|double',       def: '1'
+name: 'SizeY',           	info: 'int|double',       def: '1'
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Points; PipeWidth; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+
+
+class: EJSS_DRAWING2D.polygon
+parent:EJSS_DRAWING2D.element
+name: 'Points',    info: 'int[][]|double[][]', def: '<none>'
+name: 'PointsX',    info: 'int[]|double[]', def: '<none>'
+name: 'PointsY',    info: 'int[]|double[]', def: '<none>'
+#name: 'LastPoint', info: 'int[]|double[]',     def: '<none>'
+edition:<SEP>; <LABELInput>; Points; PointsX; PointsY; 
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+
+
+class: EJSS_DRAWING2D.polygonSet
+parent:EJSS_DRAWING2D.elementSet
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELInput>; Points; 
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; ElementInteracted; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+
+
+class: EJSS_DRAWING2D.ruler
+parent: EJSS_DRAWING2D.group
+name:'Minimum',        		info: 'int|double',       			def: '0.0'
+name:'Maximum',        		info: 'int|double',       			def: '1.0'
+name:'Length',        		info: 'int|double',       			def: '1.1'
+name:'Width',        		info: 'int|double',       			def: '0.2'
+name:'MarkFactor',        	info: 'int|double',       			def: '0.1'
+name:'NumberOfMarks',		info: 'int',       			        def: '101'
+name:'BigMark',		        info: 'int',       			        def: '10'
+name:'MediumMark',		    info: 'int',       			        def: '5'
+name:'Digits',		        info: 'int',       			        def: '0'
+name: 'BorderWidth',        info: 'int|double',                 def: '1'
+name: 'BorderColor',        info: 'int|Color|String',           def: 'BLACK'
+name: 'TextColor',        	info: 'int|Color|String',           def: 'BLACK'
+name:'TextFont',        	info: 'Font|String',       		    def: 'normal normal 8px \"Courier New\", Courier, monospace'
+name:'DrawText',        	info: 'boolean',       			    def: 'true'
+name:'Enabled',        	    info: 'boolean',       			    def: 'true'
+name:'Rotates',        	    info: 'boolean',       			    def: 'true'
+name:'OnDrag',        	info: 'Action',           			    def: '<no_action>'
+name:'OnRotation',        	info: 'Action',           			def: '<no_action>'
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; Length; Width; Rotate; Transformation; <LABELInteraction>; Visibility; Enabled; Rotates;  OnDrag; OnRotation; 
+edition:<COLUMN>; <LABELMain>; Minimum; Maximum; NumberOfMarks; BigMark; MediumMark; MarkFactor; Digits; 
+edition:<COLUMN>; <LABELAspect>; BorderWidth; BorderColor; FillColor; TextColor; TextFont; DrawText; LineColor; LineWidth; DrawLines; Attributes;
+
+
+class: EJSS_DRAWING2D.segment
+parent:EJSS_DRAWING2D.element
+name:'Offset',	info: 'Offset|String',  		def: 'SOUTH_WEST'
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Offset; <SEP>; LineColor; LineWidth; Attributes; 
+
+
+class: EJSS_DRAWING2D.segmentSet
+parent:EJSS_DRAWING2D.elementSet
+name:'Offset',	info: 'Offset|String',  		def: 'SOUTH_WEST'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; ElementInteracted; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>;  Offset; <SEP>; LineColor; LineWidth; Attributes; 
+
+class: EJSS_DRAWING2D.setSquare
+parent:EJSS_DRAWING2D.ruler
+name:'Height',        		info: 'int|double',       			def: '1.1'
+name:'Maximum',        		info: 'int|double',       			def: '0.99'
+name:'NumberOfMarks',		info: 'int',       			        def: '100'
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; Length; Height; Width; Rotate; Transformation; <LABELInteraction>; Visibility; Enabled; Rotates;  OnDrag; OnRotation; 
+edition:<COLUMN>; <LABELMain>; Minimum; Maximum; NumberOfMarks; BigMark; MediumMark; MarkFactor; Digits; 
+edition:<COLUMN>; <LABELAspect>; BorderWidth; BorderColor; FillColor; TextColor; TextFont; DrawText; LineColor; LineWidth; DrawLines; Attributes;
+
+
+class: EJSS_DRAWING2D.shape
+parent:EJSS_DRAWING2D.element
+name: 'ShapeType',    		info: 'int|ShapeType|String', 	def: 'ELLIPSE'
+name: 'CornerRadius',    	info: 'int', 			def: '0'
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; ShapeType; CornerRadius; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+
+
+class: EJSS_DRAWING2D.shapeSet
+parent:EJSS_DRAWING2D.elementSet
+name: 'ShapeType',    		info: 'int|ShapeType|int[]|String', 	def: 'ELLIPSE'
+name: 'CornerRadius',    	info: 'int|int[]', 				def: '0'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; ElementInteracted; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; ShapeType; CornerRadius; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+
+
+class: EJSS_DRAWING2D.spring
+parent:EJSS_DRAWING2D.element
+name: 'Radius',    			info: 'int|double', 	def: '0.05'
+name: 'Loops',    			info: 'int', 			def: '8'
+name: 'PointsPerLoop',    	info: 'int', 			def: '15'
+name: 'ThinExtremes',    	info: 'boolean', 		def: 'true'
+name: 'Solenoid',    		info: 'int|double', 	def: '0.0'
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Radius; Loops; PointsPerLoop; ThinExtremes; Solenoid; RelativePosition; <SEP>; LineColor; LineWidth; Attributes;
+
+class: EJSS_DRAWING2D.springSet
+parent:EJSS_DRAWING2D.elementSet
+name: 'Radius',    			info: 'int|double|int[]|double[]', 	def: '0.05'
+name: 'Loops',    			info: 'int|int[]', 					def: '8'
+name: 'PointsPerLoop',    	info: 'int|int[]', 					def: '15'
+name: 'ThinExtremes',    	info: 'boolean|boolean[]', 			def: 'true'
+name: 'Solenoid',    		info: 'int|double|int[]|double[]', 	def: '0.0'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; ElementInteracted; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Radius; Loops; PointsPerLoop; ThinExtremes; Solenoid; RelativePosition; <SEP>; LineColor; LineWidth; Attributes;
+
+class: EJSS_DRAWING2D.tank
+parent:EJSS_DRAWING2D.element
+name: 'Level',    		info: 'int|double', 	  def: '0'
+name: 'LevelColor',     info: 'int|Color|String', def: 'BLUE'
+name: 'DrawFill',       info: 'boolean',          def: 'false'
+name: 'FillColor',      info: 'int|Color|String', def: 'WHITE'
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Level; LevelColor; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+
+
+
+class: EJSS_DRAWING2D.text
+parent:EJSS_DRAWING2D.element
+text:Text
+name:'Text',        		info: 'String  TRANSLATABLE',       	def: '<none>'
+name:'Font',        		info: 'Font|String',       			def: '<none>'
+name:'FontSize',       	info: 'int|String',    				def: '20'
+name:'FontFamily',    	info: 'String',    					def: 'Arial'
+name:'FontStyle',       	info: 'String',    					def: 'none'
+name:'FontWeight',      	info: 'String',    					def: 'none'
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Text; Font; FontSize; FontFamily; FontStyle; FontWeight; RelativePosition; <SEP>; OutlineColor; FillColor; Attributes;
+
+class: EJSS_DRAWING2D.textSet
+parent:EJSS_DRAWING2D.elementSet
+text:Text
+name:'Text',        		info: 'String|String[]  TRANSLATABLE', 	def: '<none>'
+name:'Font',        		info: 'Font|String|String[]',       		def: '<none>'
+name:'FontSize',       	info: 'int|String|int[]|String[]',		def: '20'
+name:'FontFamily',      	info: 'String|String[]',					def: 'Arial'
+name:'FontStyle',       	info: 'String|String[]',					def: 'none'
+name:'FontWeight',      	info: 'String|String[]',					def: 'none'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; ElementInteracted; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Text; Font; FontSize; FontFamily; FontStyle; FontWeight; RelativePosition; <SEP>; OutlineColor; FillColor; Attributes;
+
+class: EJSS_DRAWING2D.mesh
+parent:EJSS_DRAWING2D.element
+name:'DataType', 		    info: 'int|MeshDataType|String PREVIOUS', 	    def: '<none>'
+name:'Data', 				info: 'PDEData', 	    	def: '<none>'
+name:'Points', 				info: 'double[][]', 	    def: '<none>'
+name:'Cells',        	    info: 'int[][]',       		def: '<none>'
+name:'FieldAtPoints',       info: 'double[][]',      	def: '<none>'
+name:'FieldAtCells',        info: 'double[][][]',      	def: '<none>'
+name:'VectorLength',        info: 'double',      		def: '<none>'
+name:'Boundary', 			info: 'int[][]', 	  		def: '<none>'
+name:'BoundaryLabels', 		info: 'int[]', 	  			def: '<none>'
+name:'BoundaryColors', 		info: 'int[]|Color|Color[]',	def: '<none>'
+name:'BoundaryWidth', 		info: 'int|int[]', 	  		def: '<none>'
+name:'DrawBoundary', 		info: 'boolean', 	  		def: 'true'
+name:'DrawLines',       	info: 'boolean',          def: 'false'
+edition:<COLUMN>; <LABELMain>; DataType; Data; Points; Cells; FieldAtPoints; FieldAtCells; VectorLength; DrawBoundary; Boundary; BoundaryLabels; BoundaryColors; BoundaryWidth;
+edition:<COLUMN>; <LABELPosition>; X; Y; Position; PixelPosition; RelativePosition; SizeX; SizeY; Size; PixelSize; Bounds; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured;
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+
+
+class: EJSS_DRAWING2D.trace
+parent:EJSS_DRAWING2D.trail
+name:'MarkType',        	info: 'String|MarkType',       		def: '<none>'
+name:'MarkSize',         	info: 'int[]',       		        def: '[10,10]'
+name:'MarkRelativePosition',	info: 'int|RelativePosition',   def: 'CENTER'
+name:'MarkLineColor',       info: 'int|Color|String',           def: 'BLACK'
+name:'MarkLineWidth',       info: 'int',         				def: '1'
+name:'MarkDrawLines',       info: 'boolean',         			def: 'true'
+name:'MarkFillColor',       info: 'int|Color|String',           def: 'BLUE'
+name:'MarkDrawFill',       	info: 'boolean',         			def: 'true'
+type:MarkType = ELLIPSE, RECTANGLE, AREA, BAR 
+edition:<COLUMN>; <LABELInput>; InputX; InputY; Input; 
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELConfiguration>;  Maximum; Skip; Active; NoRepeat; ClearAtInput; Connected; 
+edition:<LABELAspect>; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+edition:<SEP>; MarkType; MarkSize; MarkRelativePosition; MarkLineColor; MarkLineWidth; MarkDrawLines; MarkFillColor; MarkDrawFill;
+
+
+class: EJSS_DRAWING2D.traceSet
+parent:EJSS_DRAWING2D.trailSet
+name:'MarkType',        	info: 'String|MarkType',       		    def: '<none>'
+name:'MarkSize',         	info: 'int[]',       		            def: '[10,10]'
+name:'MarkRelativePosition',	info: 'int|int[]|RelativePosition', def: 'CENTER'
+name:'MarkLineColor',       info: 'int|int[]|Color|String',     	def: 'BLACK'
+name:'MarkLineWidth',       info: 'int|int[]',         				def: '1'
+name:'MarkDrawLines',       info: 'boolean|boolean[]',         		def: 'true'
+name:'MarkFillColor',       info: 'int|int[]|Color|String',         def: 'BLUE'
+name:'MarkDrawFill',       	info: 'boolean|boolean[]',         		def: 'true'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELInput>; InputX; InputY; Input; 
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; ElementInteracted; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELConfiguration>;  Maximum; Skip; Active; NoRepeat; ClearAtInput; Connected; 
+edition:<LABELAspect>; RelativePosition; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Attributes;
+edition:<SEP>; MarkType; MarkSize; MarkRelativePosition; MarkLineColor; MarkLineWidth; MarkDrawLines; MarkFillColor; MarkDrawFill;
+
+class: EJSS_DRAWING2D.trail
+parent:EJSS_DRAWING2D.element
+name:'InputX',         		info: 'int|double|int[]|double[]',         def: '<none>'
+name:'InputY',         		info: 'int|double|int[]|double[]',         def: '<none>'
+name:'Input',         		info: 'int[]|double[]|int[][]|double[][]',     def: '<none>'
+#name:'LastPoint',         	info: 'int[]|double[]|int[][]|double[][]',     def: '<none>'
+name:'Active',        		info: 'boolean',       		def: 'true'
+name:'NoRepeat',         	info: 'boolean',       		def: 'true'
+name:'ClearAtInput',        info: 'boolean',       		def: 'false'
+name:'Skip',         		info: 'int',       			def: '0'
+#name:'ColumnNames',         info: 'String[]',       	def: '<none>'
+name:'Maximum',         	info: 'int',       			def: '<none>'
+name:'Connected',           info: 'boolean', 			def: 'true'
+defaults:NoRepeat=true
+edition:<COLUMN>; <LABELInput>; InputX; InputY; Input; 
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELConfiguration>;  Maximum; Skip; Active; NoRepeat; ClearAtInput; Connected; 
+edition:<LABELAspect>; RelativePosition; <SEP>; LineColor; LineWidth; Attributes;
+
+
+class: EJSS_DRAWING2D.trailSet
+parent:EJSS_DRAWING2D.elementSet
+name:'InputX',         		info: 'int[]|double[]|int[][]|double[][]',         def: '<none>'
+name:'InputY',         		info: 'int[]|double[]|int[][]|double[][]',         def: '<none>'
+name:'Input',         		info: 'int[][]|double[][]',     def: '<none>'
+#name:'Points',         		info: 'int[][]|double[][]|int[][][]|double[][][]', def: '<none>'
+#name:'LastPoint',         	info: 'int[][]|double[][]',     def: '<none>'
+name:'Active',        		info: 'boolean|boolean[]',      def: 'true'
+name:'NoRepeat',         	info: 'boolean|boolean[]',      def: 'true'
+name:'ClearAtInput',        info: 'boolean|boolean[]',      def: 'false'
+name:'Skip',         		info: 'int|int[]',       		def: '0'
+#name:'ColumnNames',         info: 'String[]|String[][]',   def: '<none>'
+name:'Maximum',         	info: 'int|int[]',       		def: '<none>'
+name:'Connected',           info: 'boolean|boolean[]', 	    def: 'true'
+defaults:NoRepeat=true
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELInput>; InputX; InputY; Input; 
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; ElementInteracted; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELConfiguration>;  Maximum; Skip; Active; NoRepeat; ClearAtInput; Connected; 
+edition:<LABELAspect>; RelativePosition; <SEP>; LineColor; LineWidth; Attributes;
+
+class: EJSS_DRAWING2D.video
+parent:EJSS_DRAWING2D.element
+name:'VideoUrl', 			info: 'String|File TRANSLATABLE', 	    def: '<none>'
+name:'CurrentTime',        	info: 'int',       						def: '<none>'
+name:'ShowControls',        info: 'boolean', 	  					def: 'true'
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; VideoUrl; CurrentTime; ShowControls; RelativePosition; Attributes;
+
+class: EJSS_DRAWING2D.webCamImage
+parent:EJSS_DRAWING2D.image
+name:'Url',			        info: 'String',   def: '<none>'
+name:'On',                  info: 'boolean | PREVIOUS',  def: 'true'
+edition:<SEP>; <LABELPosition>; X; Y; Position; PixelPosition; SizeX; SizeY; Size; PixelSize; Rotate; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; OnDoubleClick; 
+edition:<COLUMN>; <LABELAspect>; Url; On; ImageUrl; RelativePosition; Attributes;
+
+# --------------------------------------------
+# Drawing3D
+# --------------------------------------------
+
+
+class:EJSS_DRAWING3D.drawingPanel
+#parent:EJSS_INTERFACE.container
+accepts:EJSS_DRAWING3D.element
+accepts:EJSS_DRAWING3D.elementSet
+name:'MinimumX', 		info: 'int|double', 	  	def: '-1'
+name:'MaximumX', 		info: 'int|double', 	  	def: '+1'
+name:'MinimumY', 		info: 'int|double', 	  	def: '-1'
+name:'MaximumY', 		info: 'int|double', 		def: '+1'
+name:'MinimumZ', 		info: 'int|double', 	  	def: '-1'
+name:'MaximumZ', 		info: 'int|double', 		def: '+1'
+name:'SizeX', 			info: 'int|double', 	  	def: '1'
+name:'SizeY', 			info: 'int|double', 	  	def: '1'
+name:'SizeZ', 			info: 'int|double', 	  	def: '1'
+name:'CameraTilt', 		info: 'int|double', 		def: '0'
+name:'CameraAltitude', 	info: 'int|double', 		def: '0'
+name:'CameraAzimuth', 	info: 'int|double', 		def: '0'
+name:'CameraX', 		info: 'int|double', 		def: '0'
+name:'CameraY', 		info: 'int|double', 		def: '0'
+name:'CameraZ', 		info: 'int|double', 		def: '1'
+name:'CameraLocation',  info: 'int[]|double[]',		def: '<none>'
+name:'CameraFocusX', 	info: 'int|double', 		def: '0'
+name:'CameraFocusY', 	info: 'int|double', 		def: '0'
+name:'CameraFocusZ', 	info: 'int|double', 		def: '0'
+name:'CameraFocus',     info: 'int[]|double[]',		def: '<none>'
+name:'CameraZoom', 		info: 'int|double', 		def: '1'
+name:'CameraZoomRate', 	info: 'int|double', 		def: '1.10'
+name:'CameraNear', 		info: 'int', 				def: '1'
+name:'CameraFar', 		info: 'int', 				def: '10000'
+name:'CameraUpVectorX', info: 'int|double', 		def: '0'
+name:'CameraUpVectorY', info: 'int|double', 		def: '0'
+name:'CameraUpVectorZ', info: 'int|double', 		def: '1'
+name:'CameraUpVector',  info: 'int[]|double[]',		def: '<none>'
+
+name:'Lights',          info: 'int[][]',      		def: '[0.7,0.7,0.7]'
+name:'DecorationType',  info: 'String|3DDecorationType|int',		def: '<none>'
+name:'Projection',  	info: 'String|3DProjectionType|int',		def: 'PERSPECTIVE_ON'
+
+name:'Width',        		info: 'int|String PREVIOUS',       	def: 'auto'
+name:'Height',        		info: 'int|String PREVIOUS',       	def: 'auto'
+name:'ImageUrl', 		info: 'File|String TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+
+name:'Background',      info: 'int|Color|String',       	def: 'inherit'
+name:'Foreground',      info: 'int|Color|String',       	def: 'inherit'
+name:'LineColor',       info: 'int|Color3D|String', def: 'BLACK'
+name:'LineWidth',       info: 'int|double',       def: '1'
+name:'DrawLines',       info: 'boolean',          def: 'true'
+name:'FillColor',       info: 'int|Color3D|String', def: 'BLUE'
+name:'DrawFill',        info: 'boolean',          def: 'true'
+
+name:'Visibility',        	info: 'boolean',       				def: 'true'
+name:'Display',        		info: 'Display|String',       		def: 'inline'
+name:'CSS',       			info: 'Object MULTILINE',       	def: '<none>'
+
+name:'Enabled',  		info: 'boolean',      		def: 'false'
+name:'Draggable',  		info: 'String|3DDraggable|int',      		def: 'ANY'
+name:'OnDoubleClick',  info: 'Action',   			def: '<no_action>'
+name:'OnMove',        	info: 'Action',   			def: '<no_action>'
+name:'OnPress',        	info: 'Action',   			def: '<no_action>'
+name:'OnDrag',        	info: 'Action',   			def: '<no_action>'
+name:'OnZoom',        	info: 'Action',   			def: '<no_action>'
+name:'OnRelease',       info: 'Action',   			def: '<no_action>'
+
+
+edition:<LABELScales>; MinimumX; MaximumX; MinimumY; MaximumY; MinimumZ; MaximumZ; SizeX; SizeY; SizeZ;
+edition:<COLUMN>; <LABELAspect>; Visibility; Display; Width; Height; Background; Foreground; CSS; 
+edition:<COLUMN>; <LABELAspect>; Projection; DecorationType; ImageUrl; Lights; LineColor; LineWidth; DrawLines; FillColor; DrawFill;
+edition:<TAB>; LABELCameraAndInteraction;
+edition:<COLUMN>; <LABELCameraPlain>; CameraAltitude; CameraAzimuth; CameraTilt; CameraNear; CameraFar; CameraZoomRate;
+edition:<COLUMN>; <LABELCameraPlain>; CameraX; CameraY; CameraZ; CameraFocusX; CameraFocusY; CameraFocusZ;
+edition:<COLUMN>; <LABELJustInteraction>; Enabled; Draggable; OnMove; OnPress; OnDrag; OnRelease; OnZoom; OnDoubleClick; 
+
+
+class: EJSS_DRAWING3D.element
+accepts:EJSS_DRAWING3D.transformation
+name: 'X', 					info: 'int|double', 	  def: '0'
+name: 'Y', 					info: 'int|double', 	  def: '0'
+name: 'Z', 					info: 'int|double', 	  def: '0'
+name: 'Position',        	info: 'int[]|double[]',   def: '<none>'
+name: 'SizeX',           	info: 'int|double',       def: '1'
+name: 'SizeY',           	info: 'int|double',       def: '1'
+name: 'SizeZ',           	info: 'int|double',       def: '1'
+name: 'Size',            	info: 'int[]|double[]',   def: '<none>'
+name: 'TextureUrl', 		info: 'File|String TRANSLATABLE BASE64_IMAGE', 	  def: '<none>'
+name: 'Transformation',  	info: 'Object',           def: '<none>'
+name: 'Visibility',      	info: 'boolean',          def: 'true'
+name: 'Measured',        	info: 'boolean',          def: 'true'
+name:'AlwaysUpdated',       info: 'boolean',       	  def: 'false'
+
+name: 'Transparency',       info: 'int|double',       def: '0.0'
+
+name: 'AmbientColor',       info: 'int|Color3D|String', def: 'BLACK'
+name: 'FillColor',       	info: 'int|Color3D|String', def: 'BLUE'
+name: 'SpecularColor',      info: 'int|Color3D|String', def: 'WHITE'
+name: 'AmbientReflection',  info: 'int|double', def: '1.0'
+name: 'ColorReflection',    info: 'int|double', def: '1.0'
+name: 'SpecularReflection', info: 'int|double', def: '1.0'
+name: 'Shininess',          info: 'int',        def: '10'
+
+name: 'LineColor',        	info: 'int|Color3D|String', def: 'BLACK'
+name: 'LineWidth',        	info: 'int|double',       def: '1'
+name: 'DrawLines',       	info: 'boolean',          def: 'true'
+name: 'DrawFill',        	info: 'boolean',          def: 'true'
+name: 'ClosedTop',       	info: 'boolean', 		  def: 'true'
+name: 'ClosedBottom',       info: 'boolean', 		  def: 'true'
+name: 'ClosedLeft',       	info: 'boolean', 		  def: 'true'
+name: 'ClosedRight',        info: 'boolean', 		  def: 'true'
+name: 'Resolution',       	info: 'int|int[]', 	      def: '[20,20,0]'
+
+name: 'EnabledPosition',  	info: 'int|Interaction2D|String', def: '0=ENABLED_NONE'
+name: 'MovesGroup',     	info: 'boolean',          def: 'false'
+name: 'EnabledSize',		info: 'int|Interaction2D|String', def: '0=ENABLED_NONE'
+name: 'ResizesGroup',     	info: 'boolean',          def: 'false'
+name: 'Sensitivity',		info: 'int',              def: '5'
+name: 'OnEnter',			info: 'Action',           def: '<no_action>'
+name: 'OnExit',				info: 'Action',           def: '<no_action>'
+name: 'OnPress', 			info: 'Action',           def: '<no_action>'
+name: 'OnDrag',          	info: 'Action',           def: '<no_action>'
+name: 'OnRelease',        	info: 'Action',           def: '<no_action>'
+
+
+class: EJSS_DRAWING3D.elementSet
+accepts:EJSS_DRAWING3D.transformation
+name: 'NumberOfElements',   info: 'int PREVIOUS', 			  		    def: '1'
+name: 'ElementInteracted',  info: 'int', 								def: '-1'
+name: 'X', 					info: 'int|double|int[]|double[]', 	  		def: '0'
+name: 'Y', 					info: 'int|double|int[]|double[]', 	  		def: '0'
+name: 'Z', 					info: 'int|double|int[]|double[]', 	  		def: '0'
+name: 'Position',        	info: 'int[]|double[]|int[][]|double[][]',  def: '<none>'
+name: 'SizeX',           	info: 'int|double|int[]|double[]',       	def: '0.1'
+name: 'SizeY',           	info: 'int|double|int[]|double[]',       	def: '0.1'
+name: 'SizeZ',           	info: 'int|double|int[]|double[]',       	def: '0.1'
+name: 'Size',            	info: 'int[]|double[]|int[][]|double[][]',  def: '<none>'
+name: 'TextureUrl', 		info: 'File|String|String[] TRANSLATABLE BASE64_IMAGE', 	def: '<none>'
+name: 'Transformation',  	info: 'Object|Object[]',           			def: '<none>'
+name: 'Visibility',      	info: 'boolean|boolean[]',          		def: 'true'
+name: 'Measured',        	info: 'boolean|boolean[]',          		def: 'true'
+name: 'Transparency',       info: 'int|double|int[]|double[]',       	def: '0.0'
+
+name: 'AmbientColor',       info: 'int|Color3D|String|int[]|String[]', def: 'BLACK'
+name: 'FillColor',       	info: 'int|Color3D|String|int[]|String[]', def: 'BLUE'
+name: 'SpecularColor',      info: 'int|Color3D|String|int[]|String[]', def: 'WHITE'
+name: 'AmbientReflection',  info: 'int|double|int[]|double[]', def: '1.0'
+name: 'ColorReflection',    info: 'int|double|int[]|double[]', def: '1.0'
+name: 'SpecularReflection', info: 'int|double|int[]|double[]', def: '1.0'
+name: 'Shininess',          info: 'int|int[]',        def: '10'
+
+
+name: 'LineColor',        	info: 'int|Color3D|String|int[]|String[]', 	def: 'BLACK'
+name: 'LineWidth',        	info: 'int|double|int[]|double[]',          def: '1'
+name: 'DrawLines',       	info: 'boolean|boolean[]',          		def: 'true'
+name: 'FillColor',       	info: 'int|Color3D|String|int[]|String[]', 	def: 'BLUE'
+name: 'DrawFill',        	info: 'boolean|boolean[]',          		def: 'true'
+name: 'ClosedTop',       	info: 'boolean|boolean[]', 		            def: 'true'
+name: 'ClosedBottom',       info: 'boolean|boolean[]', 		            def: 'true'
+name: 'ClosedLeft',       	info: 'boolean|boolean[]', 		            def: 'true'
+name: 'ClosedRight',        info: 'boolean|boolean[]', 		            def: 'true'
+name: 'Resolution',       	info: 'int|int[]|int[][]', 	      			def: '[20,20,0]'
+name: 'EnabledPosition',  	info: 'int|int[]|Interaction2D|String|String[]', def: '0=ENABLED_NONE'
+name: 'MovesGroup',     	info: 'boolean|boolean[]',          		def: 'false'
+name: 'EnabledSize',		info: 'int|int[]|Interaction2D|String|String[]', def: '0=ENABLED_NONE'
+name: 'ResizesGroup',     	info: 'boolean|boolean[]',          		def: 'false'
+name: 'Sensitivity',		info: 'int|int[]',              			def: '5'
+name: 'AlwaysUpdated',      info: 'boolean|boolean[]', 					def: 'false'
+name: 'OnEnter',			info: 'Action',           def: '<no_action>'
+name: 'OnExit',				info: 'Action',           def: '<no_action>'
+name: 'OnPress', 			info: 'Action',           def: '<no_action>'
+name: 'OnDrag',          	info: 'Action',           def: '<no_action>'
+name: 'OnRelease',        	info: 'Action',           def: '<no_action>'
+
+
+class: EJSS_DRAWING3D.group
+parent:EJSS_DRAWING3D.element
+accepts:EJSS_DRAWING3D.element
+accepts:EJSS_DRAWING3D.elementSet
+accepts:EJSS_DRAWING3D.transformation
+edition:<COLUMN>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured;
+
+class:EJSS_DRAWING3D.transformation
+name:'Angle',        		info: 'int',       	def: '0'
+name:'Axis',        		info: 'double[]',   def: '[0,0,1]'
+name:'Origin',        		info: 'double[]',   def: '[0,0,0]'
+edition:<COLUMN>; <LABELMain>; Angle; Axis; Origin;
+
+class:EJSS_DRAWING3D.rotationX
+parent:EJSS_DRAWING3D.transformation
+edition:<COLUMN>; <LABELMain>; Angle;
+
+class:EJSS_DRAWING3D.rotationY
+parent:EJSS_DRAWING3D.transformation
+edition:<COLUMN>; <LABELMain>; Angle;
+
+class:EJSS_DRAWING3D.rotationZ
+parent:EJSS_DRAWING3D.transformation
+edition:<COLUMN>; <LABELMain>; Angle;
+
+class: EJSS_DRAWING3D.analyticCurve
+parent:EJSS_DRAWING3D.element
+name:'NumPoints', 			info: 'int', 				def: '<none>'
+name:'MinValue',        	info: 'int|double',       	def: '<none>'
+name:'MaxValue',        	info: 'int|double',       	def: '<none>'
+name:'Variable', 			info: 'String', 	  		def: 'u'
+name:'FunctionX', 			info: 'String', 	  		def: 'u'
+name:'FunctionY', 			info: 'String', 	  		def: 'v'
+name:'FunctionZ', 			info: 'String', 	  		def: '0'
+#name: 'OnError',        	info: 'Action',           def: '<no_action>'
+edition:<COLUMN>; <LABELInput>; NumPoints; MinValue; MaxValue; Variable; FunctionX; FunctionY; FunctionZ; 
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.analyticSurface
+parent:EJSS_DRAWING3D.element
+name:'NumPoints1', 			info: 'int', 				def: '<none>'
+name:'MinValue1',        	info: 'int|double',       	def: '<none>'
+name:'MaxValue1',        	info: 'int|double',       	def: '<none>'
+name:'Variable1', 			info: 'String', 	  		def: 'u'
+name:'NumPoints2', 			info: 'int', 				def: '<none>'
+name:'MinValue2',        	info: 'int|double',       	def: '<none>'
+name:'MaxValue2',        	info: 'int|double',       	def: '<none>'
+name:'Variable2', 			info: 'String', 	  		def: 'v'
+name:'FunctionX', 			info: 'String', 	  		def: 'u'
+name:'FunctionY', 			info: 'String', 	  		def: 'v'
+name:'FunctionZ', 			info: 'String', 	  		def: '0'
+#name: 'OnError',        	info: 'Action',           def: '<no_action>'
+edition:<COLUMN>; <LABELInput>; NumPoints1; MinValue1; MaxValue1; Variable1; NumPoints2; MinValue2; MaxValue2; Variable2; FunctionX; FunctionY; FunctionZ; 
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.arrow
+parent:EJSS_DRAWING3D.element
+name:'HeadHeight',        	info: 'int|double',       	def: '8'
+name:'HeadWidth',        	info: 'int|double',       	def: '20'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; HeadHeight; HeadWidth; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.arrowSet
+parent:EJSS_DRAWING3D.elementSet
+name: 'HeadHeight',        	info: 'int[]|double[]|int[][]|double[][]',  def: '8'
+name: 'HeadWidth',        	info: 'int[]|double[]|int[][]|double[][]',  def: '20'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; HeadHeight; HeadWidth; LineColor; LineWidth; DrawLines; FillColor; DrawFill; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.basic
+parent:EJSS_DRAWING3D.element
+name: 'Description',       	info: 'File|String|Object', 	def: '<none>'
+name: 'Vertices',       	info: 'double[][]', 	        def: '<none>'
+name: 'Triangles',       	info: 'int[][]', 	            def: '<none>'
+name: 'Normals',       		info: 'double[][]', 	        def: '<none>'
+name: 'Colors',       		info: 'int|Color3D|String|int[]|String[]', 	def: '<none>'
+edition:<SEP>; <LABELInput>; Description; Vertices; Triangles; Normals; Colors;  
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.basicSet
+parent:EJSS_DRAWING3D.elementSet
+name: 'Description',       	info: 'File|String|String[]|Object|Object[]', 				def: '<none>'
+name: 'Vertices',       	info: 'double[][]|double[][][]', 	        				def: '<none>'
+name: 'Triangles',       	info: 'int[][]|int[][][]', 	            					def: '<none>'
+name: 'Normals',       		info: 'double[][]|double[][][]', 	                       	def: '<none>'
+name: 'Colors',       		info: 'int|Color3D|String|int[]|String[]|int[][]|String[][]',	def: '<none>'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELInput>; Description; Vertices; Triangles; Normals; Colors;  
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+
+class: EJSS_DRAWING3D.box
+parent:EJSS_DRAWING3D.element
+name: 'ReduceZby',       	info: 'int|double', 	def: '0'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; ReduceZby; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedTop; ClosedBottom; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.boxSet
+parent:EJSS_DRAWING3D.elementSet
+name: 'ReduceZby',       	info: 'int|double|int[]|double[]', 	def: '0'
+edition:<COLUMN>; <LABELElements>; NumberOfElements; 
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; ReduceZby; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedTop; ClosedBottom; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl;  Transparency;  
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.cone
+parent:EJSS_DRAWING3D.cylinder
+name: 'MinAngleU',          info: 'int|double', 	def: '0'
+name: 'MaxAngleU',       	info: 'int|double', 	def: '360'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; BottomRadius; MinAngleU; MaxAngleU; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedBottom; ClosedLeft; ClosedRight;  <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.coneSet
+parent:EJSS_DRAWING3D.cylinderSet
+name: 'MinAngleU',          info: 'int|double|int[]|double[]', 	def: '0'
+name: 'MaxAngleU',       	info: 'int|double|int[]|double[]', 	def: '360'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; BottomRadius; MinAngleU; MaxAngleU; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedBottom; ClosedLeft; ClosedRight; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.cylinder
+parent:EJSS_DRAWING3D.element
+name: 'BaseDetail',       	info: 'int', 			def: '30'
+name: 'BottomRadius',       info: 'int|double', 	def: '1'
+name: 'TopRadius',       	info: 'int|double', 	def: '1'
+name: 'MinAngleU',          info: 'int|double', 	def: '0'
+name: 'MaxAngleU',       	info: 'int|double', 	def: '360'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; BottomRadius; TopRadius; MinAngleU; MaxAngleU; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedTop; ClosedBottom; ClosedLeft; ClosedRight;  <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.cylinderSet
+parent:EJSS_DRAWING3D.elementSet
+name: 'BaseDetail',         info: 'int|int[]', 			def: '1'
+name: 'BottomRadius',       info: 'int|double|int[]|double[]', 	def: '1'
+name: 'TopRadius',       	info: 'int|double|int[]|double[]', 	def: '1'
+name: 'MinAngleU',          info: 'int|double|int[]|double[]', 	def: '0'
+name: 'MaxAngleU',       	info: 'int|double|int[]|double[]', 	def: '360'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; BottomRadius; TopRadius; MinAngleU; MaxAngleU; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedTop; ClosedBottom; ClosedLeft; ClosedRight;  <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.disk
+parent:EJSS_DRAWING3D.cylinder
+name: 'MinAngleU',          info: 'int|double', 	def: '0'
+name: 'MaxAngleU',       	info: 'int|double', 	def: '360'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; BottomRadius; MinAngleU; MaxAngleU; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.ellipsoid
+parent:EJSS_DRAWING3D.element
+name: 'MinAngleU',          info: 'int|double', 	def: '0'
+name: 'MaxAngleU',       	info: 'int|double', 	def: '360'
+name: 'MinAngleV',       	info: 'int|double', 	def: '-90'
+name: 'MaxAngleV',       	info: 'int|double', 	def: '90'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; MinAngleU; MaxAngleU; MinAngleV; MaxAngleV; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedTop; ClosedBottom; ClosedLeft; ClosedRight; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.ellipsoidSet
+parent:EJSS_DRAWING3D.elementSet
+name: 'MinAngleU',          info: 'int|double|int[]|double[]', 	def: '0'
+name: 'MaxAngleU',       	info: 'int|double|int[]|double[]', 	def: '360'
+name: 'MinAngleV',       	info: 'int|double|int[]|double[]', 	def: '-90'
+name: 'MaxAngleV',       	info: 'int|double|int[]|double[]', 	def: '90'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; MinAngleU; MaxAngleU; MinAngleV; MaxAngleV; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedTop; ClosedBottom; ClosedLeft; ClosedRight; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.plane
+parent:EJSS_DRAWING3D.element
+name: 'Detail',       		info: 'int', 			def: '1'
+name: 'SizeA',           	info: 'int|double',       def: '1'
+name: 'SizeB',           	info: 'int|double',       def: '1'
+name: 'DirectionA',         info: 'int[]|double[]', 	def: '[1,0,0]'
+name: 'DirectionB',       	info: 'int[]|double[]', 	def: '[0,1,0]'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; DirectionA; DirectionB; SizeA; SizeB; SizeX; SizeY; SizeZ; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.planeSet
+parent:EJSS_DRAWING3D.elementSet
+name: 'SizeA',           	info: 'int|double|int[]|double[]',       def: '1'
+name: 'SizeB',           	info: 'int|double|int[]|double[]',       def: '1'
+name: 'DirectionA',         info: 'int[]|double[]', 	def: '[1,0,0]'
+name: 'DirectionB',       	info: 'int[]|double[]', 	def: '[0,1,0]'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; DirectionA, DirectionB; SizeA; SizeB; SizeX; SizeY; SizeZ; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.segment
+parent:EJSS_DRAWING3D.element
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.segmentSet
+parent:EJSS_DRAWING3D.elementSet
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.sphere
+parent:EJSS_DRAWING3D.ellipsoid
+name: 'Radius',       		info: 'int|double', 	def: '1'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; Radius; MinAngleU; MaxAngleU; MinAngleV; MaxAngleV; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedTop; ClosedBottom; ClosedLeft; ClosedRight; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency;  
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.sphereSet
+parent:EJSS_DRAWING3D.ellipsoidSet
+name: 'Radius',       		info: 'int|double|int[]|double[]', 	def: '1'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; Radius; MinAngleU; MaxAngleU; MinAngleV; MaxAngleV; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedTop; ClosedBottom; ClosedLeft; ClosedRight; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.spring
+parent:EJSS_DRAWING3D.element
+name: 'Radius',       		info: 'int|double', 	def: '1'
+name: 'ThinExtremes',       info: 'boolean', 		def: 'true'
+name: 'Solenoid',    		info: 'int|double', 	def: '0.0'
+name: 'Loops',    			info: 'int', 			def: '8'
+name: 'PointsPerLoop',    	info: 'int', 			def: '50'
+
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Radius; ThinExtremes; Solenoid; Loops; PointsPerLoop; <SEP>; LineColor; LineWidth; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.springSet
+parent:EJSS_DRAWING3D.elementSet
+name: 'Radius',       		info: 'int|double|int[]|double[]', 	def: '1'
+name: 'ThinExtremes',       info: 'boolean|boolean[]', 			def: 'true'
+name: 'Solenoid',    		info: 'int|double|int[]|double[]', 	def: '0.0'
+name: 'Loops',    			info: 'int|int[]', 					def: '8'
+name: 'PointsPerLoop',    	info: 'int|int[]', 					def: '50'
+
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; Transparency;
+edition:<COLUMN>; <LABELAspect>; Radius; ThinExtremes; Solenoid; Loops; PointsPerLoop; <SEP>; LineColor; LineWidth; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.surface
+parent:EJSS_DRAWING3D.element
+name: 'Data',       		info: 'double[][][]', 			def: '<none>'
+edition:<SEP>; <LABELInput>; Data; AlwaysUpdated;
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.surfaceSet
+parent:EJSS_DRAWING3D.elementSet
+name: 'Data',       		info: 'double[][][]|double[][][][]', 			def: '<none>'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELInput>; Data;  
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.tetrahedron
+parent:EJSS_DRAWING3D.cylinder
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; BottomRadius; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedBottom; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.tetrahedronSet
+parent:EJSS_DRAWING3D.cylinderSet
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; BottomRadius; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Resolution; ClosedBottom; <SEP>; LineColor; LineWidth; DrawLines; FillColor; DrawFill; TextureUrl; Transparency;
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.text
+parent:EJSS_DRAWING3D.element
+name: 'Text',       		info: 'String TRANSLATABLE', 		def: '<none>'
+name: 'FitText',       		info: 'boolean', 					def: 'true'
+name: 'Background',     	info: 'int|Color3D|String', 			def: '<rgba(255,255,255,0)>'
+name: 'Font',        		info: 'Font|String',       			def: '<none>'
+name: 'FontColor',     	    info: 'int|Color3D|String', 			def: 'black'
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Text; FitText; FontColor; Font; Background; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.textSet
+parent:EJSS_DRAWING3D.elementSet
+name: 'Text',       		info: 'String|String[] TRANSLATABLE', 		def: '<none>'
+name: 'Background',     	info: 'int|Color3D|String', 			def: '<rgba(255,255,255,0)>'
+name: 'Font',        		info: 'Font|String|String[]|Object[]',   def: '<none>'
+name: 'FontColor',     	    info: 'int|Color3D|String', 			def: 'black'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; ElementInteracted; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELAspect>; Text; FontColor; Font; Background; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+
+class: EJSS_DRAWING3D.trail
+parent:EJSS_DRAWING3D.element
+name:'InputX',         		info: 'int|double|int[]|double[]',   def: '<none>'
+name:'InputY',         		info: 'int|double|int[]|double[]',   def: '<none>'
+name:'InputZ',         		info: 'int|double|int[]|double[]',   def: '<none>'
+name:'Active',        		info: 'boolean',       		def: 'true'
+name:'NoRepeat',         	info: 'boolean',       		def: 'true'
+name:'ClearAtInput',        info: 'boolean',       		def: 'false'
+name:'Skip',         		info: 'int',       			def: '0'
+name:'Maximum',         	info: 'int',       			def: '<none>'
+name:'Connected',           info: 'boolean', 			def: 'true'
+edition:<COLUMN>; <LABELInput>; InputX; InputY; InputZ;  
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELConfiguration>;  Maximum; Skip; Active; NoRepeat; ClearAtInput; Connected; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+class: EJSS_DRAWING3D.trailSet
+parent:EJSS_DRAWING3D.elementSet
+name:'InputX',         		info: 'int|double|int[]|double[]|int[][]|double[][]',   def: '<none>'
+name:'InputY',         		info: 'int|double|int[]|double[]|int[][]|double[][]',   def: '<none>'
+name:'InputZ',         		info: 'int|double|int[]|double[]|int[][]|double[][]',   def: '<none>'
+name:'Active',        		info: 'boolean|boolean[]',       		def: 'true'
+name:'NoRepeat',         	info: 'boolean|boolean[]',       		def: 'true'
+name:'ClearAtInput',        info: 'boolean|boolean[]',       		def: 'false'
+name:'Skip',         		info: 'int|int[]',       			def: '0'
+name:'Maximum',         	info: 'int|int[]',       			def: '<none>'
+name:'Connected',           info: 'boolean|boolean[]', 			def: 'true'
+edition:<COLUMN>; <LABELElements>; NumberOfElements;
+edition:<SEP>; <LABELInput>; InputX; InputY; InputZ;  
+edition:<SEP>; <LABELPosition>; X; Y; Z; Position; SizeX; SizeY; SizeZ; Size; Transformation;
+edition:<COLUMN>; <LABELInteraction>; Visibility; Measured; EnabledPosition; MovesGroup; EnabledSize; ResizesGroup; Sensitivity; OnEnter; OnExit; OnPress; OnDrag; OnRelease; 
+edition:<COLUMN>; <LABELConfiguration>;  Maximum; Skip; Active; NoRepeat; ClearAtInput; Connected; 
+edition:<COLUMN>; <LABELAspect>; LineColor; LineWidth; Transparency; 
+edition:<TAB>; LABELDecoration;
+edition:<COLUMN>; <LABELAdvancedColor>; AmbientColor; SpecularColor; AmbientReflection; ColorReflection; SpecularReflection; Shininess;
+edition:<COLUMN>;
+edition:<COLUMN>;
+
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<jardesc>
+    <jar path="Ejs/distribution/bin/osp.jar"/>
+    <options buildIfNeeded="true" compress="true" descriptionLocation="/Ejs/ospjar.jardesc" exportErrors="true" exportWarnings="true" includeDirectoryEntries="false" overwrite="false" saveDescription="true" storeRefactorings="false" useSourceFolders="false"/>
+    <storedRefactorings deprecationInfo="true" structuralOnly="false"/>
+    <selectedProjects/>
+    <manifest generateManifest="true" manifestLocation="" manifestVersion="1.0" reuseManifest="false" saveManifest="false" usesManifest="true">
+        <sealing sealJar="false">
+            <packagesToSeal/>
+            <packagesToUnSeal/>
+        </sealing>
+    </manifest>
+    <selectedElements exportClassFiles="true" exportJavaFiles="false" exportOutputFolder="false">
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.display.dialogs"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.display"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.tools"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.ejs.control.swing"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.tools.html"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.ejs.control.value"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.controls"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.ejs"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.display.axes"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.ejs"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.frames"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.desktop"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.display3d.simple3d"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.media.core"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.controls.images"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.davidson.applets"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.jibble.epsgraphics"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.numerics"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.controls"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.media.gif"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.analysis"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.desktop.ostermiller"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.display"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.controls.doctypes"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.display3d.core.interaction"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.numerics"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.media"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.tools"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.display3d.core"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.tools.images"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.display2d"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.numerics.specialfunctions"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.ejs.control"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.resources.media.images"/>
+        <javaElement handleIdentifier="=osp_github/src&lt;org.opensourcephysics.display3d.simple3d.utils"/>
+    </selectedElements>
+</jardesc>

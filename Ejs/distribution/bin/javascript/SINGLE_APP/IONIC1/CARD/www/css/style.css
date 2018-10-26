@@ -1,0 +1,46 @@
+/* Empty. Add your own CSS if you like */
+.iframe-wrapper iframe {
+ width: 100%;
+ height: 100%;
+}
+
+.list .item.item-accordion {
+  line-height: 38px;
+  padding-top: 0;
+  padding-bottom: 0;
+  transition: 0.09s all linear;
+}
+
+.main-navbar-page {
+    padding: 4px 30px;
+}
+
+.other-pages {
+    font: 15px Georgia, serif;
+}
+.other-pages-title {
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+    color: blue;
+}
+.other-pages-subtitle {
+    font-size: 30px;
+    text-align: center;
+    color: blue;
+}
+.other-pages-author {
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+}
+.other-pages-centered {
+  font-size: 20px;
+  text-align: center;
+}
+
+.ref-title {
+    font-weight: bold;
+    font-size: 35px;
+    color: blue;
+}

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">
+  <head>
+    <meta charset="utf-8" />
+    <title>MolecularDynamicsJSPerformance (Small)</title>
+    <link rel="stylesheet"  type="text/css" href="file:///Users/Paco/Dropbox/Programming/MyEjsWorkspace/output/_ejs_library/css/ejsSimulation.css" />
+    <script src="file:///Users/Paco/Documents/Programming/GitProjects/EJS/Ejs/distribution/bin/javascript/lib/scripts/common_script.js"></script>
+    <script src="file:///Users/Paco/Documents/Programming/GitProjects/EJS/Ejs/distribution/bin/javascript/lib/scripts/textresizedetector.js"></script>
+    <script src="file:///Users/Paco/Documents/Programming/GitProjects/EJS/Ejs/distribution/bin/javascript/lib/ejsS.v1.min.js"></script>
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function TestSimulation(_topFrame,_libraryPath,_codebasePath) {
+  var _model = EJSS_CORE.createAnimation();
+  var _view;
+  var _isPlaying = false;
+  var _isPaused = true;
+  var _isMobile = (navigator===undefined) ? false : navigator.userAgent.match(/iPhone|iPad|iPod|Android|BlackBerry|Opera Mini|IEMobile/i);
+
+var _stringProperties = {};
+  var _tools = {
+    showInputDialog : EJSS_INTERFACE.BoxPanel.showInputDialog,
+    showOkDialog : EJSS_INTERFACE.BoxPanel.showOkDialog,
+    showOkCancelDialog : EJSS_INTERFACE.BoxPanel.showOkCancelDialog
+  };
+
+  function _play()  { _isPaused = false; _isPlaying = true;  _model.play();  }
+  function _pause() { _isPaused = true;  _isPlaying = false; _model.pause(); }
+  function _step()  { _pause();  _model.step(); }
+  function _reset() { _model.reset();  _isPaused = _model.isPaused(); _isPlaying = _model.isPlaying(); }
+  function _update() { _model.update(); }
+  function _initialize() { _model.initialize(); }
+  function _setFPS(_fps) { _model.setFPS(_fps); }
+  function _setDelay(_delay) { _model.setDelay(_delay); }
+  function _setStepsPerDisplay(_spd) { _model.setStepsPerDisplay(_spd); }
+  function _setUpdateView(_updateView) { _model.setUpdateView(_updateView); }
+  function _setAutoplay(_auto) { _model.setAutoplay(_auto); }
+  function _println(_message) { console.log(_message); }
+
+  function _breakAfterThisPage() { _model.setShouldBreak(true); }
+
+  function _resetSolvers() { if (_model.resetSolvers) _model.resetSolvers(); }
+
+  function _saveText(name,type,content) { if (_model.saveText) _model.saveText(name,type,content); }
+
+  function _saveState(name) { if (_model.saveState) _model.saveState(name); }
+
+  function _saveImage(name,panelname) { if (_model.saveImage) _model.saveImage(name,panelname); }
+
+  function _readState(url,type) { if (_model.readState) _model.readState(url,type); }
+
+  function _readText(url,type,varname) { if (_model.readText) _model.readText(url,type,varname); }
+
+function _getStringProperty(propertyName) {
+  var _value = _stringProperties[propertyName];
+  if (_value===undefined) return propertyName;
+  else return _value;
+}
+  var __pagesEnabled = [];
+  function _setPageEnabled(pageName,enabled) { __pagesEnabled[pageName] = enabled; }
+
+  var boxWidth; // EjsS Model.Variables.Global.boxWidth
+  var g; // EjsS Model.Variables.Global.g
+  var dt; // EjsS Model.Variables.Global.dt
+  var wallStiffness; // EjsS Model.Variables.Global.wallStiffness
+  var forceCutoff; // EjsS Model.Variables.Global.forceCutoff
+  var forceCutoff2; // EjsS Model.Variables.Global.forceCutoff2
+  var stepsPerFrame; // EjsS Model.Variables.Global.stepsPerFrame
+  var stepCount; // EjsS Model.Variables.Global.stepCount
+  var fps; // EjsS Model.Variables.Global.fps
+  var startTime; // EjsS Model.Variables.Global.startTime
+  var innerHtml; // EjsS Model.Variables.Global.innerHtml
+
+  var N; // EjsS Model.Variables.Particles.N
+  var x; // EjsS Model.Variables.Particles.x
+  var y; // EjsS Model.Variables.Particles.y
+  var vx; // EjsS Model.Variables.Particles.vx
+  var vy; // EjsS Model.Variables.Particles.vy
+  var ax; // EjsS Model.Variables.Particles.ax
+  var ay; // EjsS Model.Variables.Particles.ay
+
+  function _serialize() { return _model.serialize(); }
+
+  _model._userSerialize = function() {
+    return {
+      boxWidth : boxWidth,
+      g : g,
+      dt : dt,
+      wallStiffness : wallStiffness,
+      forceCutoff : forceCutoff,
+      forceCutoff2 : forceCutoff2,
+      stepsPerFrame : stepsPerFrame,
+      stepCount : stepCount,
+      fps : fps,
+      startTime : startTime,
+      innerHtml : innerHtml,
+      N : N,
+      x : x,
+      y : y,
+      vx : vx,
+      vy : vy,
+      ax : ax,
+      ay : ay
+    };
+  };
+
+  function _unserialize(json) { return _model.unserialize(json); }
+
+  _model._userUnserialize = function(json) {
+    if(json.boxWidth) boxWidth = json.boxWidth;
+    if(json.g) g = json.g;
+    if(json.dt) dt = json.dt;
+    if(json.wallStiffness) wallStiffness = json.wallStiffness;
+    if(json.forceCutoff) forceCutoff = json.forceCutoff;
+    if(json.forceCutoff2) forceCutoff2 = json.forceCutoff2;
+    if(json.stepsPerFrame) stepsPerFrame = json.stepsPerFrame;
+    if(json.stepCount) stepCount = json.stepCount;
+    if(json.fps) fps = json.fps;
+    if(json.startTime) startTime = json.startTime;
+    if(json.innerHtml) innerHtml = json.innerHtml;
+    if(json.N) N = json.N;
+    if(json.x) x = json.x;
+    if(json.y) y = json.y;
+    if(json.vx) vx = json.vx;
+    if(json.vy) vy = json.vy;
+    if(json.ax) ax = json.ax;
+    if(json.ay) ay = json.ay;
+   _resetSolvers();
+   _model.update();
+  };
+
+  _model.addToReset(function() {
+  });
+
+  _model.addToReset(function() {
+    boxWidth = 40; // EjsS Model.Variables.Global.boxWidth
+    g = 0; // EjsS Model.Variables.Global.g
+    dt = 0.02; // EjsS Model.Variables.Global.dt
+    wallStiffness = 50; // EjsS Model.Variables.Global.wallStiffness
+    forceCutoff = 3.0; // EjsS Model.Variables.Global.forceCutoff
+    forceCutoff2 = forceCutoff*forceCutoff; // EjsS Model.Variables.Global.forceCutoff2
+    stepsPerFrame = 20; // EjsS Model.Variables.Global.stepsPerFrame
+    fps = 10; // EjsS Model.Variables.Global.fps
+    startTime = 0; // EjsS Model.Variables.Global.startTime
+    innerHtml = "0"; // EjsS Model.Variables.Global.innerHtml
+  });
+
+  _model.addToReset(function() {
+    N = _isMobile  ? 80 : 250; // EjsS Model.Variables.Particles.N
+    x = new Array(N); // EjsS Model.Variables.Particles.x
+    y = new Array(N); // EjsS Model.Variables.Particles.y
+    vx = new Array(N); // EjsS Model.Variables.Particles.vx
+    vy = new Array(N); // EjsS Model.Variables.Particles.vy
+    ax = new Array(N); // EjsS Model.Variables.Particles.ax
+    ay = new Array(N); // EjsS Model.Variables.Particles.ay
+  });
+
+  _model.addToReset(function() {
+    _model.setAutoplay(false);
+    _model.setFPS(10);
+    _model.setStepsPerDisplay(1);
+  });
+
+  // Execute a single time step (Verlet algorithm):  // > CustomCode.Step:1
+  function doStep() {  // > CustomCode.Step:2
+    var i;  // > CustomCode.Step:3
+    for (i=0; i<N; i++) {  // > CustomCode.Step:4
+      x[i] += vx[i]*dt + 0.5*ax[i]*dt*dt;  // > CustomCode.Step:5
+      y[i] += vy[i]*dt + 0.5*ay[i]*dt*dt;  // > CustomCode.Step:6
+      vx[i] += 0.5*ax[i]*dt;  // > CustomCode.Step:7
+      vy[i] += 0.5*ay[i]*dt;  // > CustomCode.Step:8
+    }  // > CustomCode.Step:9
+    computeAccelerations();  // > CustomCode.Step:10
+    for (i=0; i<N; i++) {  // > CustomCode.Step:11
+      vx[i] += 0.5*ax[i]*dt;  // > CustomCode.Step:12
+      vy[i] += 0.5*ay[i]*dt;  // > CustomCode.Step:13
+    }  // > CustomCode.Step:14
+  }  // > CustomCode.Step:15
+
+  function computeAccelerations() {  // > CustomCode.Accelerations:1
+    var i;  // > CustomCode.Accelerations:2
+    var dx, dy, dx2, dy2, rSquared, rSquaredInv, attract, repel, fOverR, fx, fy;  // > CustomCode.Accelerations:3
+    // first check for bounces off walls:  // > CustomCode.Accelerations:4
+    for (i = 0; i < N; i++) {  // > CustomCode.Accelerations:5
+      if (x[i] < 0.5) {  // > CustomCode.Accelerations:6
+        ax[i] = wallStiffness * (0.5 - x[i]);  // > CustomCode.Accelerations:7
+      } else  // > CustomCode.Accelerations:8
+      if (x[i] > (boxWidth - 0.5)) {  // > CustomCode.Accelerations:9
+        ax[i] = wallStiffness * (boxWidth - 0.5 - x[i]);  // > CustomCode.Accelerations:10
+      } else  // > CustomCode.Accelerations:11
+      ax[i] = 0.0;  // > CustomCode.Accelerations:12
+      if (y[i] < 0.5) {  // > CustomCode.Accelerations:13
+        ay[i] = (wallStiffness * (0.5 - y[i]));  // > CustomCode.Accelerations:14
+      } else  // > CustomCode.Accelerations:15
+      if (y[i] > (boxWidth - 0.5)) {  // > CustomCode.Accelerations:16
+        ay[i] = (wallStiffness * (boxWidth - 0.5 - y[i]));  // > CustomCode.Accelerations:17
+      } else  // > CustomCode.Accelerations:18
+      ay[i] = 0;  // > CustomCode.Accelerations:19
+      ay[i] -= g;				// add gravity if any  // > CustomCode.Accelerations:20
+    }  // > CustomCode.Accelerations:21
+    //pressure = wallForce / (4*boxWidth);  // > CustomCode.Accelerations:22
+    // now compute interaction forces (Lennard-Jones potential):  // > CustomCode.Accelerations:23
+    for (i = 0; i < N; i++) {  // > CustomCode.Accelerations:24
+      for (var j = 0; j < i; j++) {  // > CustomCode.Accelerations:25
+        dx = x[i] - x[j];  // > CustomCode.Accelerations:26
+        dx2 = dx * dx;  // > CustomCode.Accelerations:27
+        if (dx2 < forceCutoff2) {  // > CustomCode.Accelerations:28
+          // make sure they're close enough to bother  // > CustomCode.Accelerations:29
+          dy = y[i] - y[j];  // > CustomCode.Accelerations:30
+          dy2 = dy * dy;  // > CustomCode.Accelerations:31
+          if (dy2 < forceCutoff2) {  // > CustomCode.Accelerations:32
+            rSquared = dx2 + dy2;  // > CustomCode.Accelerations:33
+            if (rSquared < forceCutoff2) {  // > CustomCode.Accelerations:34
+              rSquaredInv = 1.0 / rSquared;  // > CustomCode.Accelerations:35
+              attract = rSquaredInv * rSquaredInv * rSquaredInv;  // > CustomCode.Accelerations:36
+              repel = attract * attract;  // > CustomCode.Accelerations:37
+              //tempPE += (4.0 * (repel - attract)) - pEatCutoff;  // > CustomCode.Accelerations:38
+              fOverR = 24.0 * ((2.0 * repel) - attract) * rSquaredInv;  // > CustomCode.Accelerations:39
+              fx = fOverR * dx;  // > CustomCode.Accelerations:40
+              fy = fOverR * dy;  // > CustomCode.Accelerations:41
+              ax[i] += fx;  // add this force on to i's acceleration (m = 1)  // > CustomCode.Accelerations:42
+              ay[i] += fy;  // > CustomCode.Accelerations:43
+              ax[j] -= fx;  // Newton's 3rd law  // > CustomCode.Accelerations:44
+              ay[j] -= fy;  // > CustomCode.Accelerations:45
+            }  // > CustomCode.Accelerations:46
+          }  // > CustomCode.Accelerations:47
+        }  // > CustomCode.Accelerations:48
+      }  // > CustomCode.Accelerations:49
+    }  // > CustomCode.Accelerations:50
+  }  // > CustomCode.Accelerations:51
+
+  // Function to change all speeds by a given factor (called by button presses):  // > CustomCode.Speed factor:1
+  function speedFactor(factor) {  // > CustomCode.Speed factor:2
+    for (var i=0; i<N; i++) {  // > CustomCode.Speed factor:3
+      vx[i] *= factor;  // > CustomCode.Speed factor:4
+      vy[i] *= factor;  // > CustomCode.Speed factor:5
+    }  // > CustomCode.Speed factor:6
+  }  // > CustomCode.Speed factor:7
+
+  function changeN () {  // > CustomCode.Change N:1
+    _pause();  // > CustomCode.Change N:2
+    N=Math.max(1,N);  // > CustomCode.Change N:3
+    N=Math.min(500,N);  // > CustomCode.Change N:4
+    x= new Array(N);  // > CustomCode.Change N:5
+    y= new Array(N);  // > CustomCode.Change N:6
+    vx= new Array(N);  // > CustomCode.Change N:7
+    vy= new Array(N);  // > CustomCode.Change N:8
+    ax= new Array(N);  // > CustomCode.Change N:9
+    ay= new Array(N);  // > CustomCode.Change N:10
+    _initialize();  // > CustomCode.Change N:11
+  }  // > CustomCode.Change N:12
+
+  _model.addToFixedRelations(function() { _isPaused = _model.isPaused(); _isPlaying = _model.isPlaying(); });
+
+  _model.addToFixedRelations(function() { _isPaused = _model.isPaused(); _isPlaying = _model.isPlaying(); });
+
+    _model._resized = function(_width,_height) {
+      _view._resized(_width,_height);
+  }; // end of _resized
+    _model._fontResized = function(iBase,iSize,iDelta) {
+      _view._fontResized(iBase,iSize,iDelta);
+  }; // end of _fontResized
+
+  function _getViews() {
+    var _viewsInfo = [];
+    var _counter = 0;
+    _viewsInfo[_counter++] = { name : "Small", width : null, height : null };
+    return _viewsInfo;
+  } // end of _getViews
+
+  function _selectView(_viewNumber) {
+    _view = null;
+    _view = new TestSimulation_View(_topFrame,_viewNumber,_libraryPath,_codebasePath);
+    var _view_super_reset = _view._reset;
+    _view._reset = function() {
+      _view_super_reset();
+      switch(_viewNumber) {
+        case -10 : break; // make Lint happy
+        default :
+        case 0:
+          _view.gravitySlider.linkProperty("Value",  function() { return g; }, function(_v) { g = _v; } ); // Small linking property 'Value' for element 'gravitySlider'
+          _view.nField.linkProperty("Value",  function() { return N; }, function(_v) { N = _v; } ); // Small linking property 'Value' for element 'nField'
+          _view.nField.setAction("OnChange", changeN); // Small setting action 'OnChange' for element 'nField'
+          _view.drawingPanel.linkProperty("MaximumY",  function() { return boxWidth; }, function(_v) { boxWidth = _v; } ); // Small linking property 'MaximumY' for element 'drawingPanel'
+          _view.drawingPanel.linkProperty("MaximumX",  function() { return boxWidth; }, function(_v) { boxWidth = _v; } ); // Small linking property 'MaximumX' for element 'drawingPanel'
+          _view.shapeSet.linkProperty("NumberOfElements",  function() { return N; }, function(_v) { N = _v; } ); // Small linking property 'NumberOfElements' for element 'shapeSet'
+          _view.shapeSet.linkProperty("X",  function() { return x; }, function(_v) { x = _v; } ); // Small linking property 'X' for element 'shapeSet'
+          _view.shapeSet.linkProperty("Y",  function() { return y; }, function(_v) { y = _v; } ); // Small linking property 'Y' for element 'shapeSet'
+          _view.twoStateButton.setAction("OffClick", function() { startTime = (new Date()).getTime();
+stepCount = 0;
+_play(); }); // Small setting action 'OffClick' for element 'twoStateButton'
+          _view.twoStateButton.linkProperty("State",  function() { return _isPlaying; } ); // Small linking property 'State' for element 'twoStateButton'
+          _view.twoStateButton.setAction("OnClick", _pause); // Small setting action 'OnClick' for element 'twoStateButton'
+          _view.singleStepButton.setAction("OnClick", function() { _step(); }); // Small setting action 'OnClick' for element 'singleStepButton'
+          _view.resetButton.setAction("OnClick", function() { _reset(); }); // Small setting action 'OnClick' for element 'resetButton'
+          _view.fasterButton.setAction("OnClick", function() { speedFactor(1.1); }); // Small setting action 'OnClick' for element 'fasterButton'
+          _view.slowerButton.setAction("OnClick", function() { speedFactor(0.9); }); // Small setting action 'OnClick' for element 'slowerButton'
+          _view.freezeButton.setAction("OnClick", function() { speedFactor(0); }); // Small setting action 'OnClick' for element 'freezeButton'
+          _view.dtField.linkProperty("Value",  function() { return dt; }, function(_v) { dt = _v; } ); // Small linking property 'Value' for element 'dtField'
+          _view.dtField.linkProperty("Editable",  function() { return _isPaused; } ); // Small linking property 'Editable' for element 'dtField'
+          _view.dtField.setAction("OnChange", function() { dt=Math.max(1.0E-3,dt);
+dt=Math.min(dt,0.5);
+startTime = (new Date()).getTime();
+stepCount = 0; }); // Small setting action 'OnChange' for element 'dtField'
+          _view.fpsField.linkProperty("Value",  function() { return fps; }, function(_v) { fps = _v; } ); // Small linking property 'Value' for element 'fpsField'
+          _view.fpsField.linkProperty("Editable",  function() { return _isPaused; } ); // Small linking property 'Editable' for element 'fpsField'
+          _view.fpsField.setAction("OnChange", function() { fps=Math.max(1,fps);
+fps=Math.min(fps,100);
+startTime = (new Date()).getTime();
+stepCount = 0;
+_setFPS(fps); }); // Small setting action 'OnChange' for element 'fpsField'
+          _view.spfField.linkProperty("Value",  function() { return stepsPerFrame; }, function(_v) { stepsPerFrame = _v; } ); // Small linking property 'Value' for element 'spfField'
+          _view.spfField.linkProperty("Editable",  function() { return _isPaused; } ); // Small linking property 'Editable' for element 'spfField'
+          _view.spfField.setAction("OnChange", function() { stepsPerFrame=Math.max(1,stepsPerFrame);
+stepsPerFrame=Math.min(stepsPerFrame,1000);
+startTime = (new Date()).getTime();
+stepCount = 0; }); // Small setting action 'OnChange' for element 'spfField'
+          _view.stepsLabel.linkProperty("Text",  function() { return innerHtml; }, function(_v) { innerHtml = _v; } ); // Small linking property 'Text' for element 'stepsLabel'
+          break;
+      } // end of switch
+    }; // end of new reset
+
+    _model.setView(_view);
+    _model.reset();
+    _view._enableEPub();
+  } // end of _selectView
+
+  _model.setAutoplay(false);
+  _model.setFPS(10);
+  _model.setStepsPerDisplay(1);
+  _selectView(-1); // this includes _model.reset()
+  return _model;
+}
+
+function TestSimulation_View (_topFrame,_viewNumber,_libraryPath,_codebasePath) {
+  var _view;
+  switch(_viewNumber) {
+    case -10 : break; // make Lint happy
+    default :
+    case 0: _view = TestSimulation_View_0 (_topFrame); break;
+  } // end of switch
+
+  if (_codebasePath) _view._setResourcePath(_codebasePath);
+  if (_libraryPath) _view._setLibraryPath(_libraryPath);
+  return _view;
+} // end of main function
+
+function TestSimulation_View_0 (_topFrame) {
+  var _view = EJSS_CORE.createView(_topFrame);
+
+  _view._reset = function() {
+    _view._clearAll();
+    _view._addElement(EJSS_INTERFACE.panel,"titlePanel", _view._topFrame) // EJsS HtmlView.Small: declaration of element 'titlePanel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.imageAndTextButton,"titleLabel", _view.titlePanel) // EJsS HtmlView.Small: declaration of element 'titleLabel'
+      .setProperty("Text","<h1>Molecular Dynamics Performance Test</h1>") // EJsS HtmlView.Small: setting property 'Text' for element 'titleLabel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.panel,"gravityPanel", _view._topFrame) // EJsS HtmlView.Small: declaration of element 'gravityPanel'
+      .setProperty("Width","100%") // EJsS HtmlView.Small: setting property 'Width' for element 'gravityPanel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.imageAndTextButton,"gravityLabel", _view.gravityPanel) // EJsS HtmlView.Small: declaration of element 'gravityLabel'
+      .setProperty("Text","g:") // EJsS HtmlView.Small: setting property 'Text' for element 'gravityLabel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.slider,"gravitySlider", _view.gravityPanel) // EJsS HtmlView.Small: declaration of element 'gravitySlider'
+      .setProperty("Maximum",0.1) // EJsS HtmlView.Small: setting property 'Maximum' for element 'gravitySlider'
+      .setProperty("Minimum",-0.1) // EJsS HtmlView.Small: setting property 'Minimum' for element 'gravitySlider'
+      .setProperty("Tooltip","Gravitational acceleration") // EJsS HtmlView.Small: setting property 'Tooltip' for element 'gravitySlider'
+      .setProperty("Step",0.001) // EJsS HtmlView.Small: setting property 'Step' for element 'gravitySlider'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.imageAndTextButton,"nLabel", _view.gravityPanel) // EJsS HtmlView.Small: declaration of element 'nLabel'
+      .setProperty("Text"," N =") // EJsS HtmlView.Small: setting property 'Text' for element 'nLabel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.numberField,"nField", _view.gravityPanel) // EJsS HtmlView.Small: declaration of element 'nField'
+      .setProperty("Width",45) // EJsS HtmlView.Small: setting property 'Width' for element 'nField'
+      .setProperty("Format","0") // EJsS HtmlView.Small: setting property 'Format' for element 'nField'
+      ;
+
+    _view._addElement(EJSS_DRAWING2D.drawingPanel,"drawingPanel", _view._topFrame) // EJsS HtmlView.Small: declaration of element 'drawingPanel'
+      .setProperty("Height",400) // EJsS HtmlView.Small: setting property 'Height' for element 'drawingPanel'
+      .setProperty("Width",400) // EJsS HtmlView.Small: setting property 'Width' for element 'drawingPanel'
+      .setProperty("MinimumX",0) // EJsS HtmlView.Small: setting property 'MinimumX' for element 'drawingPanel'
+      .setProperty("MinimumY",0) // EJsS HtmlView.Small: setting property 'MinimumY' for element 'drawingPanel'
+      .setProperty("Background","Black") // EJsS HtmlView.Small: setting property 'Background' for element 'drawingPanel'
+      .setProperty("SquareAspect",true) // EJsS HtmlView.Small: setting property 'SquareAspect' for element 'drawingPanel'
+      ;
+
+    _view._addElement(EJSS_DRAWING2D.shapeSet,"shapeSet", _view.drawingPanel) // EJsS HtmlView.Small: declaration of element 'shapeSet'
+      .setProperty("FillColor","#00ff00") // EJsS HtmlView.Small: setting property 'FillColor' for element 'shapeSet'
+      .setProperty("SizeX",1) // EJsS HtmlView.Small: setting property 'SizeX' for element 'shapeSet'
+      .setProperty("DrawLines",false) // EJsS HtmlView.Small: setting property 'DrawLines' for element 'shapeSet'
+      .setProperty("SizeY",1) // EJsS HtmlView.Small: setting property 'SizeY' for element 'shapeSet'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.panel,"controlPanel", _view._topFrame) // EJsS HtmlView.Small: declaration of element 'controlPanel'
+      .setProperty("Width","100%") // EJsS HtmlView.Small: setting property 'Width' for element 'controlPanel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.twoStateButton,"twoStateButton", _view.controlPanel) // EJsS HtmlView.Small: declaration of element 'twoStateButton'
+      .setProperty("ImageOnUrl","/org/opensourcephysics/resources/controls/images/stop.gif") // EJsS HtmlView.Small: setting property 'ImageOnUrl' for element 'twoStateButton'
+      .setProperty("ImageOffUrl","/org/opensourcephysics/resources/controls/images/play.gif") // EJsS HtmlView.Small: setting property 'ImageOffUrl' for element 'twoStateButton'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.button,"singleStepButton", _view.controlPanel) // EJsS HtmlView.Small: declaration of element 'singleStepButton'
+      .setProperty("ImageUrl","/org/opensourcephysics/resources/controls/images/stepforward.gif") // EJsS HtmlView.Small: setting property 'ImageUrl' for element 'singleStepButton'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.button,"resetButton", _view.controlPanel) // EJsS HtmlView.Small: declaration of element 'resetButton'
+      .setProperty("Tooltip","Reset") // EJsS HtmlView.Small: setting property 'Tooltip' for element 'resetButton'
+      .setProperty("ImageUrl","/org/opensourcephysics/resources/controls/images/reset.gif") // EJsS HtmlView.Small: setting property 'ImageUrl' for element 'resetButton'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.button,"fasterButton", _view.controlPanel) // EJsS HtmlView.Small: declaration of element 'fasterButton'
+      .setProperty("Text","Heat") // EJsS HtmlView.Small: setting property 'Text' for element 'fasterButton'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.button,"slowerButton", _view.controlPanel) // EJsS HtmlView.Small: declaration of element 'slowerButton'
+      .setProperty("Text","Cool") // EJsS HtmlView.Small: setting property 'Text' for element 'slowerButton'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.button,"freezeButton", _view.controlPanel) // EJsS HtmlView.Small: declaration of element 'freezeButton'
+      .setProperty("Text","Freeze") // EJsS HtmlView.Small: setting property 'Text' for element 'freezeButton'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.imageAndTextButton,"dtLabel", _view.controlPanel) // EJsS HtmlView.Small: declaration of element 'dtLabel'
+      .setProperty("Text"," &#916;t =") // EJsS HtmlView.Small: setting property 'Text' for element 'dtLabel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.numberField,"dtField", _view.controlPanel) // EJsS HtmlView.Small: declaration of element 'dtField'
+      .setProperty("Width",60) // EJsS HtmlView.Small: setting property 'Width' for element 'dtField'
+      .setProperty("Format","0.0E0") // EJsS HtmlView.Small: setting property 'Format' for element 'dtField'
+      .setProperty("Tooltip","Number of Verlet setps between screen updates") // EJsS HtmlView.Small: setting property 'Tooltip' for element 'dtField'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.panel,"stepsPanel", _view._topFrame) // EJsS HtmlView.Small: declaration of element 'stepsPanel'
+      .setProperty("Width","100%") // EJsS HtmlView.Small: setting property 'Width' for element 'stepsPanel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.imageAndTextButton,"fpsLabel", _view.stepsPanel) // EJsS HtmlView.Small: declaration of element 'fpsLabel'
+      .setProperty("Text"," fps =") // EJsS HtmlView.Small: setting property 'Text' for element 'fpsLabel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.numberField,"fpsField", _view.stepsPanel) // EJsS HtmlView.Small: declaration of element 'fpsField'
+      .setProperty("Width",50) // EJsS HtmlView.Small: setting property 'Width' for element 'fpsField'
+      .setProperty("Format","0") // EJsS HtmlView.Small: setting property 'Format' for element 'fpsField'
+      .setProperty("Tooltip","Fames per second") // EJsS HtmlView.Small: setting property 'Tooltip' for element 'fpsField'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.imageAndTextButton,"spfLabel", _view.stepsPanel) // EJsS HtmlView.Small: declaration of element 'spfLabel'
+      .setProperty("Text","requested steps =") // EJsS HtmlView.Small: setting property 'Text' for element 'spfLabel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.numberField,"spfField", _view.stepsPanel) // EJsS HtmlView.Small: declaration of element 'spfField'
+      .setProperty("Width",50) // EJsS HtmlView.Small: setting property 'Width' for element 'spfField'
+      .setProperty("Format","0") // EJsS HtmlView.Small: setting property 'Format' for element 'spfField'
+      .setProperty("Tooltip","Requested number of Verlet steps per frame") // EJsS HtmlView.Small: setting property 'Tooltip' for element 'spfField'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.imageAndTextButton,"labelSteps", _view.stepsPanel) // EJsS HtmlView.Small: declaration of element 'labelSteps'
+      .setProperty("Text","actual steps: ") // EJsS HtmlView.Small: setting property 'Text' for element 'labelSteps'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.imageAndTextButton,"stepsLabel", _view.stepsPanel) // EJsS HtmlView.Small: declaration of element 'stepsLabel'
+      .setProperty("Width",50) // EJsS HtmlView.Small: setting property 'Width' for element 'stepsLabel'
+      .setProperty("Tooltip","Actual number of Verlet steps per frame") // EJsS HtmlView.Small: setting property 'Tooltip' for element 'stepsLabel'
+      ;
+
+    _view._addElement(EJSS_INTERFACE.panel,"textPanel", _view._topFrame) // EJsS HtmlView.Small: declaration of element 'textPanel'
+      .setProperty("Html","<p>The Molecular Dynamics JavaScript Performance Model computes the trajectory of particles acted  on by a Lennard-Jones force.  This simulation is designed to test the speed of a computationally intensive JavaScript model.   The user can vary the number of particles, the number of frames per second, and the number of Verlet steps between frames.  The actual number of Verlet steps per frame is shown.</p>   <p>Note: If the model becomes unstable, reset the model and reduce the computational (Verlet) timestep &#916;t.</p>") // EJsS HtmlView.Small: setting property 'Html' for element 'textPanel'
+      ;
+
+  };
+
+  return _view;
+}
+
+
+//--><!]]></script>
+  </head>
+  <body>
+    <div role="button" id="_topFrame" style="text-align:center"></div>
+    <script type="text/javascript"><!--//--><![CDATA[//><!--
+      var _model;
+      window.addEventListener('load',
+        function () { 
+          _model =  new TestSimulation("_topFrame","file:/Users/Paco/Documents/Programming/GitProjects/EJS/Ejs/distribution/bin/javascript/lib/","file:/Users/Paco/Dropbox/Programming/MyEjsWorkspace/source/_extracted/");
+          TextResizeDetector.TARGET_ELEMENT_ID = '_topFrame';
+          TextResizeDetector.USER_INIT_FUNC = function () {
+            var iBase = TextResizeDetector.addEventListener(function(e,args) {
+              _model._fontResized(args[0].iBase,args[0].iSize,args[0].iDelta);
+              },null);
+            _model._fontResized(iBase);
+          };
+        }, false);
+      window.addEventListener('resize', function () { _model._resized(window.innerWidth,window.innerHeight); }, false);
+    //--><!]]></script>
+  </body>
+</html>

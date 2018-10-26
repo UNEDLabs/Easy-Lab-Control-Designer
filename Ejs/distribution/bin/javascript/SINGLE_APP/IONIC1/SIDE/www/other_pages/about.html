@@ -1,0 +1,70 @@
+<ion-nav-view>
+  <ion-content scroll="true" overflow-scroll="true" class="padding">
+	  <div id="cover-image" align="middle" >
+		<img src="model_pages/{{about_logoImage}}" align="middle"  alt="cover image" />
+	  </div>
+	  
+    <section id="Information">
+	  <h2>{{app_title}}</h2>
+	  <div ng-bind-html="about_abstractTxt"></div>
+	  <div ng-bind-html="about_authorInfo"></div>
+    </section>
+    
+	<section id="Copyright">
+      <h3 style="margin-top:.7em">Copyright and Conditions of Use</h3>
+	  <div ng-bind-html="about_copyrightTxt"></div>
+	  <p> This app was created by its authors using the Easy Java/Javascript Simulations modeling and
+	  authoring tool and is copyrighted by its authors. All rights
+	  reserved. No part of this App may be reproduced or transmitted in any form or by any means
+	  without the permission in writing from its authors:</p>
+    </section>	  
+	  
+    <section id="EjsS">
+      <h3 style="margin-top:.7em">Easy Java/JavaScript Simulations</h3>
+      <p>
+        For information on how to use this tool to create your own simulations, visit the
+          <a href="#" onclick="window.open('http://www.um.es/fem/EjsWiki','_system', 'location=yes'); return false;">EjsS Website</a>
+		  Additional JavaScript simulations can be downloaded from the AAPT
+          <a href="#" onclick="window.open('http://www.compadre.org/osp','_system', 'location=yes'); return false;">ComPADRE National Science Digital Library</a>
+        to your mobile device by downloading the
+          <a href="#" onclick="window.open('http://www.um.es/fem/EjsWiki/Main/ReaderApp','_system', 'location=yes'); return false;">EjsS Reader App</a>
+        from the Apple's iTunes or Google's Play stores.
+        The EjsS Reader App lets you organize and run, in your tablet or smartphone, Javascript simulations created with
+        EjsS 5.0 and later.
+        <figure align="center">
+          <img src="./img/ReaderInterface.png" width="90%" alt="EjsS Reader" />
+          <figcaption>Main page of the Android version of the EjsS Reader App. Clicking one of the simulations logos, the Reader runs that simulation.</figcaption>
+        </figure>
+      </p>
+      <p>
+        There is a Free version of the Reader and a Pro version of it. Both versions come with a number of demo simulations
+        in what will be your personal library. The Free version allows you to add up to five (5) more simulations to your
+        library. Once you reach this limit, you need to remove one of these downloaded simulations to make room for a new one.
+        The Pro version has no limit in the number of simulations you can add to your personal library.
+      </p>
+      <ion-list>
+        <ion-item ng-if="isIOS">
+          <img src="./img/ReaderFree.png" width="60px" alt="EjsS Reader Free" />
+          <a href="#" onclick="window.open('https://itunes.apple.com/es/app/ejss-reader-free/id870091579','_system', 'location=yes'); return false;">EjsS Reader App Free</a>
+          on Apple's iTunes Store
+        </ion-item>
+        <ion-item ng-if="isIOS">
+          <img src="./img/ReaderPro.png" width="60px" alt="EjsS Reader Pro" />
+          <a href="#" onclick="window.open('https://itunes.apple.com/es/app/ejss-reader/id870091262','_system', 'location=yes'); return false;">EjsS Reader App Pro</a>
+          on Apple's iTunes Store
+        </ion-item>
+        <ion-item ng-if="isAndroid">
+          <img src="./img/ReaderFree.png" width="60px" alt="EjsS Reader Free" />
+          <a href="#" onclick="window.open('https://play.google.com/store/apps/details?id=org.colos.ejssreader.free','_system', 'location=yes'); return false;">EjsS Reader App Free</a>
+          on Google's Play Store
+        </ion-item>
+        <ion-item ng-if="isAndroid">
+          <img src="./img/ReaderPro.png" width="60px" alt="EjsS Reader Pro" />
+          <a href="#" onclick="window.open('https://play.google.com/store/apps/details?id=org.colos.ejssreader.pro','_system', 'location=yes'); return false;">EjsS Reader App Pro</a>
+           on Google's Play Store
+        </ion-item>
+      </ion-list>
+    </section>
+	  
+  </ion-content>
+</ion-nav-view>

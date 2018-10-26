@@ -1,0 +1,13 @@
+<ion-card>
+    <ion-card-header *ngIf="!hideNavigation">
+       {{title}}
+    </ion-card-header>
+  
+	<img src="model_pages/{{about_logoImage}}">
+
+	<ion-list>
+		<button ion-item *ngFor="let entry of pages" (click)="itemSelected(entry.myref)">
+			<ion-icon [name]="entry.icon"></ion-icon> {{entry.title}}
+		</button>	
+	</ion-list>
+</ion-card>

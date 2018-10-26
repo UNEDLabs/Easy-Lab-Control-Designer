@@ -1,0 +1,74 @@
+<HtmlViewFragment>
+  <HtmlViewFragment.Parent>threePanelsPanel</HtmlViewFragment.Parent>
+  <HtmlViewFragment.Code>
+<HtmlView.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Name><![CDATA[controlPanel]]></Name>
+<Parent><![CDATA[threePanelsPanel]]></Parent>
+<Property name="Width"><![CDATA[400]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Name><![CDATA[executionPanel]]></Name>
+<Parent><![CDATA[controlPanel]]></Parent>
+<Property name="CSS"><![CDATA[{"float" : "left"}
+]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.TwoStateButton</Type>
+<Name><![CDATA[playPauseButton]]></Name>
+<Parent><![CDATA[executionPanel]]></Parent>
+<Property name="OffClick"><![CDATA[%_pause%]]></Property>
+<Property name="State"><![CDATA[_isPaused]]></Property>
+<Property name="Tooltip"><![CDATA["Play/Pause"]]></Property>
+<Property name="ImageOnUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/play.gif"]]></Property>
+<Property name="OnClick"><![CDATA[%_play%]]></Property>
+<Property name="ImageOffUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/pause.gif"]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.Button</Type>
+<Name><![CDATA[stepButton]]></Name>
+<Parent><![CDATA[executionPanel]]></Parent>
+<Property name="ImageUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/stepforward.gif"]]></Property>
+<Property name="OnClick"><![CDATA[%_step%]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.Button</Type>
+<Name><![CDATA[initButton]]></Name>
+<Parent><![CDATA[executionPanel]]></Parent>
+<Property name="Tooltip"><![CDATA["Initialize"]]></Property>
+<Property name="ImageUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/reset1.gif"]]></Property>
+<Property name="OnClick"><![CDATA[%_initialize%]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.Button</Type>
+<Name><![CDATA[resetButton]]></Name>
+<Parent><![CDATA[executionPanel]]></Parent>
+<Property name="ImageUrl"><![CDATA["/org/opensourcephysics/resources/controls/images/reset.gif"]]></Property>
+<Property name="OnClick"><![CDATA[%_reset%]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Expanded>true</Expanded>
+<Type>Elements.Panel</Type>
+<Name><![CDATA[timePanel]]></Name>
+<Parent><![CDATA[controlPanel]]></Parent>
+<Property name="CSS"><![CDATA[{ "float" : "right"}]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.Label</Type>
+<Name><![CDATA[timeLabel]]></Name>
+<Parent><![CDATA[timePanel]]></Parent>
+<Property name="Text"><![CDATA["Time:"]]></Property>
+</HtmlView.Element>
+<HtmlView.Element>
+<Type>Elements.ParsedField</Type>
+<Name><![CDATA[timeField]]></Name>
+<Parent><![CDATA[timePanel]]></Parent>
+<Property name="Format"><![CDATA["0.00"]]></Property>
+<Property name="Editable"><![CDATA[false]]></Property>
+<Property name="Width"><![CDATA["50px"]]></Property>
+</HtmlView.Element>
+  </HtmlViewFragment.Code>
+</HtmlViewFragment>

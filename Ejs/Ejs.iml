@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="EclipseModuleManager">
+    <libelement value="file://D:\EjsS_Git\Ejs\libraries\unpackaged\classes" />
+    <libelement value="jar://$MODULE_DIR$/libraries/HotEqn.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jogl/jogl.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/bsh.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/osp.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/QTJava.zip!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/slf4j-api.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/Loader3DS.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/LoaderAC3D.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/LoaderVRML.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/log4j-1.2.15.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/logback-classic.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/logback-core.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/model_elements/ParallelJava/parallel_ejs.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/ARElement.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/bcel.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/jackson-annotations-2.1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/jackson-core-2.1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/jackson-databind-2.1.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/model_elements/External/external.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/comSun7.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/model_elements/InputOutput/input_output.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/javascript/gson-2.2.2.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/javascript/model_elements/Hardware/hardware.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/ejs_lib.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/javascript/js.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/jfxrt1.7.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/commons-collections-3.2.1.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/commons-configuration-1.6.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/commons-lang-2.5.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.commands_3.6.100.v20140528-1422.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.contenttype_3.4.200.v20140207-1251.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.jobs_3.6.0.v20140424-0053.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.resources_3.9.1.v20140825-1431.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.runtime_3.10.0.v20140318-2214.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.equinox.preferences_3.5.200.v20140224-1527.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.jdt.core_3.10.0.v20140902-0626.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.osgi_3.10.1.v20140909-1633.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.text_3.5.300.v20130515-1451.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/commons-codec-1.10.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/jsoup-1.8.3.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/javax.json-1.0.4.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/javax.json-api-1.0.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/extensions/djep.jar!/" />
+    <libelement value="jar://$MODULE_DIR$/distribution/bin/ejs_extras_java8.jar!/" />
+    <src_description expected_position="26">
+      <src_folder value="file://$MODULE_DIR$/src" expected_position="26" />
+    </src_description>
+  </component>
+  <component name="NewModuleRootManager">
+    <output url="file://$MODULE_DIR$/bin" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="module-library">
+      <library name="classes">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/libraries/unpackaged/classes" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="HotEqn.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/HotEqn.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jogl.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jogl/jogl.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="bsh.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/bsh.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="osp.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/osp.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file:///Users/Paco/Documents/Programming/GitProjects/EJS/OSP_core/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="QTJava.zip">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/QTJava.zip!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="slf4j-api.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/slf4j-api.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="Loader3DS.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/Loader3DS.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="LoaderAC3D.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/LoaderAC3D.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="LoaderVRML.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/LoaderVRML.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="log4j-1.2.15.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/log4j-1.2.15.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="logback-classic.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/logback-classic.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="logback-core.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/logback-core.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="parallel_ejs.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/model_elements/ParallelJava/parallel_ejs.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../ModelElements/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ARElement.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/ARElement.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../ModelElements/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="bcel.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/bcel.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jackson-annotations-2.1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/jackson-annotations-2.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jackson-core-2.1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/jackson-core-2.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jackson-databind-2.1.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/jackson-databind-2.1.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="external.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/model_elements/External/external.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../ModelElements/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="comSun7.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/comSun7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="input_output.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/model_elements/InputOutput/input_output.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../ModelElements/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="gson-2.2.2.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/javascript/gson-2.2.2.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="hardware.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/javascript/model_elements/Hardware/hardware.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ejs_lib.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/ejs_lib.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../EjsLibrary/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="js.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/javascript/js.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="module-library">
+      <library name="jfxrt1.7.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/jfxrt1.7.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-collections-3.2.1.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/commons-collections-3.2.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-configuration-1.6.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/commons-configuration-1.6.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-lang-2.5.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/commons-lang-2.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.core.commands_3.6.100.v20140528-1422.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.commands_3.6.100.v20140528-1422.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.core.contenttype_3.4.200.v20140207-1251.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.contenttype_3.4.200.v20140207-1251.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.core.jobs_3.6.0.v20140424-0053.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.jobs_3.6.0.v20140424-0053.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.core.resources_3.9.1.v20140825-1431.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.resources_3.9.1.v20140825-1431.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.core.runtime_3.10.0.v20140318-2214.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.core.runtime_3.10.0.v20140318-2214.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.equinox.common_3.6.200.v20130402-1505.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.equinox.common_3.6.200.v20130402-1505.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.equinox.preferences_3.5.200.v20140224-1527.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.equinox.preferences_3.5.200.v20140224-1527.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.jdt.core_3.10.0.v20140902-0626.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.jdt.core_3.10.0.v20140902-0626.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.osgi_3.10.1.v20140909-1633.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.osgi_3.10.1.v20140909-1633.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="org.eclipse.text_3.5.300.v20130515-1451.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libraries/jacobo/org.eclipse.text_3.5.300.v20130515-1451.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="commons-codec-1.10.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/commons-codec-1.10.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="jsoup-1.8.3.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/jsoup-1.8.3.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javax.json-1.0.4.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/javax.json-1.0.4.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="javax.json-api-1.0.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/_utils/javax.json-api-1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="djep.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/extensions/djep.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library name="ejs_extras_java8.jar">
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/distribution/bin/ejs_extras_java8.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/../EjsExtrasForJava8/bin/org/opensourcephysics/tools/minijar/MiniJar.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../EjsExtrasForJava8" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="file://$MODULE_DIR$/../EjsExtrasForJava8/src" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+  </component>
+</module>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>EjsS BookApp Main Page</title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/book.js"></script>
+    <script src="js/app.js"></script>
+
+  </head>
+  <body ng-app="BookReader" ng-controller="BookReaderCtrl">
+
+    <ion-side-menus>
+
+      <!-- Left menu -->
+      <ion-side-menu side="left">
+        <ion-header-bar class="bar-stable">
+            <h1 class="title">{{book_menu_title}}</h1>
+            <!-- TOC entry
+          <div class="col text-center">
+            <button class="button button-clear" ng-click="selectTOC()">
+                <b>{{book_toc_title}}</b>
+            </button>
+          </div>
+        -->
+        </ion-header-bar>
+        <ion-content scroll="true">
+          <ion-list>
+            <!-- TOC entry -->
+            <ion-item class="main-navbar  main-navbar-special-page"
+                      ng-click="selectPage(COVER)" ng-class="{active: index == COVER}">
+              {{getOtherPage(COVER).title}}
+            </ion-item>
+            <ion-item class="main-navbar  main-navbar-special-page"
+                      ng-click="selectPage(TITLE_PAGE)" ng-class="{active: index == TITLE_PAGE}">
+              {{getOtherPage(TITLE_PAGE).title}}
+            </ion-item>
+            <ion-item class="main-navbar  main-navbar-special-page"
+                      ng-click="selectPage(TOC)" ng-class="{active: index == TOC}">
+              {{getOtherPage(TOC).title}}
+            </ion-item>
+
+            <div ng-repeat="entry in contents">
+              <ion-item ng-if="entry.type=='chapter'"
+                        ng-click="toggleChapter(entry)"
+                        class="main-navbar main-navbar-chapter">
+                  <i class='icon custom-icon' ng-class="isChapterExpanded(entry) ? 'ion-arrow-down-b' : 'ion-arrow-right-b'"></i>
+                  {{entry.title}}
+              </ion-item>
+              <ion-item ng-if="entry.type=='chapter'" ng-repeat="section in entry.sections"
+                        class="main-navbar main-navbar-section item-accordion"
+                        ng-show="isChapterExpanded(entry)"
+                        ng-click="selectSection(section)"
+                        ng-class="{active: index>=0 && currentSection == section}">
+                  {{section.title}}
+              </ion-item>
+              <ion-item ng-if="entry.type!='chapter'"
+                        class="main-navbar main-navbar-section item-accordion"
+                        ng-click="selectSection(entry)"
+                        ng-class="{active: index>=0 && currentSection == entry}">
+                {{entry.title}}
+              </ion-item>
+            </div>
+            <!-- Copyright entry -->
+            <ion-item class="main-navbar main-navbar-special-page"
+                      ng-click="selectPage(REFERENCES)" ng-class="{active: index == REFERENCES}">
+                      {{getOtherPage(REFERENCES).title}}
+            </ion-item>
+            <ion-item class="main-navbar main-navbar-special-page"
+                      ng-click="selectPage(COPYRIGHT)" ng-class="{active: index == COPYRIGHT}">
+                      {{getOtherPage(COPYRIGHT).title}}
+            </ion-item>
+          </ion-list>
+        </ion-content>
+
+        <!-- TOC entry
+        <ion-footer-bar align-title="center" class="bar-assertive">
+          <div class="buttons" ng-click="selectCopyright()">
+            <button class="button">{{book_copyright_title}}</button>
+          </div>
+        </ion-footer-bar>
+      -->
+
+      </ion-side-menu>
+
+      <!-- Center content -->
+      <ion-side-menu-content>
+        <ion-header-bar align-title="center" class="bar-dark">
+          <div class="buttons">
+            <button class="button button-icon" ng-click="toggleTOC()">
+              <i class="icon ion-navicon"></i>
+            </button>
+            <button class="button button-icon" ng-click="previousSection()" ng-hide="hidePrevious">
+              <i class="icon ion-arrow-left-c"></i>
+            </button>
+          </div>
+          <div class='title'><b style='color:orange'>{{book_title}}</b>{{header_title}}</div>
+          <div class="buttons">
+            <button class="button button-icon" ng-click="nextSection()" ng-hide="hideNext">
+              <i class="icon ion-arrow-right-c"></i>
+            </button>
+            <button class="button button-icon" ng-click="selectPage(ABOUT)">
+              <i class="icon ion-ios-information-outline"></i>
+            </button>
+          </div>
+        </ion-header-bar>
+        <ion-nav-view></ion-nav-view>
+      </ion-side-menu-content>
+
+   </ion-side-menus>
+
+   <script id="section.html" type="text/ng-template">
+     <ion-view>
+       <ion-content scroll="true" overflow-scroll="true" class="iframe-wrapper">
+         <iframe data-tap-disabled="true" src={{currentSection.url}}>
+         </iframe>
+       </ion-content>
+       </ion-view>
+   </script>
+
+   <script id="toc.html" type="text/ng-template">
+     <ion-view>
+       <ion-content class="padding">
+         <ul>
+           <li ng-repeat="entry in contents" >
+             <div ng-if="entry.type=='chapter'">
+               <div class="other-pages toc-chapter">{{entry.title}}</div>
+               <div class="other-pages toc-chapter-desc">{{entry.description}}</div>
+               <ul>
+                 <li ng-repeat="section in entry.sections">
+                   <a href="#/section" class="other-pages toc-chapter-section" ng-click="selectSection(section)">{{section.title}}</a>
+                </li>
+               </ul>
+             </div>
+             <div ng-if="entry.type!='chapter'">
+               <a href="#/section" class="other-pages toc-section" ng-click="selectSection(entry)"> {{entry.title}}</a>
+             </div>
+           </li>
+       </ul>
+     </ion-content>
+   </ion-view>
+   </script>
+
+  </body>
+</html>

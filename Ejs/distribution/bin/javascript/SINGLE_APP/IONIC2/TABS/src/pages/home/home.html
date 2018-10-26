@@ -1,0 +1,9 @@
+<ion-header *ngIf="!hideNavigation">
+  <ion-navbar>
+    <ion-title>{{currentPage.title}}</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content scroll="true" overflow-scroll="true">
+   <iframe (load)="resize($event)" data-tap-disabled="true" [src]=url></iframe>
+</ion-content>
