@@ -13,7 +13,7 @@ import org.apache.xmlrpc.client.XmlRpcSunHttpTransportFactory;
 
 /**
  * Class to interact with a JIL Server
- * @author Jesús Chacón <jcsombria@gmail.com> 
+ * @author Jess Chacn <jcsombria@gmail.com> 
  */
 public class Labview {  
   // The XmlRpcClient object

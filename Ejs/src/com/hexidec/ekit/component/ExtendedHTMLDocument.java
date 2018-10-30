@@ -51,11 +51,11 @@ public class ExtendedHTMLDocument extends HTMLDocument
 
   public ExtendedHTMLDocument() { ; }
 
-/** Überschreibt die Attribute des Elements.
+/** berschreibt die Attribute des Elements.
   *
-  * @param e Element bei dem die Attribute geändert werden sollen
+  * @param e Element bei dem die Attribute geï¿½ndert werden sollen
   * @param a AttributeSet mit den neuen Attributen
-  * @param tag Angabe was für ein Tag das Element ist
+  * @param tag Angabe was for ein Tag das Element ist
   */
 	public void replaceAttributes(Element e, AttributeSet a, HTML.Tag tag)
 	{

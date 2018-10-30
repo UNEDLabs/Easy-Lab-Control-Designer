@@ -169,7 +169,7 @@ public class CoachLabIIPlus {
       return null;
     }
     // for (Serial port : sCoachInterfaces) System.out.println ("CoachLab 2+ found at port "+port);
-    // TODO: Andrés: Let the user choose when there are more than one inerfaces available
+    // TODO: Andrs: Let the user choose when there are more than one inerfaces available
     return sCoachInterfaces.get(0);
   }
   
@@ -233,7 +233,7 @@ public class CoachLabIIPlus {
    */
   public boolean connect(int baudRate) {
     mSerial = getAvailableInterface(baudRate);
-    // Andrés: cómo podríamos asegurarnos de que la interface se reinicializa completamente. reboot() causa una null exception
+    // Andrs: cmo podramos asegurarnos de que la interface se reinicializa completamente. reboot() causa una null exception
     if (mSerial!=null) {
       resetInitialTime();
       return true;
